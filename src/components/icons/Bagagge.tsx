@@ -5,9 +5,6 @@ const SvgBagagge = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     fill="#0455a5"
-    style={{
-      enableBackground: "new 0 0 79.82 122.88",
-    }}
     viewBox="-21.53 0 122.88 122.88"
     width="1em"
     height="1em"
