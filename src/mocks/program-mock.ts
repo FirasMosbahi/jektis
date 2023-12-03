@@ -1,7 +1,4 @@
-import VoyageDetailsProps, {
-  Chambres,
-  ProgramDay,
-} from "@jektis/types/voyage-details-props";
+import { ProgramDay } from "@jektis/types/voyage-details-props";
 
 export const servicesInclus = {
   standard: [
@@ -49,11 +46,6 @@ export const prix = [
   "Prix Enfant -12 ans partage la chambre avec les parents: 3090 dt",
 ];
 
-// Room Types
-export const chambres: Chambres[] = [
-  { title: "Chambre Standard", unitPrice: 100 },
-  { title: "Suite de Luxe", unitPrice: 200 },
-];
 export const cancelFrais = [
   "Frais de dossiers (quelques soit la/les raison/s d'annulation du client) : 500 TND",
   "Annulation faite entre J-45 et J-30 : pénalité 35% du montant du Voyage",
