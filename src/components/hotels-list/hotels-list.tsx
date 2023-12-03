@@ -1,26 +1,23 @@
-"use client";
-
 import React from "react";
-import { getHotels } from "@jektis/services";
 import HotelCard from "@jektis/components/hotels-list/hotel-card";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import HotelCardProps from "@jektis/types/hotel_class";
 
-export default function HotelsList(): React.ReactNode {
-  const router = useRouter();
-  function navigate(id: number) {
-    router.push(`/hotels-list/${id}`);
-  }
-  const hotels = getHotels();
+export default function HotelsList({
+  hotels,
+}: {
+  hotels: HotelCardProps[];
+}): React.ReactNode {
   return (
     <div className="bg-white lg:grid xl:grid-cols-2 grid-cols-1 md:flex md:flex-col sm:flex sm:flex-col gap-16 md:gap-8 px-4 py-8">
       {hotels.map((hotel, index) => (
-        <div
+        <Link
           key={index}
           className="cursor-pointer"
-          onClick={() => navigate(hotel.id)}
+          href={`/hotels-list/${hotel.id}`}
         >
           <HotelCard hotel={hotel} />
-        </div>
+        </Link>
       ))}
     </div>
   );

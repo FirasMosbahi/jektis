@@ -3,9 +3,16 @@ import { cityCards } from "@jektis/mocks";
 import SearchFilter from "@jektis/components/voyages/voyage-search-filter";
 import CityCardXl from "@jektis/components/voyages/city-card-xl";
 import CustomPage from "@jektis/components/generic/CustomPage";
+import { getCities, getHotels } from "@jektis/services";
+import CityCardProps from "@jektis/types/city_class";
 
-export default function VoyagesIndex(): React.ReactNode {
-  const cities = cityCards;
+export default function VoyagesIndex({
+  searchParams,
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}): React.ReactNode {
+  const category = searchParams?.category;
+  const cities: CityCardProps[] = getCities(category);
   return (
     <CustomPage>
       <main className="flex flex-col lg:flex-row bg-white w-full pb-20">

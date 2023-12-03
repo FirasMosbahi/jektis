@@ -1,16 +1,32 @@
 import React from "react";
 
-export default function VoyageOffer(): React.ReactNode {
+export default function VoyageOffer({
+  name,
+  country,
+  imageUrl,
+  price,
+  nombreJours,
+  nombreNuits,
+}: {
+  name: string;
+  country: string;
+  imageUrl: string;
+  price: number;
+  nombreJours: number;
+  nombreNuits: number;
+}): React.ReactNode {
   return (
     <div className="relative mb-8 ml-6">
-      <div className="text-black flex flex-row gap-32 lg:gap-4 justify-center items-end mb-8">
-        <strong className="text-3xl lg:text-6xl">DUBAI</strong>
-        <p className="lg:text-2xl">Emirates arabes unis - 6 Nuits / 7 Jours</p>
+      <div className="text-black flex flex-row gap-32 lg:gap-4 justify-start items-end mb-8">
+        <strong className="text-3xl lg:text-6xl">{name}</strong>
+        <p className="lg:text-2xl">
+          {country} - {nombreNuits} Nuits / {nombreJours} Jours
+        </p>
       </div>
 
       <img
         alt="dubai"
-        src="https://media.gettyimages.com/id/467829216/photo/dubai-marina.jpg?b=1&s=170667a&w=0&k=20&c=7fZv26b4z8x7lE_7YKUerhjrtLLN1u_AQMaFNykFWPU="
+        src={imageUrl}
         className="w-screen h-96 border-transparent rounded-xl"
       />
       <div
@@ -23,7 +39,7 @@ export default function VoyageOffer(): React.ReactNode {
         >
           <p className="text-xs">A partir de</p>
           <div className="flex flex-row items-center">
-            <strong className="text-4xl">3290</strong>
+            <strong className="text-4xl">{price}</strong>
             <div className="flex flex-col">
               <strong className="text-2xl">TND</strong>
               <p className="text-xs">Par personne</p>

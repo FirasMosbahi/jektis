@@ -1,7 +1,42 @@
+"use client";
+
 import React from "react";
 import ChambreReservationListItem from "@jektis/components/voyage-details/chambre-reservation-list-item";
-
-export default function ChambreSelectionTable(): React.ReactNode {
+import { Chambres } from "@jektis/types";
+export default function ChambreSelectionTable({
+  chambres,
+}: {
+  chambres: Chambres[];
+}): React.ReactNode {
+  let reservation: any = {};
+  chambres.forEach((chambre) => {
+    reservation[chambre.title] = 0;
+  });
+  console.log(reservation);
+  const [chambresData, setChambresData] = React.useState(reservation);
+  function updateReservation(type: string, quantity: number) {
+    setChambresData((prevData: any) => ({ ...prevData, [type]: quantity }));
+  }
+  function getPersonsCount(): number {
+    console.log(chambresData);
+    console.log(chambres);
+    let count = 0;
+    Object.entries(chambresData).forEach(([key, value]) => {
+      const capacity = chambres.find((c) => c.title === key)?.capacity;
+      count += (capacity ?? 0) * (value as number);
+    });
+    return count;
+  }
+  function getTotalPrice(): number {
+    console.log(chambresData);
+    console.log(chambres);
+    let price = 0;
+    Object.entries(chambresData).forEach(([key, value]) => {
+      const unitPrice = chambres.find((c) => c.title === key)?.unitPrice;
+      price += (unitPrice ?? 0) * (value as number);
+    });
+    return price;
+  }
   return (
     <div>
       <strong className="text-black">Sélectionner vos chambres :</strong>
@@ -33,14 +68,20 @@ export default function ChambreSelectionTable(): React.ReactNode {
         {/*  <div className="col-span-7 flex flex-row gap-4 items-center pl-4 justify-start px-2 py-2 text-xl w-full font-medium text-white border-r-2 border-white"></div>*/}
         {/*  <div className="col-span-2 pt-8 px-4 py-2 flex flex-col items-end text-xl font-medium text-white"></div>*/}
         {/*</div>*/}
-        <ChambreReservationListItem />
-        <ChambreReservationListItem />
-        <ChambreReservationListItem />
+        {chambres.map((chambre, index) => (
+          <ChambreReservationListItem
+            key={index}
+            title={chambre.title}
+            qty={chambresData[chambre.title]}
+            onUpdate={(qty: number) => updateReservation(chambre.title, qty)}
+            price={chambre.unitPrice}
+          />
+        ))}
       </div>
       <div className="mt-4 flex flex-row justify-end">
         <button className="bg-gradient-to-r px-4 py-2 border-transparent rounded-xl flex flex-row items-baseline gap-2 from-[#004fa6] to-[#02c9b2]">
-          <p className="">Total 2 Adultes :</p>
-          <strong className="text-3xl">3580</strong>
+          <p className="">Total {getPersonsCount()} Adultes :</p>
+          <strong className="text-3xl">{getTotalPrice()}</strong>
           <sup className="text-sm">DT</sup>
         </button>
       </div>
