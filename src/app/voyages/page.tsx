@@ -14,17 +14,15 @@ export default function VoyagesIndex({
   const category = searchParams?.category;
   const cities: CityCardProps[] = getCities(category);
   return (
-    <CustomPage>
-      <main className="flex flex-col lg:flex-row bg-white w-full pb-20">
-        <SearchFilter />
-        <div className="flex flex-col gap-8 items-start w-full mt-6 flex-1">
-          {cities.map((city, index) => (
-            <div key={index} className="w-full">
-              <CityCardXl city={city} key={city.id} />
-            </div>
-          ))}
-        </div>
-      </main>
-    </CustomPage>
+    <main className="flex flex-col lg:flex-row bg-white w-full pb-20">
+      <SearchFilter />
+      <div className="flex flex-col gap-8 items-start w-full mt-6 flex-1">
+        {cities.map((city, index) => (
+          <div key={index} className="w-full">
+            <CityCardXl city={city} key={city.id} />
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }

@@ -63,11 +63,6 @@ export default function ChambreSelectionTable({
             <strong className="lg:pl-4">Somme totale</strong>
           </button>
         </div>
-        {/*<div className="grid mr-2 grid-cols-11 rounded-md shadow-sm mt-1 bg-[#ececec]">*/}
-        {/*  <div className="pt-8 col-span-2 px-4 py-2  text-xl font-medium text-white border-r-2 border-white "></div>*/}
-        {/*  <div className="col-span-7 flex flex-row gap-4 items-center pl-4 justify-start px-2 py-2 text-xl w-full font-medium text-white border-r-2 border-white"></div>*/}
-        {/*  <div className="col-span-2 pt-8 px-4 py-2 flex flex-col items-end text-xl font-medium text-white"></div>*/}
-        {/*</div>*/}
         {chambres.map((chambre, index) => (
           <ChambreReservationListItem
             key={index}

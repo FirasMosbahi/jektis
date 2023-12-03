@@ -11,7 +11,7 @@ import {
 
 export default function HotelsFilter(): React.ReactNode {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       <div>
         <p className="max-w-fit">
           Accueil/Hotels en Tunisie/<strong>Résultat de la recherche</strong>
@@ -22,15 +22,15 @@ export default function HotelsFilter(): React.ReactNode {
         </strong>
       </div>
 
-      <div className="inline-flex rounded-md shadow-sm w-fit mt-8">
-        <form className="flex xl:flex-row xl:gap-0 gap-4 flex-col rounded-xl ">
+      <div className="inline-flex rounded-md shadow-sm w-full mt-8">
+        <form className="flex xl:flex-row xl:gap-0 gap-4 flex-col rounded-xl w-full">
           <InputWithIcon
             input={
               <>
                 <select
                   id="countries"
                   placeholder="Sélectionner une ville ou un hotel"
-                  className="pl-12 w-80 h-12 xl:rounded-l-xl bg-white text-sm font-medium text-gray-900 border-transparent  rounded-xl xl:border-b xl:rounded-none"
+                  className="pl-12 w-96 h-12 xl:rounded-l-xl bg-white text-sm font-medium text-gray-900 border-transparent  rounded-xl xl:border-b xl:rounded-none"
                 >
                   <option>Sélectionner une ville ou un hotel</option>
                   <option value="CA">Canada</option>
@@ -63,7 +63,7 @@ export default function HotelsFilter(): React.ReactNode {
               <>
                 <select
                   id="countries"
-                  className="pl-12 px-4 xl:rounded-r-xl py-2 w-80 h-12 text-sm font-medium text-gray-900 bg-white border border-transparent rounded-xl xl:border-b xl:rounded-none "
+                  className="pl-12 px-4 xl:rounded-r-xl py-2 w-96 h-12 text-sm font-medium text-gray-900 bg-white border border-transparent rounded-xl xl:border-b xl:rounded-none "
                 >
                   <option>1 chambre : 2 adultes + 0 enfants</option>
                   <option value="US">United States</option>

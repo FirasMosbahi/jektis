@@ -15,11 +15,11 @@ export default function PageIndex({
   const hotels: HotelCardProps[] = getHotels(category);
 
   return (
-    <CustomPage>
+    <div className="w-full">
       <HotelsFilter />
       <div className="mb-8 mt-8 ">
         <HotelsList hotels={hotels} />
       </div>
-    </CustomPage>
+    </div>
   );
 }

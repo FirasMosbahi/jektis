@@ -24,15 +24,15 @@ export default function Index(): React.ReactNode {
     VoyageType.VOYAGE_ORGANISE,
   );
   return (
-    <CustomPage>
+    <div>
       <div className="flex flex-row items-start w-full mb-12 gap-12">
         <HomeFilter />
         <div className="flex-1">
           <Promo />
         </div>
       </div>
-      <div className="bg-white px-4">
-        <div className="flex flex-col lg:flex-row gap-4 mt-16">
+      <div className="bg-white px-4 pt-8">
+        <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1">
             <VoyageCard
               title="Voyages Organisées"
@@ -101,6 +101,6 @@ export default function Index(): React.ReactNode {
           />
         </div>
       </div>
-    </CustomPage>
+    </div>
   );
 }

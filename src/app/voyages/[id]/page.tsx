@@ -10,19 +10,17 @@ import VoyageDetailsProps from "@jektis/types/voyage-details-props";
 export default function VoyageGroupIndex(): React.ReactNode {
   const voyage: VoyageDetailsProps = getProgram(1);
   return (
-    <CustomPage>
-      <div className="bg-white pt-8 pb-20 px-4">
-        <VoyageOffer {...voyage} />
-        <VoyageNavbar />
-        <div className="flex flex-row gap-16">
-          <div>
-            <VoyageDetails voyageDetails={voyage} />
-          </div>
-          <div className="w-96">
-            <VoyageImages />
-          </div>
+    <div className="bg-white pt-8 pb-20 px-4">
+      <VoyageOffer {...voyage} />
+      <VoyageNavbar />
+      <div className="flex flex-row gap-16">
+        <div>
+          <VoyageDetails voyageDetails={voyage} />
+        </div>
+        <div className="w-96">
+          <VoyageImages />
         </div>
       </div>
-    </CustomPage>
+    </div>
   );
 }

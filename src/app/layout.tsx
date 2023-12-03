@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import CustomPage from "@jektis/components/generic/CustomPage";
+import Center, { Axes } from "@jektis/components/generic/center";
+import Header from "@jektis/components/layout/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`${inter.className}`}>
+        <CustomPage>
+          <Center axe={Axes.x}>
+            <Header />
+          </Center>
+          <div className="px-12 w-full">{children}</div>
+        </CustomPage>
+      </body>
     </html>
   );
 }

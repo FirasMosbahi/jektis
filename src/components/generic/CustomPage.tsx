@@ -6,7 +6,7 @@ export default function CustomPage({
 }): React.ReactNode {
   return (
     <div
-      className="h-fit bg-cover bg-center flex flex-col px-12 pb-20 pt-20 items-center justify-center"
+      className="h-fit bg-cover bg-center flex flex-col pb-20 pt-20 items-center justify-center"
       style={{ backgroundImage: `url(/OIP.jpg)` }}
     >
       {children}

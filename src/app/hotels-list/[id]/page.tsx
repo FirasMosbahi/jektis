@@ -9,33 +9,31 @@ import CustomPage from "@jektis/components/generic/CustomPage";
 
 export default function HotelDetailsIndex(): React.ReactNode {
   return (
-    <CustomPage>
-      <div className="bg-white px-4">
-        <HotelDescriptionHeader />
-        <p className="mt-12 tracking-wide text-black text-2xl">Hammamet</p>
-        <p className="text-black mb-8">
-          Minimum stay: 2 Nuités / All inclusive / Enfants - 6 ans gratuit
-        </p>
-        <HotelImages />
-        <HotelDetailsNavbar />
-        {/*reservation*/}
-        <UpdateReservation />
-        {/*table*/}
-        <HotelReservationTable />
+    <div className="bg-white px-4">
+      <HotelDescriptionHeader />
+      <p className="mt-12 tracking-wide text-black text-2xl">Hammamet</p>
+      <p className="text-black mb-8">
+        Minimum stay: 2 Nuités / All inclusive / Enfants - 6 ans gratuit
+      </p>
+      <HotelImages />
+      <HotelDetailsNavbar />
+      {/*reservation*/}
+      <UpdateReservation />
+      {/*table*/}
+      <HotelReservationTable />
 
-        <Amenagement />
-        <div id="prestation" className="mr-32">
-          <strong className="text-[#144e8b] text-3xl">
-            PRESTATIONS ET SERVICES
-          </strong>
-          <p className="text-black text-sm mt-8 pb-24">
-            L{"'"}iberostar Diar El Andalous est situé sur la coté
-            médiaterranéenne à Sousse. Il surplombe les plages de sable fin et
-            dispose d{"'"}une piscine intérieure et extérieure, d{"'"}un spa
-            ainsi que d{"'"}une piscine et d{"'"}une aire de jeux pour enfants
-          </p>
-        </div>
+      <Amenagement />
+      <div id="prestation" className="mr-32">
+        <strong className="text-[#144e8b] text-3xl">
+          PRESTATIONS ET SERVICES
+        </strong>
+        <p className="text-black text-sm mt-8 pb-24">
+          L{"'"}iberostar Diar El Andalous est situé sur la coté
+          médiaterranéenne à Sousse. Il surplombe les plages de sable fin et
+          dispose d{"'"}une piscine intérieure et extérieure, d{"'"}un spa ainsi
+          que d{"'"}une piscine et d{"'"}une aire de jeux pour enfants
+        </p>
       </div>
-    </CustomPage>
+    </div>
   );
 }
