@@ -26,7 +26,7 @@ export default function HotelCard({
           </div>
           <div className="p-6">
             <p className=" block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-black antialiased">
-              {hotel.detail}
+              {hotel.name}
             </p>
             <p className="mb-2 flex items-center gap-3 flex-row font-sans tracking-normal text-blue-gray-900 antialiased">
               {hotel.cityName} <div className="flex flex-row">{stars}</div>

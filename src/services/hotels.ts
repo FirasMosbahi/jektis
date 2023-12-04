@@ -26,3 +26,14 @@ export function getMiniCards(category: HotelCategory): MiniCardProps[] {
     .slice(0, 3)
     .map((hotel) => MiniCardProps.fromHotelCardProps(hotel));
 }
+export function getHotelById(id: string | number): HotelCardProps {
+  if (typeof id === "string") {
+    id = Number.parseInt(id);
+  }
+  const hotel = hotelCards.find((hotel) => hotel.id === id);
+  if (hotel === undefined) {
+    throw new Error("no hotel with this id");
+  } else {
+    return hotel;
+  }
+}

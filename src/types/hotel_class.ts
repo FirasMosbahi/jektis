@@ -7,13 +7,13 @@ export enum HotelCategory {
 export default class HotelCardProps {
   id: number;
   cityName: string;
-  detail: string;
+  name: string;
   imageUrl: string;
   rate: number;
   price: number;
   minimumStay: number;
   inclusive: boolean;
-  detailEnfant: String;
+  detailEnfant: string;
   categories: HotelCategory[];
   constructor(
     id: number,
@@ -24,12 +24,12 @@ export default class HotelCardProps {
     price: number,
     minimumStay: number,
     inclusive: boolean,
-    detailEnfant: String,
+    detailEnfant: string,
     categories: HotelCategory[],
   ) {
     this.id = id;
     this.cityName = cityName;
-    this.detail = detail;
+    this.name = detail;
     this.imageUrl = imageUrl;
     this.rate = rate;
     this.price = price;

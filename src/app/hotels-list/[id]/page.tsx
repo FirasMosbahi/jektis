@@ -5,15 +5,23 @@ import HotelDetailsNavbar from "@jektis/components/hotel-description/hotel-detai
 import UpdateReservation from "@jektis/components/hotel-description/update-reservation";
 import HotelReservationTable from "@jektis/components/hotel-description/hotel-reservation-table";
 import Amenagement from "@jektis/components/hotel-description/amenagement";
-import CustomPage from "@jektis/components/generic/CustomPage";
+import { getHotelById } from "@jektis/services";
 
-export default function HotelDetailsIndex(): React.ReactNode {
+export default function HotelDetailsIndex({
+  params,
+}: {
+  params: { id: string };
+}): React.ReactNode {
+  const hotel = getHotelById(params.id);
   return (
     <div className="bg-white px-4">
-      <HotelDescriptionHeader />
-      <p className="mt-12 tracking-wide text-black text-2xl">Hammamet</p>
+      <HotelDescriptionHeader {...hotel} />
+      <p className="mt-12 tracking-wide text-black text-2xl">
+        {hotel.cityName}
+      </p>
       <p className="text-black mb-8">
-        Minimum stay: 2 Nuités / All inclusive / Enfants - 6 ans gratuit
+        Minimum stay: {hotel.minimumStay} Nuités /{" "}
+        {hotel.inclusive && "All inclusive /"} {hotel.detailEnfant}
       </p>
       <HotelImages />
       <HotelDetailsNavbar />

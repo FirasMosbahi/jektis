@@ -9,12 +9,7 @@ export default class MiniCardProps {
     public price: number,
   ) {}
   static fromHotelCardProps(hotel: HotelCardProps): MiniCardProps {
-    return new MiniCardProps(
-      hotel.id,
-      hotel.detail,
-      hotel.imageUrl,
-      hotel.price,
-    );
+    return new MiniCardProps(hotel.id, hotel.name, hotel.imageUrl, hotel.price);
   }
   static fromVoyageCardProps(voyage: CityCardProps): MiniCardProps {
     return new MiniCardProps(
