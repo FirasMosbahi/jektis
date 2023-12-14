@@ -15,6 +15,7 @@ export default class HotelCardProps {
   inclusive: boolean;
   detailEnfant: string;
   categories: HotelCategory[];
+  images: string[];
   constructor(
     id: number,
     cityName: string,
@@ -26,6 +27,7 @@ export default class HotelCardProps {
     inclusive: boolean,
     detailEnfant: string,
     categories: HotelCategory[],
+    images: string[],
   ) {
     this.id = id;
     this.cityName = cityName;
@@ -37,5 +39,6 @@ export default class HotelCardProps {
     this.inclusive = inclusive;
     this.detailEnfant = detailEnfant;
     this.categories = categories;
+    this.images = images;
   }
 }

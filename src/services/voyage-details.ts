@@ -12,7 +12,10 @@ import {
 } from "@jektis/mocks/program-mock";
 import { cityCards } from "@jektis/mocks";
 
-export function getProgram(id: number): VoyageDetailsProps {
+export function getProgram(id: string | number): VoyageDetailsProps {
+  if (typeof id === "string") {
+    id = Number.parseInt(id);
+  }
   const voyage = cityCards.filter((v) => v.id === id)[0];
   return new VoyageDetailsProps(
     id,

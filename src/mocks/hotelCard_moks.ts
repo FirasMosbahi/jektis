@@ -1,5 +1,16 @@
 import HotelCardProps, { HotelCategory } from "@jektis/types/hotel_class";
-
+const images = [
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
+];
 const hotelCards: HotelCardProps[] = [
   new HotelCardProps(
     1,
@@ -12,6 +23,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.RECOMMANDE, HotelCategory.VUE_MER],
+    images,
   ),
   new HotelCardProps(
     2,
@@ -24,6 +36,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.ALL_INCLUSIVE],
+    images,
   ),
   new HotelCardProps(
     3,
@@ -36,6 +49,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.TOBBOGAN],
+    images,
   ),
   new HotelCardProps(
     4,
@@ -48,6 +62,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.RECOMMANDE, HotelCategory.VUE_MER],
+    images,
   ),
   new HotelCardProps(
     5,
@@ -60,6 +75,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.ALL_INCLUSIVE],
+    images,
   ),
   new HotelCardProps(
     6,
@@ -72,6 +88,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.TOBBOGAN, HotelCategory.ALL_INCLUSIVE],
+    images,
   ),
   new HotelCardProps(
     7,
@@ -84,6 +101,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.RECOMMANDE],
+    images,
   ),
   new HotelCardProps(
     8,
@@ -96,6 +114,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.TOBBOGAN, HotelCategory.VUE_MER],
+    images,
   ),
   new HotelCardProps(
     9,
@@ -108,6 +127,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.RECOMMANDE, HotelCategory.VUE_MER],
+    images,
   ),
   new HotelCardProps(
     10,
@@ -120,6 +140,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.ALL_INCLUSIVE],
+    images,
   ),
   new HotelCardProps(
     11,
@@ -132,6 +153,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.TOBBOGAN],
+    images,
   ),
   new HotelCardProps(
     12,
@@ -144,6 +166,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.RECOMMANDE, HotelCategory.VUE_MER],
+    images,
   ),
   new HotelCardProps(
     13,
@@ -156,6 +179,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.ALL_INCLUSIVE],
+    images,
   ),
   new HotelCardProps(
     14,
@@ -168,6 +192,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.TOBBOGAN, HotelCategory.ALL_INCLUSIVE],
+    images,
   ),
   new HotelCardProps(
     15,
@@ -180,6 +205,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.RECOMMANDE],
+    images,
   ),
   new HotelCardProps(
     16,
@@ -192,6 +218,7 @@ const hotelCards: HotelCardProps[] = [
     true,
     "Enfant < 6 ans : gratuit",
     [HotelCategory.TOBBOGAN, HotelCategory.VUE_MER],
+    images,
   ),
 ];
 export default hotelCards;

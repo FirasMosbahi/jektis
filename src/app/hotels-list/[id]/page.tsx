@@ -6,6 +6,7 @@ import UpdateReservation from "@jektis/components/hotel-description/update-reser
 import HotelReservationTable from "@jektis/components/hotel-description/hotel-reservation-table";
 import Amenagement from "@jektis/components/hotel-description/amenagement";
 import { getHotelById } from "@jektis/services";
+import Panorama from "@jektis/components/hotel-description/panorama";
 
 export default function HotelDetailsIndex({
   params,
@@ -23,7 +24,10 @@ export default function HotelDetailsIndex({
         Minimum stay: {hotel.minimumStay} Nuités /{" "}
         {hotel.inclusive && "All inclusive /"} {hotel.detailEnfant}
       </p>
-      <HotelImages />
+      <div className="mb-12">
+        <HotelImages images={hotel.images} />
+      </div>
+      <br />
       <HotelDetailsNavbar />
       {/*reservation*/}
       <UpdateReservation />

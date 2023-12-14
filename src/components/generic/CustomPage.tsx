@@ -7,7 +7,7 @@ export default function CustomPage({
   return (
     <div
       className="h-fit bg-cover bg-center flex flex-col pb-20 pt-20 items-center justify-center"
-      style={{ backgroundImage: `url(/OIP.jpg)` }}
+      style={{ backgroundImage: `url(/background_plage.jpg)` }}
     >
       {children}
     </div>

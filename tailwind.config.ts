@@ -10,6 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         strongBlue: "#264268",
+        weakBlue: "#4a7dbe",
+        mediumGray: "#d9d9d9",
+        weakGreen: "#87bd1d",
+        whiteBlue: "#7aa0c7",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

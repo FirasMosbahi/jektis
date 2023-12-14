@@ -7,8 +7,12 @@ import CustomPage from "@jektis/components/generic/CustomPage";
 import { getProgram } from "@jektis/services";
 import VoyageDetailsProps from "@jektis/types/voyage-details-props";
 
-export default function VoyageGroupIndex(): React.ReactNode {
-  const voyage: VoyageDetailsProps = getProgram(1);
+export default function VoyageGroupIndex({
+  params,
+}: {
+  params: { id: string };
+}): React.ReactNode {
+  const voyage: VoyageDetailsProps = getProgram(params.id);
   return (
     <div className="bg-white pt-8 pb-20 px-4">
       <VoyageOffer {...voyage} />
