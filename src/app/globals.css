@@ -27,3 +27,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.leaflet-container {
+  width: 33%;
+  height: 100%;
+}

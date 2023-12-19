@@ -1,5 +1,5 @@
 import React from "react";
-import { Star } from "@jektis/components/icons";
+import { PlaneArrival, PlaneDeparture, Star } from "@jektis/components/icons";
 import CityCardProps from "@jektis/types/city_class";
 import PriceButtonXl from "@jektis/components/voyages/price_card";
 
@@ -33,31 +33,44 @@ export default function CityCardXl({
             <strong className="block leading-6 font-sans text-2xl font-semibold uppercase tracking-normal text-black antialiased">
               {city.name}
             </strong>
-            <div className="flex flex-row items-center tracking-normal ">
+            <div className="flex xl:flex-row flex-col xl:items-center items-start xl:gap-0 gap-4 xl:mt-0 mt-4 tracking-normal ">
               <p className="flex items-center gap-3 flex-row font-sans text-blue-gray-900">
                 {city.country}
               </p>
-              <p className="flex text-xs pt-1 pl-8 flex-col xl:flex-row gap-2 items-center">
+              <p className="flex text-xs pt-1 xl:pl-8 flex-col xl:flex-row gap-2 xl:items-center items-start">
                 Note : <div className="flex flex-row">{stars}</div>
               </p>
             </div>
-            <div className="flex flex-col my-4">
+            <div className="flex flex-col my-4 gap-4">
               <strong>
-                {city.numberOfDays} jours / {city.numberofNights} nuits
+                {city.numberOfDays} jours / {city.numberofNights} nuits :
               </strong>
-              <div className="flex flex-row items-center gap-4">
-                <strong>
-                  Du {city.dateStart} au {city.dateEnd}
-                </strong>
-                <button className="bg-[#d7d7d7] border-white border-4 rounded-2xl px-2">
-                  <strong>Voir plus</strong>
+              <div className="flex lg:flex-row flex-col lg:items-center items-start gap-8">
+                <div className="flex flex-row gap-4 items-center">
+                  <PlaneDeparture width={30} height={30} />{" "}
+                  <strong>Depart: 05 Septembre 2023</strong>
+                </div>
+                <div className="flex flex-row gap-4 items-center">
+                  <PlaneArrival height={30} width={30} />{" "}
+                  <strong>Retour: 25 Septembre 2023</strong>
+                </div>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-4 flex flex-col w-fit gap-4">
+              <div className="col-span-2">
+                <PriceButtonXl price={city.price} />
+              </div>
+              <div className="flex flex-col justify-end">
+                <button className="bg-red-600 text-white border border-transparent rounded-2xl flex flex-col items-center justify-center h-3/5">
+                  <strong>Facilités</strong> <strong>jusqu'à 8 mois</strong>
                 </button>
-                <button className="bg-[#d7d7d7] border-white border-4 rounded-2xl px-2">
+              </div>
+              <div className="flex flex-col justify-end">
+                <button className="bg-gradient-to-r from-[#585657] to-[#9c9c9c] text-xl h-3/5 text-white border border-transparent rounded-2xl flex flex-col items-center justify-center">
                   <strong>Programme</strong>
                 </button>
               </div>
             </div>
-            <PriceButtonXl price={city.price} payementType={city.paymentType} />
           </div>
         </div>
       </div>

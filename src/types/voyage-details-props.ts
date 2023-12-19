@@ -4,7 +4,6 @@ export type ProgramDay = {
 };
 export type Chambres = {
   title: string;
-  capacity: number;
   unitPrice: number;
 };
 export default class VoyageDetailsProps {

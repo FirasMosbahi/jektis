@@ -13,11 +13,16 @@ export default function CityCard({
   linkBase: string;
 }): React.ReactNode {
   return (
-    <Link href={`${linkBase}/${cityProps.id}`}>
+    <Link
+      className={isHorizontal ? "" : "w-full sm:w-96"}
+      href={`${linkBase}/${cityProps.id}`}
+    >
       <div className="flex items-center justify-center w-full">
         <div
           className={`relative flex rounded-xl w-full ${
-            isHorizontal ? "flex-row bg-[#ececec] bg-clip-border" : "flex-col"
+            isHorizontal
+              ? "sm:flex-row flex-col bg-[#ececec] bg-clip-border"
+              : "flex-col"
           }  text-gray-700 shadow-md`}
         >
           <img
@@ -25,7 +30,7 @@ export default function CityCard({
             alt="image"
             className={`object-cover ${
               isHorizontal
-                ? "w-80 h-80 rounded-l-xl"
+                ? "sm:w-80 sm:h-80 w-96 h-48 rounded-l-xl"
                 : "w-96 h-48 rounded-t-xl mb-2"
             } `}
           />
@@ -51,7 +56,9 @@ export default function CityCard({
             </div>
             <div
               className={
-                isHorizontal ? "" : "flex flex-row justify-center gap-12"
+                isHorizontal
+                  ? ""
+                  : "flex flex-col sm:flex-row justify-center gap-4 sm:gap-12"
               }
             >
               <p className="flex flex-row gap-2 items-center">

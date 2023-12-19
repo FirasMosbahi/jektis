@@ -2,39 +2,45 @@
 
 import { Disclosure } from "@headlessui/react";
 import { Caret } from "@jektis/components/icons";
+import MultiRangeSlider from "multi-range-slider-react";
 
 const filters = [
   {
     id: "Thèmes",
     name: "Thèmes",
     options: [
-      { value: "Shopping", label: "Shopping", checked: false },
-      { value: "Loisir", label: "Loisir", checked: false },
+      { value: "VIP", label: "VIP", checked: false },
+      { value: "Moyen Courier", label: "Moyen Courier", checked: false },
+      { value: "Long Courier", label: "Long Courier", checked: false },
+      { value: "Famille", label: "Famille", checked: false },
       { value: "Voyage de noces", label: "Voyage de noces", checked: false },
-      { value: "Culture", label: "Culture", checked: false },
-      { value: "Voyage Famille", label: "Voyage Famille", checked: false },
-      { value: "Spécial Jeunes", label: "Spécial Jeunes", checked: false },
-      { value: "Luxe & Prestige", label: "Luxe & Prestige", checked: false },
+      { value: "Shopping", label: "Shopping", checked: false },
+      { value: "Spécial jeunes", label: "Spécial jeunes", checked: false },
       {
-        value: "Voyages Petits Budgets",
-        label: "Voyages Petits Budgets",
+        value: "Linguistique",
+        label: "Linguistique",
         checked: false,
       },
-      { value: "Voyages Sans Visa", label: "Culture", checked: false },
-      { value: "USA", label: "Culture", checked: false },
-      { value: "Culture", label: "Culture", checked: false },
     ],
   },
   {
     id: "Durée",
     name: "Durée",
     options: [
-      { value: "6 Jours", label: "6 Jours", checked: false },
-      { value: "7 Jours", label: "7 Jours", checked: false },
-      { value: "8 Jours", label: "8 Jours", checked: false },
-      { value: "9 Jours", label: "9 Jours", checked: false },
-      { value: "10 Jours", label: "10 Jours", checked: false },
-      { value: "11 Jours", label: "11 Jours", checked: true },
+      { value: 5, label: "5 Jours +", checked: false },
+      { value: 7, label: "7 Jours +", checked: false },
+      { value: 10, label: "10 Jours +", checked: false },
+    ],
+  },
+  {
+    id: "Continent",
+    name: "Continent",
+    options: [
+      { value: "Asie", label: "Asie", checked: false },
+      { value: "Europe", label: "Europe", checked: false },
+      { value: "Amérique", label: "Amérique", checked: false },
+      { value: "Afrique", label: "Afrique", checked: false },
+      { value: "Moyen Orient", label: "Moyen Orient", checked: false },
     ],
   },
 ];
@@ -57,7 +63,7 @@ export default function SearchFilter() {
               <form className="hidden lg:block">
                 <Disclosure
                   as="div"
-                  key="Nom de Voyage"
+                  key="Nom du Voyage"
                   className="border border-[#e6e6e6] pb-6 pt-8 pl-4 pr-4"
                   defaultOpen={true}
                 >
@@ -85,6 +91,50 @@ export default function SearchFilter() {
                               id="trip-name"
                               placeholder="Nom du Voyage..."
                               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            />
+                          </div>
+                        </div>
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
+                <Disclosure
+                  as="div"
+                  key="Budget"
+                  className="border border-[#e6e6e6] pb-6 pt-8 pl-4 pr-4"
+                  defaultOpen={true}
+                >
+                  {({ open }) => (
+                    <>
+                      <h3 className="-my-3 flow-root ">
+                        <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                          <span className="font-medium text-xl text-[#494461]">
+                            Budget:
+                          </span>
+                          <span className="ml-6 flex items-center">
+                            {open ? (
+                              <Caret className="h-5 w-5" aria-hidden="true" />
+                            ) : (
+                              <Caret className="h-5 w-5" aria-hidden="true" />
+                            )}
+                          </span>
+                        </Disclosure.Button>
+                      </h3>
+                      <Disclosure.Panel className="pt-6">
+                        <div className="space-y-4">
+                          <div className="mb-6">
+                            <MultiRangeSlider
+                              minValue={100}
+                              maxValue={5000}
+                              min={0}
+                              max={5000}
+                              barInnerColor="#6f6f6f"
+                              barLeftColor="#e6e6e6"
+                              barRightColor="#e6e6e6"
+                              style={{
+                                boxShadow: "none",
+                                borderColor: "transparent",
+                              }}
                             />
                           </div>
                         </div>

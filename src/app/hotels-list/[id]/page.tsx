@@ -15,7 +15,7 @@ export default function HotelDetailsIndex({
 }): React.ReactNode {
   const hotel = getHotelById(params.id);
   return (
-    <div className="bg-white px-4">
+    <div className="bg-white md:px-4">
       <HotelDescriptionHeader {...hotel} />
       <p className="mt-12 tracking-wide text-black text-2xl">
         {hotel.cityName}

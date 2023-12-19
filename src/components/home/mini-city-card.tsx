@@ -12,7 +12,7 @@ export default function MiniCityCard({
   return (
     <Link href={`${linkBase}/${cardData.id}`}>
       <div
-        className="relative w-full bg-cover bg-center h-56 mt-4 flex flex-col justify-end border-transparent rounded-xl"
+        className="relative bg-cover bg-center h-60 sm:h-full mt-4 flex flex-col justify-end border-transparent rounded-xl"
         style={{
           backgroundImage: `url(${cardData.imageUrl})`,
         }}
@@ -22,8 +22,8 @@ export default function MiniCityCard({
             {cardData.name}
           </strong>
         </div>
-        <div className="absolute top-20 left-20 right-0 bottom-0 flex items-center justify-center z-10">
-          <button className="flex h-9 pt-1 flex-col text-white mt-8 px-4 border-transparent rounded-2xl items-start bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="absolute md:top-20 sm:top-28 top-24 left-40 sm:left-20 right-0 bottom-0 flex items-center justify-center z-10">
+          <button className="flex h-9 flex-col my-2 text-white mt-8 px-4 border-transparent rounded-2xl items-start bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
             <div style={{ fontSize: 10 }} className="leading-none">
               A partir de
             </div>

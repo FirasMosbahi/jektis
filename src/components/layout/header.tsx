@@ -3,6 +3,8 @@ import SearchInput from "@jektis/components/layout/search-input";
 import LoginButton from "@jektis/components/layout/login-button";
 import Infos from "@jektis/components/layout/infos";
 import Navbar from "@jektis/components/layout/navbar";
+import Center, { Axes } from "@jektis/components/generic/center";
+
 export default function Header(): React.ReactNode {
   return (
     <>
@@ -17,7 +19,9 @@ export default function Header(): React.ReactNode {
             <Infos />
           </div>
         </div>
-        <Navbar />
+        <div className="lg:block hidden mx-24">
+          <Navbar />
+        </div>
       </div>
     </>
   );

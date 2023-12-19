@@ -8,21 +8,21 @@ export default function HotelReservationTable(): React.ReactNode {
       <div className="grid mr-2 grid-cols-11 inline-flex rounded-md shadow-sm mt-8 bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
         <button
           type="button"
-          className="col-span-3 px-4 py-2  text-xl font-medium text-white border rounded-s-lg border-white"
+          className="col-span-3 px-4 py-2  md:text-xl text-sm font-medium text-white border rounded-s-lg border-white"
         >
           <strong>Type de chambre</strong>
         </button>
         <button
           type="button"
-          className="col-span-6 flex-col pl-8 items-start px-4 py-2 text-xl w-full font-medium text-white border border-b border-white"
+          className="col-span-6 flex-col pl-8 items-star text-sm px-4 py-2 md:text-xl w-full font-medium text-white border border-b border-white"
         >
           <strong>Services</strong>
         </button>
         <button
           type="button"
-          className=" col-span-2 px-4 py-2 flex flex-row items-start text-xl font-medium text-white border border-white rounded-e-lg"
+          className=" col-span-2 px-4 py-2 flex flex-row text-sm items-start md:text-xl font-medium text-white border border-white rounded-e-lg"
         >
-          <strong className="pl-4">Total 1 Nuitées</strong>
+          <strong className="md:pl-4">Total 1 Nuitées</strong>
         </button>
       </div>
       <HotelReservationTableItem />
@@ -30,7 +30,7 @@ export default function HotelReservationTable(): React.ReactNode {
       <div className="flex flex-row justify-end">
         <div className="flex flex-row border rounded-xl justify-end items-end px-8 py-4 bg-gradient-to-r from-[#004fa6] to-[#02c9b2] mt-8 w-fit">
           Total 2 adultes :{" "}
-          <strong className="text-2xl ml-2">
+          <strong className="md:text-2xl ml-2">
             {"  "}
             176.000<sup>DT</sup>
           </strong>

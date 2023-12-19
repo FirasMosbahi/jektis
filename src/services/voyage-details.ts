@@ -30,12 +30,10 @@ export function getProgram(id: string | number): VoyageDetailsProps {
     [
       {
         title: "chambre individuelle",
-        capacity: 1,
         unitPrice: voyage.price,
       },
       {
         title: "chambre double",
-        capacity: 2,
         unitPrice: voyage.price * 1.7,
       },
     ],

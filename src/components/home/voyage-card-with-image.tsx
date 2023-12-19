@@ -19,9 +19,9 @@ export default function VoyageCardWithImg({
   titleLink?: string;
 }): React.ReactNode {
   return (
-    <div className="flex w-full flex-col mt-16 sm:mt-0 mr-12 lg:mr-0">
+    <div className="flex text-xl w-full flex-col mt-16 sm:mt-0 mr-12 lg:mr-0">
       {title && (
-        <div className="flex flex-row mb-4 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
+        <div className="flex flex-row py-2 mb-4 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
           <strong className="ml-4">{title}</strong>
           {titleLink ? (
             <Link href={titleLink}>
@@ -48,18 +48,22 @@ export default function VoyageCardWithImg({
           className="md:h-80 h-60 w-full md:w-full xl:h-80 border-transparent rounded-xl"
         />
       )}
-      <div className="flex flex-col justify-center sm:grid sm:grid-cols-3 gap-4">
+      <div className="flex flex-col justify-between h-96 sm:h-64 md:h-56 sm:flex-row gap-4">
         {cards.length > 0 && (
-          <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
+          <div className="w-[45%] sm:w-[30%] w-full h-full">
+            <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
+          </div>
         )}
         {cards.length > 1 && (
-          <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
+          <div className="w-[45%] sm:w-[30%] w-full h-full">
+            <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
+          </div>
         )}
-        <div className="md:block hidden">
-          {cards.length > 2 && (
+        {cards.length > 2 && (
+          <div className="md:w-[30%] md:block hidden h-full">
             <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

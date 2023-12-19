@@ -11,7 +11,7 @@ import {
 
 export default function Amenagement(): React.ReactNode {
   return (
-    <div className="border-b-4 border-t-4 py-8 my-8 mr-32">
+    <div className="border-b-4 border-t-4 py-8 my-8 md:pl-0 pl-8 mr-32">
       <strong className="text-[#144e8b] text-3xl">AMENAGEMENT</strong>
       <div className="grid xl:grid-cols-4 text-black mt-8">
         <div className="flex flex-row justify-start gap-4 mb-3">

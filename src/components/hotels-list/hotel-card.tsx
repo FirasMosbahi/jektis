@@ -19,7 +19,7 @@ export default function HotelCard({
   return (
     <>
       <div className="flex items-center justify-center mt-4 cursor-pointer">
-        <div className="relative flex flex-row rounded-xl bg-[#ececec] bg-clip-border text-gray-700 shadow-md pr-8">
+        <div className="relative flex lg:flex-row flex-col rounded-xl bg-[#ececec] bg-clip-border text-gray-700 shadow-md pr-8">
           <div className="relative h-80 m-0 w-60 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
             <img
               src={hotel.imageUrl}
@@ -31,11 +31,12 @@ export default function HotelCard({
             <strong className=" block font-sans text-2xl font-semibold uppercase leading-relaxed tracking-normal text-black antialiased">
               {hotel.name}
             </strong>
+            <div className="lg:hidden flex flex-row">{stars}</div>
             <strong className="mb-2 flex items-center text-xl gap-3 flex-row font-sans tracking-normal text-blue-gray-900 antialiased">
               {hotel.cityName}
             </strong>
             <div className="bg-white border border-transparent text-weakBlue rounded-2xl w-fit">
-              <button className="border-l border-r-weakBlue border-r-2 px-4 py-1">
+              <button className="border-l border-r-weakBlue border-r-2  px-4 py-1">
                 <strong>LPD</strong>
               </button>
               <button className="border-l border-r-weakBlue border-r-2 px-4 py-1">
@@ -77,8 +78,8 @@ export default function HotelCard({
               </li>
             </ul>
           </div>
-          <div className="flex flex-col justify-between items-end py-4 pt-8 pl-16">
-            <div className="flex flex-row">{stars}</div>
+          <div className="flex flex-col justify-between items-end py-4 pt-8 xl:pl-16">
+            <div className="lg:flex lg:flex-row hidden">{stars}</div>
             <div className="flex flex-col gap-2 items-end">
               <div
                 id="price"

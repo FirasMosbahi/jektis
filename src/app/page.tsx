@@ -25,15 +25,15 @@ export default function Index(): React.ReactNode {
   );
   return (
     <div>
-      <div className="flex flex-row items-start w-full mb-12 gap-12">
+      <div className="flex flex-col xl:flex-row items-start w-full mb-12 gap-12">
         <HomeFilter />
         <div className="flex-1">
           <Promo />
         </div>
       </div>
       <div className="bg-white px-4 pt-8">
-        <div className="flex flex-col lg:flex-row gap-4">
-          <div className="flex-1">
+        <div className="flex flex-col xl:grid xl:grid-cols-2 w-full xl:gap-4 gap-16">
+          <div>
             <VoyageCard
               title="Voyages Organisées"
               cards={getVoyagesMiniCardsByCategory(VoyageType.VOYAGE_ORGANISE)}
@@ -42,7 +42,7 @@ export default function Index(): React.ReactNode {
               titleLink={`/voyages?category=${VoyageType.VOYAGE_ORGANISE}`}
             />
           </div>
-          <div className="flex-1">
+          <div className="sm:mt-0 mt-52">
             <VoyageCardWithImg
               title="Circuits Sud"
               imageUrl="https://th.bing.com/th/id/OIP.R3osXfaOo7ZExMdxL5Y09QHaE8?rs=1&pid=ImgDetMain"
@@ -52,13 +52,13 @@ export default function Index(): React.ReactNode {
             />
           </div>
         </div>
-        <div className="flex text-xs sm:text-md md:text-xl flex-row mb-4 mt-8 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
+        <div className="flex text-2xl py-4 px-4 mt-52 sm:mt-16 mb-8 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-1 xs:ml-4">Voyages de Noces</strong>
           <Link href={`/voyages/${VoyageType.VOYAGE_DE_NOCES}`}>
             <p className="ml-1 xs:mr-4">Voir Tous</p>
           </Link>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="lg:grid flex flex-col items-center justify-centers lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {nocesVoyages.map((v, index) => (
             <CityCard
               linkBase="/voyages"
@@ -68,13 +68,13 @@ export default function Index(): React.ReactNode {
             />
           ))}
         </div>
-        <div className="flex flex-row mb-4 mt-8 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
+        <div className="flex flex-row text-xl py-2 mt-40 sm:mt-8 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
           <strong className="ml-4">Hotels en Tunisie :</strong>
           <Link href={`/hotels-list?category=${VoyageType.VOYAGE_DE_NOCES}`}>
             <p className="mr-4">Voir Tous</p>
           </Link>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 lg:gap-8 pb-24">
           <VoyageCardWithImg
             imageUrl={"/hotel-categories/hotel-sur-mer.jpg"}
             mainLink={`hotels-list?category=${HotelCategory.VUE_MER}`}

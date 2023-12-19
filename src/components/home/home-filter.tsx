@@ -14,69 +14,49 @@ export default function HomeFilter(): React.ReactNode {
   return (
     <div>
       <div className="flex flex-col gap-8 w-full ">
-        <form className="flex flex-col w-full gap-4 sm:gap-0 sm:flex-row ">
-          <InputWithIcon
-            input={
-              <>
-                <select
-                  id="countries"
-                  placeholder="Sélectionner une ville ou un hotel"
-                  className="pl-12 w-80 sm:w-52 h-20 bg-white text-sm font-medium text-gray-900 rounded-xl sm:rounded-none sm:rounded-l-xl"
-                >
-                  <option>Hotels en Tunisie</option>
-                  <option value="CA">H1</option>
-                  <option value="FR">H2</option>
-                  <option value="DE">H2</option>
-                </select>
-              </>
-            }
-            icon={
-              <div className="pt-1">
-                <Localisation width={25} height={25} />
-              </div>
-            }
-          />
-          <InputWithIcon
-            input={
-              <>
-                <select
-                  id="date"
-                  className="pl-16 px-4 py-2 w-80 sm:w-40 h-20 text-sm font-medium text-gray-900 bg-white border border-b border-gray-200 rounded-xl sm:rounded-none"
-                >
-                  <option>Vols</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="DE">Germany</option>
-                </select>
-              </>
-            }
-            icon={
-              <div className="pt-2">
-                <Plane width={25} height={25} />
-              </div>
-            }
-          />
-          <InputWithIcon
-            input={
-              <>
-                <select
-                  id="countries"
-                  className="pl-12 px-4 py-2 w-80 sm:w-40 h-20 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-xl sm:rounded-none sm:rounded-r-xl"
-                >
-                  <option>Voyages</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
-                </select>
-              </>
-            }
-            icon={
-              <div className="pt-2">
-                <Bagagge width={25} height={25} />
-              </div>
-            }
-          />
+        <form className="flex h-20 flex-col w-full gap-8 bg-transparent mb-20 sm:mb-0 bg-[#839fc4] border border-transparent rounded-2xl sm:gap-0 sm:flex-row ">
+          <div className="flex flex-row items-center px-4 bg-[#839fc4] h-full border-transparent rounded-2xl sm:py-0 py-2 sm:rounded-l-2xl">
+            <Localisation width={25} height={25} />
+
+            <select
+              id="countries"
+              placeholder="Sélectionner une ville ou un hotel"
+              className="pl-4 w-full sm:w-40 text-sm bg-[#839fc4] font-medium text-white "
+            >
+              <option>Hotels en Tunisie</option>
+              <option value="CA">H1</option>
+              <option value="FR">H2</option>
+              <option value="DE">H2</option>
+            </select>
+          </div>
+          <div className="flex flex-row  bg-[#839fc4] h-full items-center px-4 sm:rounded-none rounded-2xl sm:border-x-2">
+            <Plane width={25} height={25} />
+
+            <select
+              id="date"
+              className="pl-2 px-4 py-2 w-full sm:w-24 bg-[#839fc4] text-sm font-medium text-white"
+            >
+              <option>Vols</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+              <option value="DE">Germany</option>
+            </select>
+          </div>
+
+          <div className="flex flex-row items-center h-full bg-[#839fc4] px-4 border-transparent rounded-2xl sm:rounded-r-2xl">
+            <Bagagge width={25} height={25} />
+
+            <select
+              id="countries"
+              className="pl-4 px-4 py-2 bg-[#839fc4] w-full sm:w-28 text-sm font-medium text-white "
+            >
+              <option>Voyages</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+              <option value="FR">France</option>
+              <option value="DE">Germany</option>
+            </select>
+          </div>
         </form>
         <div className="bg-white pt-8 pb-2 rounded-xl w-full">
           <div className="flex flex-row items-center gap-4 ml-4 pb-4 border-b-2 border-[#586263] mr-4">

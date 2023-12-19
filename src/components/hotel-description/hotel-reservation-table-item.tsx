@@ -66,12 +66,14 @@ export default function HotelReservationTableItem(): React.ReactNode {
           Sur Demande
         </button>
       </div>
-      <div className="col-span-2 flex flex-col items-center pb-4 justify-end w-full text-xl font-medium text-white border border-white rounded-e-lg">
-        <strong className="text-[#004fa4] text-xl">
+      <div className="col-span-2 flex flex-col items-center pb-4 md:justify-end justify-center w-full text-xl font-medium text-white border border-white rounded-e-lg">
+        <strong className="text-[#004fa4] md:text-xl text-xs">
           88.000<sup>DT</sup>
         </strong>
         <div className="pt-2"></div>
-        <strong className="text-black text-xs">Prix par nuit:</strong>
+        <strong className="text-black text-xs text-center">
+          Prix par nuit:
+        </strong>
         <strong className="text-black text-xs">88.000DT</strong>
       </div>
     </div>

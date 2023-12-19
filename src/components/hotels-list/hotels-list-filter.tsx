@@ -15,13 +15,13 @@ export default function HotelsFilter(): React.ReactNode {
     <div className="flex flex-col w-full">
       <div className="rounded-md shadow-sm w-full mt-8">
         <Center axe={Axes.y}>
-          <form className="flex xl:flex-row flex-col h-16 rounded-xl border-2 border-blue-700 w-full py-2 bg-white">
-            <div className="flex flex-row items-center px-10">
+          <form className="flex xl:flex-row flex-col xl:items-start xl:px-0 px-8 items-start gap-16 xl:gap-0 xl:h-16 rounded-xl border-2 border-blue-700 w-full py-2 xl:bg-white">
+            <div className="flex flex-row bg-white w-full xl:h-full h-20 border border-transparent xl:rounded-none rounded-2xl xl:mx-0 items-center px-10">
               <Localisation width={25} height={25} />
               <select
                 id="countries"
                 placeholder="Sélectionner une ville ou un hotel"
-                className="w-36 text-sm font-medium text-gray-900"
+                className="xl:w-36 w-full h-full text-sm font-medium text-gray-900"
               >
                 <option>Ou allez vous </option>
                 <option value="CA">Canada</option>
@@ -29,7 +29,7 @@ export default function HotelsFilter(): React.ReactNode {
                 <option value="DE">Germany</option>
               </select>
             </div>
-            <div className="flex flex-row px-10 border-x-2 gap-20 justify-center border-x-blue-700">
+            <div className="flex flex-row px-10 xl:h-full h-20 w-full bg-white border-x-2 gap-20 justify-between xl:justify-center xl:rounded-none rounded-2xl xl:border-x-blue-700">
               <div className="flex flex-row gap-4 items-center">
                 <Calendar width={25} height={25} />
                 <input
@@ -45,13 +45,13 @@ export default function HotelsFilter(): React.ReactNode {
                 />
               </div>
             </div>
-            <div className="border-r-2 border-r-blue-700 px-10">
-              <div className="flex flex-row items-center h-full">
+            <div className="border-r-2 bg-white w-full xl:h-full xl:rounded-none rounded-2xl xl:border-r-blue-700 px-10">
+              <div className="flex flex-row  h-20 items-center xl:h-full">
                 <Trolley width={25} height={25} />
                 <select
                   id="countries"
                   placeholder="Sélectionner une ville ou un hotel"
-                  className="w-40 text-sm font-medium text-gray-900"
+                  className="w-full xl:w-40 text-sm font-medium text-gray-900"
                 >
                   <option>Chambre Formulaire </option>
                   <option value="CA">Canada</option>
