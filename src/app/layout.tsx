@@ -39,11 +39,6 @@ export default function RootLayout({
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
         crossOrigin=""
       />
-      <script
-        src="
-https://cdn.jsdelivr.net/npm/react-leaflet@4.2.1/lib/Rectangle.min.js
-"
-      ></script>
     </html>
   );
 }

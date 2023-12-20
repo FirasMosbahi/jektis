@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Address from "@jektis/components/contacts/Address";
 import {

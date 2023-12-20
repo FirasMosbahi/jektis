@@ -21,12 +21,14 @@ export default function Footer(): React.ReactNode {
         <div className="flex flex-col md:flex-row border-b-4 gap-16 pb-8 mb-8 pt-8">
           <div className="flex flex-col text-center">
             <strong className="text-5xl">Jektis Travel</strong>
-            <p className="text-xl">Le voyage, C'est notre métier</p>
+            <p className="text-xl">Le voyage, C{"'"}est notre métier</p>
           </div>
           <div className="flex flex-col text-xl">
             <strong>Agence de Voyages (Lic A),</strong>
-            <p>Agrée par l'ONTT, membre de la FTAV , Accrédité IATA.</p>
-            <p>Spécialisée dans l'organisation de voyages à l'étranger.</p>
+            <p>Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.</p>
+            <p>
+              Spécialisée dans l{"'"}organisation de voyages à l{"'"}étranger.
+            </p>
           </div>
         </div>
         <div className="flex flex-col gap-12 md:flex-row md:gap-24 text-xl">

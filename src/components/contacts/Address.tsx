@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
-import { Localisation } from "@jektis/components/icons";
+import { MapContainer, TileLayer } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
+import { LatLngTuple } from "leaflet";
 
 export default function Address({
   long,
@@ -14,7 +13,7 @@ export default function Address({
   long: number;
   lat: number;
 }): React.ReactNode {
-  const position = [36.8545936, 10.1836798];
+  const position: LatLngTuple = [36.8545936, 10.1836798];
   return (
     <MapContainer center={position} zoom={20} scrollWheelZoom={false}>
       <TileLayer

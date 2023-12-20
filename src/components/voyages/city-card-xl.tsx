@@ -62,7 +62,7 @@ export default function CityCardXl({
               </div>
               <div className="flex flex-col justify-end">
                 <button className="bg-red-600 text-white border border-transparent rounded-2xl flex flex-col items-center justify-center h-3/5">
-                  <strong>Facilités</strong> <strong>jusqu'à 8 mois</strong>
+                  <strong>Facilités</strong> <strong>jusqu{"'"}à 8 mois</strong>
                 </button>
               </div>
               <div className="flex flex-col justify-end">

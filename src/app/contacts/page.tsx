@@ -1,17 +1,14 @@
 "use client";
 
 import React from "react";
-import Address from "@jektis/components/contacts/Address";
-import ContactElement from "@jektis/components/contacts/contact-element";
-import { Facebook, Instagram, Messanger } from "@jektis/components/icons";
 
 export default function Index(): React.ReactNode {
   return (
     <div className="flex flex-row gap-8">
-      <div className="flex flex-col w-full">
-        <ContactElement long={36.8545936} lat={10.1836798} name="Ariana" />
-        <ContactElement long={36.8488418} lat={10.147758} name="Menzah 9" />
-      </div>
+      {/*<div className="flex flex-col w-full">*/}
+      {/*  <ContactElement long={36.8545936} lat={10.1836798} name="Ariana" />*/}
+      {/*  <ContactElement long={36.8488418} lat={10.147758} name="Menzah 9" />*/}
+      {/*</div>*/}
       <div className="flex flex-col bg-white w-1/3 px-8">
         <strong className="text-blue-800 py-16 text-2xl">
           Nous Contacter :
