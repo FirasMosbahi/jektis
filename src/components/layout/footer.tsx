@@ -13,6 +13,7 @@ import {
   Visa,
   Youtube,
 } from "@jektis/components/icons";
+import { VoyageType } from "@jektis/types";
 
 export default function Footer(): React.ReactNode {
   return (
@@ -34,19 +35,51 @@ export default function Footer(): React.ReactNode {
         <div className="flex flex-col gap-12 md:flex-row md:gap-24 text-xl">
           <div className="flex flex-col">
             <strong className="mb-6">Nos Hotels</strong>
-            <Link href="#">Hotels à Tunis</Link>
-            <Link href="#">Hotels à Sousse</Link>
-            <Link href="#">Hotels à Hammamet</Link>
-            <Link href="#">Hotels à Djerba</Link>
-            <Link href="#">Hotels à Kelibia</Link>
-            <Link href="#">Hotels à Monastir</Link>
+            <Link className="cursor-pointer" href="/hotels-list?city=tunis">
+              Hotels à Tunis
+            </Link>
+            <Link className="cursor-pointer" href="/hotels-list?city=sousse">
+              Hotels à Sousse
+            </Link>
+            <Link className="cursor-pointer" href="/hotels-list?city=hammamet">
+              Hotels à Hammamet
+            </Link>
+            <Link className="cursor-pointer" href="/hotels-list?city=djerba">
+              Hotels à Djerba
+            </Link>
+            <Link className="cursor-pointer" href="/hotels-list?city=kelibia">
+              Hotels à Kelibia
+            </Link>
+            <Link className="cursor-pointer" href="/hotels-list?city=monastir">
+              Hotels à Monastir
+            </Link>
           </div>
           <div className="flex flex-col">
             <strong className="mb-6">Nos programmes</strong>
-            <Link href="#">Voyages organisés</Link>
-            <Link href="#">Voyages de noces</Link>
-            <Link href="#">Voyages à la carte</Link>
-            <Link href="#">Circuits organisés</Link>
+            <Link
+              className="cursor-pointer"
+              href={`/voyages?category=${VoyageType.VOYAGE_ORGANISE}`}
+            >
+              Voyages organisés
+            </Link>
+            <Link
+              className="cursor-pointer"
+              href={`/voyages?category=${VoyageType.VOYAGE_DE_NOCES}`}
+            >
+              Voyages de noces
+            </Link>
+            <Link
+              className="cursor-pointer"
+              href={`/voyages?category=${VoyageType.VOYAGE_A_LA_CARTE}`}
+            >
+              Voyages à la carte
+            </Link>
+            <Link
+              className="cursor-pointer"
+              href={`/voyages?category=${VoyageType.CIRCUIT_SUD}`}
+            >
+              Circuits sud
+            </Link>
           </div>
           <div className="flex flex-col">
             <strong className="mb-6">Infos pratiques</strong>

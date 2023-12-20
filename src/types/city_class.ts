@@ -2,9 +2,10 @@ export enum VoyageType {
   VOYAGE_ORGANISE = "voyage_organisé",
   CIRCUIT_SUD = "circuit_sud",
   VOYAGE_DE_NOCES = "voyage_de_noces",
+  VOYAGE_A_LA_CARTE = "voyage_a_la_carte",
 }
 
-export default class CityCardProps {
+export default class VoyageCardProps {
   id: number;
   name: string;
   country: string;

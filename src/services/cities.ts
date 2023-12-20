@@ -1,10 +1,10 @@
-import CityCardProps, { VoyageType } from "@jektis/types/city_class";
+import VoyageCardProps, { VoyageType } from "@jektis/types/city_class";
 import { cityCards } from "@jektis/mocks";
 import MiniCardProps from "@jektis/types/mini-card-props";
 
 export function getCities(
   category: string | string[] | undefined,
-): CityCardProps[] {
+): VoyageCardProps[] {
   if (
     category &&
     typeof category === "string" &&
@@ -17,7 +17,7 @@ export function getCities(
 }
 export function getCitiesByCategory(
   voyageCategory: VoyageType,
-): CityCardProps[] {
+): VoyageCardProps[] {
   return cityCards.filter((city) => city.category === voyageCategory);
 }
 export function getVoyagesMiniCards(): MiniCardProps[] {
@@ -36,7 +36,7 @@ export function getVoyagesMiniCardsByCategory(
 export function getBestCitiesByRateAndCategory(
   number: number,
   category: VoyageType,
-): CityCardProps[] {
+): VoyageCardProps[] {
   return cityCards
     .filter((v) => v.category === category)
     .sort((v1, v2) => v1.rate - v2.rate)
@@ -44,7 +44,7 @@ export function getBestCitiesByRateAndCategory(
 }
 export function getBestCityByRateAndCategory(
   category: VoyageType,
-): CityCardProps {
+): VoyageCardProps {
   return cityCards
     .filter((v) => v.category === category)
     .sort((v1, v2) => v1.rate - v2.rate)[0];

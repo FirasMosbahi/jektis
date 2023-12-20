@@ -15,7 +15,7 @@ export default function HomeFilter(): React.ReactNode {
     <div>
       <div className="flex flex-col gap-8 w-full ">
         <form className="flex h-20 flex-col w-full gap-8 bg-transparent mb-20 sm:mb-0 bg-[#839fc4] border border-transparent rounded-2xl sm:gap-0 sm:flex-row ">
-          <div className="flex flex-row items-center px-4 bg-[#839fc4] h-full border-transparent rounded-2xl sm:py-0 py-2 sm:rounded-l-2xl">
+          <div className="flex flex-row items-center px-4 bg-[#839fc4] h-full border-transparent rounded-2xl sm:rounded-r-none sm:py-0 py-2 sm:rounded-l-2xl">
             <Localisation width={25} height={25} />
 
             <select
@@ -43,7 +43,7 @@ export default function HomeFilter(): React.ReactNode {
             </select>
           </div>
 
-          <div className="flex flex-row items-center h-full bg-[#839fc4] px-4 border-transparent rounded-2xl sm:rounded-r-2xl">
+          <div className="flex flex-row items-center h-full bg-[#839fc4] px-4 border-transparent sm:rounded-l-none rounded-2xl sm:rounded-r-2xl">
             <Bagagge width={25} height={25} />
 
             <select

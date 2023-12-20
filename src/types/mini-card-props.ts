@@ -1,5 +1,5 @@
 import HotelCardProps from "@jektis/types/hotel_class";
-import CityCardProps from "@jektis/types/city_class";
+import VoyageCardProps from "@jektis/types/city_class";
 
 export default class MiniCardProps {
   constructor(
@@ -11,7 +11,7 @@ export default class MiniCardProps {
   static fromHotelCardProps(hotel: HotelCardProps): MiniCardProps {
     return new MiniCardProps(hotel.id, hotel.name, hotel.imageUrl, hotel.price);
   }
-  static fromVoyageCardProps(voyage: CityCardProps): MiniCardProps {
+  static fromVoyageCardProps(voyage: VoyageCardProps): MiniCardProps {
     return new MiniCardProps(
       voyage.id,
       voyage.name,

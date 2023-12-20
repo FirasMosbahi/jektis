@@ -15,7 +15,8 @@ export default function PageIndex({
   searchParams?: { [key: string]: string | string[] | undefined };
 }): React.ReactNode {
   const category = searchParams?.category;
-  const hotels: HotelCardProps[] = getHotels(category);
+  const city = searchParams?.city;
+  const hotels: HotelCardProps[] = getHotels(category, city);
 
   return (
     <div className="w-full">

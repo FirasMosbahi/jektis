@@ -1,6 +1,6 @@
-import CityCardProps, { VoyageType } from "@jektis/types/city_class";
+import VoyageCardProps, { VoyageType } from "@jektis/types/city_class";
 
-const cityCard1 = new CityCardProps(
+const cityCard1 = new VoyageCardProps(
   0,
   "Bali",
   "Indonésie",
@@ -16,7 +16,7 @@ const cityCard1 = new CityCardProps(
   VoyageType.VOYAGE_DE_NOCES,
 );
 
-const cityCard2 = new CityCardProps(
+const cityCard2 = new VoyageCardProps(
   1,
   "La Jordanie",
   "Voyage de luxe",
@@ -31,7 +31,7 @@ const cityCard2 = new CityCardProps(
   8,
   VoyageType.VOYAGE_DE_NOCES,
 );
-const cityCard3 = new CityCardProps(
+const cityCard3 = new VoyageCardProps(
   2,
   "Europe Centrale",
   "Viene,Bratislava & Prague, Budapest",
@@ -46,7 +46,7 @@ const cityCard3 = new CityCardProps(
   8,
   VoyageType.VOYAGE_ORGANISE,
 );
-const cityCard4 = new CityCardProps(
+const cityCard4 = new VoyageCardProps(
   3,
   "Dubai",
   "Emirats Arabes Unis",
@@ -61,7 +61,7 @@ const cityCard4 = new CityCardProps(
   6,
   VoyageType.CIRCUIT_SUD,
 );
-const cityCard5 = new CityCardProps(
+const cityCard5 = new VoyageCardProps(
   4,
   "Bali",
   "Indonésie",
@@ -77,7 +77,7 @@ const cityCard5 = new CityCardProps(
   VoyageType.VOYAGE_ORGANISE,
 );
 
-const cityCard6 = new CityCardProps(
+const cityCard6 = new VoyageCardProps(
   1,
   "La Jordanie",
   "Voyage de luxe",
@@ -92,7 +92,7 @@ const cityCard6 = new CityCardProps(
   8,
   VoyageType.VOYAGE_ORGANISE,
 );
-const cityCard7 = new CityCardProps(
+const cityCard7 = new VoyageCardProps(
   2,
   "Europe Centrale",
   "Viene,Bratislava & Prague, Budapest",
@@ -107,7 +107,7 @@ const cityCard7 = new CityCardProps(
   8,
   VoyageType.VOYAGE_DE_NOCES,
 );
-const cityCard8 = new CityCardProps(
+const cityCard8 = new VoyageCardProps(
   3,
   "Dubai",
   "Emirats Arabes Unis",
@@ -122,7 +122,7 @@ const cityCard8 = new CityCardProps(
   6,
   VoyageType.CIRCUIT_SUD,
 );
-const cityCard9 = new CityCardProps(
+const cityCard9 = new VoyageCardProps(
   3,
   "Touzeur",
   "Tunis",

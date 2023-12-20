@@ -1,6 +1,6 @@
 import React from "react";
 import StaticStars from "@jektis/components/generic/static-stars";
-import CityCardProps from "@jektis/types/city_class";
+import VoyageCardProps from "@jektis/types/city_class";
 import Link from "next/link";
 
 export default function CityCard({
@@ -9,7 +9,7 @@ export default function CityCard({
   linkBase,
 }: {
   isHorizontal: boolean;
-  cityProps: CityCardProps;
+  cityProps: VoyageCardProps;
   linkBase: string;
 }): React.ReactNode {
   return (

@@ -1,12 +1,12 @@
 import React from "react";
 import { PlaneArrival, PlaneDeparture, Star } from "@jektis/components/icons";
-import CityCardProps from "@jektis/types/city_class";
+import VoyageCardProps from "@jektis/types/city_class";
 import PriceButtonXl from "@jektis/components/voyages/price_card";
 
 export default function CityCardXl({
   city,
 }: {
-  city: CityCardProps;
+  city: VoyageCardProps;
 }): React.ReactNode {
   const stars: React.ReactNode[] = [];
   for (let i = 0; i < city.rate; i++) {

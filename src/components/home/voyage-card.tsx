@@ -2,7 +2,7 @@ import React from "react";
 import CityCard from "@jektis/components/home/city-card";
 import MiniCityCard from "@jektis/components/home/mini-city-card";
 import MiniCardProps from "@jektis/types/mini-card-props";
-import CityCardProps from "@jektis/types/city_class";
+import VoyageCardProps from "@jektis/types/city_class";
 import Link from "next/link";
 
 export default function VoyageCard({
@@ -15,7 +15,7 @@ export default function VoyageCard({
   title: string;
   cards: MiniCardProps[];
   linksBase: string;
-  bigCardProps: CityCardProps;
+  bigCardProps: VoyageCardProps;
   titleLink?: string;
 }): React.ReactNode {
   return (

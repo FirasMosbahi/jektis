@@ -13,14 +13,14 @@ import {
   getMiniCards,
   getVoyagesMiniCardsByCategory,
 } from "@jektis/services";
-import CityCardProps from "@jektis/types/city_class";
+import VoyageCardProps from "@jektis/types/city_class";
 
 export default function Index(): React.ReactNode {
-  const nocesVoyages: CityCardProps[] = getBestCitiesByRateAndCategory(
+  const nocesVoyages: VoyageCardProps[] = getBestCitiesByRateAndCategory(
     3,
     VoyageType.VOYAGE_DE_NOCES,
   );
-  const voyageOrganise: CityCardProps = getBestCityByRateAndCategory(
+  const voyageOrganise: VoyageCardProps = getBestCityByRateAndCategory(
     VoyageType.VOYAGE_ORGANISE,
   );
   return (
