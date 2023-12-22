@@ -31,8 +31,8 @@ export default function Index(): React.ReactNode {
           <Promo />
         </div>
       </div>
-      <div className="bg-white px-4 pt-8">
-        <div className="flex flex-col xl:grid xl:grid-cols-2 w-full xl:gap-4 gap-16">
+      <div className="bg-white px-4 pt-4 flex flex-col">
+        <div className="flex flex-col xl:grid xl:grid-cols-2 w-full h-fit xl:gap-4 gap-16">
           <div>
             <VoyageCard
               title="Voyages Organisées"
@@ -52,7 +52,7 @@ export default function Index(): React.ReactNode {
             />
           </div>
         </div>
-        <div className="flex text-2xl py-4 px-4 mt-52 sm:mt-16 mb-8 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="flex text-2xl py-2 px-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-1 xs:ml-4">Voyages de Noces</strong>
           <Link href={`/voyages/${VoyageType.VOYAGE_DE_NOCES}`}>
             <p className="ml-1 xs:mr-4">Voir Tous</p>
@@ -68,13 +68,13 @@ export default function Index(): React.ReactNode {
             />
           ))}
         </div>
-        <div className="flex flex-row text-xl py-2 mt-40 sm:mt-8 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
+        <div className="flex flex-row text-xl mt-8 border py-2 px-4 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-4">Hotels en Tunisie :</strong>
           <Link href={`/hotels-list?category=${VoyageType.VOYAGE_DE_NOCES}`}>
             <p className="mr-4">Voir Tous</p>
           </Link>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 lg:gap-8 pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 pb-24 mt-8">
           <VoyageCardWithImg
             imageUrl={"/hotel-categories/hotel-sur-mer.jpg"}
             mainLink={`hotels-list?category=${HotelCategory.VUE_MER}`}

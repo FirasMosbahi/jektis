@@ -35,7 +35,7 @@ export default function VoyageCard({
         cityProps={bigCardProps}
         linkBase={linksBase}
       />
-      <div className="flex flex-col sm:flex-row justify-between h-64 md:h-56 w-full">
+      <div className="flex flex-col sm:flex-row justify-between w-full">
         {cards.length > 0 && (
           <div className="md:w-[30%] w-full sm:w-[45%]">
             <MiniCityCard cardData={cards[0]} linkBase={linksBase} />

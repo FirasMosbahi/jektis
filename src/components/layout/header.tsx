@@ -11,7 +11,7 @@ export default function Header(): React.ReactNode {
       <div className="justify-between w-full block">
         <div className="flex flex-col xl:flex-row justify-between">
           <img src="/logo_jektis.png" alt="jektis logo" />
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center">
             <div className="hidden w-full xl:flex xl:flex-row pl-40 ">
               <SearchInput />
               <LoginButton />

@@ -41,6 +41,7 @@ export { default as Twitter } from "./Twitter";
 export { default as TwoUsers } from "./TwoUsers";
 export { default as UserIcon } from "./UserIcon";
 export { default as Visa } from "./Visa";
+export { default as WhatsappWhite } from "./WhatsappWhite";
 export { default as Whatsapp } from "./Whatsapp";
 export { default as WhiteSearchIcon } from "./WhiteSearchIcon";
 export { default as Youtube } from "./Youtube";

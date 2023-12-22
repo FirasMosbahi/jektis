@@ -3,7 +3,11 @@ import Center, { Axes } from "@jektis/components/generic/center";
 export default function Promo(): React.ReactNode {
   return (
     <div className="border-4 rounded-2xl flex flex-col">
-      <img src="/promo.jpg" alt="promo" className="h-96" />
+      <img
+        src="/promo.jpg"
+        alt="promo"
+        className="h-[21rem] border-transparent rounded-xl"
+      />
       <div className="grid md:grid-cols-6 grid-cols-3 w-full h-24 border-t-white border-t-4">
         <div className="border-r-4 md:block hidden border-r-white">
           <Center axe={Axes.all}>

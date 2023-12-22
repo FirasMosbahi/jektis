@@ -14,7 +14,7 @@ export default function HomeFilter(): React.ReactNode {
   return (
     <div>
       <div className="flex flex-col gap-8 w-full ">
-        <form className="flex h-20 flex-col w-full gap-8 bg-transparent mb-20 sm:mb-0 bg-[#839fc4] border border-transparent rounded-2xl sm:gap-0 sm:flex-row ">
+        <form className="flex h-16 flex-col w-full gap-8 bg-transparent mb-20 sm:mb-0 bg-[#839fc4] border border-transparent rounded-2xl sm:gap-0 sm:flex-row ">
           <div className="flex flex-row items-center px-4 bg-[#839fc4] h-full border-transparent rounded-2xl sm:rounded-r-none sm:py-0 py-2 sm:rounded-l-2xl">
             <Localisation width={25} height={25} />
 
@@ -60,14 +60,14 @@ export default function HomeFilter(): React.ReactNode {
         </form>
         <div className="bg-white pt-8 pb-2 rounded-xl w-full">
           <div className="flex flex-row items-center gap-4 ml-4 pb-4 border-b-2 border-[#586263] mr-4">
-            <Map className="w-16 h-16" />
+            <Map className="w-12 h-14" />
             <div className="flex flex-col">
               <strong className="text-[#646868]">Région</strong>
               <p className="text-[#8b8f92]">Ou allez vous ?</p>
             </div>
           </div>
           <div className="flex flex-row items-center pt-4 gap-4 ml-4 pb-4 border-b-2 border-[#586263] mr-4">
-            <Calendar2 className="w-16 h-16" />
+            <Calendar2 className="w-12 h-14" />
             <div className="flex flex-col">
               <strong className="text-[#646868]">
                 Votre Arrivée - Votre Départ
@@ -76,7 +76,7 @@ export default function HomeFilter(): React.ReactNode {
             </div>
           </div>
           <div className="flex flex-row items-center gap-4 ml-4 pb-4 border-b-2 border-[#586263] mr-4">
-            <Sleep className="w-16 h-16" />
+            <Sleep className="w-12 h-14" />
             <div className="flex flex-col">
               <strong className="text-[#646868]">Chambres</strong>
               <p className="text-[#8b8f92]">
@@ -84,19 +84,19 @@ export default function HomeFilter(): React.ReactNode {
               </p>
             </div>
           </div>
-          <div className="flex flex-row items-end justify-end mt-4 mr-2">
+          <div className="flex flex-row justify-center  mt-4 mr-2">
             <button
               type="button"
               style={{
                 borderRadius: 10,
               }}
-              className="text-white w-52 h-12 ml-4 bg-[#8eb633] focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 pr-0 text-center inline-flex items-center me-2 mb-2"
+              className="text-white h-12 bg-[#8eb633] focus:ring-4 font-medium rounded-lg text-sm px-20 py-2.5 text-center inline-flex items-center me-2 mb-2"
             >
               <WhiteSearchIcon
                 width={20}
                 height={20}
                 strokeWidth={2}
-                className="ml-4 mr-4"
+                className="mx-4"
               />
               <p className="text-xl">Rechercher</p>
             </button>
