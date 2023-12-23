@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Address from "@jektis/components/contacts/Address";
 import {
   ContactsPosition,
   Email,
@@ -11,17 +10,18 @@ import {
 } from "@jektis/components/icons";
 
 export default function ContactElement({
-  long,
-  lat,
+  location,
   name,
 }: {
-  long: number;
-  lat: number;
+  location: string;
   name: string;
 }): React.ReactNode {
   return (
-    <div className="flex flex-row gap-8 h-fit bg-white w-full py-4 px-4">
-      <Address long={long} lat={lat} />
+    <div className="flex flex-col md:flex-row items-center gap-8 h-fit bg-white w-full py-4 px-4">
+      <img
+        className="border border-transparent md:w-[50%] md:h-full h-60 rounded-2xl"
+        src={location}
+      />
       <div className="flex flex-col gap-4 py-4">
         <strong className="text-xl text-blue-800 pb-4">Agence {name} :</strong>
         <div className="flex flex-row text-black  items-center gap-2">

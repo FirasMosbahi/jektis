@@ -25,14 +25,14 @@ export default function Index(): React.ReactNode {
   );
   return (
     <div>
-      <div className="flex flex-col xl:flex-row items-start w-full mb-12 gap-12">
+      <div className="flex flex-col xl:flex-row items-center xl:items-start w-full mb-12 gap-12">
         <HomeFilter />
         <div className="flex-1">
           <Promo />
         </div>
       </div>
       <div className="bg-white px-4 pt-4 flex flex-col">
-        <div className="flex flex-col xl:grid xl:grid-cols-2 w-full h-fit xl:gap-4 gap-16">
+        <div className="flex flex-col xl:grid xl:grid-cols-2 w-full h-fit xl:gap-4">
           <div>
             <VoyageCard
               title="Voyages Organisées"
@@ -42,7 +42,7 @@ export default function Index(): React.ReactNode {
               titleLink={`/voyages?category=${VoyageType.VOYAGE_ORGANISE}`}
             />
           </div>
-          <div className="sm:mt-0 mt-52">
+          <div className="mt-0">
             <VoyageCardWithImg
               title="Circuits Sud"
               imageUrl="https://th.bing.com/th/id/OIP.R3osXfaOo7ZExMdxL5Y09QHaE8?rs=1&pid=ImgDetMain"
@@ -68,13 +68,13 @@ export default function Index(): React.ReactNode {
             />
           ))}
         </div>
-        <div className="flex flex-row text-xl mt-8 border py-2 px-4 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="flex flex-row text-xl gap-8 mt-8 border py-2 px-4 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-4">Hotels en Tunisie :</strong>
           <Link href={`/hotels-list?category=${VoyageType.VOYAGE_DE_NOCES}`}>
             <p className="mr-4">Voir Tous</p>
           </Link>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 pb-24 mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 pb-24 md:mt-8">
           <VoyageCardWithImg
             imageUrl={"/hotel-categories/hotel-sur-mer.jpg"}
             mainLink={`hotels-list?category=${HotelCategory.VUE_MER}`}

@@ -36,12 +36,12 @@ export default function VoyageGroupIndex({
             setHeight(height ?? 0);
           }}
         >
-          <div className="md:w-10/12 w-full h-fit">
+          <div className="xl:w-10/12 w-full h-fit">
             <VoyageDetails voyageDetails={voyage} section={section} />
             <ChambreSelectionTable chambres={voyage.chambres} />
           </div>
         </ResizeDetector>
-        <div className="lg:block hidden">
+        <div className="xl:block hidden">
           <VoyageImages height={heightState} />
         </div>
       </div>

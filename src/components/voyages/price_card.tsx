@@ -11,9 +11,9 @@ export default function PriceButtonXl({
       className="flex flex-col items-start border rounded-2xl px-4 py-2 text-white w-fit bg-gradient-to-r from-[#004fa6] to-[#02c9b2]"
     >
       <p className="text-sm pb-2">A partir de</p>
-      <strong className="text-3xl">
+      <strong className="text-xl">
         {price}
-        <sup>TND</sup> / Mois
+        <sup>TND</sup> / Pers
       </strong>
     </div>
   );

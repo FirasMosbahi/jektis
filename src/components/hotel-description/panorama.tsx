@@ -10,7 +10,6 @@ export default function Panorama({
 }: {
   images: string[];
 }): React.ReactNode {
-  const [showModal, setShowModal] = React.useState<boolean>(false);
   const imagesToShow = images.map((image, index) => ({
     original: image,
     description: `image ${index}`,

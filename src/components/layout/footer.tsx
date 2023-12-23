@@ -17,7 +17,7 @@ import { VoyageType } from "@jektis/types";
 
 export default function Footer(): React.ReactNode {
   return (
-    <div className="flex flex-col md:mt-0 mt-12 pb-8 xl:flex-row h-96 text-white bg-black bg-opacity-60 w-full px-12 justify-between">
+    <div className="flex flex-col md:mt-0 mt-12 pb-8 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-12 justify-between">
       <div className="flex flex-col">
         <div className="flex flex-col md:flex-row border-b-4 gap-16 mb-4 py-4">
           <div className="flex flex-col text-center">

@@ -15,7 +15,7 @@ export default function HotelDetailsIndex({
 }): React.ReactNode {
   const hotel = getHotelById(params.id);
   return (
-    <div className="bg-white md:px-4">
+    <div className="bg-white md:py-8 px-10">
       <HotelDescriptionHeader {...hotel} />
       <p className="mt-12 tracking-wide text-black text-2xl">
         {hotel.cityName}
@@ -33,19 +33,6 @@ export default function HotelDetailsIndex({
       <UpdateReservation />
       {/*table*/}
       <HotelReservationTable />
-
-      <Amenagement />
-      <div id="prestation" className="mr-32">
-        <strong className="text-[#144e8b] text-3xl">
-          PRESTATIONS ET SERVICES
-        </strong>
-        <p className="text-black text-sm mt-8 pb-24">
-          L{"'"}iberostar Diar El Andalous est situé sur la coté
-          médiaterranéenne à Sousse. Il surplombe les plages de sable fin et
-          dispose d{"'"}une piscine intérieure et extérieure, d{"'"}un spa ainsi
-          que d{"'"}une piscine et d{"'"}une aire de jeux pour enfants
-        </p>
-      </div>
     </div>
   );
 }

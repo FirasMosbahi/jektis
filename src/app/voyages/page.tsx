@@ -14,11 +14,11 @@ export default function VoyagesIndex({
   const category = searchParams?.category;
   const cities: VoyageCardProps[] = getCities(category);
   return (
-    <main className="flex flex-col lg:flex-row bg-white w-full pb-20">
+    <main className="flex flex-col gap-8 lg:flex-row w-full pb-20">
       <SearchFilter />
-      <div className="flex flex-col gap-8 items-start w-full mt-6 flex-1">
+      <div className="flex flex-col bg-white gap-8 items-start w-full py-10 flex-1">
         {cities.map((city, index) => (
-          <div key={index} className="w-full">
+          <div key={index} className="w-full px-8">
             <CityCardXl city={city} key={city.id} />
           </div>
         ))}

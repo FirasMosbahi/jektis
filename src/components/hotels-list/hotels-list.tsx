@@ -11,7 +11,7 @@ export default function HotelsList({
   hotels: HotelCardProps[];
 }): React.ReactNode {
   return (
-    <div className="bg-white flex flex-col gap-16 md:gap-8 px-4 py-8">
+    <div className="bg-white flex flex-col gap-16 md:gap-8 px-4 w-full py-8">
       {hotels.map((hotel, index) => (
         <Link
           key={index}
