@@ -18,7 +18,7 @@ export default function VoyagesIndex({
       <SearchFilter />
       <div className="flex flex-col bg-white gap-8 items-start w-full py-10 flex-1">
         {cities.map((city, index) => (
-          <div key={index} className="w-full px-8">
+          <div key={index} className="w-full px-4">
             <CityCardXl city={city} key={city.id} />
           </div>
         ))}

@@ -6,7 +6,7 @@ export default function Promo(): React.ReactNode {
       <img
         src="/promo.jpg"
         alt="promo"
-        className="h-[21rem] border-transparent rounded-xl"
+        className="h-[21rem] border-transparent rounded-t-xl"
       />
       <div className="grid md:grid-cols-6 grid-cols-3 w-full h-24 border-t-white border-t-4">
         <div className="border-r-4 md:block hidden border-r-white">

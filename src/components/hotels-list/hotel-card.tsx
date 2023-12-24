@@ -19,7 +19,7 @@ export default function HotelCard({
   return (
     <>
       <div className="flex lg:flex-row flex-col items-center justify-center p-1 bg-white shadow-xl rounded-2xl mt-4 cursor-pointer">
-        <div className="relative flex min-h-[18.5rem] lg:flex-row lg:justify-between lg:pr-8 flex-col rounded-xl bg-[#ececec] bg-clip-border text-gray-700 shadow-md w-full">
+        <div className="relative flex min-h-[25rem] lg:flex-row lg:justify-between lg:pr-4 flex-col rounded-xl bg-[#ececec] bg-clip-border text-gray-700 shadow-md w-full">
           <div className="flex lg:flex-row flex-col">
             <div className="relative m-0 lg:w-60 lg:h-full h-60 w-full shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
               <img
@@ -84,19 +84,19 @@ export default function HotelCard({
               </ul>
             </div>
           </div>
-          <div className="flex flex-col justify-between items-end lg:w-fit w-full lg:px-0 px-4 py-4 pt-8 xl:pl-16">
+          <div className="flex flex-col justify-between items-end lg:w-fit w-full lg:px-0 px-4 py-4 pt-8 xl:pl-8">
             <div className="lg:flex lg:flex-row hidden">{stars}</div>
             <div className="flex flex-col gap-2 items-end">
               <div
                 id="price"
-                className="flex flex-col items-start border-2 rounded-xl px-4 py-1  text-white w-fit bg-gradient-to-r from-[#004fa6] to-[#02c9b2]"
+                className="flex flex-col items-start border-2 rounded-xl px-1 py-1  text-white w-fit bg-gradient-to-r from-[#004fa6] to-[#02c9b2]"
               >
                 <p className="text-xs">A partir de</p>
                 <div className="flex flex-row items-center">
-                  <strong className="text-4xl h-10">{hotel.price}</strong>
-                  <div className="flex flex-col h-10 ">
-                    <strong className="text-xl leading-5">TND</strong>
-                    <p className="text-xs leading-5">Par personne</p>
+                  <strong className="text-3xl h-10">{hotel.price}</strong>
+                  <div className="flex flex-col">
+                    <strong className="leading-4">TND</strong>
+                    <p className="text-xs leading-4">Par personne</p>
                   </div>
                 </div>
               </div>

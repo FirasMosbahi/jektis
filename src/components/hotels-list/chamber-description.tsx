@@ -31,7 +31,7 @@ export default function ChamberDescriptionElement({
       >
         {category}{" "}
         <div
-          className={`text-white border border-transparent rounded px-4 ${
+          className={`text-white h-fit border border-transparent rounded px-4 ${
             isDisponible ? "bg-weakGreen" : "bg-red-500"
           }`}
         >

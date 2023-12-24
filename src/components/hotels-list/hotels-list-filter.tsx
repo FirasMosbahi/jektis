@@ -16,12 +16,12 @@ export default function HotelsFilter(): React.ReactNode {
       <div className="rounded-md shadow-sm w-full mt-8">
         <Center axe={Axes.y}>
           <form className="flex xl:flex-row flex-col xl:items-start xl:px-0 px-8 items-start gap-8 xl:gap-0 xl:h-16 rounded-xl border-2 border-blue-700 w-full py-2 xl:bg-white">
-            <div className="flex flex-row bg-white xl:w-[50rem] w-full xl:h-full h-12 border border-transparent xl:rounded-none rounded-2xl xl:mx-0 items-center xl:gap-2 gap-4 px-6 xl:px-10">
+            <div className="flex flex-row bg-white xl:w-fit w-full xl:h-full h-12 border border-transparent xl:rounded-none rounded-2xl xl:mx-0 items-center xl:gap-2 gap-4 px-6 xl:px-6">
               <Localisation width={25} height={25} />
               <select
                 id="countries"
                 placeholder="Sélectionner une ville ou un hotel"
-                className="w-full h-full text-sm font-medium text-gray-900"
+                className="xl:w-28 w-full h-full text-sm font-medium text-gray-900"
               >
                 <option>Ou allez vous </option>
                 <option value="CA">Canada</option>
@@ -29,24 +29,24 @@ export default function HotelsFilter(): React.ReactNode {
                 <option value="DE">Germany</option>
               </select>
             </div>
-            <div className="flex sm:flex-row flex-col xl:w-[70rem] xl:px-8 xl:h-full sm:h-12 w-full sm:gap-16 gap-4 bg-white border-x-2 sm:justify-around xl:justify-center xl:rounded-none rounded-2xl xl:border-x-blue-700 px-6">
-              <div className="flex flex-row xl:gap-4 gap-8 items-center">
+            <div className="flex sm:flex-row flex-col xl:w-fit xl:px-8 xl:h-full sm:h-12 w-full sm:gap-8 gap-4 bg-white border-x-2 sm:justify-around xl:justify-center xl:rounded-none rounded-2xl xl:border-x-blue-700 px-4">
+              <div className="flex flex-row xl:gap-4 gap-4 items-center">
                 <Calendar width={25} height={25} />
                 <input
                   type="date"
-                  className="w-full text-sm font-medium text-gray-900"
+                  className="w-full xl:w-28 text-sm font-medium text-gray-900"
                 />
               </div>
               <div className="flex flex-row xl:gap-4 gap-8 items-center">
                 <Calendar width={25} height={25} />
                 <input
                   type="date"
-                  className="sm:w-32 w-full text-sm font-medium text-gray-900"
+                  className="sm:w-32 w-full xl:w-28 text-sm font-medium text-gray-900"
                 />
               </div>
             </div>
-            <div className="border-r-2 xl:w-[50rem] bg-white w-full xl:h-full xl:rounded-none rounded-2xl xl:border-r-blue-700">
-              <div className="flex flex-row  h-12 items-center xl:h-full xl:gap-2 gap-4 px-6 xl:px-10">
+            <div className="border-r-2 xl:w-fit bg-white w-full xl:h-full xl:rounded-none rounded-2xl xl:border-r-blue-700">
+              <div className="flex flex-row  h-12 items-center xl:h-full xl:gap-2 gap-4 px-6 xl:px-6">
                 <Trolley width={25} height={25} />
                 <select
                   id="countries"
@@ -60,13 +60,13 @@ export default function HotelsFilter(): React.ReactNode {
                 </select>
               </div>
             </div>
-            <div className="border-l-3 xl:w-[60rem] w-full flex flex-col  sm:items-end items-center mr-4 justify-end pr-8 lg:pr-0 border-l-blue-700">
+            <div className="border-l-3 w-full flex flex-col  sm:items-end items-center mr-4 justify-end pr-8 lg:pr-0 border-l-blue-700">
               <button
                 type="button"
                 style={{
                   borderRadius: 10,
                 }}
-                className="text-white bg-blue-800 font-medium px-12 h-12 py-2.5 flex flex-row items-center"
+                className="text-white bg-blue-800 font-medium px-8 h-12 py-2.5 flex flex-row items-center"
               >
                 <WhiteSearchIcon
                   width={20}

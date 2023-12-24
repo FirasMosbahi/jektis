@@ -14,12 +14,12 @@ export default function CityCard({
 }): React.ReactNode {
   return (
     <Link
-      className={isHorizontal ? "" : "w-full sm:w-96"}
+      className={isHorizontal ? "" : "w-full sm:w-72"}
       href={`${linkBase}/${cityProps.id}`}
     >
       <div className="flex items-center justify-center w-full">
         <div
-          className={`relative flex rounded-xl w-full ${
+          className={`relative flex border border-transparent rounded-xl w-full ${
             isHorizontal
               ? "sm:flex-row flex-col bg-[#ececec] bg-clip-border"
               : "flex-col"
@@ -30,11 +30,11 @@ export default function CityCard({
             alt="image"
             className={`object-cover ${
               isHorizontal
-                ? "sm:w-80 sm:max-h-full sm:h-[15.5rem] w-96 h-36 rounded-l-xl"
+                ? "sm:w-2/5 sm:max-h-full sm:h-[17rem] w-96 h-36 rounded-l-xl"
                 : "w-96 h-36 rounded-t-xl mb-2"
             } `}
           />
-          <div className="px-6 py-3 bg-[#ececec] flex flex-col gap-2">
+          <div className="px-6 py-3 bg-[#ececec] flex flex-col gap-2 border border-transparent rounded-xl">
             <strong className="block leading-6 font-sans text-2xl font-semibold uppercase tracking-normal text-black antialiased">
               {cityProps.name}
             </strong>

@@ -37,14 +37,14 @@ export default function VoyageCardWithImg({
           <img
             alt="img"
             src={imageUrl}
-            className="md:h-80 h-60 w-full md:w-full xl:h-[15.5rem] border-transparent rounded-xl"
+            className="md:h-80 h-60 w-full md:w-full xl:h-[17rem] border-transparent rounded-xl"
           />
         </Link>
       ) : (
         <img
           alt="img"
           src={imageUrl}
-          className="md:h-80 h-60 w-full md:w-full xl:h-[15.5rem] border-transparent rounded-xl"
+          className="md:h-80 h-60 w-full md:w-full xl:h-[17rem] border-transparent rounded-xl"
         />
       )}
       <div className="flex flex-col justify-between h-96 sm:h-64 md:h-56 sm:flex-row gap-4">

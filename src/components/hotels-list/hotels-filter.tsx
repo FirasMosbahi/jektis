@@ -54,7 +54,7 @@ function classNames(...classes: any[]) {
 
 export default function HotelsSideFilter() {
   return (
-    <div className="hidden xl:block bg-white w-1/4">
+    <div className="hidden xl:block bg-white h-fit w-1/4">
       <div>
         <main className="mx-auto px-4 sm:px-6 lg:px-8">
           <section aria-labelledby="products-heading" className="pb-24 pt-6">

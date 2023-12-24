@@ -16,7 +16,7 @@ export default function CityCardXl({
     <>
       <div className="flex items-center p-1.5 shadow-md shadow-gray-400 bg-white rounded-2xl justify-center w-full">
         <div
-          className="overflow-hidden w-full lg:h-96 relative flex lg:flex-row flex-col rounded-xl bg-[#ececec] bg-clip-border
+          className="overflow-hidden w-full relative flex lg:flex-row flex-col rounded-xl bg-[#ececec] bg-clip-border
             text-gray-700 shadow-md"
         >
           <div className="bg-gradient-radial from-[#183595] to-[#f903bf] border-transparent rounded-full p-24 -top-28 -right-16 xl:h-96 xl:w-96 xl:p-48 flex flex-row items-start justify-start absolute xl:-top-72 xl:-right-48"></div>
@@ -34,11 +34,11 @@ export default function CityCardXl({
               <strong className="block leading-6 font-sans text-2xl font-semibold uppercase tracking-normal text-black antialiased">
                 {city.name}
               </strong>
-              <div className="flex xl:flex-row flex-col xl:items-center items-start xl:gap-0 gap-4 xl:mt-0 mt-4 tracking-normal ">
+              <div className="flex flex-col xl:items-start items-start xl:gap-0 gap-4 xl:mt-0 mt-4 tracking-normal ">
                 <p className="flex items-center gap-3 flex-row font-sans text-blue-gray-900">
                   {city.country}
                 </p>
-                <p className="flex text-xs pt-1 xl:pl-8 flex-col xl:flex-row gap-2 xl:items-center items-start">
+                <p className="flex text-xs pt-1 flex-col xl:flex-row gap-2 items-start">
                   Note : <div className="flex flex-row">{stars}</div>
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function CityCardXl({
             <div className="flex flex-col xl:flex-row xl:gap-0 gap-4 items-end justify-end xl:justify-between w-full">
               <PriceButtonXl price={city.price} />
               <div className="flex flex-col xl:w-[30%] justify-end">
-                <button className="bg-red-600 px-4 tracking-widest text-white border border-transparent rounded-2xl flex flex-col items-center justify-center">
+                <button className="bg-red-600 px-2 text-white border border-transparent rounded-2xl flex flex-col items-center justify-center">
                   <strong>Facilités</strong> <strong>jusqu{"'"}à 8 mois</strong>
                 </button>
               </div>
