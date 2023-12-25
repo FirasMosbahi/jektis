@@ -14,7 +14,7 @@ export default function CityCard({
 }): React.ReactNode {
   return (
     <Link
-      className={isHorizontal ? "" : "w-full sm:w-72"}
+      className={isHorizontal ? "" : "w-full sm:max-w-80"}
       href={`${linkBase}/${cityProps.id}`}
     >
       <div className="flex items-center justify-center w-full">
@@ -52,21 +52,17 @@ export default function CityCard({
                 Du {cityProps.dateStart} au {cityProps.dateEnd} 2023
               </strong>
             </div>
-            <div
-              className={isHorizontal ? "" : "flex flex-col sm:flex-row gap-4"}
-            >
-              <p className="flex flex-row gap-2 items-center">
-                Note : <StaticStars number={cityProps.rate} />
-              </p>
-              <div className="flex flex-row justify-start">
-                <button className="flex flex-row text-white mt-4 px-4 border rounded-2xl items-center bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
-                  <div>
-                    <p className="text-xs">A partir de</p>
-                    <strong className="text-3xl">{cityProps.price}</strong>
-                  </div>
-                  <strong>TND</strong>
-                </button>
-              </div>
+            <p className="flex flex-row gap-2 items-center">
+              Note : <StaticStars number={cityProps.rate} />
+            </p>
+            <div className="flex flex-row justify-end">
+              <button className="flex flex-row text-white mt-4 px-4 border rounded-2xl items-center bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
+                <div>
+                  <p className="text-xs">A partir de</p>
+                  <strong className="text-3xl">{cityProps.price}</strong>
+                </div>
+                <strong>TND</strong>
+              </button>
             </div>
           </div>
         </div>

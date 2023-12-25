@@ -22,7 +22,7 @@ export default function MiniCityCard({
             {cardData.name}
           </strong>
         </div>
-        <div className="absolute md:top-16 sm:top-28 top-24 left-40 sm:left-20 right-0 bottom-0 flex items-center justify-center z-10">
+        <div className="absolute lg:top-16 sm:top-16 top-16 left-40 sm:left-20 right-0 bottom-0 flex items-center justify-center z-10">
           <button className="flex h-8 flex-col text-white px-4 border-transparent rounded-2xl items-start bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
             <div style={{ fontSize: 8 }} className="leading-none">
               A partir de

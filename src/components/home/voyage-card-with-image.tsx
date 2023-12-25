@@ -47,14 +47,14 @@ export default function VoyageCardWithImg({
           className="md:h-80 h-60 w-full md:w-full xl:h-[17rem] border-transparent rounded-xl"
         />
       )}
-      <div className="flex flex-col justify-between h-96 sm:h-64 md:h-56 sm:flex-row gap-4">
+      <div className="flex flex-col justify-between h-96 sm:flex-row gap-4">
         {cards.length > 0 && (
-          <div className="w-[45%] sm:w-[30%] w-full h-full">
+          <div className="w-full sm:w-[45%] md:w-[30%] h-full">
             <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
           </div>
         )}
         {cards.length > 1 && (
-          <div className="w-[45%] sm:w-[30%] w-full h-full">
+          <div className="w-full sm:w-[45%] md:w-[30%] h-full">
             <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
           </div>
         )}

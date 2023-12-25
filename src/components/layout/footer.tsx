@@ -17,7 +17,7 @@ import { VoyageType } from "@jektis/types";
 
 export default function Footer(): React.ReactNode {
   return (
-    <div className="flex flex-col md:mt-0 mt-12 pb-8 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-12 justify-between">
+    <div className="flex flex-col md:mt-0 mt-12 pb-8 gap-16 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-12 justify-between">
       <div className="flex flex-col">
         <div className="flex flex-col md:flex-row border-b-4 gap-16 mb-4 py-4">
           <div className="flex flex-col text-center">
@@ -103,13 +103,13 @@ export default function Footer(): React.ReactNode {
       <div className="flex flex-col text-3xl gap-6 mt-12">
         <strong>Suivez Nous</strong>
         <div className="bg-white opacity-100 gap-x-4 py-2 px-2 flex flex-row">
-          <Facebook width={40} height={40} />
-          <Messanger width={40} height={40} />
-          <Instagram width={40} height={40} />
-          <Linkedin width={40} height={40} />
-          <Youtube width={40} height={40} />
-          <Twitter width={40} height={40} />
-          <Tiktok width={40} height={40} />
+          <Facebook width={35} height={35} />
+          <Messanger width={35} height={35} />
+          <Instagram width={35} height={35} />
+          <Linkedin width={35} height={35} />
+          <Youtube width={35} height={35} />
+          <Twitter width={35} height={35} />
+          <Tiktok width={35} height={35} />
         </div>
         <strong>Paiement Sécurisé</strong>
         <div className="bg-white opacity-100 flex flex-row gap-4 px-2 py-2">

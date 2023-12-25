@@ -15,7 +15,7 @@ export default function HomeFilter(): React.ReactNode {
   return (
     <div>
       <div className="flex flex-col gap-8 w-full ">
-        <form className="flex h-16 flex-col w-full gap-8 bg-transparent mb-20 sm:mb-0 bg-[#839fc4] border border-transparent rounded-2xl sm:gap-0 sm:flex-row ">
+        <form className="flex sm:h-16 h-28 flex-col w-full gap-8 bg-transparent mb-20 sm:mb-0 bg-[#839fc4] border border-transparent rounded-2xl sm:gap-0 sm:flex-row ">
           <div className="flex flex-row items-center gap-4 px-4 bg-[#839fc4] h-full border-transparent rounded-2xl sm:rounded-r-none sm:py-0 py-2 sm:rounded-l-2xl">
             <Image
               src="/home-page/hotel.png"
@@ -25,7 +25,7 @@ export default function HomeFilter(): React.ReactNode {
             />
             Hotels en tunisie
           </div>
-          <div className="flex flex-row gap-4 bg-[#839fc4] h-full items-center px-4 sm:rounded-none rounded-2xl sm:border-x-2">
+          <div className="flex flex-row gap-4 py-2 sm:py-0 bg-[#839fc4] h-full items-center px-4 sm:rounded-none rounded-2xl sm:border-x-2">
             <Image
               src="/home-page/vol.png"
               width={30}
@@ -35,7 +35,7 @@ export default function HomeFilter(): React.ReactNode {
             Vols
           </div>
 
-          <div className="flex flex-row gap-4 items-center h-full bg-[#839fc4] px-4 border-transparent sm:rounded-l-none rounded-2xl sm:rounded-r-2xl">
+          <div className="flex flex-row gap-4 py-2 sm:py-0 items-center h-full bg-[#839fc4] px-4 border-transparent sm:rounded-l-none rounded-2xl sm:rounded-r-2xl">
             <Image
               src="/home-page/voyage.png"
               width={30}
