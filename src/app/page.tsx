@@ -32,7 +32,7 @@ export default function Index(): React.ReactNode {
         </div>
       </div>
       <div className="bg-white px-4 pt-4 flex flex-col">
-        <div className="flex flex-col xl:grid xl:grid-cols-2 w-full h-fit xl:gap-4">
+        <div className="flex flex-col xl:grid xl:grid-cols-2 xl:max-h-[38rem] w-full h-fit xl:gap-4">
           <div>
             <VoyageCard
               title="Voyages Organisées"
@@ -42,7 +42,7 @@ export default function Index(): React.ReactNode {
               titleLink={`/voyages?category=${VoyageType.VOYAGE_ORGANISE}`}
             />
           </div>
-          <div className="mt-0">
+          <div>
             <VoyageCardWithImg
               title="Circuits Sud"
               imageUrl="https://th.bing.com/th/id/OIP.R3osXfaOo7ZExMdxL5Y09QHaE8?rs=1&pid=ImgDetMain"

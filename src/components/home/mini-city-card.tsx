@@ -23,17 +23,13 @@ export default function MiniCityCard({
           </strong>
         </div>
         <div className="absolute lg:top-16 sm:top-16 top-16 left-40 sm:left-20 right-0 bottom-0 flex items-center justify-center z-10">
-          <button className="flex h-8 flex-col text-white px-4 border-transparent rounded-2xl items-start bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
-            <div style={{ fontSize: 8 }} className="leading-none">
-              A partir de
-            </div>
+          <button className="flex h-8 flex-col text-white pb-0.5 px-4 border-transparent rounded-2xl items-start bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+            <div className="leading-none text-[0.6rem]">A partir de</div>
             <div>
-              <strong style={{ fontSize: 12 }} className="leading-none">
+              <strong className="leading-none text-[0.8rem]">
                 {cardData.price}
               </strong>
-              <sup style={{ fontSize: 8 }} className="leading-none">
-                TND
-              </sup>
+              <sup className="leading-none text-[0.8rem]">TND</sup>
             </div>
           </button>
         </div>

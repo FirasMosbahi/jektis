@@ -17,11 +17,11 @@ export default function CityCard({
       className={isHorizontal ? "" : "w-full sm:max-w-80"}
       href={`${linkBase}/${cityProps.id}`}
     >
-      <div className="flex items-center justify-center w-full">
+      <div className="items-center justify-center w-full">
         <div
           className={`relative flex border border-transparent rounded-xl w-full ${
             isHorizontal
-              ? "sm:flex-row flex-col bg-[#ececec] bg-clip-border"
+              ? "sm:flex-row flex xl:h-[20rem] flex-col bg-[#ececec] bg-clip-border"
               : "flex-col"
           }  text-gray-700 shadow-md`}
         >
