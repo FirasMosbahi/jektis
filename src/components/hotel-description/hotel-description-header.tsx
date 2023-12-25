@@ -13,9 +13,9 @@ export default function HotelDescriptionHeader({
   detailEnfant: string;
 }): React.ReactNode {
   return (
-    <div className="flex items-end gap-2 xl:flex-row flex-col md:items-center xl:items-end xl:gap-12">
+    <div className="flex gap-2 xl:flex-row flex-col items-center text-center pt-4 xl:items-end xl:gap-12">
       <div>
-        <p className="text-[#0f4d99] sm:text-center md:text-4xl  font-extrabold ">
+        <p className="text-[#0f4d99] sm:text-center text-2xl md:text-4xl  font-extrabold ">
           {name}
         </p>
       </div>

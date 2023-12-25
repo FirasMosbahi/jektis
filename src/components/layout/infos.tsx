@@ -5,7 +5,7 @@ export default function Infos(): React.ReactNode {
   return (
     <div className="flex flex-col items-start w-fit xl:inline text-right xl:tracking-wide mt-8">
       <div className="flex flex-col xl:justify-start lg:gap-0 gap-4 text-center">
-        <div className="flex lg:flex-row flex-col gap-0 items-center lg:items-end lg:gap-6">
+        <div className="flex xl:flex-row flex-col gap-0 items-center xl:items-end xl:gap-6">
           <strong className="text-xl">Tel +216 71 70 69 00 :</strong>
           <p>
             <strong>Lun-Ven:</strong> 9h à 15h30{" "}

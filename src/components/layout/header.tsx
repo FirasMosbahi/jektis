@@ -9,10 +9,10 @@ export default function Header(): React.ReactNode {
   return (
     <>
       <div className="justify-between w-full block">
-        <div className="flex flex-col md:flex-row justify-between lg:pr-0">
+        <div className="flex flex-col md:flex-row justify-between md:pr-8">
           <img src="/logo_jektis.png" alt="jektis logo" />
           <div className="flex flex-col items-center">
-            <div className="hidden w-full lg:flex lg:flex-row pl-40 ">
+            <div className="hidden w-full xl:flex xl:flex-row pl-40 ">
               <SearchInput />
               <LoginButton />
             </div>
