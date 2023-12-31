@@ -1,10 +1,9 @@
 import React from "react";
-import { cityCards } from "@jektis/mocks";
 import SearchFilter from "@jektis/components/voyages/voyage-search-filter";
 import CityCardXl from "@jektis/components/voyages/city-card-xl";
 import CustomPage from "@jektis/components/generic/CustomPage";
 import { getCities, getHotels } from "@jektis/services";
-import VoyageCardProps from "@jektis/types/city_class";
+import { VoyageCardProps } from "@jektis/types";
 
 export default function VoyagesIndex({
   searchParams,

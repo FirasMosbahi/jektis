@@ -1,7 +1,8 @@
 import React from "react";
 import { PlaneArrival, PlaneDeparture, Star } from "@jektis/components/icons";
-import VoyageCardProps from "@jektis/types/city_class";
 import PriceButtonXl from "@jektis/components/voyages/price_card";
+import { VoyageCardProps } from "@jektis/types";
+import { getSejourStayDetails } from "@jektis/app/utils/voyage.utils";
 
 export default function CityCardXl({
   city,
@@ -12,6 +13,10 @@ export default function CityCardXl({
   for (let i = 0; i < city.rate; i++) {
     stars.push(<Star width={20} height={20} />);
   }
+  const { numberOfDays, numberOfNights } = getSejourStayDetails(
+    city.dateStart,
+    city.dateEnd,
+  );
   return (
     <>
       <div className="flex items-center p-1.5 shadow-md shadow-gray-400 bg-white rounded-2xl justify-center w-full">
@@ -44,7 +49,7 @@ export default function CityCardXl({
               </div>
               <div className="flex flex-col my-4 gap-4">
                 <strong>
-                  {city.numberOfDays} jours / {city.numberofNights} nuits :
+                  {numberOfDays} jours / {numberOfNights} nuits :
                 </strong>
                 <div className="flex xl:flex-row flex-col lg:items-center items-start gap-8">
                   <div className="flex flex-row gap-4 items-center">

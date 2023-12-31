@@ -1,5 +1,4 @@
 import VoyageDetailsProps from "@jektis/types/voyage-details-props";
-import { getCities } from "@jektis/services/cities";
 import {
   cancelFrais,
   chargeeDeVoyage,
@@ -10,13 +9,13 @@ import {
   servicesNonInclus,
   visa,
 } from "@jektis/mocks/program-mock";
-import { cityCards } from "@jektis/mocks";
+import { voyageCards } from "@jektis/mocks";
 
 export function getProgram(id: string | number): VoyageDetailsProps {
   if (typeof id === "string") {
     id = Number.parseInt(id);
   }
-  const voyage = cityCards.filter((v) => v.id === id)[0];
+  const voyage = voyageCards.filter((v) => v.id === id)[0];
   return new VoyageDetailsProps(
     id,
     voyage.name,
@@ -24,8 +23,8 @@ export function getProgram(id: string | number): VoyageDetailsProps {
     voyage.imageUrl,
     voyage.rate,
     voyage.price,
-    voyage.numberOfDays,
-    voyage.numberofNights,
+    voyage.dateStart,
+    voyage.dateEnd,
     program,
     [
       {

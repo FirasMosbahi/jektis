@@ -1,20 +1,17 @@
 import React from "react";
-import CustomPage from "@jektis/components/generic/CustomPage";
 import HomeFilter from "@jektis/components/home/home-filter";
 import VoyageCard from "@jektis/components/home/voyage-card";
 import CityCard from "@jektis/components/home/city-card";
 import VoyageCardWithImg from "@jektis/components/home/voyage-card-with-image";
 import Promo from "@jektis/components/home/promo";
 import Link from "next/link";
-import { HotelCategory, VoyageType } from "@jektis/types";
+import { HotelCategory, VoyageCardProps, VoyageType } from "@jektis/types";
 import {
   getBestCitiesByRateAndCategory,
   getBestCityByRateAndCategory,
   getMiniCards,
   getVoyagesMiniCardsByCategory,
 } from "@jektis/services";
-import VoyageCardProps from "@jektis/types/city_class";
-
 export default function Index(): React.ReactNode {
   const nocesVoyages: VoyageCardProps[] = getBestCitiesByRateAndCategory(
     3,

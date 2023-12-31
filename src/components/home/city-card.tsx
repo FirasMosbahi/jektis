@@ -1,7 +1,8 @@
 import React from "react";
 import StaticStars from "@jektis/components/generic/static-stars";
-import VoyageCardProps from "@jektis/types/city_class";
 import Link from "next/link";
+import { VoyageCardProps } from "@jektis/types";
+import { getSejourStayDetails } from "@jektis/app/utils/voyage.utils";
 
 export default function CityCard({
   isHorizontal,
@@ -12,6 +13,10 @@ export default function CityCard({
   cityProps: VoyageCardProps;
   linkBase: string;
 }): React.ReactNode {
+  const { numberOfDays, numberOfNights } = getSejourStayDetails(
+    cityProps.dateStart,
+    cityProps.dateEnd,
+  );
   return (
     <Link
       className={isHorizontal ? "" : "w-fit sm:max-w-80"}
@@ -36,7 +41,7 @@ export default function CityCard({
           />
           <div className="px-6  py-3 bg-[#ececec] flex flex-col gap-2 border border-transparent rounded-xl">
             <div>
-              <strong className="block leading-6 font-sans text-xl font-bold uppercase tracking-normal text-black antialiased">
+              <strong className="block h-6 overflow-hidden leading-6 font-sans text-xl font-bold uppercase tracking-normal text-black antialiased">
                 {cityProps.name}
               </strong>
               <p className="flex h-6 overflow-hidden items-start gap-3 flex-row font-sans tracking-normal text-blue-gray-900 antialiased">
@@ -47,12 +52,12 @@ export default function CityCard({
               className={`flex flex-col  ${isHorizontal ? "" : "text-sm mb-2"}`}
             >
               <strong>
-                {cityProps.numberOfDays} jours / {cityProps.numberofNights}{" "}
-                nuits
+                {numberOfDays} jours / {numberOfNights} nuits
               </strong>
               {isHorizontal && (
                 <strong className="text-sm">
-                  Du {cityProps.dateStart} au {cityProps.dateEnd} 2023
+                  Du {cityProps.dateStart.toDateString()} au{" "}
+                  {cityProps.dateEnd.toDateString()}
                 </strong>
               )}
             </div>

@@ -14,8 +14,8 @@ export default class VoyageDetailsProps {
     public imageUrl: string,
     public rate: number,
     public price: number,
-    public nombreJours: number,
-    public nombreNuits: number,
+    public startDate: Date,
+    public endDate: Date,
     public program: ProgramDay[],
     public chambres: Chambres[],
     public servicesInclus: {

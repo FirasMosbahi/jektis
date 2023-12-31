@@ -20,7 +20,6 @@ export default function HotelsFilter(): React.ReactNode {
               <Localisation width={25} height={25} />
               <select
                 id="countries"
-                placeholder="Sélectionner une ville ou un hotel"
                 className="xl:w-24 w-full h-full text-sm font-medium text-gray-900"
               >
                 <option>Ou allez vous </option>
@@ -50,7 +49,6 @@ export default function HotelsFilter(): React.ReactNode {
                 <Trolley width={25} height={25} />
                 <select
                   id="countries"
-                  placeholder="Sélectionner une ville ou un hotel"
                   className="w-full xl:w-24 text-sm font-medium text-gray-900"
                 >
                   <option>Chambre </option>
