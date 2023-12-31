@@ -76,25 +76,25 @@ export default function Index(): React.ReactNode {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 pb-24 md:mt-8">
           <VoyageCardWithImg
-            imageUrl={"/hotel-categories/hotel-sur-mer.jpg"}
+            imageUrl="https://www.jektistravel.com/public/images/image/image_0.75932100-1701696368.png"
             mainLink={`hotels-list?category=${HotelCategory.VUE_MER}`}
             cards={getMiniCards(HotelCategory.VUE_MER)}
             linksBase="/hotels-list"
           />
           <VoyageCardWithImg
-            imageUrl={"/hotel-categories/hotel-recommandé.jpg"}
+            imageUrl="https://www.jektistravel.com/public/images/image/image_0.01709600-1701696381.png"
             mainLink={`hotels-list?category=${HotelCategory.RECOMMANDE}`}
             linksBase="hotels-list"
             cards={getMiniCards(HotelCategory.RECOMMANDE)}
           />
           <VoyageCardWithImg
-            imageUrl={"/hotel-categories/hotel-all-inclusive.jpg"}
+            imageUrl="https://www.jektistravel.com/public/images/image/image_0.11581900-1701696393.png"
             mainLink={`hotels-list?category=${HotelCategory.ALL_INCLUSIVE}`}
             cards={getMiniCards(HotelCategory.ALL_INCLUSIVE)}
             linksBase="hotels-list"
           />
           <VoyageCardWithImg
-            imageUrl={"/hotel-categories/hotel-toboggan.jpg"}
+            imageUrl="https://www.jektistravel.com/public/images/image/image_0.72363500-1701696405.png"
             mainLink={`hotels-list?category=${HotelCategory.TOBBOGAN}`}
             cards={getMiniCards(HotelCategory.TOBBOGAN)}
             linksBase="hotels-list"

@@ -27,7 +27,7 @@ export default function CityCardXl({
           <img
             src={city.imageUrl}
             alt="image"
-            className="object-cover w-full 2xl:w-[30%] 2xl:h-[19rem] h-[32rem] rounded-l-xl"
+            className="object-cover w-full xl:w-[30%] xl:h-[19rem] h-[12rem] rounded-l-xl"
           />
           <div className="flex xl:flex-col sm:flex-row flex-col px-6 py-4 w-full bg-[#ececec] bg-clip-border">
             <div className="">
