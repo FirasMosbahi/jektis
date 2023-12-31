@@ -102,7 +102,7 @@ export default function Footer(): React.ReactNode {
       </div>
       <div className="flex flex-col text-3xl gap-6 mt-12">
         <strong>Suivez Nous</strong>
-        <div className="bg-white opacity-100 gap-x-4 py-2 px-2 flex flex-row">
+        <div className="bg-white opacity-100 gap-x-4 py-2 px-2 flex flex-row flex-wrap gap-y-4 xl:max-w-[14rem]">
           <Facebook width={35} height={35} />
           <Messanger width={35} height={35} />
           <Instagram width={35} height={35} />
@@ -112,7 +112,7 @@ export default function Footer(): React.ReactNode {
           <Tiktok width={35} height={35} />
         </div>
         <strong>Paiement Sécurisé</strong>
-        <div className="bg-white opacity-100 flex flex-row gap-4 px-2 py-2">
+        <div className="bg-white opacity-100 flex flex-row flex-wrap gap-y-4 xl:max-w-[14rem] gap-4 px-2 py-2">
           <Visa width={60} height={60} />
           <MasterCard width={60} height={60} />
           <AmericanExpress width={60} height={60} />

@@ -32,7 +32,7 @@ export default function Index(): React.ReactNode {
         </div>
       </div>
       <div className="bg-white px-4 pt-4 flex flex-col">
-        <div className="flex flex-col xl:grid xl:grid-cols-2 xl:max-h-[38rem] w-full h-fit xl:gap-4">
+        <div className="flex flex-col xl:grid xl:grid-cols-2 xl:max-h-[38rem] w-full h-fit xl:gap-8 mb-8">
           <div>
             <VoyageCard
               title="Voyages Organisées"
@@ -58,7 +58,7 @@ export default function Index(): React.ReactNode {
             <p className="ml-1 xs:mr-4">Voir Tous</p>
           </Link>
         </div>
-        <div className="lg:grid flex flex-col items-center justify-centers lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="flex flex-wrap gap-8">
           {nocesVoyages.map((v, index) => (
             <CityCard
               linkBase="/voyages"
@@ -74,7 +74,7 @@ export default function Index(): React.ReactNode {
             <p className="mr-4">Voir Tous</p>
           </Link>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 pb-24 md:mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 pb-24 md:mt-8">
           <VoyageCardWithImg
             imageUrl={"/hotel-categories/hotel-sur-mer.jpg"}
             mainLink={`hotels-list?category=${HotelCategory.VUE_MER}`}

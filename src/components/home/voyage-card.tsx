@@ -30,27 +30,29 @@ export default function VoyageCard({
           <p className="mr-4">Voir Tous</p>
         )}
       </div>
-      <CityCard
-        isHorizontal={true}
-        cityProps={bigCardProps}
-        linkBase={linksBase}
-      />
-      <div className="flex flex-col sm:flex-row justify-between w-full">
-        {cards.length > 0 && (
-          <div className="md:w-[30%] w-full sm:w-[45%]">
-            <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
-          </div>
-        )}
-        {cards.length > 1 && (
-          <div className="md:w-[30%] w-full sm:w-[45%]">
-            <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
-          </div>
-        )}
-        {cards.length > 2 && (
-          <div className="md:block hidden md:w-[30%]">
-            <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
-          </div>
-        )}
+      <div className="flex flex-col gap-4">
+        <CityCard
+          isHorizontal={true}
+          cityProps={bigCardProps}
+          linkBase={linksBase}
+        />
+        <div className="flex flex-col mt-2 sm:flex-row justify-between w-full">
+          {cards.length > 0 && (
+            <div className="md:w-[30%] w-full sm:w-[45%] h-fit">
+              <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
+            </div>
+          )}
+          {cards.length > 1 && (
+            <div className="md:w-[30%] w-full sm:w-[45%] h-fit">
+              <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
+            </div>
+          )}
+          {cards.length > 2 && (
+            <div className="md:block hidden md:w-[30%] h-fit">
+              <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

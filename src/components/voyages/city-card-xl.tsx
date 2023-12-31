@@ -16,7 +16,7 @@ export default function CityCardXl({
     <>
       <div className="flex items-center p-1.5 shadow-md shadow-gray-400 bg-white rounded-2xl justify-center w-full">
         <div
-          className="overflow-hidden w-full relative flex lg:flex-row flex-col rounded-xl bg-[#ececec] bg-clip-border
+          className="overflow-hidden w-full relative flex xl:flex-row flex-col rounded-xl bg-[#ececec] bg-clip-border
             text-gray-700 shadow-md"
         >
           <div className="bg-gradient-radial from-[#183595] to-[#f903bf] border-transparent rounded-full p-24 -top-28 -right-16 xl:h-96 xl:w-96 xl:p-48 flex flex-row items-start justify-start absolute xl:-top-72 xl:-right-48"></div>
@@ -27,7 +27,7 @@ export default function CityCardXl({
           <img
             src={city.imageUrl}
             alt="image"
-            className="object-cover w-full lg:w-[30%] h-60 lg:h-[32rem] xl:h-[16.5rem] rounded-l-xl"
+            className="object-cover w-full 2xl:w-[30%] 2xl:h-[19rem] h-[32rem] rounded-l-xl"
           />
           <div className="flex xl:flex-col sm:flex-row flex-col px-6 py-4 w-full bg-[#ececec] bg-clip-border">
             <div className="">

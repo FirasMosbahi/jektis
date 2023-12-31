@@ -32,37 +32,39 @@ export default function VoyageCardWithImg({
           )}
         </div>
       )}
-      {mainLink ? (
-        <Link href={mainLink}>
+      <div className="flex flex-col gap-4">
+        {mainLink ? (
+          <Link href={mainLink}>
+            <img
+              alt="img"
+              src={imageUrl}
+              className="w-full max-h-[14.5rem] md:w-full border-transparent rounded-xl"
+            />
+          </Link>
+        ) : (
           <img
             alt="img"
             src={imageUrl}
-            className="md:h-80 h-60 w-full md:w-full xl:max-h-[20.5rem] border-transparent rounded-xl"
+            className="w-full max-h-[14.5rem] md:w-full border-transparent rounded-xl"
           />
-        </Link>
-      ) : (
-        <img
-          alt="img"
-          src={imageUrl}
-          className="md:h-80 h-60 w-full md:w-full xl:max-h-[20.5rem] border-transparent rounded-xl"
-        />
-      )}
-      <div className="flex flex-col justify-between h-96 sm:flex-row gap-4">
-        {cards.length > 0 && (
-          <div className="w-full sm:w-[45%] md:w-[30%] h-full">
-            <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
-          </div>
         )}
-        {cards.length > 1 && (
-          <div className="w-full sm:w-[45%] md:w-[30%] h-full">
-            <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
-          </div>
-        )}
-        {cards.length > 2 && (
-          <div className="md:w-[30%] md:block hidden h-full">
-            <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
-          </div>
-        )}
+        <div className="flex flex-wrap overflow-hidden pt-2 gap-4">
+          {cards.length > 0 && (
+            <div className="w-[30%] h-fit">
+              <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
+            </div>
+          )}
+          {cards.length > 1 && (
+            <div className="w-[30%] h-fit">
+              <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
+            </div>
+          )}
+          {cards.length > 2 && (
+            <div className="w-[30%] h-fit">
+              <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

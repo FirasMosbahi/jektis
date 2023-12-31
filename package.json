@@ -14,6 +14,7 @@
     "@types/leaflet": "^1.9.8",
     "@types/react-leaflet": "^3.0.0",
     "flowbite-react": "^0.7.0",
+    "framer-motion": "^10.16.16",
     "leaflet": "^1.9.4",
     "multi-range-slider-react": "^2.0.7",
     "next": "14.0.3",
