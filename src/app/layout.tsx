@@ -27,7 +27,7 @@ export default function RootLayout({
               <Header />
             </div>
           </Center>
-          <div className="md:px-12 px-2 md:mr-12 w-full">{children}</div>
+          <div className="px-2 w-full">{children}</div>
           <div className="w-full mt-12 mb-8 pr-16 pl-4">
             <Footer />
           </div>

@@ -57,7 +57,7 @@ export default function Promo(): React.ReactNode {
               <img
                 src={promos[current].image}
                 alt={`${promos[current].title} image`}
-                className="h-[26rem] w-[85rem]"
+                className="h-[22rem] w-[85rem]"
               />
             </motion.div>
           </AnimatePresence>
@@ -67,10 +67,12 @@ export default function Promo(): React.ReactNode {
         {promos.map((promo, index) => (
           <div
             key={index}
-            className="border-r-4 text-center px-1  text-[1.5rem] h-24 border-r-white"
+            className={`text-center px-1  text-[1.5rem] h-24 -r-white ${
+              index !== promos.length - 1 ? "border-r-4 border" : ""
+            }`}
           >
             <Center axe={Axes.all}>
-              <strong>{promo.title}</strong>
+              <p className="text-[1.2rem]">{promo.title}</p>
             </Center>
           </div>
         ))}

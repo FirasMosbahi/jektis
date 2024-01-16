@@ -51,7 +51,7 @@ export default function CityCard({
             <div
               className={`flex flex-col  ${isHorizontal ? "" : "text-sm mb-2"}`}
             >
-              <strong>
+              <strong className="italic">
                 {numberOfDays} jours / {numberOfNights} nuits
               </strong>
               {isHorizontal && (

@@ -8,6 +8,7 @@ import { HotelCategory } from "@jektis/types";
 import { getHotels, getHotelsByCategory } from "@jektis/services";
 import HotelCardProps from "@jektis/types/hotel_class";
 import HotelsSideFilter from "@jektis/components/hotels-list/hotels-filter";
+import Pagination from "@jektis/components/generic/pagination";
 
 export default function PageIndex({
   searchParams,
@@ -17,13 +18,19 @@ export default function PageIndex({
   const category = searchParams?.category;
   const city = searchParams?.city;
   const hotels: HotelCardProps[] = getHotels(category, city);
-
+  const page = Number.parseInt(
+    typeof searchParams?.page === "string" ? searchParams?.page : "0",
+  );
+  const hotelsToShow = hotels.slice(page * 3, (page + 1) * 3);
   return (
     <div className="w-full">
       <HotelsFilter />
       <div className="mb-8 mt-8 flex flex-row gap-8">
         <HotelsSideFilter />
-        <HotelsList hotels={hotels} />
+        <div className="bg-white">
+          <HotelsList hotels={hotelsToShow} />
+          <Pagination pagesNumber={hotels.length / 3 - 1} />
+        </div>
       </div>
     </div>
   );
