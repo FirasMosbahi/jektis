@@ -19,18 +19,18 @@ export default function HotelCard({
   return (
     <>
       <div className="flex lg:flex-row flex-col items-center justify-center p-1 bg-white shadow-xl rounded-2xl mt-4 cursor-pointer">
-        <div className="relative flex min-h-[25rem] lg:flex-row lg:justify-between lg:pr-4 flex-col rounded-xl bg-[#ececec] bg-clip-border text-gray-700 shadow-md w-full">
+        <div className="relative flex min-h-[22rem] lg:flex-row lg:justify-between lg:pr-4 flex-col rounded-xl bg-[#ececec] bg-clip-border text-gray-700 shadow-md w-full">
           <div className="flex lg:flex-row flex-col">
-            <div className="relative m-0 lg:w-60 lg:h-full h-60 w-full shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
+            <div className="relative m-0 lg:w-52 lg:h-full h-60 w-full shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
               <img
                 src={hotel.imageUrl}
                 alt="image"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="px-4 lg:h-fit max-h-[17rem] lg:py-2 lg:space-y-0.5">
+            <div className="pl-4 lg:h-fit max-h-[17rem] lg:py-2 lg:space-y-0.5">
               <div className="flex sm:flex-row flex-col sm:justify-between lg:mt-0 mt-2">
-                <strong className="block font-sans text-xl font-bold uppercase leading-relaxed tracking-normal text-black antialiased">
+                <strong className="block font-sans h-8 overflow-hidden text-xl font-bold uppercase leading-relaxed tracking-normal text-black antialiased">
                   {hotel.name}
                 </strong>
                 <div className="lg:hidden flex flex-row">{stars}</div>
@@ -39,8 +39,8 @@ export default function HotelCard({
                 {hotel.cityName}
               </strong>
               <div className="py-2 space-y-2">
-                <div className="bg-white border border-transparent text-weakBlue rounded-2xl w-fit">
-                  <button className="border-l border-r-weakBlue border-r-2  px-4 py-1">
+                <div className="bg-white border border-transparent text-[0.8rem] text-weakBlue rounded-2xl w-fit">
+                  <button className="border-l border-r-weakBlue border-r-2 px-4 py-1">
                     <strong>LPD</strong>
                   </button>
                   <button className="border-l border-r-weakBlue border-r-2 px-4 py-1">

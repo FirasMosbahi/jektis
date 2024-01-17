@@ -51,7 +51,7 @@ export default function Index(): React.ReactNode {
         </div>
         <div className="flex text-2xl py-2 px-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-1 xs:ml-4">Voyages de Noces</strong>
-          <Link href={`/voyages/${VoyageType.VOYAGE_DE_NOCES}`}>
+          <Link href={`/voyages?category=${VoyageType.VOYAGE_DE_NOCES}`}>
             <p className="ml-1 xs:mr-4">Voir Tous</p>
           </Link>
         </div>

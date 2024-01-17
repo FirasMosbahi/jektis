@@ -31,7 +31,7 @@ export default function HotelReservationTableItem(): React.ReactNode {
           <TwoUsers />
           <select
             id="countries"
-            className="ml-2 w-40 lg:w-72 h-8 border bg-[#ececec] border-white xl:border-white text-gray-900 rounded-lg block "
+            className="ml-2 w-40 lg:w-48 h-8 border bg-[#ececec] border-white xl:border-white text-gray-900 rounded-lg block "
           >
             <option className="text-sm lg:text-xl">
               Logement petit déjeuner
@@ -62,7 +62,7 @@ export default function HotelReservationTableItem(): React.ReactNode {
             </label>
           </div>
         </div>
-        <button className="bg-[#004fa4] px-2 py-1 border rounded-xl">
+        <button className="bg-[#004fa4] text-[1rem] px-2 py-1 border rounded-xl">
           Sur Demande
         </button>
       </div>

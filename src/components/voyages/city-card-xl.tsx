@@ -66,11 +66,11 @@ export default function CityCardXl({
             <div className="flex flex-col xl:flex-row xl:gap-0 gap-4 items-end justify-end xl:justify-between w-full">
               <PriceButtonXl price={city.price} />
               <div className="flex flex-col xl:w-[30%] justify-end">
-                <button className="bg-red-600 px-2 text-white border border-transparent rounded-2xl flex flex-col items-center justify-center">
+                <button className="bg-red-600 text-[0.8rem] px-2 text-white border border-transparent rounded-2xl flex flex-col items-center justify-center">
                   <strong>Facilités</strong> <strong>jusqu{"'"}à 8 mois</strong>
                 </button>
               </div>
-              <div className="flex flex-col justify-end xl:w-[30%]">
+              <div className="flex flex-col text-[0.8rem] justify-end xl:w-[30%]">
                 <button className="bg-gradient-to-r tracking-wide px-4 py-2 from-[#585657] to-[#9c9c9c] text-xl text-white border border-transparent rounded-2xl flex flex-col items-center justify-center">
                   <strong>Programme</strong>
                 </button>
