@@ -28,7 +28,7 @@ export default function HomeFilter(): React.ReactNode {
   return (
     <div>
       <div className="flex flex-col gap-8 w-full ">
-        <form className="flex sm:h-16 h-28 flex-col w-full gap-8 bg-transparent mb-20 sm:mb-0 bg-[#839fc4] border border-transparent rounded-2xl sm:gap-0 sm:flex-row ">
+        <form className="flex text-white sm:h-16 h-28 flex-col w-full gap-8 bg-transparent mb-20 sm:mb-0 bg-[#839fc4] border border-transparent rounded-2xl sm:gap-0 sm:flex-row ">
           <div
             onClick={() => setChoosenForm(HomeFilterFormsEnum.HOTELS)}
             className="flex flex-row items-center gap-4 px-4 bg-[#839fc4] h-full border-transparent rounded-2xl sm:rounded-r-none sm:py-0 py-2 sm:rounded-l-2xl"

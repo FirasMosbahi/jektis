@@ -67,12 +67,12 @@ export default function Promo(): React.ReactNode {
         {promos.map((promo, index) => (
           <div
             key={index}
-            className={`text-center px-1  text-[1.5rem] h-24 -r-white ${
+            className={`text-center min-w-[10%] text-white text-[1.5rem] h-24 ${
               index !== promos.length - 1 ? "border-r-4 border" : ""
             }`}
           >
             <Center axe={Axes.all}>
-              <p className="text-[1.2rem]">{promo.title}</p>
+              <p className="px-2 text-[1rem]">{promo.title}</p>
             </Center>
           </div>
         ))}
