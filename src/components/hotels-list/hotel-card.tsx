@@ -28,7 +28,7 @@ export default function HotelCard({
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="pl-4 lg:h-fit max-h-[17rem] lg:py-2 lg:space-y-0.5">
+            <div className="pl-4 lg:h-fit max-h-[22rem] overflow-hidden lg:py-2 lg:space-y-0.5">
               <div className="flex sm:flex-row flex-col sm:justify-between lg:mt-0 mt-2">
                 <strong className="block font-sans h-8 overflow-hidden text-xl font-bold uppercase leading-relaxed tracking-normal text-black antialiased">
                   {hotel.name}

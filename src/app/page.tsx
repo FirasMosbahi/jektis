@@ -22,7 +22,7 @@ export default function Index(): React.ReactNode {
   );
   return (
     <div>
-      <div className="flex flex-col xl:flex-row items-center xl:items-start w-full mb-12 gap-12">
+      <div className="flex xl:flex-row flex-col items-center xl:items-start w-full mb-12 gap-12">
         <HomeFilter />
         <div className="flex-1">
           <Promo />

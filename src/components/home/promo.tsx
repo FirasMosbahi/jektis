@@ -44,7 +44,7 @@ export default function Promo(): React.ReactNode {
 
   const promos: Promo[] = getPromos();
   return (
-    <div className="border-4 h-full rounded-2xl flex flex-col">
+    <div className="border-4 h-full w-[30rem] rounded-2xl flex flex-col">
       <div ref={ref} className="mx-auto max-w-screen-lg w-full">
         <div className="flex w-full flex-row justify-center">
           <AnimatePresence>
@@ -57,7 +57,7 @@ export default function Promo(): React.ReactNode {
               <img
                 src={promos[current].image}
                 alt={`${promos[current].title} image`}
-                className="h-[22rem] w-[85rem]"
+                className="h-[22rem]"
               />
             </motion.div>
           </AnimatePresence>
@@ -72,7 +72,7 @@ export default function Promo(): React.ReactNode {
             }`}
           >
             <Center axe={Axes.all}>
-              <p className="px-2 text-[1rem]">{promo.title}</p>
+              <p className="text-[1rem] px-2">{promo.title}</p>
             </Center>
           </div>
         ))}

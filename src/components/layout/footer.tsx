@@ -19,20 +19,22 @@ export default function Footer(): React.ReactNode {
   return (
     <div className="flex flex-col md:mt-0 mt-12 pb-8 gap-16 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-12 justify-between">
       <div className="flex flex-col">
-        <div className="flex flex-col md:flex-row border-b-4 gap-16 mb-4 py-4">
+        <div className="flex flex-col md:flex-row border-b-4 gap-12 mb-4 py-4">
           <div className="flex flex-col text-center">
-            <strong className="text-5xl">Jektis Travel</strong>
-            <p className="text-xl">Le voyage, C{"'"}est notre métier</p>
+            <strong className="text-[1.9rem] font-extrabold">
+              Jektis Travel
+            </strong>
+            <p className="text-[1.4rem]">Le voyage, C{"'"}est notre métier</p>
           </div>
           <div className="flex flex-col">
-            <strong className="text-xl">Agence de Voyages (Lic A),</strong>
+            <strong className="">Agence de Voyages (Lic A),</strong>
             <p>Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.</p>
             <p>
               Spécialisée dans l{"'"}organisation de voyages à l{"'"}étranger.
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-12 md:flex-row md:gap-24">
+        <div className="flex flex-col text-[0.9rem] gap-12 md:flex-row md:gap-24">
           <div className="flex flex-col">
             <strong className="mb-4">Nos Hotels</strong>
             <Link className="cursor-pointer" href="/hotels-list?city=tunis">

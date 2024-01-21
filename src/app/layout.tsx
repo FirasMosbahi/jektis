@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <CustomPage>
           <Center axe={Axes.x}>
-            <div className="w-full lg:mb-0 mb-20">
+            <div className="lg:mb-0 mb-20">
               <Header />
             </div>
           </Center>

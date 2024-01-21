@@ -8,9 +8,13 @@ import Center, { Axes } from "@jektis/components/generic/center";
 export default function Header(): React.ReactNode {
   return (
     <>
-      <div className="justify-between w-full block">
-        <div className="flex flex-col lg:flex-col xl:flex-row md:flex-row justify-between md:pr-8">
-          <img src="/logo_jektis.png" alt="jektis logo" />
+      <div className="justify-between w-full">
+        <div className="flex flex-col lg:flex-col xl:flex-row md:flex-row justify-between">
+          <img
+            src="/logo_jektis.png"
+            alt="jektis logo"
+            className="w-[18rem] h-[12rem]"
+          />
           <div className="flex flex-col xl:items-end items-center">
             <div className="hidden w-full xl:flex xl:flex-row pl-40 ">
               <SearchInput />
