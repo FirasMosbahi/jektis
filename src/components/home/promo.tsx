@@ -13,26 +13,9 @@ export default function Promo(): React.ReactNode {
   const ref = useRef<any>(null);
 
   const isInView = useIsInViewport(ref);
-
-  // const navigate = useCallback((feature: number) => {
-  //   setCurrent(feature);
-  //   ref?.current?.children[feature]?.scrollIntoView({
-  //     behavior: "smooth",
-  //     block: "nearest",
-  //     inline: "center",
-  //   });
-  // }, []);
-
-  // const periodicScroll = useCallback(() => {
-  //   if (isInView) {
-  //     setCurrent((prevState) => (prevState + 1) % promos.length);
-  //   }
-  // }, [current, isInView]);
   useEffect(() => {
-    console.log("is in view", isInView);
     const intervalId = setInterval(() => {
       if (isInView) {
-        console.log("modify state");
         setCurrent((prevState) => (prevState + 1) % promos.length);
       }
     }, 3000);
@@ -44,7 +27,7 @@ export default function Promo(): React.ReactNode {
 
   const promos: Promo[] = getPromos();
   return (
-    <div className="border-4 h-full w-[30rem] rounded-2xl flex flex-col">
+    <div className="border-4 w-[35rem] rounded-2xl flex flex-col">
       <div ref={ref} className="mx-auto max-w-screen-lg w-full">
         <div className="flex w-full flex-row justify-center">
           <AnimatePresence>
@@ -57,7 +40,7 @@ export default function Promo(): React.ReactNode {
               <img
                 src={promos[current].image}
                 alt={`${promos[current].title} image`}
-                className="h-[22rem]"
+                className="h-[27rem]"
               />
             </motion.div>
           </AnimatePresence>

@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function HotelsForm(): React.ReactElement {
   return (
-    <div className="w-full bg-opacity-80 py-8 border border-transparent rounded-2xl bg-white">
-      <div className="flex flex-row items-center gap-12 ml-4 pb-4 border-b-2 border-[#586263] mr-4">
+    <div className="w-full h-full flex flex-col gap-4 bg-opacity-80 py-8 border border-transparent rounded-2xl bg-white">
+      <div className="flex flex-row items-center gap-12 ml-4 pb-8 border-b-2 border-[#586263] mr-4">
         <Image
           src="/home-page/sejours.png"
           width={45}
@@ -17,7 +17,7 @@ export default function HotelsForm(): React.ReactElement {
           <p className="text-[#8b8f92]">Ou allez vous ?</p>
         </div>
       </div>
-      <div className="flex flex-row items-center pt-4 gap-12 ml-4 pb-4 border-b-2 border-[#586263] mr-4">
+      <div className="flex flex-row items-center pt-4 gap-12 ml-4 pb-8 border-b-2 border-[#586263] mr-4">
         <Image src="/home-page/date.png" width={45} height={45} alt="hotel" />
         <div className="flex flex-col">
           <strong className="text-[#646868]">
@@ -26,7 +26,7 @@ export default function HotelsForm(): React.ReactElement {
           <p className="text-[#8b8f92]">07/10/2023 - 08/10/2023</p>
         </div>
       </div>
-      <div className="flex flex-row items-center gap-12 ml-4 py-4 border-b-2 border-[#586263] mr-4">
+      <div className="flex flex-row items-center gap-12 ml-4 pt-4 pb-8 border-b-2 border-[#586263] mr-4">
         <Image
           src="/home-page/destination.png"
           width={45}

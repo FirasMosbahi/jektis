@@ -3,7 +3,7 @@ import { WhiteSearchIcon } from "@jektis/components/icons";
 
 export default function VoyagesForm(): React.ReactElement {
   return (
-    <form className="w-full py-4 px-4 gap-x-8 gap-y-4 bg-opacity-80 border border-transparent rounded-2xl bg-white grid grid-cols-2">
+    <form className="w-full h-full py-4 px-4 gap-x-8 gap-y-4 bg-opacity-80 border border-transparent rounded-2xl bg-white grid grid-cols-2">
       <div className="col-span-2">
         <label htmlFor="destination" className="block mb-2 text-gray-900">
           Nos Destinations

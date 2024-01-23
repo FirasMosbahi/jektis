@@ -68,13 +68,15 @@ export default function HomeFilter(): React.ReactNode {
           </div>
         </form>
 
-        {choosenForm === HomeFilterFormsEnum.HOTELS ? (
-          <HotelsForm />
-        ) : choosenForm === HomeFilterFormsEnum.VOLS ? (
-          <VolForm />
-        ) : (
-          <VoyagesForm />
-        )}
+        <div className="h-[28rem]">
+          {choosenForm === HomeFilterFormsEnum.HOTELS ? (
+            <HotelsForm />
+          ) : choosenForm === HomeFilterFormsEnum.VOLS ? (
+            <VolForm />
+          ) : (
+            <VoyagesForm />
+          )}
+        </div>
       </div>
     </div>
   );
