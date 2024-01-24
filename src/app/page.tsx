@@ -23,10 +23,10 @@ export default function Index(): React.ReactNode {
   return (
     <div>
       <div className="flex xl:flex-row flex-col items-center justify-between xl:items-start w-full mb-12 gap-12">
-        <div className="2xl:min-w-[40%]">
+        <div className="3xl:min-w-[40%] flex-1">
           <HomeFilter />
         </div>
-        <div className="2xl:min-w-[40%]">
+        <div className="3xl:min-w-[40%]">
           <Promo />
         </div>
       </div>
