@@ -25,9 +25,9 @@ export default function PageIndex({
   return (
     <div className="w-full">
       <HotelsFilter />
-      <div className="mb-8 mt-8 flex flex-row gap-8">
+      <div className="mb-8 w-full mt-8 flex flex-row gap-8">
         <HotelsSideFilter />
-        <div className="bg-white">
+        <div className="w-full bg-white">
           <HotelsList hotels={hotelsToShow} />
           <Pagination pagesNumber={hotels.length / 3 - 1} />
         </div>

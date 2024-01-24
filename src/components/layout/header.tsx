@@ -13,10 +13,10 @@ export default function Header(): React.ReactNode {
           <img
             src="/logo_jektis.png"
             alt="jektis logo"
-            className="w-[18rem] h-[12rem]"
+            className="w-[18rem] h-[12rem] 3xl:w-[25rem] 3xl:h-[18rem]"
           />
           <div className="flex flex-col xl:items-end items-center">
-            <div className="hidden w-full xl:flex xl:flex-row pl-40 ">
+            <div className="hidden w-full xl:flex xl:flex-row xl:justify-end">
               <SearchInput />
               <LoginButton />
             </div>

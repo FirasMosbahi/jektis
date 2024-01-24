@@ -18,15 +18,17 @@ import { VoyageType } from "@jektis/types";
 export default function Footer(): React.ReactNode {
   return (
     <div className="flex flex-col md:mt-0 mt-12 pb-8 gap-16 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-12 justify-between">
-      <div className="flex flex-col">
+      <div className="flex flex-col 3xl:max-w-[70%]">
         <div className="flex flex-col md:flex-row border-b-4 gap-12 mb-4 py-4">
           <div className="flex flex-col text-center">
-            <strong className="text-[1.9rem] font-extrabold">
+            <strong className="text-[1.9rem] text-nowrap 3xl:text-[3rem] font-extrabold">
               Jektis Travel
             </strong>
-            <p className="text-[1.4rem]">Le voyage, C{"'"}est notre métier</p>
+            <p className="text-[1.4rem] 3xl:text-[1.5rem]">
+              Le voyage, C{"'"}est notre métier
+            </p>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col 3xl:text-[1.4rem]">
             <strong className="">Agence de Voyages (Lic A),</strong>
             <p>Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.</p>
             <p>
@@ -34,7 +36,7 @@ export default function Footer(): React.ReactNode {
             </p>
           </div>
         </div>
-        <div className="flex flex-col text-[0.9rem] gap-12 md:flex-row md:gap-24">
+        <div className="flex flex-col text-[0.9rem] 3xl:text-[1.3rem] gap-12 md:flex-row md:gap-24">
           <div className="flex flex-col">
             <strong className="mb-4">Nos Hotels</strong>
             <Link className="cursor-pointer" href="/hotels-list?city=tunis">
@@ -91,7 +93,7 @@ export default function Footer(): React.ReactNode {
             <Link href="#">Mentions légales</Link>
           </div>
         </div>
-        <div className="flex flex-col md:mt-4 mt-24 md:flex-row text-xl items-center gap-8 mb-12">
+        <div className="flex flex-col md:mt-4 mt-24 3xl:text-[1.5rem] 3xl:pt-12 md:flex-row text-xl items-center gap-8 mb-12">
           <p>Recevez nos promotions par mail</p>
           <input
             type="email"

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function MultiDimensionForm(): React.ReactElement {
   return (
-    <form className="max-w-sm text-[0.85rem] mx-auto py-4 px-2">
+    <form className="max-w-sm 2xl:max-w-full 2xl:px-8 text-[0.85rem] mx-auto py-4 px-2">
       <div className="grid grid-cols-2 pb-4 gap-y-2 gap-x-6">
         <div className="col-span-2">
           <label htmlFor="depart-date" className="block mb-2  text-gray-900">

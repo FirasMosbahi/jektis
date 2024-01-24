@@ -3,7 +3,7 @@ import { Whatsapp, WhatsappWhite } from "@jektis/components/icons";
 
 export default function Infos(): React.ReactNode {
   return (
-    <div className="flex flex-col text-white text-[0.9rem] items-start w-fit xl:inline text-right xl:tracking-wide mt-8">
+    <div className="flex flex-col text-white text-[0.9rem] 2xl:text-[1.1rem] 3xl:text-[1.5rem] items-start w-fit xl:inline text-right xl:tracking-wide mt-8">
       <div className="flex flex-col xl:justify-start lg:gap-0 gap-4 text-center">
         <div className="flex md:flex-row flex-col gap-0 items-center md:items-end md:gap-6">
           <strong className="">Tel +216 71 70 69 00 :</strong>
