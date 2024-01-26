@@ -9,7 +9,7 @@ export default function CustomPage({
       className="h-fit bg-cover bg-center flex flex-col lg:px-52 py-8 items-center justify-center"
       style={{ backgroundImage: "url(/background-sud.jpg)" }}
     >
-      <div className="3xl:max-w-[70rem]">{children}</div>
+      <div className="xl:max-w-[70rem]">{children}</div>
     </div>
   );
 }
