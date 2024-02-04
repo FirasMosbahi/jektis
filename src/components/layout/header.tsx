@@ -3,7 +3,6 @@ import SearchInput from "@jektis/components/layout/search-input";
 import LoginButton from "@jektis/components/layout/login-button";
 import Infos from "@jektis/components/layout/infos";
 import Navbar from "@jektis/components/layout/navbar";
-import Center, { Axes } from "@jektis/components/generic/center";
 
 export default function Header(): React.ReactNode {
   return (

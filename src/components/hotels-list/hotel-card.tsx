@@ -3,7 +3,6 @@
 import React from "react";
 import { Ok, Star } from "@jektis/components/icons";
 import HotelCardProps from "@jektis/types/hotel_class";
-import PriceButton from "@jektis/components/generic/price-button";
 import ChamberDescription from "@jektis/components/hotels-list/chamber-description";
 
 export default function HotelCard({
