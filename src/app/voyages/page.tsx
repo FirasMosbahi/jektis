@@ -5,6 +5,7 @@ import CustomPage from "@jektis/components/generic/CustomPage";
 import { getCities, getHotels } from "@jektis/services";
 import { VoyageCardProps } from "@jektis/types";
 import Pagination from "@jektis/components/generic/pagination";
+import Link from "next/link";
 
 export default function VoyagesIndex({
   searchParams,
@@ -24,7 +25,9 @@ export default function VoyagesIndex({
         <div className="flex flex-col gap-8 items-start w-full py-10 flex-1">
           {citiesToShow.map((city, index) => (
             <div key={index} className="w-full px-4">
-              <CityCardXl city={city} key={city.id} />
+              <Link href={`/voyages/${city.id}`}>
+                <CityCardXl city={city} key={city.id} />
+              </Link>
             </div>
           ))}
         </div>

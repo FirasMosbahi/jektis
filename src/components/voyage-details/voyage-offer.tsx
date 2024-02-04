@@ -36,7 +36,7 @@ export default function VoyageOffer({
       />
       <div
         style={{ borderRadius: 15 }}
-        className="bg-gradient-to-r hidden md:block from-[#004fa6] to-[#02c9b2] w-fit absolute sm:top-16 md:top-12 lg:top-32 xl:top-16 right-12"
+        className="bg-gradient-to-r hidden md:block from-[#004fa6] to-[#02c9b2] w-fit absolute sm:top-16 md:top-12 lg:top-32 xl:top-32 right-12"
       >
         <div
           id="price"
