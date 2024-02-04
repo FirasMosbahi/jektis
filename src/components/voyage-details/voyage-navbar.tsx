@@ -13,45 +13,45 @@ export default function VoyageNavbar({
     >
       <button
         type="button"
-        className="text-sm px-6 py-4 font-medium text-white border-r-4 border-white"
+        className="px-6 py-4 font-medium text-white border-r-4 border-white"
         onClick={() => onClick(VoyageDetailsSection.programme)}
       >
-        <strong className="xl:text-xl">Programme</strong>
+        <strong className="">Programme</strong>
       </button>
       <button
         type="button"
-        className="px-6 py-4 text-sm font-medium text-white border-r-4 border-white"
+        className="px-6 py-4 font-medium text-white border-r-4 border-white"
         onClick={() => onClick(VoyageDetailsSection.servicesInclus)}
       >
-        <strong className="xl:text-xl">Services inclus</strong>
+        <strong>Services inclus</strong>
       </button>
       <button
         type="button"
-        className="px-6 py-4 text-sm font-medium text-white border-r-4 border-white"
+        className="px-6 py-4 font-medium text-white border-r-4 border-white"
         onClick={() => onClick(VoyageDetailsSection.servicesNonInclus)}
       >
-        <strong className="xl:text-xl">Services non inclus</strong>
+        <strong>Services non inclus</strong>
       </button>
       <button
         type="button"
-        className="px-6 py-4 text-sm font-medium text-white border-r-4 border-white"
+        className="px-6 py-4 font-medium text-white border-r-4 border-white"
         onClick={() => onClick(VoyageDetailsSection.TarifsAndReservation)}
       >
-        <strong className="xl:text-xl">Tarifs et réservations</strong>
+        <strong>Tarifs et réservations</strong>
       </button>
       <button
         type="button"
-        className="px-6 py-4 text-sm font-medium text-white border-r-4 border-white"
+        className="px-6 py-4 font-medium text-white border-r-4 border-white"
         onClick={() => onClick(VoyageDetailsSection.Visa)}
       >
-        <strong className="xl:text-xl">Visa</strong>
+        <strong>Visa</strong>
       </button>
       <button
         type="button"
-        className="px-8 py-4 text-sm font-medium text-white"
+        className="px-8 py-4 font-medium text-white"
         onClick={() => onClick(VoyageDetailsSection.ChargeeDeVoyage)}
       >
-        <strong className="xl:text-xl">Chargé de voyage</strong>
+        <strong>Chargé de voyage</strong>
       </button>
     </div>
   );

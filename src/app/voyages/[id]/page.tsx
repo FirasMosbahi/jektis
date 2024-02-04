@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import VoyageOffer from "@jektis/components/voyage-details/voyage-offer";
 import VoyageNavbar from "@jektis/components/voyage-details/voyage-navbar";
 import VoyageDetails from "@jektis/components/voyage-details/voyage-description";
@@ -9,7 +9,7 @@ import { getProgram } from "@jektis/services";
 import VoyageDetailsProps from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
 import ChambreSelectionTable from "@jektis/components/voyage-details/chambre-selection-table";
-import ResizeDetector, { useResizeDetector } from "react-resize-detector";
+import ResizeDetector from "react-resize-detector";
 
 export default function VoyageGroupIndex({
   params,
@@ -41,7 +41,7 @@ export default function VoyageGroupIndex({
             <ChambreSelectionTable chambres={voyage.chambres} />
           </div>
         </ResizeDetector>
-        <div className="xl:block hidden">
+        <div className="xl:block hidden max-w-[15rem]">
           <VoyageImages height={heightState} />
         </div>
       </div>

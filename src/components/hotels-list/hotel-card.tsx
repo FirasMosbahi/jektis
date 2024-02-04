@@ -84,7 +84,7 @@ export default function HotelCard({
               </ul>
             </div>
           </div>
-          <div className="flex flex-col justify-between items-end lg:w-fit w-full lg:px-0 px-4 py-4 pt-8 xl:pl-8">
+          <div className="flex flex-col justify-between items-end lg:w-fit w-full lg:px-0 px-4 py-4 pt-2 xl:pl-8">
             <div className="lg:flex lg:flex-row hidden">{stars}</div>
             <div className="flex flex-col gap-2 items-end">
               <div
@@ -100,7 +100,7 @@ export default function HotelCard({
                   </div>
                 </div>
               </div>
-              <button className="bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1 border border-transparent rounded-2xl ">
+              <button className="bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1 border-0.5 border-transparent rounded-2xl ">
                 <div className="bg-white text-green-600 px-4 py-2 rounded-xl">
                   Réserver
                 </div>

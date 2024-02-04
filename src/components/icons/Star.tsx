@@ -3,7 +3,7 @@ import type { SVGProps } from "react";
 const SvgStar = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="#ff0"
+    fill="#F1B904"
     className="star_svg__h-5 star_svg__w-5 star_svg__text-yellow-500"
     viewBox="0 0 20 20"
     width="1em"

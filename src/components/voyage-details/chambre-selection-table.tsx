@@ -8,6 +8,7 @@ export default function ChambreSelectionTable({
 }: {
   chambres: Chambres[];
 }): React.ReactNode {
+  console.log(chambres);
   let reservation: any = {};
   chambres.forEach((chambre) => {
     reservation[chambre.title] = 0;

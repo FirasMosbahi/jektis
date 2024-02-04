@@ -4,6 +4,7 @@ import MiniCityCard from "@jektis/components/home/mini-city-card";
 import MiniCardProps from "@jektis/types/mini-card-props";
 import { VoyageCardProps } from "@jektis/types/city_class";
 import Link from "next/link";
+import { VoirPlus } from "@jektis/components/icons";
 
 export default function VoyageCard({
   title,
@@ -23,11 +24,15 @@ export default function VoyageCard({
       <div className="flex flex-row mb-4 text-xl py-2 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
         <strong className="ml-4">{title}</strong>
         {titleLink ? (
-          <Link href={titleLink}>
-            <p className="mr-4">Voir Tous</p>
+          <Link href={titleLink} className="flex flex-col justify-end">
+            <p className="mr-4 text-sm flex flex-row items-center font-light gap-x-1 h-fit">
+              Voir Toute la liste <VoirPlus width={12} height={12} />
+            </p>
           </Link>
         ) : (
-          <p className="mr-4">Voir Tous</p>
+          <p className="mr-4 text-sm flex flex-row items-center font-light gap-x-1 h-fit">
+            Voir Toute la liste <VoirPlus width={12} height={12} />
+          </p>
         )}
       </div>
       <div className="flex flex-col gap-4">

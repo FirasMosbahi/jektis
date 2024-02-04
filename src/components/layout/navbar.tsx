@@ -70,12 +70,13 @@ export default function Navbar(): React.ReactNode {
         >
           Espace Entreprise
         </button>
-        <button
+        <Link
+          href="/contacts"
           type="button"
-          className="px-5 h-12 2xl:min-w-[10%] font-medium bg-opacity-80 bg-whiteBlue border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
+          className="px-5 h-12 2xl:min-w-[10%] flex flex-col justify-center font-medium bg-opacity-80 bg-whiteBlue border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
         >
-          Contact
-        </button>
+          <button>Contact</button>
+        </Link>
       </div>
     </>
   );

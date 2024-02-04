@@ -16,14 +16,14 @@ export default function ChambreReservationListItem({
   return (
     <div className="grid mr-2 grid-cols-11 rounded-md shadow-sm mt-1 bg-[#ececec]">
       <div className="flex flex-col items-center col-span-3 lg:col-span-2  text-xl font-medium text-white border-r-2 border-white ">
-        <div className="flex text-black flex-row h-full my-4 gap-4 mx-1 bg-white justify-between border-2 rounded border-[#d9d9d9]">
+        <div className="flex text-black max-h-8 w-[80%] items-center flex-row h-full my-4 gap-4 mx-1 bg-white justify-between border-2 rounded border-[#d9d9d9]">
           <Minus
-            className="sm:block hidden bg-[#d9d9d9] h-full w-auto cursor-pointer"
+            className="sm:block max-h-8 max-w-8 min-w-6 hidden bg-[#d9d9d9] h-full cursor-pointer"
             onClick={() => onUpdate(qty - 1)}
           />
           <Center axe={Axes.all}>
             <input
-              className="w-4"
+              className="sm:w-4 w-16 text-center"
               type="number"
               value={qty}
               onChange={(e) =>
@@ -36,17 +36,17 @@ export default function ChambreReservationListItem({
             />
           </Center>
           <Plus
-            className="sm:block hidden bg-[#d9d9d9] h-full w-auto cursor-pointer"
+            className="sm:block hidden bg-[#d9d9d9] max-h-8 max-w-8 min-w-6 h-full w-auto cursor-pointer"
             onClick={() => onUpdate(qty + 1)}
           />
         </div>
       </div>
       <div className="col-span-6 lg:col-span-7 flex flex-row gap-4 items-center pl-4 justify-start text-sm lg:text-xl w-full font-medium border-r-2 border-white">
-        <strong className="text-black">{title}</strong>
+        <strong className="text-black text-[0.9rem]">{title}</strong>
       </div>
       <div className="col-span-2 flex flex-row justify-center text-xl lg:text-3xl font-medium">
         <div className="flex flex-col items-center justify-center">
-          <strong className="text-[#366999]">
+          <strong className="text-[#366999] text-[1.2rem]">
             {qty * price}
             <sup>DT</sup>
           </strong>

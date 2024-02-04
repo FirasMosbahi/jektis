@@ -59,10 +59,7 @@ export const program: ProgramDay[] = [
   {
     title: "Jour 1: Bienvenue à la destination",
     content: `
-      Aujourd'hui marque le début de notre incroyable aventure! Après avoir atterri dans cette destination enchanteresse, nous nous installerons à notre hébergement. Une fois installés, nous explorerons les environs pour nous imprégner de l'atmosphère locale. Ne manquez pas de déguster des plats authentiques dans un restaurant local et de vous immerger dans la culture unique de la région.
-      
-      En soirée, une balade détendue pour découvrir les charmes nocturnes de la ville sera le moyen idéal de conclure cette première journée inoubliable.
-    `,
+      Aujourd'hui marque le début de notre incroyable aventure! Après avoir atterri dans cette destination enchanteresse, nous nous installerons à notre hébergement. Une fois installés, nous explorerons les environs pour nous imprégner de l'atmosphère locale. Ne manquez pas de déguster des plats authentiques dans un restaurant local et de vous immerger dans la culture unique de la région.`,
   },
   {
     title: "Jour 2: Aventure en plein air",
@@ -88,28 +85,35 @@ export const program: ProgramDay[] = [
       En soirée, rejoignez-nous pour un dîner décontracté pour partager vos découvertes de la journée.
     `,
   },
-  {
-    title: "Jour 5: Aventure Culinaire",
-    content: `
-      Aujourd'hui, nous explorerons les délices culinaires de la région! Commencez la journée par une visite du marché local, où nous choisirons des ingrédients frais pour un cours de cuisine interactif. Apprenez les secrets de la cuisine locale auprès de chefs talentueux et dégustez les fruits de votre travail lors d'un déjeuner convivial.
+];
 
-      En soirée, une dégustation de vins locaux et de spécialités gastronomiques sera le point culminant de cette journée gourmande.
-    `,
+export const chambres = (price: {
+  chambreSignle: number;
+  chambreDouble: number;
+  chambreTrois: number;
+  enfant6Ans: number;
+  enfant12Ans: number;
+}) => [
+  {
+    title: "chambre single",
+    unitPrice: price.chambreSignle,
   },
   {
-    title: "Jour 6: Aventure Urbaine",
-    content: `
-      Plongeons-nous dans l'énergie dynamique de la vie urbaine aujourd'hui! Explorez les quartiers animés, visitez des galeries d'art contemporain et découvrez l'effervescence culturelle de la ville. Que ce soit en visitant des boutiques uniques, en dégustant des cafés locaux ou en participant à des événements culturels, cette journée urbaine sera pleine de découvertes fascinantes.
-
-      En soirée, prenez part à une activité nocturne locale pour vivre pleinement l'atmosphère vibrante de la vie nocturne.
-    `,
+    title: "chambre double",
+    unitPrice: price.chambreDouble,
   },
   {
-    title: "Jour 7: Adieu, mais pas au revoir",
-    content: `
-      Le dernier jour de notre voyage est arrivé, mais la magie ne s'arrête pas ici. Profitez d'une dernière matinée pour explorer les environs ou pour faire des emplettes de souvenirs mémorables. Nous clôturerons notre voyage par un déjeuner d'adieu où nous pourrons partager nos moments préférés et échanger des contacts pour rester en contact.
-
-      En partant, rappelez-vous que ce n'est qu'un au revoir à cette destination spéciale. Les souvenirs que nous avons créés ensemble resteront avec nous pour toujours.
-    `,
+    title: "3éme personne",
+    unitPrice: price.chambreTrois,
+  },
+  {
+    title:
+      "Enfant (2 / -06 ans) partageant la chambre avec les parents (sans lit supplémentaire)",
+    unitPrice: price.enfant6Ans,
+  },
+  {
+    title:
+      "Enfant (+06 / -12 ans) partageant la chambre avec les parents (sans lit supplémentaire)",
+    unitPrice: price.enfant12Ans,
   },
 ];

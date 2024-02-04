@@ -1,6 +1,7 @@
 import VoyageDetailsProps from "@jektis/types/voyage-details-props";
 import {
   cancelFrais,
+  chambres,
   chargeeDeVoyage,
   payement,
   prix,
@@ -26,16 +27,13 @@ export function getProgram(id: string | number): VoyageDetailsProps {
     voyage.dateStart,
     voyage.dateEnd,
     program,
-    [
-      {
-        title: "chambre individuelle",
-        unitPrice: voyage.price,
-      },
-      {
-        title: "chambre double",
-        unitPrice: voyage.price * 1.7,
-      },
-    ],
+    chambres({
+      chambreSignle: voyage.price,
+      chambreDouble: voyage.price * 1.7,
+      chambreTrois: voyage.price * 2.2,
+      enfant6Ans: voyage.price * 2.4,
+      enfant12Ans: voyage.price * 2.6,
+    }),
     servicesInclus,
     servicesNonInclus,
     visa,

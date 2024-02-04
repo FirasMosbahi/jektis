@@ -12,6 +12,7 @@ import {
   getMiniCards,
   getVoyagesMiniCardsByCategory,
 } from "@jektis/services";
+import { VoirPlus } from "@jektis/components/icons";
 export default function Index(): React.ReactNode {
   const nocesVoyages: VoyageCardProps[] = getBestCitiesByRateAndCategory(
     3,
@@ -52,9 +53,16 @@ export default function Index(): React.ReactNode {
           </div>
         </div>
         <div className="flex text-2xl py-2 px-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
-          <strong className="ml-1 xs:ml-4">Voyages de Noces</strong>
-          <Link href={`/voyages?category=${VoyageType.VOYAGE_DE_NOCES}`}>
-            <p className="ml-1 xs:mr-4">Voir Tous</p>
+          <strong className="ml-1 xs:ml-4">
+            Voyages de Noces - Voyages à la carte
+          </strong>
+          <Link
+            href={`/voyages?category=${VoyageType.VOYAGE_DE_NOCES}`}
+            className="flex flex-col justify-end"
+          >
+            <p className="mr-4 text-sm flex flex-row items-center font-light gap-x-1 h-fit">
+              Voir Toute la liste <VoirPlus width={12} height={12} />
+            </p>
           </Link>
         </div>
         <div className="flex flex-wrap gap-8">
@@ -69,8 +77,13 @@ export default function Index(): React.ReactNode {
         </div>
         <div className="flex flex-row text-xl gap-8 mt-8 border py-2 px-4 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-4">Hotels en Tunisie :</strong>
-          <Link href={`/hotels-list?category=${VoyageType.VOYAGE_DE_NOCES}`}>
-            <p className="mr-4">Voir Tous</p>
+          <Link
+            href={`/hotels-list?category=${VoyageType.VOYAGE_DE_NOCES}`}
+            className="flex flex-col justify-end"
+          >
+            <p className="mr-4 text-sm flex flex-row items-center font-light gap-x-1 h-fit">
+              Voir Toute la liste <VoirPlus width={12} height={12} />
+            </p>
           </Link>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 pb-24 md:mt-8">
@@ -79,24 +92,28 @@ export default function Index(): React.ReactNode {
             mainLink={`hotels-list?category=${HotelCategory.VUE_MER}`}
             cards={getMiniCards(HotelCategory.VUE_MER)}
             linksBase="/hotels-list"
+            showSeeAllButton={true}
           />
           <VoyageCardWithImg
             imageUrl="https://www.jektistravel.com/public/images/image/image_0.01709600-1701696381.png"
             mainLink={`hotels-list?category=${HotelCategory.RECOMMANDE}`}
             linksBase="hotels-list"
             cards={getMiniCards(HotelCategory.RECOMMANDE)}
+            showSeeAllButton={true}
           />
           <VoyageCardWithImg
             imageUrl="https://www.jektistravel.com/public/images/image/image_0.11581900-1701696393.png"
             mainLink={`hotels-list?category=${HotelCategory.ALL_INCLUSIVE}`}
             cards={getMiniCards(HotelCategory.ALL_INCLUSIVE)}
             linksBase="hotels-list"
+            showSeeAllButton={true}
           />
           <VoyageCardWithImg
             imageUrl="https://www.jektistravel.com/public/images/image/image_0.72363500-1701696405.png"
             mainLink={`hotels-list?category=${HotelCategory.TOBBOGAN}`}
             cards={getMiniCards(HotelCategory.TOBBOGAN)}
             linksBase="hotels-list"
+            showSeeAllButton={true}
           />
         </div>
       </div>

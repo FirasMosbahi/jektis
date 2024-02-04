@@ -4,6 +4,7 @@ import React from "react";
 import VoyageDetailsProps from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
 import Programme from "@jektis/components/voyage-details/programme";
+import { Printer } from "@jektis/components/icons";
 
 export default function VoyageDetails({
   voyageDetails,
@@ -15,12 +16,21 @@ export default function VoyageDetails({
   return (
     <div>
       {section === VoyageDetailsSection.programme && (
-        <>
+        <div className="relative">
+          <div className="absolute hidden right-4 top-4 sm:flex flex-row gap-x-4">
+            <button className="px-2 h-8 bg-[#CFCFCF] text-black border border-transparent rounded-xl">
+              Partager
+            </button>
+            <button className="px-2 h-8 bg-[#0050A5] text-white border border-transparent rounded-xl">
+              Imprimer
+            </button>
+            <Printer className="h-full w-auto" width={40} height={40} />
+          </div>
           <div className="mt-6 mb-4">
             <strong className="text-[#1b53a1] text-3xl ">PROGRAMME</strong>
           </div>
           <Programme programmeDescription={voyageDetails.program} />
-        </>
+        </div>
       )}
       {section === VoyageDetailsSection.servicesInclus && (
         <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8">

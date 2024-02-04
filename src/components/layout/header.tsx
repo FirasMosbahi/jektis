@@ -9,7 +9,7 @@ export default function Header(): React.ReactNode {
   return (
     <>
       <div className="justify-between w-full">
-        <div className="flex flex-col lg:flex-col xl:flex-row md:flex-row justify-between">
+        <div className="flex flex-row flex-wrap items-center lg:px-0 px-12 justify-between">
           <img
             src="/logo_jektis.png"
             alt="jektis logo"

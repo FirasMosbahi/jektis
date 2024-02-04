@@ -1,12 +1,11 @@
 "use client";
 
 import Center, { Axes } from "@jektis/components/generic/center";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Promo } from "@jektis/types/promo";
 import getPromos from "@jektis/services/promos";
 import useIsInViewport from "@jektis/hooks/useInViewPort";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Promo(): React.ReactNode {
   const [current, setCurrent] = useState<number>(0);
@@ -49,10 +48,14 @@ export default function Promo(): React.ReactNode {
       <div className="md:flex flex-row w-full hidden border-t-white border-t-4">
         {promos.map((promo, index) => (
           <div
+            style={{
+              borderBottomLeftRadius: index === 0 ? 12 : 0,
+              borderBottomRightRadius: index === promos.length - 1 ? 12 : 0,
+            }}
             key={index}
             className={`text-center min-w-[10%] 2xl:h-16 text-white text-[1.5rem] h-24 ${
               index !== promos.length - 1 ? "border-r-4 border" : ""
-            }`}
+            } ${current === index ? "bg-[#0051A3]" : "bg-[#A0BADB]"} `}
           >
             <Center axe={Axes.all}>
               <p className="text-[1rem] px-2">{promo.title}</p>
