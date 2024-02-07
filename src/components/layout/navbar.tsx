@@ -5,7 +5,7 @@ export default function Navbar(): React.ReactNode {
   return (
     <>
       <div
-        className="flex flex-row justify-center rounded-md text-white shadow-sm mt-8 lg:mx-0 w-full mb-16"
+        className="flex flex-row justify-center rounded-md text-white shadow-sm mt-8 lg:mx-0 w-full mb-8"
         role="group"
       >
         <Link href="/" className="2xl:min-w-[4%]">

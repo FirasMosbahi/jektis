@@ -24,7 +24,7 @@ export default function HotelDetailsIndex({
         Minimum stay: {hotel.minimumStay} Nuités /{" "}
         {hotel.inclusive && "All inclusive /"} {hotel.detailEnfant}
       </p>
-      <div className="mb-12">
+      <div className="mb-2">
         <HotelImages images={hotel.images} />
       </div>
       <br />

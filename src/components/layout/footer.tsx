@@ -17,18 +17,18 @@ import { VoyageType } from "@jektis/types";
 
 export default function Footer(): React.ReactNode {
   return (
-    <div className="flex flex-col md:mt-0 mt-12 pb-8 gap-16 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-12 justify-between">
+    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-8 xl:gap-12 gap-6 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-6 xl:px-6 justify-between">
       <div className="flex flex-col 3xl:max-w-[70%]">
-        <div className="flex flex-col md:flex-row border-b-4 gap-12 mb-4 py-4">
-          <div className="flex flex-col text-center">
-            <strong className="text-[1.9rem] text-nowrap 3xl:text-[3rem] font-extrabold">
+        <div className="flex flex-col sm:flex-row border-b-4 gap-12 mb-4 py-4">
+          <div className="flex flex-col text-center max-w-[250px]">
+            <strong className="text-[1.9rem]  text-nowrap 3xl:text-[3rem] font-extrabold">
               Jektis Travel
             </strong>
             <p className="text-[1.4rem] 3xl:text-[1.5rem]">
               Le voyage, C{"'"}est notre métier
             </p>
           </div>
-          <div className="flex flex-col 3xl:text-[1.4rem]">
+          <div className="flex flex-col 3xl:text-[1.4rem] max-w-[300px]">
             <strong className="">Agence de Voyages (Lic A),</strong>
             <p>Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.</p>
             <p>
@@ -36,7 +36,7 @@ export default function Footer(): React.ReactNode {
             </p>
           </div>
         </div>
-        <div className="flex flex-col text-[0.9rem] 3xl:text-[1.3rem] gap-12 md:flex-row md:gap-24">
+        <div className="flex flex-row flex-wrap text-[0.9rem] 3xl:text-[1.3rem] gap-12  md:gap-16">
           <div className="flex flex-col">
             <strong className="mb-4">Nos Hotels</strong>
             <Link className="cursor-pointer" href="/hotels-list?city=tunis">
@@ -93,34 +93,42 @@ export default function Footer(): React.ReactNode {
             <Link href="#">Mentions légales</Link>
           </div>
         </div>
-        <div className="flex flex-col md:mt-4 mt-24 3xl:text-[1.5rem] 3xl:pt-12 md:flex-row text-xl items-center gap-8 mb-12">
-          <p>Recevez nos promotions par mail</p>
-          <input
-            type="email"
-            id="email"
-            placeholder="Veuiller ajouter votre e-mail ici"
-            className="bg-gray-50 w-64 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
-          />
-          <button className="bg-blue-400 px-12 py-2">OK</button>
+        <div className="flex flex-col md:mt-4 mt-8 3xl:text-[1.5rem]  border-y-white border-y-4 py-4 xl:border-y-transparent xl:pt-0 3xl:pt-12 text-sm gap-8">
+          <p className="lg:text-base text-xl font-bold lg:font-normal">
+            Recevez nos promotions par mail
+          </p>
+          <div className="flex flex-row flex-wrap gap-x-4 gap-y-2">
+            <input
+              type="email"
+              id="email"
+              placeholder="Veuiller ajouter votre e-mail ici"
+              className="bg-gray-50 w-52 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+            />
+            <button className="bg-blue-400 px-12 py-2">OK</button>
+          </div>
         </div>
       </div>
-      <div className="flex flex-col text-3xl gap-6 mt-12">
-        <strong>Suivez Nous</strong>
-        <div className="bg-white opacity-100 gap-x-4 py-2 px-2 flex flex-row flex-wrap gap-y-4 xl:max-w-[14rem]">
-          <Facebook width={35} height={35} />
-          <Messanger width={35} height={35} />
-          <Instagram width={35} height={35} />
-          <Linkedin width={35} height={35} />
-          <Youtube width={35} height={35} />
-          <Twitter width={35} height={35} />
-          <Tiktok width={35} height={35} />
+      <div className="flex flex-col text-3xl gap-6 xl:mt-12">
+        <div className="flex flex-col gap-6">
+          <strong>Suivez Nous</strong>
+          <div className="bg-white opacity-100 gap-x-4 py-2 px-2 flex flex-row flex-wrap gap-y-4 w-fit">
+            <Facebook width={25} height={25} />
+            <Messanger width={25} height={25} />
+            <Instagram width={25} height={25} />
+            <Linkedin width={25} height={25} />
+            <Youtube width={25} height={25} />
+            <Twitter width={25} height={25} />
+            <Tiktok width={25} height={25} />
+          </div>
         </div>
-        <strong>Paiement Sécurisé</strong>
-        <div className="bg-white opacity-100 flex flex-row flex-wrap gap-y-4 xl:max-w-[14rem] gap-4 px-2 py-2">
-          <Visa width={60} height={60} />
-          <MasterCard width={60} height={60} />
-          <AmericanExpress width={60} height={60} />
-          <DinersClub width={60} height={60} />
+        <div className="flex flex-col gap-6">
+          <strong>Paiement Sécurisé</strong>
+          <div className="bg-white opacity-100 flex flex-row flex-wrap gap-y-4 gap-4 px-2 py-2 w-fit">
+            <Visa width={50} height={50} />
+            <MasterCard width={50} height={50} />
+            <AmericanExpress width={50} height={50} />
+            <DinersClub width={50} height={50} />
+          </div>
         </div>
       </div>
     </div>

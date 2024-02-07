@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import { Ok, Star } from "@jektis/components/icons";
+import { Ok, Star, VoirPlus } from "@jektis/components/icons";
 import HotelCardProps from "@jektis/types/hotel_class";
 import ChamberDescription from "@jektis/components/hotels-list/chamber-description";
+import Link from "next/link";
 
 export default function HotelCard({
   hotel,
@@ -81,6 +82,14 @@ export default function HotelCard({
                   <Ok /> {hotel.detailEnfant}
                 </li>
               </ul>
+              <div className="lg:pt-4">
+                <Link
+                  href={`/hotels-list/${hotel.id}`}
+                  className="border-2 border-white bg-[#0051A3] text-white max-w-52 justify-between py-0.5 cursor-pointer rounded-2xl px-4 flex flex-row gap-x-1 items-center text-[1.2rem] font-extralight"
+                >
+                  <p>Voir toute la liste</p> <VoirPlus height={12} width={12} />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-between items-end lg:w-fit w-full lg:px-0 px-4 py-4 pt-2 xl:pl-8">

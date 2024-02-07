@@ -21,7 +21,7 @@ export default function VoyageOffer({
     endDate,
   );
   return (
-    <div className="relative mb-8 ml-6">
+    <div className="relative ml-6">
       <div className="text-black flex flex-row gap-32 lg:gap-4 justify-start items-end mb-8">
         <strong className="text-3xl lg:text-6xl">{name}</strong>
         <p className="lg:text-2xl">

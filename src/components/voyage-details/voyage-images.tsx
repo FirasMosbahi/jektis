@@ -22,11 +22,10 @@ export default function VoyageImages({
         key={index}
         src={imagesUrl[index % imagesUrl.length]}
         alt={"city image"}
-        height="300"
-        className="border-transparent rounded-2xl my-4"
+        className="border-transparent rounded-2xl my-4 h-[200px]"
       />,
     );
-    imagesHeight += 300;
+    imagesHeight += 450;
     index++;
   }
 

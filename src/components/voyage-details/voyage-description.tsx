@@ -26,7 +26,7 @@ export default function VoyageDetails({
             </button>
             <Printer className="h-full w-auto" width={40} height={40} />
           </div>
-          <div className="mt-6 mb-4">
+          <div className="my-3">
             <strong className="text-[#1b53a1] text-3xl ">PROGRAMME</strong>
           </div>
           <Programme programmeDescription={voyageDetails.program} />

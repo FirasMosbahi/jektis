@@ -53,12 +53,12 @@ export default function Promo(): React.ReactNode {
               borderBottomRightRadius: index === promos.length - 1 ? 12 : 0,
             }}
             key={index}
-            className={`text-center min-w-[10%] 2xl:h-16 text-white text-[1.5rem] h-24 ${
+            className={`text-center min-w-[10%] 2xl:h-16 text-white h-24 ${
               index !== promos.length - 1 ? "border-r-4 border" : ""
             } ${current === index ? "bg-[#0051A3]" : "bg-[#A0BADB]"} `}
           >
             <Center axe={Axes.all}>
-              <p className="text-[1rem] px-2">{promo.title}</p>
+              <p className="text-[0.9rem] px-2">{promo.title}</p>
             </Center>
           </div>
         ))}

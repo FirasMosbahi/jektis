@@ -24,10 +24,10 @@ export default function Index(): React.ReactNode {
   return (
     <div>
       <div className="flex xl:flex-row flex-col items-center justify-between xl:items-start w-full mb-12 gap-12">
-        <div className="3xl:min-w-[40%] flex-1">
+        <div className="xl:min-w-[45%] ">
           <HomeFilter />
         </div>
-        <div className="3xl:min-w-[40%]">
+        <div className="xl:min-w-[50%]">
           <Promo />
         </div>
       </div>
@@ -75,7 +75,7 @@ export default function Index(): React.ReactNode {
             />
           ))}
         </div>
-        <div className="flex flex-row text-xl gap-8 mt-8 border py-2 px-4 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="flex flex-row text-xl text-white gap-8 mt-8 border py-2 px-4 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-4">Hotels en Tunisie :</strong>
           <Link
             href={`/hotels-list?category=${VoyageType.VOYAGE_DE_NOCES}`}
