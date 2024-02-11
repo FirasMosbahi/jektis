@@ -33,7 +33,7 @@ export default function VoyageDetails({
         </div>
       )}
       {section === VoyageDetailsSection.servicesInclus && (
-        <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8">
+        <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8 xl:my-3">
           <strong className="text-3xl text-[#1c4678]">SERVICES INCLUS</strong>
           <strong className="text-xl text-black">
             Pack Standard comprends:
@@ -52,7 +52,7 @@ export default function VoyageDetails({
         </div>
       )}
       {section === VoyageDetailsSection.servicesNonInclus && (
-        <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8 ">
+        <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8 xl:my-3">
           <strong className="text-3xl text-[#1c4678]">
             SERVICES NON INCLUS
           </strong>
@@ -64,7 +64,7 @@ export default function VoyageDetails({
         </div>
       )}
       {section === VoyageDetailsSection.Visa && (
-        <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8 ">
+        <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8 xl:my-3">
           <strong className="text-3xl text-[#1c4678]">VISA </strong>
           <ul className="text-black">
             {voyageDetails.visa.map((service, index) => (
@@ -74,7 +74,7 @@ export default function VoyageDetails({
         </div>
       )}
       {section === VoyageDetailsSection.ChargeeDeVoyage && (
-        <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8 ">
+        <div className="flex flex-col gap-6 border-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8 xl:my-3">
           <strong className="text-3xl text-[#1c4678]">
             CHARGé(E) DU VOYAGE
           </strong>
@@ -88,7 +88,7 @@ export default function VoyageDetails({
         </div>
       )}
       {section === VoyageDetailsSection.TarifsAndReservation && (
-        <div className="flex flex-col gap-6 border-b-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8">
+        <div className="flex flex-col gap-6 border-b-[#dbdbdb] border-b-4 mt-6 mb-8 pb-8 xl:my-3">
           <strong className="text-3xl text-[#1c4678]">TARIF</strong>
           <strong className="text-xl text-black">
             date de voyage : Du 30 Octobre au 05 Novembre 2023

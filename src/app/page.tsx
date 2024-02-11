@@ -52,13 +52,13 @@ export default function Index(): React.ReactNode {
             />
           </div>
         </div>
-        <div className="flex text-2xl py-2 px-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="flex text-2xl text-white py-2 px-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-1 xs:ml-4">
             Voyages de Noces - Voyages à la carte
           </strong>
           <Link
             href={`/voyages?category=${VoyageType.VOYAGE_DE_NOCES}`}
-            className="flex flex-col justify-end"
+            className="flex text-white flex-col justify-end"
           >
             <p className="mr-4 text-sm flex flex-row items-center font-light gap-x-1 h-fit">
               Voir Toute la liste <VoirPlus width={12} height={12} />

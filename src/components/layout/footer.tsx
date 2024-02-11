@@ -17,7 +17,7 @@ import { VoyageType } from "@jektis/types";
 
 export default function Footer(): React.ReactNode {
   return (
-    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-8 xl:gap-12 gap-6 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-6 xl:px-6 justify-between">
+    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-2 xl:pb-0 xl:gap-12 gap-6 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-6 xl:px-6 justify-between">
       <div className="flex flex-col 3xl:max-w-[70%]">
         <div className="flex flex-col sm:flex-row border-b-4 gap-12 mb-4 py-4">
           <div className="flex flex-col text-center max-w-[250px]">
@@ -93,7 +93,7 @@ export default function Footer(): React.ReactNode {
             <Link href="#">Mentions légales</Link>
           </div>
         </div>
-        <div className="flex flex-col md:mt-4 mt-8 3xl:text-[1.5rem]  border-y-white border-y-4 py-4 xl:border-y-transparent xl:pt-0 3xl:pt-12 text-sm gap-8">
+        <div className="flex xl:flex-row xl:items-center flex-col md:mt-4 mt-8 xl:mt-2 3xl:text-[1.5rem]  border-y-white border-y-4 py-4 xl:py-0 xl:pb-1 xl:border-y-transparent xl:pt-0 3xl:pt-12 text-sm gap-8 xl:gap-2">
           <p className="lg:text-base text-xl font-bold lg:font-normal">
             Recevez nos promotions par mail
           </p>

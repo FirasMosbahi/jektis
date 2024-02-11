@@ -24,10 +24,13 @@ export default function VoyageCardWithImg({
   return (
     <div className="flex text-xl w-full flex-col mt-16 sm:mt-0 mr-12 lg:mr-0">
       {title && (
-        <div className="flex flex-row py-2 mb-4 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
+        <div className="flex text-white flex-row py-2 mb-4 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
           <strong className="ml-4">{title}</strong>
           {titleLink ? (
-            <Link href={titleLink} className="flex flex-col justify-end">
+            <Link
+              href={titleLink}
+              className="flex text-white flex-col justify-end"
+            >
               <p className="mr-4 text-sm flex flex-row items-center font-light gap-x-1 h-fit">
                 Voir Toute la liste <VoirPlus width={12} height={12} />
               </p>

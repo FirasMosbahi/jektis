@@ -28,7 +28,7 @@ export default function RootLayout({
             </div>
           </Center>
           <div className="px-2 w-full">{children}</div>
-          <div className="w-full mt-12 mb-8 pl-4">
+          <div className="w-full mt-12 mb-0.5 pl-4">
             <Footer />
           </div>
         </CustomPage>
