@@ -74,7 +74,7 @@ export default function HotelsSideFilter() {
                     <>
                       <h3 className="-my-3 flow-root ">
                         <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                          <span className="font-medium text-xl text-[#494461]">
+                          <span className="font-medium text-xl text-nowrap text-[#494461]">
                             Nom de l{"'"}hotel
                           </span>
                           <span className="ml-6 flex items-center">

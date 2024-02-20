@@ -18,8 +18,8 @@ export default function HotelCard({
 
   return (
     <>
-      <div className="flex lg:flex-row flex-col items-center justify-center p-1 bg-white shadow-xl rounded-2xl mt-4 cursor-pointer">
-        <div className="relative flex min-h-[22rem] lg:flex-row lg:justify-between lg:pr-4 flex-col rounded-xl bg-[#ececec] bg-clip-border text-gray-700 shadow-md w-full">
+      <div className="flex overflow-visible lg:flex-row flex-col items-center justify-center p-1 bg-white shadow-xl rounded-2xl mt-4 cursor-pointer">
+        <div className="overflow-visible flex min-h-[22rem] lg:flex-row lg:justify-between lg:pr-4 flex-col rounded-xl bg-[#ececec] bg-clip-border text-gray-700 shadow-md w-full">
           <div className="flex lg:flex-row flex-col">
             <div className="relative m-0 lg:w-52 lg:h-full h-60 w-full shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
               <img

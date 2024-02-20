@@ -8,11 +8,11 @@ export default function Header(): React.ReactNode {
   return (
     <>
       <div className="justify-between w-full">
-        <div className="flex flex-row flex-wrap items-center lg:px-0 px-12 justify-between">
+        <div className="flex flex-row flex-wrap items-center lg:px-0 px-4 justify-between">
           <img
-            src="/logo_jektis.png"
+            src="/logo_footer.png"
             alt="jektis logo"
-            className="w-[18rem] h-[12rem] 3xl:w-[25rem] 3xl:h-[18rem]"
+            className="lg:w-[18rem] lg:h-[12rem] w-[200px] h-[140px] 3xl:w-[25rem] 3xl:h-[18rem]"
           />
           <div className="flex flex-col xl:items-end items-center">
             <div className="hidden w-full xl:flex xl:flex-row xl:justify-end">

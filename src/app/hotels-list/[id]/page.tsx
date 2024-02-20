@@ -4,9 +4,7 @@ import HotelImages from "@jektis/components/hotel-description/hotel-images";
 import HotelDetailsNavbar from "@jektis/components/hotel-description/hotel-details-navbar";
 import UpdateReservation from "@jektis/components/hotel-description/update-reservation";
 import HotelReservationTable from "@jektis/components/hotel-description/hotel-reservation-table";
-import Amenagement from "@jektis/components/hotel-description/amenagement";
 import { getHotelById } from "@jektis/services";
-import Panorama from "@jektis/components/hotel-description/panorama";
 
 export default function HotelDetailsIndex({
   params,

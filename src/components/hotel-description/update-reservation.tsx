@@ -3,7 +3,7 @@ import React from "react";
 
 export default function UpdateReservation(): React.ReactNode {
   return (
-    <div className="mt-10 w-full">
+    <div className="mt-4 w-full">
       <strong className="text-[#17547a] text-3xl">Tarifs & Réservations</strong>
       <div className="flex flex-col xl:flex-row w-full xl:items-center justify-center gap-4 mt-6">
         <div className="flex flex-col justify-around xl:gap-8 xl:items-center w-full xl:flex-row text-black items-start xl:border xl:border-[#9d9d9d] xl:rounded px-4 py-2">

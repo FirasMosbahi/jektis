@@ -3,10 +3,10 @@ import { WhatsappWhite } from "@jektis/components/icons";
 
 export default function Infos(): React.ReactNode {
   return (
-    <div className="flex text-start flex-col text-white text-[0.8rem] 2xl:text-[1rem] 3xl:text-[1.3rem] items-start w-fit xl:inline text-right xl:tracking-wide mt-8">
+    <div className="flex text-start  flex-col text-white text-[0.8rem] 2xl:text-[1rem] 3xl:text-[1.3rem] items-start w-full lg:w-fit xl:inline text-right xl:tracking-wide mt-4 lg:mt-8">
       <div className="flex flex-col xl:justify-start lg:gap-0 gap-4 text-center">
-        <div className="flex md:flex-row flex-col gap-0 items-center md:items-end md:gap-6">
-          <strong className="lg:min-w-36 w-full md:w-fit text-start">
+        <div className="flex lg:flex-row flex-col items-end lg:gap-6">
+          <strong className="lg:min-w-36 w-full text-start">
             Tel +216 71 70 69 00 :
           </strong>
           <p className="text-start w-full md:w-fit">
@@ -17,7 +17,7 @@ export default function Infos(): React.ReactNode {
             <strong className="w-full md:w-fit">Sam:</strong> 9h à 13h
           </p>
         </div>
-        <div className="flex md:flex-row flex-col gap-0 items-center md:items-end md:gap-6">
+        <div className="flex lg:flex-row flex-col gap-0 items-center lg:items-end hidden lg:gap-6">
           <div className="min-w-36 w-full md:w-fit flex flex-row items-center gap-2">
             <WhatsappWhite stroke="#000" />
             <strong>+216 98 53 80 70 : </strong>

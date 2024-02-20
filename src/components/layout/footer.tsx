@@ -14,19 +14,20 @@ import {
   Youtube,
 } from "@jektis/components/icons";
 import { VoyageType } from "@jektis/types";
+import Image from "next/image";
 
 export default function Footer(): React.ReactNode {
   return (
-    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-2 xl:pb-0 xl:gap-12 gap-6 xl:flex-row h-fit text-white bg-black bg-opacity-60 w-full px-6 xl:px-6 justify-between">
+    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-2 xl:pb-0 xl:gap-12 gap-6 xl:flex-row h-fit text-white bg-black bg-opacity-40 w-full px-6 xl:px-6 justify-between">
       <div className="flex flex-col 3xl:max-w-[70%]">
         <div className="flex flex-col sm:flex-row border-b-4 gap-12 mb-4 py-4">
           <div className="flex flex-col text-center max-w-[250px]">
-            <strong className="text-[1.9rem]  text-nowrap 3xl:text-[3rem] font-extrabold">
-              Jektis Travel
-            </strong>
-            <p className="text-[1.4rem] 3xl:text-[1.5rem]">
-              Le voyage, C{"'"}est notre métier
-            </p>
+            <Image
+              src="/logo_footer.png"
+              alt="jektis logo"
+              width={300}
+              height={200}
+            />
           </div>
           <div className="flex flex-col 3xl:text-[1.4rem] max-w-[300px]">
             <strong className="">Agence de Voyages (Lic A),</strong>
