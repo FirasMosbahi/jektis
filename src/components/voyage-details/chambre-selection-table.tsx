@@ -3,12 +3,12 @@
 import React from "react";
 import ChambreReservationListItem from "@jektis/components/voyage-details/chambre-reservation-list-item";
 import { Chambres } from "@jektis/types";
+import { NextArrowWhite } from "@jektis/components/icons";
 export default function ChambreSelectionTable({
   chambres,
 }: {
   chambres: Chambres[];
 }): React.ReactNode {
-  console.log(chambres);
   let reservation: any = {};
   chambres.forEach((chambre) => {
     reservation[chambre.title] = 0;
@@ -17,13 +17,15 @@ export default function ChambreSelectionTable({
   function updateReservation(type: string, quantity: number) {
     setChambresData((prevData: any) => ({ ...prevData, [type]: quantity }));
   }
-  function getTotalPrice(): number {
+  function getTotalPrice(): { price: number; qty: number } {
     let price = 0;
+    let qty = 0;
     Object.entries(chambresData).forEach(([key, value]) => {
       const unitPrice = chambres.find((c) => c.title === key)?.unitPrice;
       price += (unitPrice ?? 0) * (value as number);
+      qty += value as number;
     });
-    return price;
+    return { price, qty };
   }
   return (
     <div>
@@ -61,12 +63,21 @@ export default function ChambreSelectionTable({
           />
         ))}
       </div>
-      <div className="mt-4 flex flex-row justify-end">
-        <button className="bg-gradient-to-r px-4 py-2 border-transparent rounded-xl flex flex-row items-baseline gap-2 from-[#004fa6] to-[#02c9b2]">
-          <p className="">Total :</p>
-          <strong className="text-3xl">{getTotalPrice()}</strong>
-          <sup className="text-sm">DT</sup>
-        </button>
+      <div className="flex text-white flex-row justify-end">
+        <div className="flex flex-row border rounded-xl justify-end items-end px-8 py-4 bg-gradient-to-r from-[#004fa6] to-[#02c9b2] mt-8 w-fit">
+          Total {getTotalPrice().qty} chambres :{" "}
+          <strong className="md:text-2xl ml-2">
+            {"  "}
+            {getTotalPrice().price.toFixed(0)}
+            <sup>DT</sup>
+          </strong>
+        </div>
+      </div>
+      <div className="flex text-white flex-row justify-end">
+        <div className="flex flex-row border rounded-xl justify-center items-center gap-4 px-8 py-2 bg-[#9d9d9d] mt-8 w-fit">
+          <strong className="text-xl">Envoyer votre demande</strong>
+          <NextArrowWhite width={25} height={25} />
+        </div>
       </div>
     </div>
   );

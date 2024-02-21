@@ -27,7 +27,7 @@ export default function HotelReservationTable(): React.ReactNode {
       </div>
       <HotelReservationTableItem />
       <HotelReservationTableItem />
-      <div className="flex flex-row justify-end">
+      <div className="flex text-white flex-row justify-end">
         <div className="flex flex-row border rounded-xl justify-end items-end px-8 py-4 bg-gradient-to-r from-[#004fa6] to-[#02c9b2] mt-8 w-fit">
           Total 2 adultes :{" "}
           <strong className="md:text-2xl ml-2">
@@ -36,7 +36,7 @@ export default function HotelReservationTable(): React.ReactNode {
           </strong>
         </div>
       </div>
-      <div className="flex flex-row justify-end">
+      <div className="flex text-white flex-row justify-end">
         <div className="flex flex-row border rounded-xl justify-center items-center gap-4 px-8 py-2 bg-[#9d9d9d] mt-8 w-fit">
           <strong className="text-xl">Envoyer votre demande</strong>
           <NextArrowWhite width={25} height={25} />

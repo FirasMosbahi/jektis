@@ -9,10 +9,10 @@ export default function Infos(): React.ReactNode {
           <strong className="lg:min-w-36 w-full text-start">
             Tel +216 71 70 69 00 :
           </strong>
-          <p className="text-start w-full md:w-fit">
+          <p className="text-start text-nowrap w-full md:w-fit">
             <strong>Lun-Ven:</strong> 9h à 15h30{" "}
           </p>
-          <p className="text-start w-full md:w-fit">
+          <p className="text-start text-nowrap w-full md:w-fit">
             {" "}
             <strong className="w-full md:w-fit">Sam:</strong> 9h à 13h
           </p>
