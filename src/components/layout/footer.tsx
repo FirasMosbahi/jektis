@@ -29,10 +29,12 @@ export default function Footer(): React.ReactNode {
               height={200}
             />
           </div>
-          <div className="flex flex-col 3xl:text-[1.4rem] max-w-[300px]">
-            <strong className="">Agence de Voyages (Lic A),</strong>
-            <p>Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.</p>
-            <p>
+          <div className="flex flex-col text-[0.8rem] 3xl:text-[1rem] max-w-[300px]">
+            <strong className="text-nowrap">Agence de Voyages (Lic A),</strong>
+            <p className="text-nowrap">
+              Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.
+            </p>
+            <p className="text-nowrap">
               Spécialisée dans l{"'"}organisation de voyages à l{"'"}étranger.
             </p>
           </div>
