@@ -40,7 +40,7 @@ export default function HotelsFilter(): React.ReactNode {
                 <Calendar width={25} height={25} />
                 <input
                   type="date"
-                  className="sm:w-32  w-full font-medium text-gray-900"
+                  className="sm:w-32 text-sm w-full font-medium text-gray-900"
                 />
               </div>
             </div>

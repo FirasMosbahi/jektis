@@ -17,7 +17,7 @@ export default function ChamberDescriptionElement({
   onSelect: () => void;
 }): React.ReactNode {
   return (
-    <div className="items-center justify-center mb-4 flex flex-row">
+    <div className="items-center justify-center flex flex-row">
       <input
         id="default-checkbox"
         type="checkbox"

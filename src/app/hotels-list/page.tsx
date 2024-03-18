@@ -7,6 +7,10 @@ import { getHotels } from "@jektis/services";
 import HotelCardProps from "@jektis/types/hotel_class";
 import HotelsSideFilter from "@jektis/components/hotels-list/hotels-filter";
 import Pagination from "@jektis/components/generic/pagination";
+import { FilterSection } from "@jektis/types/filter-type";
+import Stars from "@jektis/components/generic/stars";
+import SearchSideFilter from "@jektis/components/generic/SearchSideFilter";
+import { HOTEL_SIDE_FILTER } from "@jektis/consts/side-filters-data";
 
 export default function PageIndex({
   searchParams,
@@ -24,7 +28,10 @@ export default function PageIndex({
     <div className="w-full">
       <HotelsFilter />
       <div className="w-full mt-8 flex flex-row gap-8">
-        <HotelsSideFilter />
+        <SearchSideFilter
+          filters={HOTEL_SIDE_FILTER}
+          nameFilterPlaceholder="nom de l'hotel"
+        />
         <div className="w-full bg-white pb-8">
           <HotelsList hotels={hotelsToShow} />
           <Pagination pagesNumber={hotels.length / 3 - 1} />

@@ -29,9 +29,11 @@ export default function Footer(): React.ReactNode {
               height={200}
             />
           </div>
-          <div className="flex flex-col text-[0.8rem] 3xl:text-[1rem] max-w-[300px]">
-            <strong className="text-nowrap">Agence de Voyages (Lic A),</strong>
-            <p className="text-nowrap">
+          <div className="flex flex-col  max-w-[300px]">
+            <strong className="text-nowrap text-[22px]">
+              Agence de Voyages (Lic A),
+            </strong>
+            <p className="text-nowrap text-[15px] 3xl:text-[18rem]">
               Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.
             </p>
             <p className="text-nowrap">
@@ -39,9 +41,9 @@ export default function Footer(): React.ReactNode {
             </p>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap text-[0.9rem] 3xl:text-[1.3rem] gap-12  md:gap-16">
+        <div className="flex flex-row flex-wrap font-[300] leading-5 text-[18px] 3xl:text-[22px] gap-12  md:gap-16">
           <div className="flex flex-col">
-            <strong className="mb-4">Nos Hotels</strong>
+            <strong className="mb-4 font-[500] text-[20px]">Nos Hotels</strong>
             <Link className="cursor-pointer" href="/hotels-list?city=tunis">
               Hotels à Tunis
             </Link>
@@ -62,7 +64,9 @@ export default function Footer(): React.ReactNode {
             </Link>
           </div>
           <div className="flex flex-col">
-            <strong className="mb-4">Nos programmes</strong>
+            <strong className="mb-4 font-[500] text-[20px]">
+              Nos programmes
+            </strong>
             <Link
               className="cursor-pointer"
               href={`/voyages?category=${VoyageType.VOYAGE_ORGANISE}`}
@@ -89,30 +93,32 @@ export default function Footer(): React.ReactNode {
             </Link>
           </div>
           <div className="flex flex-col">
-            <strong className="mb-4">Infos pratiques</strong>
+            <strong className="mb-4 text-[20px] font-[500]">
+              Infos pratiques
+            </strong>
             <Link href="#">Conditions de vente</Link>
             <Link href="#">Pour la visa</Link>
             <Link href="#">Recrutement</Link>
             <Link href="#">Mentions légales</Link>
           </div>
         </div>
-        <div className="flex xl:flex-row xl:items-center flex-col md:mt-4 mt-8 xl:mt-2 3xl:text-[1.5rem]  border-y-white border-y-4 py-4 xl:py-0 xl:pb-1 xl:border-y-transparent xl:pt-0 3xl:pt-12 text-sm gap-8 xl:gap-2">
-          <p className="lg:text-base text-xl font-bold lg:font-normal">
+        <div className="flex xl:flex-row xl:items-center flex-col md:mt-4 mt-8 xl:mt-2 3xl:text-[1.5rem]  border-y-white border-y-4 py-4 xl:py-0 xl:pb-1 xl:border-y-transparent xl:pt-0 3xl:pt-12 text-sm gap-8 xl:gap-6">
+          <p className="lg:text-[18px] text-xl font-bold lg:font-[300]">
             Recevez nos promotions par mail
           </p>
-          <div className="flex flex-row flex-wrap gap-x-4 gap-y-2">
+          <div className="flex flex-row flex-wrap gap-x-4 gap-y-1">
             <input
               type="email"
               id="email"
               placeholder="Veuiller ajouter votre e-mail ici"
               className="bg-gray-50 w-52 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
             />
-            <button className="bg-blue-400 px-12 py-2">OK</button>
+            <button className="bg-blue-400 px-12 py-1">OK</button>
           </div>
         </div>
       </div>
-      <div className="flex flex-col text-3xl gap-6 xl:mt-12">
-        <div className="flex flex-col gap-6">
+      <div className="flex flex-col text-[22px] gap-6 xl:mt-7 leading-none">
+        <div className="flex flex-col gap-2">
           <strong>Suivez Nous</strong>
           <div className="bg-white opacity-100 gap-x-4 py-2 px-2 flex flex-row flex-wrap gap-y-4 w-fit">
             <Facebook width={25} height={25} />
@@ -124,7 +130,7 @@ export default function Footer(): React.ReactNode {
             <Tiktok width={25} height={25} />
           </div>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-2">
           <strong>Paiement Sécurisé</strong>
           <div className="bg-white opacity-100 flex flex-row flex-wrap gap-y-4 gap-4 px-2 py-2 w-fit">
             <Visa width={50} height={50} />

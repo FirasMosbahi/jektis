@@ -22,7 +22,7 @@ export default function VoyageCardWithImg({
   showSeeAllButton?: boolean;
 }): React.ReactNode {
   return (
-    <div className="flex text-xl w-full flex-col mt-16 sm:mt-0 mr-12 lg:mr-0">
+    <div className="flex text-white text-xl w-full flex-col mt-16 sm:mt-0 mr-12 lg:mr-0">
       {title && (
         <div className="flex text-white flex-row py-2 mb-4 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
           <strong className="ml-4">{title}</strong>
@@ -42,9 +42,9 @@ export default function VoyageCardWithImg({
           )}
         </div>
       )}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         <div
-          className={`w-full max-h-[15.5rem] md:w-full border-transparent rounded-xl ${
+          className={`w-full h-[230px] md:w-full border-transparent rounded-xl ${
             showSeeAllButton ? "relative" : ""
           }`}
         >
@@ -59,11 +59,11 @@ export default function VoyageCardWithImg({
           <img
             alt="img"
             src={imageUrl}
-            className="w-full max-h-[15.5rem] md:w-full border-transparent rounded-xl"
+            className="w-full h-[230px] md:w-full border-transparent rounded-xl"
           />
         </div>
 
-        <div className="flex flex-wrap overflow-hidden pt-2 gap-4">
+        <div className="flex flex-wrap overflow-hidden pt-2 gap-6">
           {cards.length > 0 && (
             <div className="md:w-[30%] min-w-[6rem] w-[45%] h-fit">
               <MiniCityCard cardData={cards[0]} linkBase={linksBase} />

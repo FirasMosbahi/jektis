@@ -19,7 +19,7 @@ export default function CityCard({
   );
   return (
     <Link
-      className={isHorizontal ? "" : "w-fit sm:max-w-72"}
+      className={isHorizontal ? "" : "w-[31%]"}
       href={`${linkBase}/${cityProps.id}`}
     >
       <div className={`items-center justify-center w-full `}>

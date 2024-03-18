@@ -45,7 +45,7 @@ export default function Promo(): React.ReactNode {
           </AnimatePresence>
         </div>
       </div>
-      <div className="md:flex flex-row w-full hidden border-t-white border-t-4">
+      <div className="md:flex font-[ flex-row w-full hidden border-t-white border-t-4">
         {promos.map((promo, index) => (
           <div
             style={{
@@ -55,43 +55,15 @@ export default function Promo(): React.ReactNode {
             key={index}
             className={`text-center min-w-[10%] 2xl:h-16 text-white h-24 ${
               index !== promos.length - 1 ? "border-r-4 border" : ""
-            } ${current === index ? "bg-[#0051A3]" : "bg-[#A0BADB]"} `}
+            } ${current === index ? "bg-[#0051A3]" : "bg-[#A0BADB]"} ${
+              promo.title.length < 12 ? "w-[14%]" : "w-[20%]"
+            }`}
           >
             <Center axe={Axes.all}>
               <p className="text-[0.9rem] px-2">{promo.title}</p>
             </Center>
           </div>
         ))}
-        {/*<div className="border-r-4 md:block hidden border-r-white">*/}
-        {/*  <Center axe={Axes.all}>*/}
-        {/*    <strong>DUBAI</strong>*/}
-        {/*  </Center>*/}
-        {/*</div>*/}
-        {/*<div className="border-r-4 border-r-white">*/}
-        {/*  <Center axe={Axes.all}>*/}
-        {/*    <strong>PHILIPPINES</strong>*/}
-        {/*  </Center>*/}
-        {/*</div>*/}
-        {/*<div className="border-r-4 border-r-white text-center">*/}
-        {/*  <Center axe={Axes.all}>*/}
-        {/*    <strong>*/}
-        {/*      HOTELS <br /> EN TUNISIE*/}
-        {/*    </strong>*/}
-        {/*  </Center>*/}
-        {/*</div>*/}
-        {/*<div className="border-r-4 border-r-white text-center">*/}
-        {/*  <Center axe={Axes.all}>*/}
-        {/*    <strong>*/}
-        {/*      {" "}*/}
-        {/*      CIRCUIT <br /> SUD*/}
-        {/*    </strong>*/}
-        {/*  </Center>*/}
-        {/*</div>*/}
-        {/*<div className="md:block hidden">*/}
-        {/*  <Center axe={Axes.all}>*/}
-        {/*    <strong>VISA</strong>*/}
-        {/*  </Center>*/}
-        {/*</div>*/}
       </div>
     </div>
   );

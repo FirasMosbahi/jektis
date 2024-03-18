@@ -33,6 +33,7 @@ export { default as Pool } from "./Pool";
 export { default as Printer } from "./Printer";
 export { default as Recommanded } from "./Recommanded";
 export { default as SearchIcon } from "./SearchIcon";
+export { default as SearchInputIcon } from "./SearchInputIcon";
 export { default as Sleep } from "./Sleep";
 export { default as Spa } from "./Spa";
 export { default as Star } from "./Star";

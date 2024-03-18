@@ -8,21 +8,23 @@ import Image from "next/image";
 export default function Header(): React.ReactNode {
   return (
     <>
-      <div className="justify-between w-full">
+      <div className="justify-between">
         <div className="flex flex-row flex-wrap items-center lg:px-0 px-4 justify-between">
           <Image
             src="/logo_footer.png"
             alt="jektis logo"
             width={200}
             height={200}
-            className="lg:w-[16rem] lg:h-[10rem] w-[200px] h-[140px] 3xl:w-[22rem] 3xl:h-[16rem]"
+            className="lg:w-[350px] lg:h-[10rem] w-[200px] h-[140px] 3xl:w-[22rem] 3xl:h-[16rem]"
           />
           <div className="flex flex-col xl:items-end items-center">
-            <div className="hidden w-full xl:flex xl:flex-row xl:justify-end">
+            <div className="w-full hidden xl:absolute right-0 xl:gap-16 max-w-[600px] xl:flex xl:flex-row">
               <SearchInput />
               <LoginButton />
             </div>
-            <Infos />
+            <div className="mt-20">
+              <Infos />
+            </div>
           </div>
         </div>
         <div className="lg:block hidden">
