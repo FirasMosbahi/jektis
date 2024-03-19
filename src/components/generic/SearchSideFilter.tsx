@@ -36,7 +36,7 @@ export default function SearchSideFilter({
                 <input
                   id="default-checkbox"
                   type="checkbox"
-                  value={v.value}
+                  value={v.value.toString()}
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
                 />
                 <label

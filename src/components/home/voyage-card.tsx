@@ -41,19 +41,19 @@ export default function VoyageCard({
           cityProps={bigCardProps}
           linkBase={linksBase}
         />
-        <div className="flex mt-2 flex-row flex-wrap gap-y-4 justify-between w-full">
+        <div className="flex mt-2 flex-row overflow-x-scroll no-scrollbar gap-x-6 justify-between w-full">
           {cards.length > 0 && (
-            <div className="md:w-[30%] min-w-[6rem] w-[45%] h-fit">
+            <div className="w-[30%] min-w-[140px] h-fit">
               <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
             </div>
           )}
           {cards.length > 1 && (
-            <div className="md:w-[30%] min-w-[6rem] w-[45%] h-fit">
+            <div className="w-[30%] min-w-[140px] h-fit">
               <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
             </div>
           )}
           {cards.length > 2 && (
-            <div className="w-[40%] min-w-[6rem] md:w-[30%] h-fit">
+            <div className="w-[30%] min-w-[140px] h-fit">
               <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
             </div>
           )}

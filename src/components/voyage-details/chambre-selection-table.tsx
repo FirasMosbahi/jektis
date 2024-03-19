@@ -17,15 +17,13 @@ export default function ChambreSelectionTable({
   function updateReservation(type: string, quantity: number) {
     setChambresData((prevData: any) => ({ ...prevData, [type]: quantity }));
   }
-  function getTotalPrice(): { price: number; qty: number } {
+  function getTotalPrice(): number {
     let price = 0;
-    let qty = 0;
     Object.entries(chambresData).forEach(([key, value]) => {
       const unitPrice = chambres.find((c) => c.title === key)?.unitPrice;
       price += (unitPrice ?? 0) * (value as number);
-      qty += value as number;
     });
-    return { price, qty };
+    return price;
   }
   return (
     <div>
@@ -64,21 +62,23 @@ export default function ChambreSelectionTable({
         ))}
       </div>
       <div className="flex text-white flex-row justify-end">
-        <div className="flex flex-row border rounded-xl justify-end items-end px-8 py-4 bg-gradient-to-r from-[#004fa6] to-[#02c9b2] mt-8 w-fit">
-          Total {getTotalPrice().qty} chambres :{" "}
-          <strong className="md:text-2xl ml-2">
-            {"  "}
-            {getTotalPrice().price.toFixed(0)}
-            <sup>DT</sup>
-          </strong>
+        <div className="flex leading-none flex-row text-[18px] border rounded-xl justify-end font-semibold items-end px-4 py-4 bg-gradient-to-r from-[#004fa6] to-[#02c9b2] mt-8 w-fit">
+          Total :{" "}
+          <div className="flex flex-row">
+            <p className="md:text-[32px] leading-none font-extrabold ml-2">
+              {"  "}
+              {getTotalPrice().toFixed(0)}
+            </p>
+            <p className="leading-none font-medium">DT</p>
+          </div>
         </div>
       </div>
-      <div className="flex text-white flex-row justify-end">
-        <div className="flex flex-row border rounded-xl justify-center items-center gap-4 px-8 py-2 bg-[#9d9d9d] mt-8 w-fit">
-          <strong className="text-xl">Envoyer votre demande</strong>
-          <NextArrowWhite width={25} height={25} />
-        </div>
-      </div>
+      {/*<div className="flex text-white flex-row justify-end">*/}
+      {/*  <div className="flex flex-row border rounded-xl justify-center items-center gap-4 px-8 py-2 bg-[#9d9d9d] mt-8 w-fit">*/}
+      {/*    <strong className="text-xl">Envoyer votre demande</strong>*/}
+      {/*    <NextArrowWhite width={25} height={25} />*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </div>
   );
 }

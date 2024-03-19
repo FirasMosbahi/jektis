@@ -21,7 +21,7 @@ export default function Footer(): React.ReactNode {
     <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-2 xl:pb-0 xl:gap-12 gap-6 xl:flex-row h-fit text-white bg-black bg-opacity-40 w-full px-6 xl:px-6 justify-between">
       <div className="flex flex-col 3xl:max-w-[70%]">
         <div className="flex flex-col sm:flex-row border-b-4 gap-12 mb-4 py-4">
-          <div className="flex flex-col text-center max-w-[250px]">
+          <div className="flex flex-col text-center xl:max-w-[220px] xxl:max-w-[250px]">
             <Image
               src="/logo_footer.png"
               alt="jektis logo"
@@ -33,15 +33,15 @@ export default function Footer(): React.ReactNode {
             <strong className="text-nowrap text-[22px]">
               Agence de Voyages (Lic A),
             </strong>
-            <p className="text-nowrap text-[15px] 3xl:text-[18rem]">
+            <p className="text-nowrap text-[14px] xxl:text-[15px] 3xl:text-[18rem]">
               Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.
             </p>
-            <p className="text-nowrap">
+            <p className="text-nowrap text-[14px] xxl:text-[15px] 3xl:text-[18rem]">
               Spécialisée dans l{"'"}organisation de voyages à l{"'"}étranger.
             </p>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap font-[300] leading-5 text-[18px] 3xl:text-[22px] gap-12  md:gap-16">
+        <div className="flex flex-row flex-wrap font-[300] leading-5 text-[18px] 3xl:text-[22px] xl:gap-11 xxl:gap-12  md:gap-16">
           <div className="flex flex-col">
             <strong className="mb-4 font-[500] text-[20px]">Nos Hotels</strong>
             <Link className="cursor-pointer" href="/hotels-list?city=tunis">
@@ -103,7 +103,7 @@ export default function Footer(): React.ReactNode {
           </div>
         </div>
         <div className="flex xl:flex-row xl:items-center flex-col md:mt-4 mt-8 xl:mt-2 3xl:text-[1.5rem]  border-y-white border-y-4 py-4 xl:py-0 xl:pb-1 xl:border-y-transparent xl:pt-0 3xl:pt-12 text-sm gap-8 xl:gap-6">
-          <p className="lg:text-[18px] text-xl font-bold lg:font-[300]">
+          <p className="xxl:text-[18px] xl:text-[15px] text-xl font-bold lg:font-[300]">
             Recevez nos promotions par mail
           </p>
           <div className="flex flex-row flex-wrap gap-x-4 gap-y-1">

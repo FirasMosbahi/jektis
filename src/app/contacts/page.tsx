@@ -5,15 +5,15 @@ import ContactElement from "@jektis/components/contacts/contact-element";
 
 export default function Index(): React.ReactNode {
   return (
-    <div className="flex lg:flex-row flex-col gap-8">
-      <div className="flex flex-col w-full bg-white py-8">
-        <ContactElement location="/contacts/location1.jpg" name="Ariana" />
-        <ContactElement location="/contacts/location1.jpg" name="Menzah 9" />
+    <div className="flex lg:flex-row flex-col gap-8 ">
+      <div className="flex flex-col w-full bg-white lg:w-[64%] py-8">
+        <ContactElement location="/contacts/location1.jpg" name="ARIANA" />
+        <ContactElement location="/contacts/location1.jpg" name="MENZAH 9" />
       </div>
-      <div className="flex flex-col bg-white lg:w-1/3 w-full lg:pb-0 pb-8 px-8">
-        <strong className="text-blue-800 py-16 text-2xl">
-          Nous Contacter :
-        </strong>
+      <div className="flex flex-col bg-white lg:w-[34%] w-full lg:pb-0 pb-8 px-8">
+        <p className="text-blue-800 pb-10 pt-16 text-[24px] font-semibold">
+          NOUS CONTACTER :
+        </p>
         <form className="flex flex-col gap-4">
           <input
             type="text"
@@ -45,7 +45,7 @@ export default function Index(): React.ReactNode {
             className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
             placeholder="Message"
           ></textarea>
-          <p className="text-gray-700">
+          <p className="text-gray-700 mt-4">
             Merci de choisir le service auquel vous souhaiter envoyer un mail :
           </p>
           <select

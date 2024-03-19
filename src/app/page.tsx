@@ -23,7 +23,7 @@ export default function Index(): React.ReactNode {
   );
   return (
     <div>
-      <div className="flex xl:flex-row flex-col items-center justify-between xl:items-start w-full mb-12 gap-12">
+      <div className="flex lg:flex-row flex-col items-center justify-between xl:items-start w-full mb-12 gap-12">
         <div className="xl:min-w-[45%] ">
           <HomeFilter />
         </div>
@@ -32,7 +32,7 @@ export default function Index(): React.ReactNode {
         </div>
       </div>
       <div className="bg-white px-4 pt-4 flex flex-col">
-        <div className="flex flex-col xl:grid xl:grid-cols-2 xl:max-h-[38rem] w-full h-fit xl:gap-8 mb-8">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 xl:max-h-[38rem] w-full h-fit lg:gap-8 mb-8">
           <div>
             <VoyageCard
               title="Voyages Organisées"
@@ -65,7 +65,7 @@ export default function Index(): React.ReactNode {
             </p>
           </Link>
         </div>
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-row gap-8 overflow-x-scroll no-scrollbar">
           {nocesVoyages.map((v, index) => (
             <CityCard
               linkBase="/voyages"

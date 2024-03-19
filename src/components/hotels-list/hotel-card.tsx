@@ -38,25 +38,25 @@ export default function HotelCard({
               <strong className="mb-2 flex text-[18px] font-semibold items-center gap-3 flex-row font-sans tracking-normal text-blue-gray-900 antialiased">
                 {hotel.cityName}
               </strong>
-              <div className="py-2 space-y-2 max-w-[320px]">
+              <div className="py-2 space-y-2 xl:text-[13px] xxl:text-[14px] xl:max-w-[320px]">
                 <div className="bg-white border border-transparent text-weakBlue rounded-2xl w-fit">
-                  <button className="border-l border-r-weakBlue border-r-2 px-2 py-1">
+                  <button className="border-l border-r-weakBlue border-r-2 xxl:px-2 xl:px-[8px] px-[5px] py-1">
                     <strong>LPD</strong>
                   </button>
-                  <button className="border-l border-r-weakBlue border-r-2 px-2 py-1">
+                  <button className="border-l border-r-weakBlue border-r-2 xl:px-[7px] xxl:px-2 px-[8px] py-1">
                     <strong>DP</strong>
                   </button>
-                  <button className="border-l border-r-weakBlue border-r-2 px-2 py-1">
+                  <button className="border-l border-r-weakBlue border-r-2 xl:px-[7px] xxl:px-2 px-[8px] py-1">
                     <strong>PC</strong>
                   </button>
-                  <button className="border-l border-r-weakBlue border-r-2 px-2 py-1">
+                  <button className="border-l border-r-weakBlue border-r-2 xl:px-[7px] xxl:px-2 px-[8px] py-1">
                     <strong>All In</strong>
                   </button>
-                  <button className="px-2 py-1">
+                  <button className="xxl:px-2 px-[5px] xl:px-[8px] py-1">
                     <strong>All In Soft</strong>
                   </button>
                 </div>
-                <div className="bg-white border border-transparent rounded-2xl flex-col justify-around flex py-2 gap-2 px-2">
+                <div className="bg-white border max-w-[280px] border-transparent rounded-2xl flex-col justify-around flex py-2 gap-2 px-2">
                   <ChamberDescription
                     category="Chambre DBL Std BB"
                     isDisponible={true}
@@ -69,7 +69,7 @@ export default function HotelCard({
                   />
                 </div>
               </div>
-              <ul className="mb-8 block font-sans font-normal leading-5 text-gray-700 antialiased">
+              <ul className="mb-8 xxl:text-[14px] xl:text-[13px] block font-sans font-normal leading-5 text-gray-700 antialiased">
                 <li className="flex flex-row items-center gap-3">
                   <Ok /> <p>Minimum Stay : {hotel.minimumStay} nuités</p>
                 </li>
@@ -90,7 +90,7 @@ export default function HotelCard({
               <HotelPricingButton price={hotel.price} />
               <button className="bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1 border-0.5 border-transparent rounded-2xl ">
                 <div className="bg-white  px-4 py-1 rounded-xl">
-                  <p className="font-bold text-[22px] text-[#00d3bc]">
+                  <p className="font-bold xxl:text-[22px] xl:text-[16px] text-[#00d3bc]">
                     Réserver
                   </p>
                 </div>

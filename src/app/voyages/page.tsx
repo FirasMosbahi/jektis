@@ -6,6 +6,8 @@ import { getCities, getHotels } from "@jektis/services";
 import { VoyageCardProps } from "@jektis/types";
 import Pagination from "@jektis/components/generic/pagination";
 import Link from "next/link";
+import SearchSideFilter from "@jektis/components/generic/SearchSideFilter";
+import { VOYAGE_SIDE_FILTER_DATA } from "@jektis/consts/side-filters-data";
 
 export default function VoyagesIndex({
   searchParams,
@@ -20,9 +22,12 @@ export default function VoyagesIndex({
   const citiesToShow = cities.slice(page * 4, (page + 1) * 4);
   return (
     <main className="flex flex-col gap-8 lg:flex-row w-full pb-20">
-      <SearchFilter />
-      <div className="bg-white py-8 w-full">
-        <div className="flex flex-col gap-8 items-start w-full py-10 flex-1">
+      <SearchSideFilter
+        filters={VOYAGE_SIDE_FILTER_DATA}
+        nameFilterPlaceholder="Nom du Voyage"
+      />
+      <div className="bg-white w-full">
+        <div className="flex flex-col gap-8 items-start w-full py-6 flex-1">
           {citiesToShow.map((city, index) => (
             <div key={index} className="w-full px-4">
               <Link href={`/voyages/${city.id}`}>

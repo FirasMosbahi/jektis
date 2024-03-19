@@ -18,11 +18,11 @@ export default function Header(): React.ReactNode {
             className="lg:w-[350px] lg:h-[10rem] w-[200px] h-[140px] 3xl:w-[22rem] 3xl:h-[16rem]"
           />
           <div className="flex flex-col xl:items-end items-center">
-            <div className="w-full hidden xl:absolute right-0 xl:gap-16 max-w-[600px] xl:flex xl:flex-row">
+            <div className="w-full hidden lg:absolute right-0 xl:gap-16 gap-10 max-w-[500px] xl:max-w-[600px] lg:flex lg:flex-row">
               <SearchInput />
               <LoginButton />
             </div>
-            <div className="mt-20">
+            <div className="xl:mt-20 mt-12 mb-10">
               <Infos />
             </div>
           </div>

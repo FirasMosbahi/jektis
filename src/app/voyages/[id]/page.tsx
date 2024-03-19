@@ -23,7 +23,7 @@ export default function VoyageGroupIndex({
   const [heightState, setHeight] = React.useState<number>(0);
 
   return (
-    <div className="bg-white pt-8 pb-20 px-4">
+    <div className="bg-white pt-8 pb-8 px-4">
       <VoyageOffer {...voyage} />
       <VoyageNavbar
         onClick={(section: VoyageDetailsSection) => setSection(section)}

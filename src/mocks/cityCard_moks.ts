@@ -14,7 +14,7 @@ export const voyageCards: VoyageCardProps[] = [
     dateStart: new Date("2024-07-22"),
     dateEnd: new Date("2024-07-29"),
     remainingPlace: 2,
-    price: 499,
+    price: 3499,
     category: VoyageType.VOYAGE_ORGANISE,
   },
   {
@@ -56,7 +56,7 @@ export const voyageCards: VoyageCardProps[] = [
     dateStart: new Date("2024-09-01"),
     dateEnd: new Date("2024-09-07"),
     remainingPlace: 2,
-    price: 600,
+    price: 3600,
     category: VoyageType.VOYAGE_ORGANISE,
   },
   {

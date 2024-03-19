@@ -2,7 +2,7 @@ import { FilterSection } from "@jektis/types/filter-type";
 import Stars from "@jektis/components/generic/stars";
 import React from "react";
 
-export const HOTEL_SIDE_FILTER: FilterSection[] = [
+export const HOTEL_SIDE_FILTER_DATA: FilterSection[] = [
   {
     name: "rating",
     values: [
@@ -44,6 +44,56 @@ export const HOTEL_SIDE_FILTER: FilterSection[] = [
         value: "Recommandé par Jektis",
         label: "Recommandé par Jektis",
       },
+    ],
+  },
+];
+
+export const VOYAGE_SIDE_FILTER_DATA: FilterSection[] = [
+  {
+    name: "Thèmes",
+    values: [
+      { value: "VIP", label: "VIP" },
+      { value: "Moyen Courier", label: "Moyen Courier" },
+      { value: "Long Courier", label: "Long Courier" },
+      { value: "Famille", label: "Famille" },
+      { value: "Voyage de noces", label: "Voyage de noces" },
+      { value: "Shopping", label: "Shopping" },
+      { value: "Spécial jeunes", label: "Spécial jeunes" },
+      {
+        value: "Linguistique",
+        label: "Linguistique",
+      },
+    ],
+  },
+  {
+    name: "VISA",
+    values: [
+      {
+        value: true,
+        label: "Avec Visa",
+      },
+      {
+        value: false,
+        label: "Sans Visa",
+      },
+    ],
+  },
+  {
+    name: "Durée",
+    values: [
+      { value: 5, label: "5 Jours +" },
+      { value: 7, label: "7 Jours +" },
+      { value: 10, label: "10 Jours +" },
+    ],
+  },
+  {
+    name: "Continent",
+    values: [
+      { value: "Asie", label: "Asie" },
+      { value: "Europe", label: "Europe" },
+      { value: "Amérique", label: "Amérique" },
+      { value: "Afrique", label: "Afrique" },
+      { value: "Moyen Orient", label: "Moyen Orient" },
     ],
   },
 ];

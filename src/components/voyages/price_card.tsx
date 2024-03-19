@@ -8,13 +8,18 @@ export default function PriceButtonXl({
   return (
     <div
       id="price"
-      className="flex flex-col items-start border rounded-2xl px-4 py-2 text-white w-fit bg-gradient-to-r from-[#004fa6] to-[#02c9b2]"
+      className="flex flex-col items-start border rounded-2xl px-2 py-0.5 text-white w-fit bg-gradient-to-r from-[#004fa6] to-[#02c9b2]"
     >
-      <p className="2xl:text-sm text-[0.8rem] pb-2">A partir de</p>
-      <strong className="text-[0.8rem]">
-        {price}
-        <sup>TND</sup> / Pers
-      </strong>
+      <p className="xl:text-[12px] lg:text-[10px]">A partir de</p>
+      <div className="flex flex-row leading-none items-end">
+        <div className="flex flex-row">
+          <p className="xl:text-[32px] text-[28px] font-extrabold">3499</p>
+          <p className="xl:text-[20px] text-[18px] font-bold">TND</p>
+        </div>
+        <p className="xl:text-[20px] text-[18px] text-nowrap font-bold">
+          / Pers
+        </p>
+      </div>
     </div>
   );
 }

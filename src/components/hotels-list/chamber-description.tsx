@@ -22,16 +22,16 @@ export default function ChamberDescriptionElement({
         id="default-checkbox"
         type="checkbox"
         value=""
-        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 mr-2"
+        className="xxl:w-4 xxl:h-4 w-2.5 h-2.5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 xxl:mr-2 mr-0.5"
         onClick={onSelect}
       />
       <label
         htmlFor="default-checkbox"
-        className="ms-2 text-[0.8rem] font-medium text-gray-900 flex flex-row items-center justify-between w-full"
+        className="xl:ms-2 ms-0.5 xl:text-[12px] xxl:text-[11px] font-medium text-gray-900 flex flex-row items-center justify-between w-full"
       >
         {category}{" "}
         <div
-          className={`text-white h-fit border border-transparent rounded px-4 ${
+          className={`text-white h-fit border border-transparent rounded xxl:px-4 xl:px-1.5 ${
             isDisponible ? "bg-weakGreen" : "bg-red-500"
           }`}
         >

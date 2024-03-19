@@ -63,19 +63,19 @@ export default function VoyageCardWithImg({
           />
         </div>
 
-        <div className="flex flex-wrap overflow-hidden pt-2 gap-6">
+        <div className="flex flex-row overflow-x-scroll no-scrollbar pt-2 gap-6">
           {cards.length > 0 && (
-            <div className="md:w-[30%] min-w-[6rem] w-[45%] h-fit">
+            <div className="w-[30%] min-w-[140px] h-fit">
               <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
             </div>
           )}
           {cards.length > 1 && (
-            <div className="md:w-[30%] min-w-[6rem] w-[45%] h-fit">
+            <div className="w-[30%] min-w-[140px] h-fit">
               <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
             </div>
           )}
           {cards.length > 2 && (
-            <div className="md:w-[30%] min-w-[6rem] w-[45%] h-fit">
+            <div className="w-[30%] min-w-[140px] h-fit">
               <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
             </div>
           )}
