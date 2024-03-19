@@ -43,17 +43,17 @@ export default function VoyageCard({
         />
         <div className="flex mt-2 flex-row overflow-x-scroll no-scrollbar gap-x-6 justify-between w-full">
           {cards.length > 0 && (
-            <div className="w-[30%] min-w-[140px] h-fit">
+            <div className="w-[30%] min-w-[100px] h-fit">
               <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
             </div>
           )}
           {cards.length > 1 && (
-            <div className="w-[30%] min-w-[140px] h-fit">
+            <div className="w-[30%] min-w-[100px] h-fit">
               <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
             </div>
           )}
           {cards.length > 2 && (
-            <div className="w-[30%] min-w-[140px] h-fit">
+            <div className="w-[30%] min-w-[100px] h-fit">
               <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
             </div>
           )}

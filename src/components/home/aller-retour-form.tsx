@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AllerRetourForm(): React.ReactElement {
   return (
-    <form className="max-w-sm 2xl:max-w-full 2xl:px-8 text-[0.85rem] mx-auto py-4 px-2">
+    <form className="2xl:max-w-full 2xl:px-8 text-[0.85rem] mx-4 py-4 px-2">
       <div className="grid grid-cols-2 pb-4 gap-y-2 gap-x-6">
         <div>
           <label htmlFor="depart" className="block mb-2  text-gray-900">
@@ -101,7 +101,7 @@ export default function AllerRetourForm(): React.ReactElement {
           </select>
         </div>
       </div>
-      <div className="flex flex-row justify-center mt-4 mr-2">
+      <div className="flex flex-row justify-center mt-10 mr-2">
         <button
           type="submit"
           style={{

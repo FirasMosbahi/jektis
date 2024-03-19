@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HotelsForm(): React.ReactElement {
   return (
-    <div className="w-full h-full flex flex-col gap-4 bg-opacity-80 py-8 border border-transparent rounded-2xl bg-white">
+    <div className="w-full h-full flex flex-col gap-4 bg-opacity-80 pt-8 border border-transparent rounded-2xl bg-white">
       <div className="flex flex-row items-center gap-12 ml-4 pb-8 border-b-2 border-[#586263] mr-4">
         <Image
           src="/home-page/sejours.png"

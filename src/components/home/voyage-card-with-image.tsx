@@ -44,7 +44,7 @@ export default function VoyageCardWithImg({
       )}
       <div className="flex flex-col gap-2">
         <div
-          className={`w-full h-[230px] md:w-full border-transparent rounded-xl ${
+          className={`w-full h-[260px] md:w-full border-transparent rounded-xl ${
             showSeeAllButton ? "relative" : ""
           }`}
         >
@@ -59,23 +59,23 @@ export default function VoyageCardWithImg({
           <img
             alt="img"
             src={imageUrl}
-            className="w-full h-[230px] md:w-full border-transparent rounded-xl"
+            className="w-full h-[250px] md:w-full border-transparent rounded-xl"
           />
         </div>
 
         <div className="flex flex-row overflow-x-scroll no-scrollbar pt-2 gap-6">
           {cards.length > 0 && (
-            <div className="w-[30%] min-w-[140px] h-fit">
+            <div className="w-[30%] min-w-[100px] h-fit">
               <MiniCityCard cardData={cards[0]} linkBase={linksBase} />
             </div>
           )}
           {cards.length > 1 && (
-            <div className="w-[30%] min-w-[140px] h-fit">
+            <div className="w-[30%] min-w-[100px] h-fit">
               <MiniCityCard cardData={cards[1]} linkBase={linksBase} />
             </div>
           )}
           {cards.length > 2 && (
-            <div className="w-[30%] min-w-[140px] h-fit">
+            <div className="w-[30%] min-w-[100px] h-fit">
               <MiniCityCard cardData={cards[2]} linkBase={linksBase} />
             </div>
           )}
