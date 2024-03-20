@@ -31,8 +31,8 @@ export default function SearchSideFilter({
         <div className="pt-8" key={index}>
           <p className="text-[#2265ae] text-[18px] font-semibold">{f.name}</p>
           <div className="mt-2">
-            {f.values.map((v) => (
-              <div className="flex items-center mb-1">
+            {f.values.map((v, index) => (
+              <div className="flex items-center mb-1" key={index}>
                 <input
                   id="default-checkbox"
                   type="checkbox"
