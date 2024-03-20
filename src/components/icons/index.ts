@@ -9,6 +9,7 @@ export { default as DinersClub } from "./DinersClub";
 export { default as Email } from "./Email";
 export { default as ExternalPool } from "./ExternalPool";
 export { default as Facebook } from "./Facebook";
+export { default as Hamburger } from "./Hamburger";
 export { default as Home } from "./Home";
 export { default as Instagram } from "./Instagram";
 export { default as Linkedin } from "./Linkedin";

@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="/logo_footer.png" />
       </head>
       <body className={`${dm_serif.className}`}>
@@ -36,7 +37,7 @@ export default function RootLayout({
             </div>
           </Center>
           <div className="px-2 w-full">{children}</div>
-          <div className="w-full mt-12 mb-0.5 pl-4">
+          <div className="w-full mt-4 pb-4 pl-4">
             <Footer />
           </div>
         </CustomPage>

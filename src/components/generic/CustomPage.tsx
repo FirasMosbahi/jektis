@@ -6,11 +6,13 @@ export default function CustomPage({
 }): React.ReactNode {
   return (
     <div
-      className="h-fit bg-cover bg-center flex flex-col lg:px-52 lg:py-8 xl:pt-8 xl:pb-4 items-center justify-center"
+      className="bg-cover bg-center "
       style={{ backgroundImage: "url(/background.jpg)" }}
     >
-      <div className="lg:max-w-[1200px] lg:min-w-[1000px] w-full">
-        {children}
+      <div className="flex flex-col  h-screen overflow-y-scroll no-scrollbar items-center justify-center">
+        <div className="lg:max-w-[1200px] lg:min-w-[1000px] h-full pt-0 lg:mx-52 lg:my-8 xl:mt-8 xl:mb-4 relative w-full">
+          {children}
+        </div>
       </div>
     </div>
   );

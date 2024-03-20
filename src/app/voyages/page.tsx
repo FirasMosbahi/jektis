@@ -21,7 +21,7 @@ export default function VoyagesIndex({
   );
   const citiesToShow = cities.slice(page * 4, (page + 1) * 4);
   return (
-    <main className="flex flex-col gap-8 lg:flex-row w-full pb-20">
+    <main className="flex flex-col gap-8 lg:flex-row w-full pb-4">
       <SearchSideFilter
         filters={VOYAGE_SIDE_FILTER_DATA}
         nameFilterPlaceholder="Nom du Voyage"
