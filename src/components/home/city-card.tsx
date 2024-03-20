@@ -26,7 +26,7 @@ export default function CityCard({
         <div
           className={`relative flex border border-transparent rounded-xl w-full ${
             isHorizontal
-              ? "sm:flex-row flex flex-col bg-[#ececec] bg-clip-border"
+              ? "sm:flex-row flex flex-col lg:h-[250px] bg-[#ececec] bg-clip-border"
               : "flex-col max-w-[20rem]"
           }  text-gray-700 shadow-md`}
         >

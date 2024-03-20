@@ -4,7 +4,7 @@ import { SearchIcon } from "@jektis/components/icons";
 export default function SearchInput(): React.ReactNode {
   return (
     <>
-      <div className="flex w-full 3xl:h-12 mt-1">
+      <div className="flex w-full 2xl:max-w-[370px] xxl:max-w-[320px] xl:max-w-[260px] 3xl:h-12 mt-1">
         <div className="relative w-full">
           <input
             type="search"

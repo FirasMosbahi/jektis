@@ -22,7 +22,7 @@ export default function Header(): React.ReactNode {
             />
           </div>
           <div className="flex flex-col xl:items-end items-center">
-            <div className="w-full hidden absolute right-0 xl:gap-16 gap-10 max-w-[500px] xl:max-w-[600px] lg:flex lg:flex-row">
+            <div className="w-full hidden absolute right-0 xl:gap-12 gap-10 max-w-[400px] xl:max-w-[450px] lg:flex lg:flex-row">
               <SearchInput />
               <LoginButton />
             </div>
