@@ -25,15 +25,15 @@ export default function NavbarElement({
       href={link}
       className={
         size === NavbarElementSize.SM
-          ? "2xl:min-w-[6%]"
+          ? "lg:min-w-[6%]"
           : size === NavbarElementSize.MD
-            ? "2xl:min-w-[9%]"
-            : "2xl:min-w-[16%]"
+            ? "lg:min-w-[9%]"
+            : "lg:min-w-[16%]"
       }
     >
       <button
         type="button"
-        className={`px-3 h-12 2xl:w-full bg-opacity-80 bg-whiteBlue border border-b border-gray-200 ${
+        className={`px-3 h-12 lg:w-full bg-opacity-80 bg-whiteBlue border border-b border-gray-200 ${
           pathname === link ? "font-bold bg-[#0051a3]" : ""
         } ${isFirst ? "rounded-l-xl" : ""} ${isLast ? "rounded-r-xl" : ""}`}
       >

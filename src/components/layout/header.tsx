@@ -18,15 +18,15 @@ export default function Header(): React.ReactNode {
               alt="jektis logo"
               width={200}
               height={200}
-              className="lg:w-[350px] lg:h-[10rem] w-[100px] h-[70px] 3xl:w-[22rem] 3xl:h-[16rem]"
+              className="lg:w-[250px] lg:h-[100px] w-[100px] h-[70px] "
             />
           </div>
           <div className="flex flex-col xl:items-end items-center">
-            <div className="w-full hidden absolute right-0 xl:gap-12 gap-10 max-w-[400px] xl:max-w-[450px] lg:flex lg:flex-row">
+            <div className="w-full hidden  xl:gap-12 gap-10 max-w-[400px] xl:max-w-[450px] lg:flex lg:flex-row">
               <SearchInput />
               <LoginButton />
             </div>
-            <div className="xl:mt-20 lg:mt-12 lg:mb-10">
+            <div className="px-4 xl:px-0 lg:mb-10 lg:mt-4">
               <Infos />
             </div>
           </div>
