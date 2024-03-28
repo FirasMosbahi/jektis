@@ -119,7 +119,7 @@ export default function Footer(): React.ReactNode {
           </div>
         </div>
       </div>
-      <div className="flex flex-col text-[22px] gap-6 lg:mt-7 leading-none">
+      <div className="flex flex-col text-[22px] gap-6 lg:mt-16 leading-none">
         <div className="flex flex-col gap-2">
           <strong>Suivez Nous</strong>
           <div className="bg-white opacity-100 gap-x-4 py-2 px-2 border border-transparent rounded-3xl flex flex-row flex-wrap gap-y-4 w-fit">
