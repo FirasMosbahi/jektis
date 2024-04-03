@@ -5,6 +5,7 @@ import MiniCardProps from "@jektis/types/mini-card-props";
 import { VoyageCardProps } from "@jektis/types/city_class";
 import Link from "next/link";
 import { VoirPlus } from "@jektis/components/icons";
+import ScrollableCardsList from "@jektis/components/generic/ScrollableCardsList";
 
 export default function VoyageCard({
   title,
@@ -14,7 +15,7 @@ export default function VoyageCard({
   titleLink,
 }: {
   title: string;
-  cards: MiniCardProps[];
+  cards: VoyageCardProps[];
   linksBase: string;
   bigCardProps: VoyageCardProps;
   titleLink?: string;
@@ -35,7 +36,7 @@ export default function VoyageCard({
           </p>
         )}
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="hidden lg:flex flex-col gap-4">
         <CityCard
           isHorizontal={true}
           cityProps={bigCardProps}
@@ -58,6 +59,11 @@ export default function VoyageCard({
             </div>
           )}
         </div>
+      </div>
+      <div className="lg:hidden">
+        <ScrollableCardsList
+          data={{ linksBase, citiesProps: [...cards, bigCardProps] }}
+        />
       </div>
     </div>
   );

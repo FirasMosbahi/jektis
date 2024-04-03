@@ -20,15 +20,12 @@ export function getCitiesByCategory(
 ): VoyageCardProps[] {
   return voyageCards.filter((city) => city.category === voyageCategory);
 }
-export function getVoyagesMiniCards(): MiniCardProps[] {
-  return voyageCards
-    .sort((v1, v2) => v1.rate - v2.rate)
-    .slice(0, 3)
-    .map((v) => MiniCardProps.fromVoyageCardProps(v));
+export function getVoyagesMiniCards(): VoyageCardProps[] {
+  return voyageCards.sort((v1, v2) => v1.rate - v2.rate).slice(0, 3);
 }
 export function getVoyagesMiniCardsByCategory(
   category: VoyageType,
-): MiniCardProps[] {
+): VoyageCardProps[] {
   return getCitiesByCategory(category)
     .sort((v1, v2) => v1.rate - v2.rate)
     .slice(0, 3);

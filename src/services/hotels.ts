@@ -1,6 +1,7 @@
 import HotelCardProps, { HotelCategory } from "@jektis/types/hotel_class";
 import hotelCards from "@jektis/mocks/hotelCard_moks";
 import MiniCardProps from "@jektis/types/mini-card-props";
+import { VoyageCardProps } from "@jektis/types";
 
 export function getHotels(
   category: string | string[] | undefined,
@@ -31,11 +32,10 @@ export function getHotelsByCategory(
 ): HotelCardProps[] {
   return hotelCards.filter((hotel) => hotel.categories.includes(hotelCategory));
 }
-export function getMiniCards(category: HotelCategory): MiniCardProps[] {
+export function getMiniCards(category: HotelCategory): HotelCardProps[] {
   return getHotelsByCategory(category)
     .sort((hotel1, hotel2) => hotel1.rate - hotel2.rate)
-    .slice(0, 3)
-    .map((hotel) => MiniCardProps.fromHotelCardProps(hotel));
+    .slice(0, 3);
 }
 export function getHotelById(id: string | number): HotelCardProps {
   if (typeof id === "string") {

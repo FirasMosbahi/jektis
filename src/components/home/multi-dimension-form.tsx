@@ -3,7 +3,7 @@ import React from "react";
 
 export default function MultiDimensionForm(): React.ReactElement {
   return (
-    <form className="2xl:max-w-full 2xl:px-8 text-[0.85rem] mx-4 py-4 px-2">
+    <form className="2xl:max-w-full 2xl:px-8 text-[0.85rem] lg:mx-4 py-4 px-2">
       <div className="grid grid-cols-2 pb-4 gap-y-2 gap-x-6">
         <div className="col-span-2">
           <label htmlFor="depart-date" className="block mb-2  text-gray-900">
@@ -41,7 +41,7 @@ export default function MultiDimensionForm(): React.ReactElement {
           />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+      <div className="grid sm:grid-cols-3 grid-cols-2 gap-x-4 gap-y-2">
         <div>
           <label htmlFor="adultes" className="block mb-2   text-gray-900">
             Adultes
@@ -81,7 +81,7 @@ export default function MultiDimensionForm(): React.ReactElement {
           </label>
           <select
             id="classe"
-            className="  border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="border h-20 border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           >
             <option selected>-</option>
             <option value="US">Economy</option>

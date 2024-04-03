@@ -5,8 +5,12 @@ import MiniCardProps from "@jektis/types/mini-card-props";
 import { VoirPlus } from "@jektis/components/icons";
 import { VoyageCardProps } from "@jektis/types";
 import ScrollableCardsList from "@jektis/components/generic/ScrollableCardsList";
+import HotelCardProps from "@jektis/types/hotel_class";
+import CityCard from "@jektis/components/home/city-card";
+import hotelCards from "@jektis/mocks/hotelCard_moks";
+import MiniHotelCard from "@jektis/components/mobile-home-page/MiniHotelCard";
 
-export default function VoyageCardWithImg({
+export default function HotelCardWithImage({
   title,
   imageUrl,
   cards,
@@ -17,7 +21,7 @@ export default function VoyageCardWithImg({
 }: {
   title?: string;
   imageUrl: string;
-  cards: VoyageCardProps[];
+  cards: HotelCardProps[];
   mainLink?: string;
   linksBase: string;
   titleLink?: string;
@@ -44,10 +48,10 @@ export default function VoyageCardWithImg({
           )}
         </div>
       )}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 relative">
         <div
-          className={`w-full lg:h-[260px] md:w-full border-transparent rounded-xl ${
-            showSeeAllButton ? "relative" : ""
+          className={`lg:w-full lg:h-[260px] md:w-full border-transparent rounded-xl ${
+            showSeeAllButton ? "lg:relative lg:block hidden" : ""
           }`}
         >
           {showSeeAllButton && (
@@ -83,7 +87,25 @@ export default function VoyageCardWithImg({
           )}
         </div>
         <div className="lg:hidden">
-          <ScrollableCardsList data={{ linksBase, citiesProps: cards }} />
+          <div className="w-full flex flex-row gap-8 overflow-x-scroll no-scrollbar">
+            <img src={imageUrl} className="relative w-[80%]" />
+            <Link
+              href={mainLink ?? ""}
+              className="border-2 absolute bottom-4 left-4 border-white bg-[#0051A3] cursor-pointer rounded-2xl px-2 flex flex-row gap-x-1 items-center text-[1.2rem] font-extralight"
+            >
+              Voir toute la liste <VoirPlus height={12} width={12} />
+            </Link>
+            {cards.map((e, index) => (
+              <div className="min-w-[80%]" key={index}>
+                <MiniHotelCard
+                  isHorizontal={false}
+                  hotelProps={e}
+                  linkBase={linksBase}
+                  key={index}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

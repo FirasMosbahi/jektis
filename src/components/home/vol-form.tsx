@@ -14,7 +14,7 @@ export default function VolForm(): React.ReactElement {
     VolFormEnum.ALLER_RETOUR,
   );
   return (
-    <div className="w-full bg-opacity-80 h-full border border-transparent rounded-2xl bg-white">
+    <div className="lg:w-full w-full bg-opacity-80 h-full border border-transparent rounded-2xl bg-white">
       <div className="flex flex-row justify-between items-center mt-4 m-4">
         <div className="flex items-center">
           <input
@@ -25,7 +25,10 @@ export default function VolForm(): React.ReactElement {
             name="default-radio"
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
           />
-          <label htmlFor="aller-retour" className="ms-2 text-sm text-gray-900">
+          <label
+            htmlFor="aller-retour"
+            className="ms-2 text-[12px] sm:text-sm text-gray-900"
+          >
             Aller-Retour
           </label>
         </div>
@@ -39,7 +42,10 @@ export default function VolForm(): React.ReactElement {
             name="default-radio"
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
           />
-          <label htmlFor="aller-simple" className="ms-2 text-sm text-gray-900">
+          <label
+            htmlFor="aller-simple"
+            className="ms-2 text-[12px] sm:text-sm text-gray-900"
+          >
             Aller Simple
           </label>
         </div>
@@ -55,7 +61,7 @@ export default function VolForm(): React.ReactElement {
           />
           <label
             htmlFor="multi-destination"
-            className="ms-2 text-sm text-gray-900"
+            className="ms-2 text-[12px] sm:text-sm text-gray-900"
           >
             Multi Destination
           </label>
