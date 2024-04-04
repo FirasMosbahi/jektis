@@ -5,29 +5,35 @@ import { VoyageCardProps } from "@jektis/types";
 import { getSejourStayDetails } from "@jektis/app/utils/voyage.utils";
 import HotelCardProps from "@jektis/types/hotel_class";
 
-export default function CityCard({
+export default function MiniHotelCard({
   isHorizontal,
   hotelProps,
   linkBase,
+  isFullScreen,
 }: {
   isHorizontal: boolean;
   hotelProps: HotelCardProps;
   linkBase: string;
+  isFullScreen?: boolean;
 }): React.ReactNode {
   return (
     <Link
-      className="w-[31%] min-w-[300px]"
+      className={isFullScreen ? "w-full" : "min-w-[300px]"}
       href={`${linkBase}/${hotelProps.id}`}
     >
       <div className={`items-center justify-center w-full `}>
-        <div className="relative flex border border-transparent rounded-xl w-full flex-col max-w-[20rem] text-gray-700 shadow-md">
+        <div
+          className={`relative flex border border-transparent rounded-xl w-full flex-col ${
+            isFullScreen ? "" : "max-w-[20rem]"
+          } text-gray-700 shadow-md`}
+        >
           <img
             src={hotelProps.imageUrl}
             alt="image"
             className={`object-cover ${
               isHorizontal
                 ? "sm:w-2/5 w-96 rounded-l-xl"
-                : "w-96 h-60 rounded-t-xl mb-2"
+                : `${isFullScreen ? "w-full" : "w-96"} h-60 rounded-t-xl mb-2`
             } `}
           />
           <div className="px-6 py-3 bg-[#ececec] flex flex-col gap-2 border border-transparent rounded-xl">

@@ -4,6 +4,7 @@ import React from "react";
 import HotelCard from "@jektis/components/hotels-list/hotel-card";
 import Link from "next/link";
 import HotelCardProps from "@jektis/types/hotel_class";
+import MiniHotelCard from "@jektis/components/mobile-home-page/MiniHotelCard";
 
 export default function HotelsList({
   hotels,
@@ -18,7 +19,17 @@ export default function HotelsList({
           className="cursor-pointer"
           href={`/hotels-list/${hotel.id}`}
         >
-          <HotelCard hotel={hotel} />
+          <div className="lg:block hidden">
+            <HotelCard hotel={hotel} />
+          </div>
+          <div className="lg:hidden">
+            <MiniHotelCard
+              isFullScreen={true}
+              isHorizontal={false}
+              hotelProps={hotel}
+              linkBase="/hotels-list/"
+            />
+          </div>
         </Link>
       ))}
     </div>

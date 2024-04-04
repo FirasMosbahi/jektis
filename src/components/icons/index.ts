@@ -14,6 +14,7 @@ export { default as EspaceEntreprise } from "./EspaceEntreprise";
 export { default as ExternalPool } from "./ExternalPool";
 export { default as FacebookContacts } from "./FacebookContacts";
 export { default as Facebook } from "./Facebook";
+export { default as Filter } from "./Filter";
 export { default as Group } from "./Group";
 export { default as Hamburger } from "./Hamburger";
 export { default as Home } from "./Home";

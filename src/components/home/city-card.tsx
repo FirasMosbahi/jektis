@@ -8,10 +8,12 @@ export default function CityCard({
   isHorizontal,
   cityProps,
   linkBase,
+  isFullScreen,
 }: {
   isHorizontal: boolean;
   cityProps: VoyageCardProps;
   linkBase: string;
+  isFullScreen?: boolean;
 }): React.ReactNode {
   const { numberOfDays, numberOfNights } = getSejourStayDetails(
     cityProps.dateStart,
@@ -20,7 +22,9 @@ export default function CityCard({
   return (
     <Link
       className={
-        isHorizontal ? "max-w-[80%] lg:max-w-full" : "w-[31%] min-w-[300px]"
+        isHorizontal
+          ? `${isFullScreen ? "w-full" : "max-w-[80%]"} lg:max-w-full`
+          : "w-[31%] min-w-[300px]"
       }
       href={`${linkBase}/${cityProps.id}`}
     >
@@ -29,7 +33,7 @@ export default function CityCard({
           className={`relative flex border border-transparent rounded-xl w-full ${
             isHorizontal
               ? "sm:flex-row flex flex-col lg:h-[250px] bg-[#ececec] bg-clip-border"
-              : "flex-col max-w-[20rem]"
+              : `flex-col ${isFullScreen ? "" : "max-w-[20rem]"}`
           }  text-gray-700 shadow-md`}
         >
           <img

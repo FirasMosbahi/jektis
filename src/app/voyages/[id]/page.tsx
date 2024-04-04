@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import VoyageOffer from "@jektis/components/voyage-details/voyage-offer";
 import VoyageNavbar from "@jektis/components/voyage-details/voyage-navbar";
 import VoyageDetails from "@jektis/components/voyage-details/voyage-description";
@@ -10,12 +10,16 @@ import VoyageDetailsProps from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
 import ChambreSelectionTable from "@jektis/components/voyage-details/chambre-selection-table";
 import ResizeDetector from "react-resize-detector";
+import MobileVoyageNavigation from "@jektis/components/voyage-details/MobileVoyageNavigation";
 
 export default function VoyageGroupIndex({
   params,
 }: {
   params: { id: string };
 }): React.ReactNode {
+  const voyageDetailsSectionRef: React.MutableRefObject<HTMLDivElement | null> =
+    React.useRef(null);
+  useEffect(() => {}, []);
   const voyage: VoyageDetailsProps = getProgram(params.id);
   const [section, setSection] = React.useState<VoyageDetailsSection>(
     VoyageDetailsSection.programme,
@@ -28,7 +32,6 @@ export default function VoyageGroupIndex({
       <VoyageNavbar
         onClick={(section: VoyageDetailsSection) => setSection(section)}
       />
-
       <div className="flex flex-row gap-16">
         <ResizeDetector
           handleWidth={false}
@@ -36,8 +39,19 @@ export default function VoyageGroupIndex({
             setHeight(height ?? 0);
           }}
         >
-          <div className="xl:w-10/12 w-full h-fit">
+          <div
+            ref={voyageDetailsSectionRef}
+            className="xl:w-10/12 w-full h-fit"
+          >
             <VoyageDetails voyageDetails={voyage} section={section} />
+            <MobileVoyageNavigation
+              onClick={(section) => {
+                voyageDetailsSectionRef?.current?.scrollIntoView({});
+
+                setSection(section);
+              }}
+              current={section}
+            />
             <ChambreSelectionTable chambres={voyage.chambres} />
           </div>
         </ResizeDetector>

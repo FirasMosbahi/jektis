@@ -20,7 +20,7 @@ export default function Footer(): React.ReactNode {
   return (
     <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-4 lg:pb-2 gap-6 lg:flex-row h-fit text-white bg-black bg-opacity-40 w-full px-6 justify-between">
       <div className="flex flex-col">
-        <div className="flex flex-col sm:flex-row border-b-4 gap-12 mb-4 py-4">
+        <div className="flex flex-col sm:flex-row lg:border-b-4 lg:gap-12 gap-4 lg:mb-4 py-4">
           <div className="flex flex-col text-center max-w-[200px] xl:max-w-[250px]">
             <Image
               src="/logo_footer.png"
@@ -41,7 +41,7 @@ export default function Footer(): React.ReactNode {
             </p>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap font-[300] leading-5 text-[18px] xl:text-[20px] md:gap-16">
+        <div className="hidden lg:flex flex-row flex-wrap font-[300] leading-5 text-[18px] xl:text-[20px] md:gap-16">
           <div className="flex flex-col">
             <strong className="mb-4 font-[500] text-[20px] xl:text-[22px]">
               Nos Hotels
@@ -104,8 +104,8 @@ export default function Footer(): React.ReactNode {
             <Link href="#">Mentions légales</Link>
           </div>
         </div>
-        <div className="flex lg:flex-row lg:items-center flex-col md:mt-4 mt-8 py-4 lg:pt-0 text-sm gap-8 lg:gap-6">
-          <p className="lg:text-[16px] xl:text-[18px] font-bold lg:font-[300]">
+        <div className="flex lg:flex-row lg:items-center flex-col md:mt-4 py-4 lg:pt-0 text-sm gap-4 lg:gap-6">
+          <p className="text-[16px] xl:text-[18px] font-bold lg:font-[300]">
             Recevez nos promotions par mail
           </p>
           <div className="flex flex-row gap-x-4 gap-y-1">

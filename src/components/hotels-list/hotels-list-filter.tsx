@@ -12,7 +12,7 @@ import {
 
 export default function HotelsFilter(): React.ReactNode {
   return (
-    <div className="flex flex-col w-full">
+    <div className="hidden lg:flex flex-col w-full">
       <div className="rounded-md shadow-sm w-full mt-8">
         <Center axe={Axes.y}>
           <form className="flex lg:flex-row flex-col bg-white xl:items-start xl:min-w-fit lg:px-0 px-8 items-start gap-8 lg:gap-0 xl:h-16 rounded-xl border-2 border-blue-700 w-full py-2 xl:bg-white">

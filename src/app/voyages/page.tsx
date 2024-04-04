@@ -8,6 +8,7 @@ import Pagination from "@jektis/components/generic/pagination";
 import Link from "next/link";
 import SearchSideFilter from "@jektis/components/generic/SearchSideFilter";
 import { VOYAGE_SIDE_FILTER_DATA } from "@jektis/consts/side-filters-data";
+import CityCard from "@jektis/components/home/city-card";
 
 export default function VoyagesIndex({
   searchParams,
@@ -31,7 +32,17 @@ export default function VoyagesIndex({
           {citiesToShow.map((city, index) => (
             <div key={index} className="w-full px-4">
               <Link href={`/voyages/${city.id}`}>
-                <CityCardXl city={city} key={city.id} />
+                <div className="lg:block hidden">
+                  <CityCardXl city={city} key={city.id} />
+                </div>
+                <div className="lg:hidden">
+                  <CityCard
+                    isFullScreen={true}
+                    isHorizontal={false}
+                    cityProps={city}
+                    linkBase="/voyages/"
+                  />
+                </div>
               </Link>
             </div>
           ))}

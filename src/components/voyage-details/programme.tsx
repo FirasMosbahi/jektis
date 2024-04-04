@@ -8,7 +8,7 @@ export default function Programme({
   programmeDescription: ProgramDay[];
 }): React.ReactNode {
   return (
-    <div className="border-b-4 pb-8 mb-4 ">
+    <div className="lg:border-b-4 lg:pb-8 mb-4 ">
       <div>
         {programmeDescription.map((programDay, index) => (
           <ProgramDayDescription key={index} {...programDay} />

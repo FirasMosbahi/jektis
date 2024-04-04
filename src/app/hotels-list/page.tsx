@@ -27,7 +27,7 @@ export default function PageIndex({
   return (
     <div className="w-full">
       <HotelsFilter />
-      <div className="w-full mt-8 flex flex-row gap-8">
+      <div className="w-full mt-8 flex lg:flex-row flex-col gap-8">
         <SearchSideFilter
           filters={HOTEL_SIDE_FILTER_DATA}
           nameFilterPlaceholder="nom de l'hotel"

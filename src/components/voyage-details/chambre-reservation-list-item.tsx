@@ -47,7 +47,7 @@ export default function ChambreReservationListItem({
       </div>
       <div className="col-span-2 flex flex-row justify-center text-xl lg:text-3xl font-medium">
         <div className="flex flex-col items-center justify-center">
-          <strong className="text-[#366999] text-[1.2rem]">
+          <strong className="text-[#366999] lg:text-[1.2rem] text-[14px]">
             {(qty * price).toFixed(0)}
             <sup>DT</sup>
           </strong>

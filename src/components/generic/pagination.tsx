@@ -12,7 +12,7 @@ export default function Pagination({
   const params = useSearchParams();
   return (
     <div className="flex w-full justify-between px-12">
-      {params.get("page") && Number.parseInt(params.get("page") ?? "") > 1 && (
+      {params.get("page") && Number.parseInt(params.get("page") ?? "") > 1 ? (
         <Link
           href={`${path}?page=${Number.parseInt(params.get("page") ?? "") - 1}`}
           className="flex items-center justify-center px-4 h-10 me-3 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
@@ -34,8 +34,10 @@ export default function Pagination({
           </svg>
           Previous
         </Link>
+      ) : (
+        <div></div>
       )}
-      {Number.parseInt(params.get("page") ?? "0") < pagesNumber && (
+      {Number.parseInt(params.get("page") ?? "0") < pagesNumber ? (
         <Link
           href={`${path}?page=${
             Number.parseInt(params.get("page") ?? "2") + 1
@@ -59,6 +61,8 @@ export default function Pagination({
             />
           </svg>
         </Link>
+      ) : (
+        <div></div>
       )}
     </div>
   );
