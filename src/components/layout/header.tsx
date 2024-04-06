@@ -21,7 +21,7 @@ export default function Header(): React.ReactNode {
             />
             <HamburgerNavbar />
           </div>
-          <div className="lg:flex lg:flex-col hidden lg:block xl:items-end items-center">
+          <div className="lg:flex lg:flex-col hidden xl:items-end items-center">
             <div className="w-full hidden  xl:gap-12 gap-10 max-w-[400px] xl:max-w-[450px] lg:flex lg:flex-row">
               <SearchInput />
               <LoginButton />

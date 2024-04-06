@@ -13,12 +13,12 @@ export default function HotelDetailsIndex({
 }): React.ReactNode {
   const hotel = getHotelById(params.id);
   return (
-    <div className="bg-white md:py-8 pb-8 px-10">
+    <div className="bg-white lg:py-8 lg:pb-8 lg:mt-0 mt-12 px-10">
       <HotelDescriptionHeader {...hotel} />
-      <p className="mt-12 tracking-wide text-black text-2xl">
+      <p className="lg:mt-12 mt-4 text-center lg:text-start tracking-wide text-black text-2xl">
         {hotel.cityName}
       </p>
-      <p className="text-black mb-8">
+      <p className="text-black lg:mb-8 mb-2 lg:text-start text-center">
         Minimum stay: {hotel.minimumStay} Nuités /{" "}
         {hotel.inclusive && "All inclusive /"} {hotel.detailEnfant}
       </p>

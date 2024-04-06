@@ -14,9 +14,10 @@ import {
   Usa,
   VisaSideBar,
 } from "@jektis/components/icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import NavbarItem from "@jektis/components/mobile-layout/NavbarItem";
+import { useAnimation, motion } from "framer-motion";
 
 export default function SearchSideFilter({
   filters,
@@ -25,10 +26,32 @@ export default function SearchSideFilter({
   filters: FilterSection[];
   nameFilterPlaceholder: string;
 }) {
+  const sideAnimate = useAnimation();
+  const iconAnimate = useAnimation();
+
   const [show, setShow] = useState<boolean>(false);
+
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (show) {
+      onAppear();
+    }
+  }, [show]);
+
+  async function onAppear() {
+    sideAnimate.set({ x: 100, opacity: 0 });
+    iconAnimate.start({ opacity: 0 }, { duration: 1 });
+    await sideAnimate.start({ x: 0, opacity: 1 }, { duration: 1 });
+  }
+  async function onDisappear() {
+    sideAnimate.start({ x: 80, opacity: 0 }, { duration: 1 });
+    await iconAnimate.start({ opacity: 1 }, { duration: 1 });
+    setShow(false);
+  }
   return (
     <div>
-      <div className="bg-white lg:block hidden px-4 py-8 w-[30%] max-w-[400px]">
+      <div className="bg-white lg:block hidden px-4 py-8 h-full max-w-[400px]">
         <label
           htmlFor="default-search"
           className="text-[20px] font-bold text-gray-900"
@@ -83,14 +106,16 @@ export default function SearchSideFilter({
             placeholder={nameFilterPlaceholder}
           />
         </div>
-        <button
+        <motion.button
+          animate={iconAnimate}
           onClick={() => setShow(true)}
           className="bg-white border border-transparent rounded-xl shadow-2xl p-2"
         >
           <Filter className="size-4" />
-        </button>
+        </motion.button>
         {show && (
-          <aside
+          <motion.aside
+            animate={sideAnimate}
             id="sidebar-multi-level-sidebar"
             className="absolute top-40 right-0 z-50 w-80"
             aria-label="Sidebar"
@@ -103,7 +128,7 @@ export default function SearchSideFilter({
                   width={150}
                   height={150}
                 />
-                <Close className="size-6" onClick={() => setShow(false)} />
+                <Close className="size-6" onClick={onDisappear} />
               </div>
               {filters.map((f, index) => (
                 <div className="pt-4" key={index}>
@@ -131,7 +156,7 @@ export default function SearchSideFilter({
                 </div>
               ))}
             </div>
-          </aside>
+          </motion.aside>
         )}
       </div>
     </div>

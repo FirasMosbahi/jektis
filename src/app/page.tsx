@@ -24,7 +24,7 @@ export default function Index(): React.ReactNode {
   );
   return (
     <div>
-      <div className="flex lg:flex-row flex-col items-center justify-between xl:items-start w-full mb-12 gap-12">
+      <div className="flex lg:flex-row pt-12 lg:pt-0 flex-col-reverse items-center justify-between xl:items-start w-full mb-12 gap-12">
         <div className="xl:min-w-[45%] ">
           <HomeFilter />
         </div>

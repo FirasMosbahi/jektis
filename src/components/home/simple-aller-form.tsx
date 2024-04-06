@@ -81,7 +81,7 @@ export default function SimpleAllerForm(): React.ReactElement {
           </label>
           <select
             id="classe"
-            className="  border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="border h-8 border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           >
             <option selected>-</option>
             <option value="US">Economy</option>

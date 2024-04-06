@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AllerRetourForm(): React.ReactElement {
   return (
-    <form className="2xl:max-w-full w-full 2xl:px-8 text-[0.85rem] lg:mx-4 py-4 px-2">
+    <form className="2xl:max-w-full w-full 2xl:px-8 text-[0.85rem] py-4 px-4">
       <div className="grid grid-cols-2 pb-4 gap-y-2 gap-x-6">
         <div>
           <label htmlFor="depart" className="block mb-2  text-gray-900">
@@ -92,7 +92,7 @@ export default function AllerRetourForm(): React.ReactElement {
           </label>
           <select
             id="classe"
-            className="-50  border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            className="border h-8 border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           >
             <option selected>-</option>
             <option value="US">Economy</option>

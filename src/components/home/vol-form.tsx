@@ -14,7 +14,7 @@ export default function VolForm(): React.ReactElement {
     VolFormEnum.ALLER_RETOUR,
   );
   return (
-    <div className="lg:w-full w-full bg-opacity-80 h-full border border-transparent rounded-2xl bg-white">
+    <div className="lg:w-full w-full lg:max-w-[450px] xl:max-w-[600px] bg-opacity-80 h-full border border-transparent rounded-2xl bg-white">
       <div className="flex flex-row justify-between items-center mt-4 m-4">
         <div className="flex items-center">
           <input

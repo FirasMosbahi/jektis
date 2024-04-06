@@ -14,14 +14,6 @@ export default function Navbar(): React.ReactNode {
         className="flex flex-row font-light text-[18px] justify-center text-white shadow-sm mt-8 lg:mx-0 w-full mb-8"
         role="group"
       >
-        {/*<Link href="/" className="2xl:min-w-[4%]">*/}
-        {/*  <button*/}
-        {/*    type="button"*/}
-        {/*    className="lg:px-6 w-full px-1 h-12 bg-[#054d9f] border border-[#054d9f]"*/}
-        {/*  >*/}
-        {/*    <Home height={25} width={25} />*/}
-        {/*  </button>*/}
-        {/*</Link>*/}
         <NavbarElement
           size={NavbarElementSize.SM}
           link="/"

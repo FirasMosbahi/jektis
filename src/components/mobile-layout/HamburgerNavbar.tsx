@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import NavbarItem from "@jektis/components/mobile-layout/NavbarItem";
 import { Hamburger } from "@jektis/components/icons";
 import SideBar from "@jektis/components/mobile-layout/SideBar";
+import { motion, useAnimation } from "framer-motion";
 
 const NAVBAR_DATA = [
   {
@@ -21,46 +22,40 @@ const NAVBAR_DATA = [
 ];
 
 export default function HamburgerNavbar() {
+  const animate = useAnimation();
+  const hamburgerAnimate = useAnimation();
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  async function onSideBarClose() {
+    animate.set({ y: -40 });
+    animate.start({ x: 100, y: -40, opacity: 0 }, { duration: 1 });
+    await hamburgerAnimate.start({ opacity: 1 }, { duration: 1 });
+    setIsNavOpen(false);
+  }
+
+  async function onSideBarOpen() {
+    hamburgerAnimate.start({ opacity: 0 }, { duration: 1 });
+    setIsNavOpen(true);
+  }
 
   return (
     <div className="flex lg:hidden items-center justify-between">
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
-          <div
+          <motion.div
+            animate={hamburgerAnimate}
             className="HAMBURGER-ICON space-y-2"
-            onClick={() => setIsNavOpen((prev) => !prev)}
+            onClick={onSideBarOpen}
           >
             <Hamburger className="w-12 h-12 border-[3px] border-[#1d4f9f] rounded-lg" />
-          </div>
+          </motion.div>
           {isNavOpen && (
-            // <div className="absolute top-10 left-0 z-10 ">
-            //   <div
-            //     className="absolute top-2 right-2"
-            //     onClick={() => setIsNavOpen(false)}
-            //   >
-            //     <svg
-            //       className="h-8 w-8 text-gray-600"
-            //       viewBox="0 0 24 24"
-            //       fill="none"
-            //       stroke="currentColor"
-            //       strokeWidth="2"
-            //       strokeLinecap="round"
-            //       strokeLinejoin="round"
-            //     >
-            //       <line x1="18" y1="6" x2="6" y2="18" />
-            //       <line x1="6" y1="6" x2="18" y2="18" />
-            //     </svg>
-            //   </div>
-            //   <ul className=" flex bg-[#789cc0] w-[250px] flex-col items-center min-h-[250px]">
-            //     {NAVBAR_DATA.map((e, index) => (
-            //       <NavbarItem {...e} key={index} />
-            //     ))}
-            //   </ul>{" "}
-            // </div>
-            <div className="absolute top-10 right-0 z-10 ">
-              <SideBar onClose={() => setIsNavOpen(false)} />
-            </div>
+            <motion.div
+              animate={animate}
+              className="absolute top-10 right-0 z-10 "
+            >
+              <SideBar onClose={onSideBarClose} />
+            </motion.div>
           )}
         </section>
       </nav>
