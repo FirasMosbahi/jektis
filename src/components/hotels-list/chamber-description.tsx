@@ -1,12 +1,7 @@
 "use client";
 
 import React from "react";
-import Center, { Axes } from "@jektis/components/generic/center";
 
-export type ChambreProps = {
-  category: string;
-  isDisponible: boolean;
-};
 export default function ChamberDescriptionElement({
   category,
   isDisponible,
