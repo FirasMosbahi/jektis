@@ -2,7 +2,6 @@
 
 import React from "react";
 import ContactElement from "@jektis/components/contacts/contact-element";
-import SocialBar from "@jektis/components/contacts/SocialBar";
 
 export default function Index(): React.ReactNode {
   return (
