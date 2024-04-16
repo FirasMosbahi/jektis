@@ -18,7 +18,7 @@ import Image from "next/image";
 
 export default function Footer(): React.ReactNode {
   return (
-    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-4 lg:pb-2 gap-6 lg:flex-row h-fit text-white bg-black bg-opacity-40 w-full px-6 justify-between">
+    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-4 lg:pb-2 gap-6 lg:flex-row h-fit text-white bg-black bg-opacity-40 w-full lg:px-6 px-2 justify-between">
       <div className="flex flex-col">
         <div className="flex flex-col sm:flex-row lg:border-b-4 lg:gap-12 gap-4 lg:mb-4 py-4">
           <div className="flex flex-col text-center max-w-[200px] xl:max-w-[250px]">

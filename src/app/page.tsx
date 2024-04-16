@@ -23,8 +23,8 @@ export default function Index(): React.ReactNode {
     VoyageType.VOYAGE_ORGANISE,
   );
   return (
-    <div>
-      <div className="flex lg:flex-row pt-12 lg:pt-0 flex-col-reverse items-center justify-between xl:items-start w-full mb-12 gap-12">
+    <div className="pt-12 lg:pt-0">
+      <div className="lg:flex lg:flex-row lg:pt-0 hidden items-center justify-between xl:items-start w-full lg:mb-12 gap-12">
         <div className="xl:min-w-[45%] ">
           <HomeFilter />
         </div>
@@ -53,8 +53,8 @@ export default function Index(): React.ReactNode {
             />
           </div>
         </div>
-        <div className="flex text-2xl text-white py-2 px-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
-          <strong className="ml-1 text-[20px] xs:ml-4">
+        <div className="flex text-2xl text-white lg:py-2 py-3 lg:px-4 pl-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+          <strong className="ml-1 text-[20px] lg:leading-normal leading-5 xs:ml-4">
             Voyages de Noces{" "}
             <p className="lg:inline hidden"> - Voyages à la carte </p>
           </strong>
@@ -62,12 +62,12 @@ export default function Index(): React.ReactNode {
             href={`/voyages?category=${VoyageType.VOYAGE_DE_NOCES}`}
             className="flex text-white flex-col justify-end"
           >
-            <p className="mr-4 text-sm flex flex-row items-center font-light gap-x-1 h-fit">
+            <p className="mr-4 lg:text-sm text-[13px] flex flex-row items-center justify-end lg:leading-normal leading-none font-light gap-x-1 h-fit">
               Voir Toute la liste <VoirPlus width={12} height={12} />
             </p>
           </Link>
         </div>
-        <div className="flex flex-row gap-8 overflow-x-scroll no-scrollbar">
+        <div className="flex flex-row gap-8 overflow-x-scroll pb-12 lg:pb-0 no-scrollbar">
           {nocesVoyages.map((v, index) => (
             <CityCard
               linkBase="/voyages"
@@ -77,7 +77,7 @@ export default function Index(): React.ReactNode {
             />
           ))}
         </div>
-        <div className="flex flex-row lg:text-xl text-[18px] text-white gap-8 mt-8 border py-2 lg:px-4 px-2 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="lg:flex lg:flex-row hidden lg:text-xl text-[18px] text-white gap-8 mt-8 border py-2 lg:px-4 px-2 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-4">Hotels en Tunisie :</strong>
           <Link
             href={`/hotels-list?category=${VoyageType.VOYAGE_DE_NOCES}`}
@@ -88,7 +88,7 @@ export default function Index(): React.ReactNode {
             </p>
           </Link>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 pb-24 md:mt-8">
+        <div className="lg:grid grid-cols-1 hidden lg:grid-cols-2 gap-x-8 gap-y-12 pb-24 md:mt-8">
           <HotelCardWithImage
             imageUrl="https://www.jektistravel.com/public/images/image/image_0.75932100-1701696368.png"
             mainLink={`hotels-list?category=${HotelCategory.VUE_MER}`}

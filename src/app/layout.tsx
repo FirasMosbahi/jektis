@@ -37,7 +37,7 @@ export default function RootLayout({
             </div>
           </Center>
           <div className="px-2 w-full">{children}</div>
-          <div className="w-full mt-4 pb-4 pl-4">
+          <div className="w-full mt-4 pb-4 px-2">
             <Footer />
           </div>
         </CustomPage>
