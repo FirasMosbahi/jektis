@@ -39,7 +39,7 @@ export default function Promo(): React.ReactNode {
               <img
                 src={promos[current].image}
                 alt={`${promos[current].title} image`}
-                className="h-full"
+                className="h-full border border-transparent rounded-xl"
               />
             </motion.div>
           </AnimatePresence>
