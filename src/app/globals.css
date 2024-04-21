@@ -45,3 +45,9 @@ input [type=number] {
   -ms-overflow-style: none; /* For IE and Edge */
   scrollbar-width: none; /* For Firefox */
 }
+
+.custom-select {
+  -webkit-appearance: none;
+  appearance: none;
+  /* Additional styles for the select element (optional) */
+}

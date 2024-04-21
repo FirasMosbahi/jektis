@@ -1,22 +1,9 @@
 "use client";
 
 import { FilterSection } from "@jektis/types/filter-type";
-import {
-  Billet,
-  Close,
-  ContactsSideBar,
-  EspaceEntreprise,
-  Filter,
-  Group,
-  HotelSideBarIcon,
-  Noces,
-  SearchInputIcon,
-  Usa,
-  VisaSideBar,
-} from "@jektis/components/icons";
+import { Close, Filter, SearchInputIcon } from "@jektis/components/icons";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import NavbarItem from "@jektis/components/mobile-layout/NavbarItem";
 import { useAnimation, motion } from "framer-motion";
 
 export default function SearchSideFilter({
@@ -30,8 +17,6 @@ export default function SearchSideFilter({
   const iconAnimate = useAnimation();
 
   const [show, setShow] = useState<boolean>(false);
-
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     if (show) {

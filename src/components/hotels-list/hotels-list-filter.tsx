@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Center, { Axes } from "@jektis/components/generic/center";
 import InputWithIcon from "@jektis/components/generic/input-with-icon";
 import {
@@ -9,20 +9,39 @@ import {
   Trolley,
   WhiteSearchIcon,
 } from "@jektis/components/icons";
+import { useForm } from "react-hook-form";
+import { HotelSearchFormData } from "@jektis/forms-data/hotel-filter-form-data";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { hotelSearchValidationSchema } from "@jektis/schema/hotel-forms";
+import { searchHotel } from "@jektis/actions/hotel-search-actions";
 
 export default function HotelsFilter(): React.ReactNode {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm<HotelSearchFormData>({
+    resolver: yupResolver(hotelSearchValidationSchema),
+  });
+  async function onSubmit(data: HotelSearchFormData) {
+    await searchHotel(data);
+  }
   return (
     <div className="hidden lg:flex flex-col w-full">
       <div className="rounded-md shadow-sm w-full mt-8">
         <Center axe={Axes.y}>
-          <form className="flex lg:flex-row flex-col bg-white xl:items-start xl:min-w-fit lg:px-0 px-8 items-start gap-8 lg:gap-0 xl:h-16 rounded-xl border-2 border-blue-700 w-full py-2 xl:bg-white">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex lg:flex-row flex-col bg-white xl:items-start xl:min-w-fit lg:px-0 px-8 items-start gap-8 lg:gap-0 xl:h-16 rounded-xl border-2 border-blue-700 w-full py-2 xl:bg-white"
+          >
             <div className="flex flex-row w-full xl:h-full xl:max-w-[230px]  lg:w-[320px] h-12 border border-transparent lg:rounded-none rounded-2xl lg:mx-0 items-center lg:gap-2 gap-4 px-4 xl:pl-4">
               <Localisation width={25} height={25} />
               <select
                 id="countries"
-                className="w-full h-full text-sm font-medium text-gray-900"
+                {...register("location")}
+                className="w-full h-full border border-transparent custom-select text-sm font-medium text-gray-900"
               >
-                <option>Ou allez vous </option>
+                <option value="">Ou allez vous </option>
                 <option value="CA">Canada</option>
                 <option value="FR">France</option>
                 <option value="DE">Germany</option>
@@ -33,6 +52,7 @@ export default function HotelsFilter(): React.ReactNode {
                 <Calendar width={25} height={25} />
                 <input
                   type="date"
+                  {...register("arrive")}
                   className="text-sm font-medium text-gray-900"
                 />
               </div>
@@ -40,6 +60,7 @@ export default function HotelsFilter(): React.ReactNode {
                 <Calendar width={25} height={25} />
                 <input
                   type="date"
+                  {...register("depart")}
                   className="sm:w-32 text-sm w-full font-medium text-gray-900"
                 />
               </div>
@@ -49,7 +70,8 @@ export default function HotelsFilter(): React.ReactNode {
                 <Trolley width={25} height={25} />
                 <select
                   id="countries"
-                  className="text-sm w-full font-medium text-gray-900"
+                  {...register("reservation")}
+                  className="text-sm w-full custom-select font-medium text-gray-900"
                 >
                   <option>Chambre </option>
                   <option value="CA">Canada</option>
@@ -60,7 +82,7 @@ export default function HotelsFilter(): React.ReactNode {
             </div>
             <div className="border-l-3 flex-1 lg:min-w-[250px] w-full flex flex-col  sm:items-end items-center justify-end pr-8 lg:pr-4 border-l-blue-700">
               <button
-                type="button"
+                type="submit"
                 style={{
                   borderRadius: 10,
                 }}

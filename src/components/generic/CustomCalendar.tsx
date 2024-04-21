@@ -1,10 +1,9 @@
 "use client";
 
 import { CalendarIcon } from "@jektis/components/icons";
-import Calendar from "react-calendar";
-import { CustomFlowbiteTheme, Datepicker, Flowbite } from "flowbite-react";
+import { Datepicker } from "flowbite-react";
 import { useState } from "react";
-import { days, months } from "@jektis/app/utils/date-utils";
+import { days, months } from "@jektis/utils/date-utils";
 
 const theme = {
   root: {
@@ -90,12 +89,19 @@ const theme = {
   },
 };
 
-export default function CustomCalendar({ label }: { label: string }) {
+export default function CustomCalendar({
+  label,
+  setValue,
+}: {
+  label: string;
+  setValue: (value: Date) => void;
+}) {
   const [isCalendarOpen, setIsCalendarOpen] = useState<boolean>(false);
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const handleDatePickerChange = (date: Date) => {
     setIsCalendarOpen(false);
     setSelectedDate(date);
+    setValue(date);
   };
   return isCalendarOpen ? (
     <Datepicker
@@ -107,7 +113,7 @@ export default function CustomCalendar({ label }: { label: string }) {
     />
   ) : (
     <div className="flex flex-col gap-1 lg:w-[150px] w-[100px]">
-      <p className="text-gray-400 text-center">Arrivée</p>
+      <p className="text-gray-400 text-center">{label}</p>
       <div className="relative text-black max-w-sm flex flex-row lg:gap-4 gap-2">
         <div
           onClick={() => setIsCalendarOpen(true)}

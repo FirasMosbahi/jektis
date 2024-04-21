@@ -2,7 +2,7 @@ import React from "react";
 import { PlaneArrival, PlaneDeparture, Star } from "@jektis/components/icons";
 import PriceButtonXl from "@jektis/components/voyages/price_card";
 import { VoyageCardProps } from "@jektis/types";
-import { getSejourStayDetails } from "@jektis/app/utils/voyage.utils";
+import { getSejourStayDetails } from "@jektis/utils/voyage.utils";
 
 export default function CityCardXl({
   city,

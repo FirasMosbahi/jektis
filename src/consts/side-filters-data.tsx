@@ -5,6 +5,7 @@ import React from "react";
 export const HOTEL_SIDE_FILTER_DATA: FilterSection[] = [
   {
     name: "rating",
+    field: "rating",
     values: [
       { value: 3, label: <Stars number={3} width={25} height={25} /> },
       { value: 4, label: <Stars number={4} width={25} height={25} /> },
@@ -13,6 +14,7 @@ export const HOTEL_SIDE_FILTER_DATA: FilterSection[] = [
   },
   {
     name: "Arrangement",
+    field: "arrangement",
     values: [
       {
         value: "Logement petit déjeuner",
@@ -29,6 +31,8 @@ export const HOTEL_SIDE_FILTER_DATA: FilterSection[] = [
   },
   {
     name: "Thèmes",
+    field: "themes",
+
     values: [
       { value: "Promo", label: "Promo" },
       { value: "Top vente", label: "Top vente" },
@@ -51,6 +55,8 @@ export const HOTEL_SIDE_FILTER_DATA: FilterSection[] = [
 export const VOYAGE_SIDE_FILTER_DATA: FilterSection[] = [
   {
     name: "Thèmes",
+    field: "themes",
+
     values: [
       { value: "VIP", label: "VIP" },
       { value: "Moyen Courier", label: "Moyen Courier" },
@@ -67,6 +73,7 @@ export const VOYAGE_SIDE_FILTER_DATA: FilterSection[] = [
   },
   {
     name: "VISA",
+    field: "visa",
     values: [
       {
         value: true,
@@ -80,6 +87,8 @@ export const VOYAGE_SIDE_FILTER_DATA: FilterSection[] = [
   },
   {
     name: "Durée",
+    field: "duree",
+
     values: [
       { value: 5, label: "5 Jours +" },
       { value: 7, label: "7 Jours +" },
@@ -88,6 +97,7 @@ export const VOYAGE_SIDE_FILTER_DATA: FilterSection[] = [
   },
   {
     name: "Continent",
+    field: "continent",
     values: [
       { value: "Asie", label: "Asie" },
       { value: "Europe", label: "Europe" },

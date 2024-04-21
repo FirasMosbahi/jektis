@@ -6,5 +6,6 @@ export type FilterValue = {
 };
 export type FilterSection = {
   name: string;
+  field: string;
   values: FilterValue[];
 };

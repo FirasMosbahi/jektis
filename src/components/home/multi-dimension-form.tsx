@@ -1,9 +1,32 @@
 import { WhiteSearchIcon } from "@jektis/components/icons";
 import React from "react";
+import { useForm } from "react-hook-form";
+import {
+  AllezReourVolFormData,
+  MultiDestinationsVolFormData,
+} from "@jektis/forms-data/home-filter-form-data";
+import { yupResolver } from "@hookform/resolvers/yup";
+import {
+  AllezReourVolFormValidationSchema,
+  MultiDestinationsVolFormValidationSchema,
+} from "@jektis/schema/home-forms";
+import {
+  allezDapartVolSearch,
+  MultiDestinationsVolSearch,
+} from "@jektis/actions/home-actions";
 
 export default function MultiDimensionForm(): React.ReactElement {
+  const { register, handleSubmit } = useForm<MultiDestinationsVolFormData>({
+    resolver: yupResolver(MultiDestinationsVolFormValidationSchema),
+  });
+  async function onSubmit(form: MultiDestinationsVolFormData) {
+    await MultiDestinationsVolSearch(form);
+  }
   return (
-    <form className="2xl:max-w-full 2xl:px-8 text-[0.85rem] lg:mx-4 py-4 px-2">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="2xl:max-w-full 2xl:px-8 text-[0.85rem] lg:mx-4 py-4 px-2"
+    >
       <div className="grid grid-cols-2 pb-4 gap-y-2 gap-x-6">
         <div className="col-span-2">
           <label htmlFor="depart-date" className="block mb-2  text-gray-900">
@@ -13,7 +36,7 @@ export default function MultiDimensionForm(): React.ReactElement {
             type="date"
             id="depart-date"
             className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            required
+            {...register("dateDepart")}
           />
         </div>
         <div>
@@ -25,7 +48,7 @@ export default function MultiDimensionForm(): React.ReactElement {
             id="depart"
             className=" border h-8 border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Ville / Aeroporte"
-            required
+            {...register("depart")}
           />
         </div>
         <div>
@@ -37,7 +60,7 @@ export default function MultiDimensionForm(): React.ReactElement {
             id="destination"
             className=" border h-8 border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Ville / Aeroporte"
-            required
+            {...register("destination")}
           />
         </div>
       </div>
@@ -50,7 +73,7 @@ export default function MultiDimensionForm(): React.ReactElement {
             type="number"
             id="adultes"
             className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            required
+            {...register("nombreAdultes")}
           />
         </div>
         <div>
@@ -61,7 +84,7 @@ export default function MultiDimensionForm(): React.ReactElement {
             type="number"
             id="enfants"
             className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            required
+            {...register("nombreEnfants")}
           />
         </div>
         <div>
@@ -72,7 +95,7 @@ export default function MultiDimensionForm(): React.ReactElement {
             type="number"
             id="bebe"
             className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            required
+            {...register("nombreBebe")}
           />
         </div>
         <div>
@@ -81,12 +104,15 @@ export default function MultiDimensionForm(): React.ReactElement {
           </label>
           <select
             id="classe"
-            className="border h-8 border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            {...register("classe")}
+            className="border h-8 border-gray-300 text-gray-900 text-[12px] focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5"
           >
-            <option selected>-</option>
-            <option value="US">Economy</option>
-            <option value="CA">Business</option>
-            <option value="FR">First</option>
+            <option selected value="">
+              -
+            </option>
+            <option value="Economy">Economy</option>
+            <option value="Business">Business</option>
+            <option value="First">First</option>
           </select>
         </div>
       </div>

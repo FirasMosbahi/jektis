@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   BlackSearchIcon,
@@ -8,10 +10,24 @@ import {
 } from "@jektis/components/icons";
 import Image from "next/image";
 import CustomCalendar from "@jektis/components/generic/CustomCalendar";
+import { useForm } from "react-hook-form";
+import { HomeFilterFormData } from "@jektis/forms-data/home-filter-form-data";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { hotelsValidationSchema } from "@jektis/schema/home-forms";
+import { hotelSearch } from "@jektis/actions/home-actions";
 
 export default function HotelsForm(): React.ReactElement {
+  const { register, setValue, handleSubmit } = useForm<HomeFilterFormData>({
+    resolver: yupResolver(hotelsValidationSchema),
+  });
+  async function onSubmit(form: HomeFilterFormData) {
+    await hotelSearch(form);
+  }
   return (
-    <div className="lg:w-full h-full flex flex-col gap-6 bg-opacity-80 pt-8 border border-transparent rounded-2xl bg-white">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="lg:w-full h-full flex flex-col gap-6 bg-opacity-80 pt-8 border border-transparent rounded-2xl bg-white"
+    >
       <div className="px-4 relative">
         <BlackSearchIcon className="absolute top-[40%] size-5 left-7" />
 
@@ -20,23 +36,40 @@ export default function HotelsForm(): React.ReactElement {
           id="first_name"
           className="bg-gray-200 text-xl border border-gray-300 w-full text-black focus:ring-blue-500 focus:border-blue-500 block lg:pl-10 pl-12 p-6"
           placeholder="ex . ville , nom d'hotel"
-          required
+          {...register("nom")}
         />
       </div>
       <div className="flex flex-row justify-between items-center border border-gray-300 mx-4 py-4 px-4 bg-gray-200">
-        <CustomCalendar label="Arrivé" />
+        <CustomCalendar
+          label="Arrivé"
+          setValue={(value: Date) => setValue("arrive", value)}
+        />
         <SimpleNextArrow className="size-12" />
-        <CustomCalendar label="Départ" />
+        <CustomCalendar
+          label="Départ"
+          setValue={(value: Date) => setValue("depart", value)}
+        />
       </div>
       <div className="flex flex-row items-center border border-gray-300 mx-4 py-8 px-4 gap-2 bg-gray-200">
         <TwoUsers className="lg:size-6 size-5" />
-        <p className="text-black lg:text-[20px] text-[18px] font-semibold">
-          1 Chambre , 2 Adultes, 0 enfants
-        </p>
+        {/*<p className="text-black lg:text-[20px] text-[18px] font-semibold">*/}
+        {/*  1 Chambre , 2 Adultes, 0 enfants*/}
+        {/*</p>*/}
+        <select
+          id="chambre"
+          {...register("chambres")}
+          className="bg-transparent text-black lg:text-[20px] text-[18px] font-semibold rounded-lg block w-full custom-select"
+        >
+          <option selected> 1 Chambre , 2 Adultes, 0 enfants</option>
+          <option value="US"> 1 Chambre , 2 Adultes, 0 enfants</option>
+          <option value="CA"> 1 Chambre , 2 Adultes, 0 enfants</option>
+          <option value="FR"> 1 Chambre , 2 Adultes, 0 enfants</option>
+          <option value="DE"> 1 Chambre , 2 Adultes, 0 enfants</option>
+        </select>
       </div>
       <div className="flex flex-row justify-center px-6 w-full mt-4 mr-2">
         <button
-          type="button"
+          type="submit"
           style={{
             borderRadius: 10,
           }}
@@ -51,6 +84,6 @@ export default function HotelsForm(): React.ReactElement {
           <p className="text-xl">Rechercher</p>
         </button>
       </div>
-    </div>
+    </form>
   );
 }
