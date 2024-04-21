@@ -23,8 +23,8 @@ export default function SideBar({ onClose }: { onClose: () => void }) {
   const animate = useAnimation();
 
   async function onSideBarOpening() {
-    animate.set({ x: 100, y: 10, opacity: 0 });
-    await animate.start({ x: 0, opacity: 1 }, { duration: 1 });
+    animate.set({ x: -300, y: 10, opacity: 0 });
+    await animate.start({ x: -140, opacity: 1 }, { duration: 1 });
   }
 
   const pathName = usePathname();
@@ -46,7 +46,7 @@ export default function SideBar({ onClose }: { onClose: () => void }) {
       className="fixed top-6 right-0 z-50 w-64"
       aria-label="Sidebar"
     >
-      <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 border border-transparent rounded-l-3xl">
+      <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 border border-transparent rounded-r-3xl">
         <div className="flex flex-row items-center justify-between px-2 border-b pb-2 mb-2">
           <Link href="/">
             <Image src="/logo_footer.png" alt="logo" width={150} height={150} />

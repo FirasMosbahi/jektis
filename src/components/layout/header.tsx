@@ -10,8 +10,9 @@ export default function Header(): React.ReactNode {
   return (
     <>
       <div className="justify-between">
-        <div className="flex flex-row items-center pt-4 lg:pt-0 px-0 justify-between">
-          <div className="flex flex-row lg:justify-center justify-between w-full lg:w-fit px-8 lg:px-0 ml-4 gap-4">
+        <div className="flex flex-row items-center pt-4 lg:pt-0 py-4 lg:py-0 px-0 justify-between">
+          <div className="flex flex-row lg:justify-center justify-between w-full lg:w-fit pr-8 pl-2 lg:pl-0 lg:pr-0 lg:px-0 lg:ml-4 gap-4">
+            <HamburgerNavbar />
             <Image
               src="/logo_footer.png"
               alt="jektis logo"
@@ -19,7 +20,6 @@ export default function Header(): React.ReactNode {
               height={200}
               className="lg:w-[250px] lg:h-[100px] w-[150px] h-[100px] "
             />
-            <HamburgerNavbar />
           </div>
           <div className="lg:flex lg:flex-col hidden xl:items-end items-center">
             <div className="w-full hidden  xl:gap-12 gap-10 max-w-[400px] xl:max-w-[450px] lg:flex lg:flex-row">
