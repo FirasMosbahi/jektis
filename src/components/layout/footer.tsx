@@ -123,22 +123,22 @@ export default function Footer(): React.ReactNode {
         <div className="flex flex-col gap-2">
           <strong>Suivez Nous</strong>
           <div className="bg-white opacity-100 gap-x-4 py-2 px-2 border border-transparent rounded-3xl flex flex-row flex-wrap gap-y-4 w-fit">
-            <Facebook width={25} height={25} />
-            <Messanger width={25} height={25} />
-            <Instagram width={25} height={25} />
-            <Linkedin width={25} height={25} />
-            <Youtube width={25} height={25} />
-            <Twitter width={25} height={25} />
-            <Tiktok width={25} height={25} />
+            <Facebook className="size-10" />
+            <Messanger className="size-10" />
+            <Instagram className="size-10" />
+            {/*<Linkedin width={25} height={25} />*/}
+            {/*<Youtube width={25} height={25} />*/}
+            <Twitter className="size-10" />
+            <Tiktok className="size-10" />
           </div>
         </div>
         <div className="flex flex-col gap-2">
           <strong>Paiement Sécurisé</strong>
           <div className="bg-white opacity-100 flex flex-row border border-transparent rounded-3xl flex-wrap gap-y-4 gap-4 px-2 py-1 w-fit">
-            <Visa width={40} height={40} />
-            <MasterCard width={40} height={40} />
-            <AmericanExpress width={40} height={40} />
-            <DinersClub width={40} height={40} />
+            <Visa className="size-12" />
+            <MasterCard className="size-12" />
+            <AmericanExpress className="size-12" />
+            <DinersClub className="size-12" />
           </div>
         </div>
       </div>

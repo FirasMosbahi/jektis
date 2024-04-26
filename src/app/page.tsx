@@ -53,7 +53,7 @@ export default function Index(): React.ReactNode {
             />
           </div>
         </div>
-        <div className="flex text-2xl text-white lg:py-2 py-3 lg:px-4 pl-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="lg:flex hidden text-2xl text-white lg:py-2 py-3 lg:px-4 pl-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-1 text-[20px] lg:leading-normal leading-5 xs:ml-4">
             Voyages de Noces{" "}
             <p className="lg:inline hidden"> - Voyages à la carte </p>
@@ -67,7 +67,7 @@ export default function Index(): React.ReactNode {
             </p>
           </Link>
         </div>
-        <div className="flex flex-row gap-8 overflow-x-scroll pb-12 lg:pb-0 no-scrollbar">
+        <div className="lg:flex hidden flex-row gap-8 overflow-x-scroll pb-12 lg:pb-0 no-scrollbar">
           {nocesVoyages.map((v, index) => (
             <CityCard
               linkBase="/voyages"

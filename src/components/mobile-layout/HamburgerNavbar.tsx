@@ -28,7 +28,7 @@ export default function HamburgerNavbar() {
 
   async function onSideBarClose() {
     animate.set({ y: -40 });
-    animate.start({ x: -100, y: -40, opacity: 0 }, { duration: 1 });
+    animate.start({ x: 100, y: -40, opacity: 0 }, { duration: 1 });
     await hamburgerAnimate.start({ opacity: 1 }, { duration: 1 });
     setIsNavOpen(false);
   }
