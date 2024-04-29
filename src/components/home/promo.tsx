@@ -26,9 +26,9 @@ export default function Promo(): React.ReactNode {
 
   const promos: Promo[] = getPromos();
   return (
-    <div className="border-4 2xl:w-[35rem] rounded-2xl flex flex-col">
+    <div className="border-4 2xl:w-full rounded-2xl flex flex-col">
       <div ref={ref} className="mx-auto max-w-screen-lg w-full">
-        <div className="flex w-full lg:h-[450px]  xl:h-[450px] 2xl:h-[480px] flex-row justify-center">
+        <div className="flex w-full lg:h-[440px] flex-row justify-center">
           <AnimatePresence>
             <motion.div
               key="modal"

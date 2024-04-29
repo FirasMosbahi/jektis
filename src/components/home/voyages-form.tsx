@@ -24,7 +24,7 @@ export default function VoyagesForm(): React.ReactElement {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full h-full py-4 px-4 gap-x-8 gap-y-4 bg-opacity-80 border border-transparent rounded-2xl bg-white grid grid-cols-2"
+      className="w-full lg:w-[530px] xl:w-full h-full xl:h-[470px] 2xl:h-full py-4 px-4 gap-x-8 gap-y-5 bg-opacity-80 border border-transparent rounded-2xl bg-white grid grid-cols-2"
     >
       <div className="col-span-2">
         <label htmlFor="destination" className="block mb-2 text-gray-900">

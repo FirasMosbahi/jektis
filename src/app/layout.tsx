@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={`${dm_serif.className}`}>
         <CustomPage>
           <Center axe={Axes.x}>
-            <div className="lg:bg-transparent bg-gray-50 lg:mb-0 w-full lg:mb-20">
+            <div className="lg:bg-transparent bg-gray-50 lg:mb-0 w-full">
               <Header />
             </div>
           </Center>

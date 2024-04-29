@@ -18,7 +18,7 @@ export default function Header(): React.ReactNode {
               alt="jektis logo"
               width={200}
               height={200}
-              className="lg:w-[250px] lg:h-[100px] w-[150px] h-[100px] "
+              className="lg:w-[360px] lg:h-[117px] w-[150px] h-[100px] "
             />
             <div className="lg:hidden">
               <a href="https://wa.me/+21698538070">
