@@ -24,7 +24,7 @@ export default function CityCardXl({
           className="overflow-hidden w-full max-h-[200px] relative flex lg:flex-row flex-col rounded-xl bg-[#ececec] bg-clip-border
             text-gray-700 shadow-md"
         >
-          <div className="bg-gradient-radial from-[#183595] to-[#f903bf] border-transparent rounded-full p-24 -top-28 -right-16 lg:h-96 lg:w-96 lg:p-36 flex flex-row items-start justify-start absolute lg:-top-[310px] lg:-right-44"></div>
+          <div className="bg-gradient-to-r from-[#004fa6] to-[#02c9b2] border-transparent rounded-full p-24 -top-28 -right-16 lg:h-96 lg:w-96 lg:p-36 flex flex-row items-start justify-start absolute lg:-top-[310px] lg:-right-44"></div>
           <div className="absolute  flex flex-col items-end text-white top-2 right-4">
             <p className="text-[16px] font-extralight leading-none">Encore</p>
             <p className="text-[24px] font-bold leading-none">

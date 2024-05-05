@@ -18,32 +18,32 @@ import Image from "next/image";
 
 export default function Footer(): React.ReactNode {
   return (
-    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-4 lg:pb-2 gap-6 lg:flex-row h-fit text-white bg-black bg-opacity-40 w-full lg:px-6 px-2 justify-between">
+    <div className="flex flex-col md:mt-0 lg:mr-0 mr-4 mt-12 pb-4 lg:pb-0 gap-6 lg:flex-row h-fit text-white bg-black bg-opacity-40 w-full lg:px-6 px-2 justify-between">
       <div className="flex flex-col">
         <div className="flex flex-col sm:flex-row lg:border-b-4 lg:gap-12 gap-4 lg:mb-4 py-4">
-          <div className="flex flex-col text-center max-w-[200px] xl:max-w-[250px]">
+          <div className="flex flex-col text-center max-w-[200px] xl:max-w-[240px]">
             <Image
               src="/logo_footer.png"
               alt="jektis logo"
               width={300}
-              height={200}
+              height={170}
             />
           </div>
           <div className="flex flex-col max-w-[300px] xl:max-w-[600px]">
-            <strong className="text-nowrap text-[22px] xl:text-[24px]">
+            <strong className="text-nowrap text-[22px] xl:text-[20px]">
               Agence de Voyages (Lic A),
             </strong>
-            <p className="text-nowrap text-[14px] xl:text-[18px]">
+            <p className="text-nowrap text-[14px] xl:text-[16px]">
               Agrée par l{"'"}ONTT, membre de la FTAV , Accrédité IATA.
             </p>
-            <p className="text-nowrap text-[14px] xl:text-[18px]">
+            <p className="text-nowrap text-[14px] xl:text-[16px]">
               Spécialisée dans l{"'"}organisation de voyages à l{"'"}étranger.
             </p>
           </div>
         </div>
-        <div className="hidden lg:flex flex-row flex-wrap font-[300] leading-5 text-[18px] xl:text-[20px] md:gap-16">
+        <div className="hidden lg:flex flex-row flex-wrap font-[300] leading-5 text-[16px] xl:text-[18px] md:gap-16">
           <div className="flex flex-col">
-            <strong className="mb-4 font-[500] text-[20px] xl:text-[22px]">
+            <strong className="mb-2 font-[500] text-[20px] xl:text-[22px]">
               Nos Hotels
             </strong>
             <Link className="cursor-pointer" href="/hotels-list?city=tunis">
@@ -66,7 +66,7 @@ export default function Footer(): React.ReactNode {
             </Link>
           </div>
           <div className="flex flex-col">
-            <strong className="mb-4 font-[500] text-[20px] xl:text-[22px]">
+            <strong className="mb-2 font-[500] text-[20px] xl:text-[22px]">
               Nos programmes
             </strong>
             <Link
@@ -95,7 +95,7 @@ export default function Footer(): React.ReactNode {
             </Link>
           </div>
           <div className="flex flex-col">
-            <strong className="mb-4 text-[20px] font-[500] xl:text-[22px]">
+            <strong className="mb-2 text-[20px] font-[500] xl:text-[22px]">
               Infos pratiques
             </strong>
             <Link href="#">Conditions de vente</Link>
@@ -104,7 +104,7 @@ export default function Footer(): React.ReactNode {
             <Link href="#">Mentions légales</Link>
           </div>
         </div>
-        <div className="flex lg:flex-row lg:items-center flex-col md:mt-4 py-4 lg:pt-0 text-sm gap-4 lg:gap-6">
+        <div className="flex lg:flex-row lg:items-center flex-col md:mt-2 py-4 lg:pt-0 text-sm gap-4 lg:gap-6">
           <p className="text-[16px] xl:text-[18px] font-bold lg:font-[300]">
             Recevez nos promotions par mail
           </p>

@@ -28,7 +28,7 @@ export default function HomeFilter(): React.ReactNode {
         <form className="flex text-white sm:h-16 sm:min-h-[100px] lg:min-h-[60px] w-full bg-transparent bg-[#839fc4] border border-transparent rounded-2xl flex-row ">
           <div
             onClick={() => setChooseForm(HomeFilterFormsEnum.HOTELS)}
-            className="flex flex-col lg:flex-row items-center xl:w-[45%] lg:w-[35%] w-[33%] gap-4 lg:py-0 py-3 px-4 bg-[#839fc4] h-full  rounded-r-none rounded-l-2xl"
+            className="flex flex-col lg:flex-row items-center xl:w-[42%] lg:w-[35%] w-[33%] gap-4 lg:py-0 py-3 px-4 bg-[#839fc4] h-full  rounded-r-none rounded-l-2xl"
           >
             <Image
               src="/home-page/hotel.png"
@@ -37,10 +37,10 @@ export default function HomeFilter(): React.ReactNode {
               alt="hotel"
               className="w-6 h-8"
             />
-            <p className="lg:text-[20px] font-bold xl:block hidden">
+            <p className="lg:text-[20px] font-[400] xl:block hidden">
               Hotels en tunisie
             </p>
-            <p className="text-[18px] lg:text-[20px] font-bold xl:hidden">
+            <p className="text-[18px] lg:text-[20px] font-[400] xl:hidden">
               Hotels
             </p>
           </div>
@@ -55,12 +55,12 @@ export default function HomeFilter(): React.ReactNode {
               alt="hotel"
               className="w-10 h-8"
             />
-            <p className="text-[20px] font-bold">Vols</p>
+            <p className="text-[20px] font-[400]">Vols</p>
           </div>
 
           <div
             onClick={() => setChooseForm(HomeFilterFormsEnum.VOYAGES)}
-            className="flex flex-col xl:w-[28%] lg:w-[35%] lg:flex-row w-[33%] gap-3 py-3 lg:py-0 items-center h-full bg-[#839fc4] px-4 border-transparent rounded-l-none rounded-r-2xl"
+            className="flex flex-col xl:w-[31%] lg:w-[35%] lg:flex-row w-[33%] gap-3 py-3 lg:py-0 items-center h-full bg-[#839fc4] px-4 border-transparent rounded-l-none rounded-r-2xl"
           >
             <Image
               src="/home-page/voyage.png"
@@ -69,7 +69,7 @@ export default function HomeFilter(): React.ReactNode {
               alt="hotel"
               className="w-10 h-8"
             />
-            <p className="text-[20px] font-bold">Voyages</p>
+            <p className="text-[20px] font-[400]">Voyages</p>
           </div>
         </form>
 
