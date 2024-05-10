@@ -73,7 +73,7 @@ export default function CityCardXl({
                 </button>
               </div>
               <div className="flex flex-col  justify-end lg:w-[30%]">
-                <button className="bg-gradient-to-r tracking-wide px-4 py-2 from-[#585657] to-[#9c9c9c] xxl:text-[18px] text-[14px] text-white border border-transparent rounded-2xl flex flex-col items-center justify-center">
+                <button className="tracking-wide px-4 py-2 bg-gradient-to-r from-[#004fa6] to-[#02c9b2] xxl:text-[18px] text-[14px] text-white border border-transparent rounded-2xl flex flex-col items-center justify-center">
                   <strong>Programme</strong>
                 </button>
               </div>

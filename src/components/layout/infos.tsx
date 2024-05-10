@@ -7,35 +7,35 @@ export default function Infos(): React.ReactNode {
       <div className="flex flex-col justify-start gap-0 text-center">
         <div className="flex flex-row pb-2 justify-between">
           <div className="flex flex-col items-start gap-0.5">
-            <strong className="text-start text-[7px] flex flex-row items-center justify-center gap-1 leading-none lg:text-[15px] ">
+            <strong className="text-start text-[7px] flex flex-row items-center justify-center gap-1 leading-none lg:text-[20px] ">
               <WhitePhone className="size-3.5" />: +216 71 70 69 00
             </strong>
-            <p className="text-start text-[7px] leading-none lg:text-[14px] text-nowrap w-fit">
+            <p className="text-start text-[7px] leading-none lg:text-[16px] text-nowrap w-fit">
               <strong>Lun-Ven:</strong> 9h à 15h30
             </p>
-            <p className="text-start text-[7px] leading-none lg:text-[14px] text-nowrap w-fit">
-              <strong className="w-fit text-[7px] lg:text-[14px]">Sam:</strong>{" "}
+            <p className="text-start text-[7px] leading-none lg:text-[16px] text-nowrap w-fit">
+              <strong className="w-fit text-[7px] lg:text-[16px]">Sam:</strong>{" "}
               9h à 13h
             </p>
           </div>
           <div className="flex flex-col items-start gap-0.5">
-            <strong className="text-start text-[7px] leading-none lg:text-[15px] flex flex-row gap-1 items-center">
+            <strong className="text-start text-[7px] leading-none lg:text-[20px] flex flex-row gap-1 items-center">
               <WhatsappWhite className="size-3.5" /> +216 98 53 80 70
             </strong>
-            <p className="text-start leading-none text-[7px] lg:text-[14px] text-nowrap w-fit">
+            <p className="text-start leading-none text-[7px] lg:text-[16px] text-nowrap w-fit">
               7j/7 De 8h à 22h
             </p>
           </div>
         </div>
-        <div className="flex text-[7px] lg:text-[15px] flex-row  items-end gap-1.5 lg:gap-3">
+        <div className="flex text-[7px] lg:text-[18px] flex-row  items-end gap-1.5 lg:gap-3">
           <strong className="w-fit text-start">Agence Ariana:</strong>{" "}
-          <p className="text-[13px] font-semibold">
+          <p className="text-[17px] font-semibold">
             98 Av. H.Bourguiba 2<sup>éme</sup> étage, Ariana
           </p>
         </div>
-        <div className="flex text-[7px] lg:text-[15px] flex-row items-end gap-1.5 lg:gap-3">
+        <div className="flex text-[7px] lg:text-[18px] flex-row items-end gap-1.5 lg:gap-3">
           <strong className="md:w-fit text-start">Agence Menzah 9 :</strong>{" "}
-          <p className="text-[13px] font-semibold">
+          <p className="text-[17px] font-semibold">
             22 Av. Abdelaziz Thaalbi, Menzah 9B
           </p>
         </div>
