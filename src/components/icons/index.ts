@@ -65,6 +65,7 @@ export { default as VoirPlus } from "./VoirPlus";
 export { default as WhatsappContact } from "./WhatsappContact";
 export { default as WhatsappWhite } from "./WhatsappWhite";
 export { default as Whatsapp } from "./Whatsapp";
+export { default as WhitePhone } from "./WhitePhone";
 export { default as WhiteSearchIcon } from "./WhiteSearchIcon";
 export { default as YoutubeContacts } from "./YoutubeContacts";
 export { default as Youtube } from "./Youtube";
