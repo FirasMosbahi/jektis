@@ -1,8 +1,8 @@
 "use client";
 
 import { WhiteSearchIcon } from "@jektis/components/icons";
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
+import React, { useEffect, useMemo, useState } from "react";
+import { set, useForm } from "react-hook-form";
 import {
   AllezReourVolFormData,
   SimpleAllezVolFormData,
@@ -16,16 +16,34 @@ import {
   allezDapartVolSearch,
   simpleAllerVolSearch,
 } from "@jektis/actions/home-actions";
+import { PackageJson } from "type-fest";
 
 export default function SimpleAllerForm(): React.ReactElement {
   const {
     register,
     formState: { errors },
+    setValue,
     getValues,
     handleSubmit,
   } = useForm<SimpleAllezVolFormData>({
     resolver: yupResolver(SimpleAllezVolFormValidationSchema),
+    defaultValues: {
+      nombreBebe: 0,
+      nombreEnfants: 0,
+      nombreAdultes: 0,
+    },
   });
+
+  const [persons, setPersons] = useState<{
+    adultes: number;
+    enfants: number;
+    bebe: number;
+  }>({
+    adultes: 0,
+    enfants: 0,
+    bebe: 0,
+  });
+
   async function onSubmit(form: SimpleAllezVolFormData) {
     console.log("sub");
     console.log(form.dateDepart);
@@ -82,7 +100,19 @@ export default function SimpleAllerForm(): React.ReactElement {
             type="number"
             id="adultes"
             className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            {...register("nombreAdultes")}
+            value={persons.adultes}
+            onChange={(e) => {
+              const value = Number.isNaN(Number.parseInt(e.target.value))
+                ? 0
+                : Number.parseInt(e.target.value);
+              if (
+                getValues().nombreEnfants + getValues().nombreBebe + value <=
+                4
+              ) {
+                setValue("nombreAdultes", value);
+                setPersons((prev) => ({ ...prev, adultes: value }));
+              }
+            }}
           />
         </div>
         <div>
@@ -93,7 +123,19 @@ export default function SimpleAllerForm(): React.ReactElement {
             type="number"
             id="enfants"
             className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            {...register("nombreEnfants")}
+            value={persons.enfants}
+            onChange={(e) => {
+              const value = Number.isNaN(Number.parseInt(e.target.value))
+                ? 0
+                : Number.parseInt(e.target.value);
+              if (
+                getValues().nombreAdultes + getValues().nombreBebe + value <=
+                4
+              ) {
+                setPersons((prev) => ({ ...prev, enfants: value }));
+                setValue("nombreEnfants", value);
+              }
+            }}
           />
         </div>
         <div>
@@ -104,7 +146,19 @@ export default function SimpleAllerForm(): React.ReactElement {
             type="number"
             id="bebe"
             className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            {...register("nombreBebe")}
+            value={persons.bebe}
+            onChange={(e) => {
+              const value = Number.isNaN(Number.parseInt(e.target.value))
+                ? 0
+                : Number.parseInt(e.target.value);
+              if (
+                getValues().nombreEnfants + getValues().nombreAdultes + value <=
+                4
+              ) {
+                setValue("nombreBebe", value);
+                setPersons((prev) => ({ ...prev, bebe: value }));
+              }
+            }}
           />
         </div>
         <div>

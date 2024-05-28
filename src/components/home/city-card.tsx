@@ -23,18 +23,22 @@ export default function CityCard({
     <Link
       className={
         isHorizontal
-          ? `${isFullScreen ? "w-full" : "max-w-[80%]"} lg:max-w-full`
+          ? ` shadow-lg z-20 border border-transparent rounded-2xl ${
+              isFullScreen ? "w-full" : "max-w-[80%]"
+            } lg:max-w-full`
           : "w-[31%] min-w-[300px]"
       }
       href={`${linkBase}/${cityProps.id}`}
     >
-      <div className={`items-center justify-center w-full `}>
+      <div
+        className={`items-center drop-shadow px-0.5 py-1 bg-transparent justify-center w-full `}
+      >
         <div
           className={`relative flex border border-transparent rounded-xl w-full ${
             isHorizontal
-              ? "sm:flex-row flex flex-col lg:h-[250px] bg-[#ececec] bg-clip-border"
+              ? "sm:flex-row flex flex-col lg:h-[250px] "
               : `flex-col ${isFullScreen ? "" : "max-w-[20rem]"}`
-          }  text-gray-700 shadow-md`}
+          }  text-gray-700`}
         >
           <img
             src={cityProps.imageUrl}
@@ -42,10 +46,14 @@ export default function CityCard({
             className={`object-cover ${
               isHorizontal
                 ? "sm:w-2/5 w-96 rounded-l-xl"
-                : "w-96 h-60 rounded-t-xl mb-2"
+                : "w-96 h-60 mb-2 border border-transparent rounded-xl"
             } `}
           />
-          <div className="px-6  py-3 bg-[#ececec] flex flex-col gap-2 border border-transparent rounded-xl">
+          <div
+            className={`px-6 py-3 bg-[#fffdfd] w-full flex flex-col gap-2 border border-transparent ${
+              isHorizontal ? "rounded-r-xl" : "min-h-32 rounded-xl"
+            }`}
+          >
             <div>
               <strong className="block h-6 overflow-hidden leading-6 font-sans text-xl font-bold uppercase tracking-normal text-black antialiased">
                 {cityProps.name}
@@ -76,7 +84,7 @@ export default function CityCard({
               className={
                 isHorizontal
                   ? `flex flex-row justify-end`
-                  : "absolute bottom-24 right-4"
+                  : "absolute bottom-4 right-4"
               }
             >
               <button className="flex flex-row text-white px-4 border rounded-2xl items-center bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">

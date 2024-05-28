@@ -141,6 +141,9 @@ export default function Footer(): React.ReactNode {
             <DinersClub className="size-12" />
           </div>
         </div>
+        <p className="text-[16px] pt-4">
+          ©2024 Jektis Travel - Tous droits réservés.
+        </p>
       </div>
     </div>
   );

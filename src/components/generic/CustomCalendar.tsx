@@ -2,10 +2,10 @@
 
 import { CalendarIcon } from "@jektis/components/icons";
 import { Datepicker } from "flowbite-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { days, months } from "@jektis/utils/date-utils";
 
-const theme = {
+export const theme = {
   root: {
     base: "relative",
   },
@@ -92,21 +92,23 @@ const theme = {
 export default function CustomCalendar({
   label,
   setValue,
+  value,
 }: {
   label: string;
-  setValue: (value: Date) => void;
+  setValue: (value: Date) => boolean;
+  value: Date;
 }) {
+  const [date, setDate] = useState<Date>(value);
   const [isCalendarOpen, setIsCalendarOpen] = useState<boolean>(false);
-  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const handleDatePickerChange = (date: Date) => {
+    const change = setValue(date);
+    change && setDate(date);
     setIsCalendarOpen(false);
-    setSelectedDate(date);
-    setValue(date);
   };
   return isCalendarOpen ? (
     <Datepicker
       name="selectedDate"
-      value={selectedDate.toDateString()}
+      value={value.toDateString()}
       onSelectedDateChanged={handleDatePickerChange}
       inline={true}
       theme={theme}
@@ -123,14 +125,12 @@ export default function CustomCalendar({
         </div>
         <div className="flex flex-row items-center lg:gap-4 gap-2">
           <p className="lg:text-[40px] text-[36px] leading-none font-extrabold">
-            {selectedDate.getDate()}
+            {date.getDate()}
           </p>
           <div className="flex flex-col lg:text-[18px] text-[16px] font-bold">
+            <p className="leading-none">{days[date.getDay()].slice(0, 3)}</p>
             <p className="leading-none">
-              {days[selectedDate.getDay()].slice(0, 3)}
-            </p>
-            <p className="leading-none">
-              {months[selectedDate.getMonth()].slice(0, 3)}
+              {months[date.getMonth()].slice(0, 3)}
             </p>
           </div>
         </div>

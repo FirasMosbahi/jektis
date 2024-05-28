@@ -13,7 +13,15 @@ export const hotelsValidationSchema = yup.object().shape({
     .max(255),
   arrive: yup.date().optional(),
   depart: yup.date().optional(),
-  chambres: yup.string().optional(),
+  chambres: yup
+    .array(
+      yup.object().shape({
+        adultes: yup.number().min(0).default(0),
+        enfants: yup.number().min(0).default(0),
+        bebe: yup.number().min(0).default(0),
+      }),
+    )
+    .default([]),
 });
 
 export const AllezReourVolFormValidationSchema = yup.object().shape({
@@ -28,17 +36,17 @@ export const AllezReourVolFormValidationSchema = yup.object().shape({
   nombreAdultes: yup
     .number()
     .transform(TransformEmptyToUndefined)
-    .optional()
+    .default(0)
     .min(1),
   nombreEnfants: yup
     .number()
     .transform(TransformEmptyToUndefined)
-    .optional()
+    .default(0)
     .min(0),
   nombreBebe: yup
     .number()
     .transform(TransformEmptyToUndefined)
-    .optional()
+    .default(0)
     .min(0),
   classe: yup.string().transform(TransformEmptyToUndefined).optional(),
 });
@@ -50,11 +58,19 @@ export const SimpleAllezVolFormValidationSchema = yup
     depart: yup.string().optional(),
     destination: yup.string().optional(),
     dateDepart: yup.date().optional(),
-    nombreAdultes: yup.number().optional().min(1),
-    nombreEnfants: yup.number().optional().min(0),
-    nombreBebe: yup.number().optional().min(0),
+    nombreAdultes: yup.number().default(0).min(1),
+    nombreEnfants: yup.number().default(0).min(0),
+    nombreBebe: yup.number().default(0).min(0),
     classe: yup.string().optional(),
-  });
+  })
+  .test(
+    "passengerCount",
+    "Total passengers must be less than 4",
+    function (value) {
+      const { nombreAdultes, nombreEnfants, nombreBebe } = value;
+      return nombreAdultes + nombreEnfants + nombreBebe <= 4;
+    },
+  );
 
 export const MultiDestinationsVolFormValidationSchema = yup
   .object()
@@ -63,9 +79,9 @@ export const MultiDestinationsVolFormValidationSchema = yup
     depart: yup.string().optional(),
     destination: yup.string().optional(),
     dateDepart: yup.date().optional(),
-    nombreAdultes: yup.number().optional().min(1),
-    nombreEnfants: yup.number().optional().min(0),
-    nombreBebe: yup.number().optional().min(0),
+    nombreAdultes: yup.number().default(0).min(1),
+    nombreEnfants: yup.number().default(0).min(0),
+    nombreBebe: yup.number().default(0).min(0),
     classe: yup.string().optional(),
   });
 

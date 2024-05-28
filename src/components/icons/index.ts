@@ -1,3 +1,4 @@
+export { default as AddIcon } from "./AddIcon";
 export { default as AmericanExpress } from "./AmericanExpress";
 export { default as Bagagge } from "./Bagagge";
 export { default as Billet } from "./Billet";

@@ -13,6 +13,7 @@ export default function VolForm(): React.ReactElement {
   const [choosenForm, setChoosenForm] = useState<VolFormEnum>(
     VolFormEnum.ALLER_RETOUR,
   );
+
   return (
     <div className="xl:w-full lg:w-[530px] w-full xl:h-[470px] 2xl:h-full xl:max-w-[600px] bg-opacity-80 h-full border border-transparent rounded-2xl bg-white">
       <div className="flex flex-row justify-between items-center mt-4 m-4">

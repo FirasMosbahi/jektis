@@ -35,7 +35,7 @@ export default function Header(): React.ReactNode {
               <SearchInput />
               <LoginButton />
             </div>
-            <div className="px-4 xl:px-0 lg:mb-10 lg:mt-4">
+            <div className="px-4 xl:px-0 lg:mb-0 lg:mt-4">
               <Infos />
             </div>
           </div>

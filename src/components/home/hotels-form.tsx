@@ -1,8 +1,13 @@
 "use client";
 
-import React from "react";
+import RoomsForm from "@jektis/components/home/RoomsForm";
+
+import React, { useMemo } from "react";
 import {
+  AddIcon,
   BlackSearchIcon,
+  Close,
+  Plus,
   SearchIcon,
   SimpleNextArrow,
   TwoUsers,
@@ -17,56 +22,72 @@ import { hotelsValidationSchema } from "@jektis/schema/home-forms";
 import { hotelSearch } from "@jektis/actions/home-actions";
 
 export default function HotelsForm(): React.ReactElement {
-  const { register, setValue, handleSubmit } = useForm<HomeFilterFormData>({
-    resolver: yupResolver(hotelsValidationSchema),
-  });
+  const today = new Date();
+  const [isPopupOpen, setIsPopupOpen] = React.useState(false);
+  const { register, getValues, setValue, handleSubmit } =
+    useForm<HomeFilterFormData>({
+      resolver: yupResolver(hotelsValidationSchema),
+      defaultValues: {
+        depart: new Date(today.getTime() + 24 * 60 * 60 * 1000),
+        arrive: today,
+      },
+    });
   async function onSubmit(form: HomeFilterFormData) {
     await hotelSearch(form);
   }
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className=" h-full flex flex-col lg:w-[530px] xl:w-full gap-6 2xl:gap-5 xl:gap-8 bg-opacity-80 pt-8 border border-transparent rounded-2xl bg-white"
+      className={`relative h-full flex flex-col lg:w-[530px] xl:w-full gap-6 2xl:gap-5 xl:gap-8 ${
+        isPopupOpen ? "bg-opacity-70" : ""
+      } pt-8 border border-transparent rounded-2xl bg-white`}
     >
       <div className="px-4 relative">
-        <BlackSearchIcon className="absolute top-[40%] size-5 left-7" />
+        <BlackSearchIcon className="absolute top-[35%] size-5 left-7" />
 
         <input
           type="text"
           id="first_name"
-          className="text-xl border bg-transparent border-gray-300 w-full text-black focus:ring-blue-500 focus:border-blue-500 block lg:pl-10 pl-12 p-6"
-          placeholder="ex . ville , nom d'hotel"
+          className="text-xl border bg-transparent border-gray-300 w-full text-black focus:ring-blue-500 focus:border-blue-500 block lg:pl-10 pl-24 p-6"
+          placeholder="Votre destination"
           {...register("nom")}
         />
       </div>
-      <div className="flex flex-row justify-between items-center border border-gray-300 mx-4 py-4 px-4">
+      <div className="flex flex-row h-28 justify-between items-center border border-gray-300 mx-4 py-4 px-4">
         <CustomCalendar
           label="Arrivé"
-          setValue={(value: Date) => setValue("arrive", value)}
+          value={getValues().arrive ?? today}
+          setValue={(value: Date) => {
+            const date = getValues().depart ?? new Date();
+            if (value > new Date() && value < date) {
+              setValue("arrive", value);
+              return true;
+            }
+            return false;
+          }}
         />
         <SimpleNextArrow className="size-12" />
         <CustomCalendar
+          value={
+            getValues().depart ??
+            new Date(today.getTime() + 24 * 60 * 60 * 1000)
+          }
           label="Départ"
-          setValue={(value: Date) => setValue("depart", value)}
+          setValue={(value: Date) => {
+            const date = getValues().arrive ?? new Date();
+            if (value > new Date() && value > date) {
+              setValue("depart", value);
+              return true;
+            }
+            return false;
+          }}
         />
       </div>
-      <div className="flex flex-row items-center border border-gray-300 mx-4 py-8 px-4 gap-2">
-        <TwoUsers className="lg:size-6 size-5" />
-        {/*<p className="text-black lg:text-[20px] text-[18px] font-semibold">*/}
-        {/*  1 Chambre , 2 Adultes, 0 enfants*/}
-        {/*</p>*/}
-        <select
-          id="chambre"
-          {...register("chambres")}
-          className="bg-transparent text-black lg:text-[20px] text-[18px] font-semibold rounded-lg block w-full custom-select"
-        >
-          <option selected> 1 Chambre , 2 Adultes, 0 enfants</option>
-          <option value="US"> 1 Chambre , 2 Adultes, 0 enfants</option>
-          <option value="CA"> 1 Chambre , 2 Adultes, 0 enfants</option>
-          <option value="FR"> 1 Chambre , 2 Adultes, 0 enfants</option>
-          <option value="DE"> 1 Chambre , 2 Adultes, 0 enfants</option>
-        </select>
-      </div>
+      <RoomsForm
+        isPopupOpen={isPopupOpen}
+        setIsPopupOpen={setIsPopupOpen}
+        onSubmit={(value) => setValue("chambres", value)}
+      />
       <div className="flex flex-row justify-center px-6 w-full mt-4 mr-2">
         <button
           type="submit"

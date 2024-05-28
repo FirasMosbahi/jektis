@@ -1,21 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Bagagge,
-  Calendar2,
-  Localisation,
-  Map,
-  Plane,
-  Sleep,
-  WhiteSearchIcon,
-} from "@jektis/components/icons";
-import InputWithIcon from "@jektis/components/generic/input-with-icon";
 import Image from "next/image";
-import AllerRetourForm from "@jektis/components/home/aller-retour-form";
 import VolForm from "@jektis/components/home/vol-form";
 import HotelsForm from "@jektis/components/home/hotels-form";
 import VoyagesForm from "@jektis/components/home/voyages-form";
-import HomeFilterSelectForm from "@jektis/components/mobile-home-page/HomeFilterSelectForm";
 import { HomeFilterFormsEnum } from "@jektis/enums/home.filter.enum";
 
 export default function HomeFilter(): React.ReactNode {
@@ -72,13 +60,6 @@ export default function HomeFilter(): React.ReactNode {
             <p className="text-[20px] text-white font-[400]">Voyages</p>
           </div>
         </form>
-
-        {/*<div className="lg:hidden">*/}
-        {/*  <HomeFilterSelectForm*/}
-        {/*    onSelect={(filter) => setChoosenForm(filter)}*/}
-        {/*    selected={chooseForm}*/}
-        {/*  />*/}
-        {/*</div>*/}
 
         <div className="min-h-[460px] 2xl:h-[440px] 2xl:min-h-fit">
           {chooseForm === HomeFilterFormsEnum.HOTELS ? (
