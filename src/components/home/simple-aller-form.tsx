@@ -45,8 +45,6 @@ export default function SimpleAllerForm(): React.ReactElement {
   });
 
   async function onSubmit(form: SimpleAllezVolFormData) {
-    console.log("sub");
-    console.log(form.dateDepart);
     await simpleAllerVolSearch(form);
   }
   return (

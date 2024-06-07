@@ -55,6 +55,7 @@ export { default as Spa } from "./Spa";
 export { default as Star } from "./Star";
 export { default as Telephone } from "./Telephone";
 export { default as Tiktok } from "./Tiktok";
+export { default as Trash } from "./Trash";
 export { default as Trolley } from "./Trolley";
 export { default as Twitter } from "./Twitter";
 export { default as TwoUsers } from "./TwoUsers";

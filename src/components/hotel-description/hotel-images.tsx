@@ -9,7 +9,6 @@ export default function HotelImages({
   images: string[];
 }): React.ReactNode {
   const len = images.length;
-  console.log(len);
   const [showGallery, setShowGallery] = React.useState<boolean>(false);
   return showGallery ? (
     <div className="h-[60%]">

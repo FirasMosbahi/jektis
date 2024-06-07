@@ -30,9 +30,17 @@ export default function HotelsForm(): React.ReactElement {
       defaultValues: {
         depart: new Date(today.getTime() + 24 * 60 * 60 * 1000),
         arrive: today,
+        chambres: [
+          {
+            enfants: [],
+            bebe: 0,
+            adultes: 0,
+          },
+        ],
       },
     });
   async function onSubmit(form: HomeFilterFormData) {
+    console.log(form);
     await hotelSearch(form);
   }
   return (
@@ -55,7 +63,7 @@ export default function HotelsForm(): React.ReactElement {
       </div>
       <div className="flex flex-row h-28 justify-between items-center border border-gray-300 mx-4 py-4 px-4">
         <CustomCalendar
-          label="Arrivé"
+          label="Arrivée"
           value={getValues().arrive ?? today}
           setValue={(value: Date) => {
             const date = getValues().depart ?? new Date();

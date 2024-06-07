@@ -1,9 +1,10 @@
 import * as yup from "yup";
 export type Room = {
   adultes: number;
-  enfants: number;
+  enfants: { age: number }[];
   bebe: number;
 };
+
 export type HomeFilterFormData = {
   nom?: string;
   arrive?: Date;

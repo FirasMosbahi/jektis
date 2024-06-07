@@ -1,68 +1,193 @@
 "use client";
 
-import { AddIcon, Close, TwoUsers } from "@jektis/components/icons";
-import React, { useCallback, useMemo } from "react";
+import { AddIcon, Close, Trash, TwoUsers } from "@jektis/components/icons";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Room } from "@jektis/forms-data/home-filter-form-data";
+
+function arrayFromNumbers(num: number, array: any[]): any[] {
+  for (let i = array.length; i < num; i++) {
+    array.push({ age: 11 });
+  }
+  return array;
+}
 
 function RoomInput({
   roomId,
   room,
   onChange,
+  onEnfantAgeChange,
+  onDelete,
 }: {
   roomId: number;
-  onChange: (field: "adultes" | "enfants" | "bebe", value: number) => void;
+  onChange: (field: "adultes" | "bebe", value: number) => void;
+  onEnfantAgeChange: (value: { age: number }[]) => void;
+  onDelete: () => void;
   room: Room;
 }) {
+  const [enfantsAge, setEnfantsAge] = useState<{ age: number }[]>([]);
+  const enfantsNumber = useMemo(() => {
+    return enfantsAge.length;
+  }, [enfantsAge]);
   return (
     <div className="mb-6">
-      <p className="text-black text-[18px] font-semibold pb-3">
-        Chambre {roomId + 1}
-      </p>
-      <div className="flex flex-row gap-4">
-        <div>
-          <label htmlFor="adultes" className="block mb-2   text-gray-900">
-            Adultes
-          </label>
-          <input
-            value={room.adultes}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              e.preventDefault();
-              onChange("adultes", Number.parseInt(e.target.value) ?? 0);
-            }}
-            type="number"
-            id="adultes"
-            className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
+      <div className="flex flex-row pb-4 justify-between">
+        <p className="text-black text-[18px] font-semibold ">
+          Chambre {roomId + 1}
+        </p>
+        {roomId > 0 ? <Trash onClick={onDelete} className="size-6" /> : <div />}
+      </div>
+      <div className="flex flex-col">
+        <div className="flex flex-row gap-4">
+          <div>
+            <label
+              htmlFor="adultes"
+              className="block text-[14px] text-gray-900"
+            >
+              Adulte(s)
+            </label>
+            <select
+              value={room.adultes}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                if (
+                  (Number.parseInt(e.target.value) ?? 0) +
+                    room.bebe +
+                    enfantsNumber >
+                  4
+                ) {
+                  return;
+                }
+                e.preventDefault();
+                onChange("adultes", Number.parseInt(e.target.value) ?? 0);
+              }}
+              id="adultes"
+              className=" h-10 w-24 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block p-1.5"
+            >
+              <option value={0}>0</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+              <option value={4}>4</option>
+            </select>
+          </div>
+          <div>
+            <label
+              htmlFor="enfants"
+              className="block  text-[14px] text-gray-900"
+            >
+              Enfant(s)
+            </label>
+            <select
+              value={enfantsNumber}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                if (
+                  (Number.parseInt(e.target.value) ?? 0) +
+                    room.bebe +
+                    room.adultes >
+                  4
+                ) {
+                  return;
+                }
+                e.preventDefault();
+                setEnfantsAge((prevState) => {
+                  return [
+                    ...arrayFromNumbers(
+                      Number.parseInt(e.target.value) ?? 0,
+                      prevState,
+                    ),
+                  ];
+                });
+                // onChange("enfants", Number.parseInt(e.target.value) ?? 0);
+              }}
+              id="enfants"
+              className=" h-10 w-24 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block p-1.5"
+            >
+              <option value={0}>0</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+            </select>
+            <label
+              htmlFor="enfants"
+              className="block  text-[14px]  text-gray-900"
+            >
+              (2-11 ans)
+            </label>
+          </div>
+          <div>
+            <label htmlFor="bebe" className="block  text-[14px]  text-gray-900">
+              Bébé(s)
+            </label>
+            <select
+              value={room.bebe}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                if (
+                  (Number.parseInt(e.target.value) ?? 0) +
+                    enfantsNumber +
+                    room.adultes >
+                  4
+                ) {
+                  return;
+                }
+                e.preventDefault();
+                onChange("bebe", Number.parseInt(e.target.value) ?? 0);
+              }}
+              id="bebe"
+              className=" h-10 w-24 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block p-1.5"
+            >
+              <option value={0}>0</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+            </select>
+            <label htmlFor="bebe" className="block  text-[14px] text-gray-900">
+              (inf à 2 ans)
+            </label>
+          </div>
         </div>
-        <div>
-          <label htmlFor="enfants" className="block mb-2  text-gray-900">
-            Enfant(s)
-          </label>
-          <input
-            value={room.enfants}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              e.preventDefault();
-              onChange("enfants", Number.parseInt(e.target.value) ?? 0);
-            }}
-            type="number"
-            id="enfants"
-            className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
-        </div>
-        <div>
-          <label htmlFor="bebe" className="block mb-2  text-gray-900">
-            Bébé(s)
-          </label>
-          <input
-            value={room.bebe}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              e.preventDefault();
-              onChange("bebe", Number.parseInt(e.target.value) ?? 0);
-            }}
-            type="number"
-            id="bebe"
-            className=" h-8 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
+        <div className="flex flex-row gap-2">
+          {enfantsAge.length > 0 &&
+            enfantsAge.map((e, index) => (
+              <div key={index + 1}>
+                <label
+                  htmlFor={`age enfant ${index + 1}`}
+                  className="block  text-[14px] text-gray-900"
+                >
+                  Age Enfant {index + 1}
+                </label>
+                <select
+                  value={e.age}
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                    if (
+                      (Number.parseInt(e.target.value) ?? 0) > 11 ||
+                      (Number.parseInt(e.target.value) ?? 0) < 2
+                    ) {
+                      return;
+                    }
+                    e.preventDefault();
+                    // onChange("bebe", Number.parseInt(e.target.value) ?? 0);
+                    setEnfantsAge((prevState) => {
+                      const result = prevState;
+                      result[index].age = Number.parseInt(e.target.value) ?? 11;
+                      onEnfantAgeChange(result);
+                      return [...result];
+                    });
+                  }}
+                  id={`age enfant ${index + 1}`}
+                  className=" h-10 w-24 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block  p-1.5"
+                >
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                  <option value={5}>5</option>
+                  <option value={6}>6</option>
+                  <option value={7}>7</option>
+                  <option value={3}>8</option>
+                  <option value={8}>9</option>
+                  <option value={9}>10</option>
+                  <option value={10}>11</option>
+                  <option value={11}>12</option>
+                </select>
+              </div>
+            ))}
         </div>
       </div>
     </div>
@@ -79,7 +204,7 @@ export default function RoomsForm({
   setIsPopupOpen: (state: boolean) => void;
 }) {
   const [rooms, setRooms] = React.useState<Room[]>([
-    // { bebe: 0, enfants: 0, adultes: 0 },
+    { bebe: 0, enfants: [], adultes: 0 },
   ]);
 
   const sumRooms = useMemo(() => {
@@ -90,7 +215,7 @@ export default function RoomsForm({
     rooms.forEach((room) => {
       chambres++;
       adultes += room.adultes;
-      enfants += room.enfants;
+      enfants += room.enfants.length;
       bebe += room.bebe;
     });
     return { chambres, adultes, enfants, bebe };
@@ -125,18 +250,32 @@ export default function RoomsForm({
                   room={room}
                   roomId={index}
                   onChange={(field, value) => {
-                    if (room.enfants + room.bebe + room.adultes < 4) {
-                      setRooms((prevState) =>
-                        prevState.map((room, i) => {
-                          if (index === i) {
-                            return { ...room, [field]: value };
-                          } else {
-                            return room;
-                          }
-                        }),
-                      );
-                    }
+                    setRooms((prevState) =>
+                      prevState.map((room, i) => {
+                        if (index === i) {
+                          return { ...room, [field]: value };
+                        } else {
+                          return room;
+                        }
+                      }),
+                    );
                   }}
+                  onEnfantAgeChange={(value) =>
+                    setRooms((prevState) =>
+                      prevState.map((room, i) => {
+                        if (index === i) {
+                          return { ...room, enfants: value };
+                        } else {
+                          return room;
+                        }
+                      }),
+                    )
+                  }
+                  onDelete={() =>
+                    setRooms((prevState) =>
+                      prevState.filter((_, i) => i !== index),
+                    )
+                  }
                   key={index}
                 />
               ))}
@@ -148,7 +287,7 @@ export default function RoomsForm({
               onClick={() =>
                 setRooms((prevState) => [
                   ...prevState,
-                  { adultes: 0, bebe: 0, enfants: 0 },
+                  { adultes: 0, bebe: 0, enfants: [] },
                 ])
               }
             >
@@ -161,7 +300,9 @@ export default function RoomsForm({
                 onSubmit(
                   rooms.filter(
                     (room) =>
-                      room.adultes >= 0 && room.enfants >= 0 && room.bebe >= 0,
+                      room.adultes >= 0 &&
+                      room.enfants.length >= 0 &&
+                      room.bebe >= 0,
                   ),
                 );
                 setIsPopupOpen(false);

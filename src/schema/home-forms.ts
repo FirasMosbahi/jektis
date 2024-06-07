@@ -16,9 +16,18 @@ export const hotelsValidationSchema = yup.object().shape({
   chambres: yup
     .array(
       yup.object().shape({
-        adultes: yup.number().min(0).default(0),
-        enfants: yup.number().min(0).default(0),
-        bebe: yup.number().min(0).default(0),
+        adultes: yup.number().required().min(0).default(0),
+        enfants: yup
+          .array(
+            yup
+              .object()
+              .required()
+              .shape({
+                age: yup.number().required().min(2).max(11).default(11),
+              }),
+          )
+          .default([]),
+        bebe: yup.number().required().min(0).default(0),
       }),
     )
     .default([]),

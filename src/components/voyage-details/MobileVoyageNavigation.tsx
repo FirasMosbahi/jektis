@@ -53,7 +53,6 @@ export default function MobileVoyageNavigation({
       break;
   }
 
-  console.log(current, nextLabel, previousLabel);
   return (
     <div className="flex lg:hidden flex-row justify-between pb-2 border-[#dbdbdb] text-blue-800 border-b-4">
       {previousLabel ? (

@@ -36,9 +36,7 @@ export default function HotelsFilter(): React.ReactNode {
   const [departCalendarDate, setDepartCalendarDate] = useState<Date>(today);
   const [openArriveCalendar, setOpenArriveCalendar] = useState<boolean>(false);
   const [arriveCalendarDate, setArriveCalendarDate] = useState<Date>(tomorrow);
-  useEffect(() => {
-    console.log(openArriveCalendar);
-  }, [openArriveCalendar]);
+
   return (
     <div className="hidden lg:flex flex-col w-full">
       <div className="rounded-md shadow-sm w-full mt-8">
