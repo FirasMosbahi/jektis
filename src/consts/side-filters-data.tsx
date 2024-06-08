@@ -4,8 +4,8 @@ import React from "react";
 
 export const HOTEL_SIDE_FILTER_DATA: FilterSection[] = [
   {
-    name: "rating",
-    field: "rating",
+    name: "Catégorie",
+    field: "Catégorie",
     values: [
       { value: 3, label: <Stars number={3} width={25} height={25} /> },
       { value: 4, label: <Stars number={4} width={25} height={25} /> },
@@ -13,8 +13,8 @@ export const HOTEL_SIDE_FILTER_DATA: FilterSection[] = [
     ],
   },
   {
-    name: "Arrangement",
-    field: "arrangement",
+    name: "Formule",
+    field: "Formule",
     values: [
       {
         value: "Logement petit déjeuner",

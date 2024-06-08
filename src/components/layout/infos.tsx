@@ -7,8 +7,12 @@ export default function Infos(): React.ReactNode {
       <div className="flex flex-col justify-start gap-0 text-center">
         <div className="flex flex-col pb-2 gap-3 justify-between">
           <div className="flex flex-row items-center justify-center gap-2">
-            <strong className="text-start text-[7px] flex flex-row items-start gap-1 leading-none lg:text-[18px] ">
-              <WhitePhone className="size-3.5" />: +216 71 70 69 00
+            <strong className="text-start text-[7px] flex flex-row items-start gap-3 leading-none lg:text-[18px] ">
+              <WhitePhone className="size-3.5" />{" "}
+              <div className="flex flex-row items-center gap-1.5">
+                <p className="font-medium text-[16px] leading-none">+216</p>
+                <p>71 70 69 00</p>
+              </div>
             </strong>
             <p className="text-start text-[7px] leading-none lg:text-[14px] text-nowrap w-fit">
               <strong>Lun-Ven:</strong> 9h à 15h30
@@ -19,8 +23,12 @@ export default function Infos(): React.ReactNode {
             </p>
           </div>
           <div className="flex flex-row items-center gap-2">
-            <strong className="text-start text-[7px] leading-none lg:text-[18px] flex flex-row gap-1 items-center">
-              <WhatsappWhite className="size-3.5" /> +216 98 53 80 70
+            <strong className="text-start text-[7px] leading-none lg:text-[18px] flex flex-row gap-3 items-center">
+              <WhatsappWhite className="size-3.5" />{" "}
+              <div className="flex flex-row items-center gap-1.5">
+                <p className="font-medium text-[16px] leading-none">+216</p>
+                <p>98 53 80 70</p>
+              </div>
             </strong>
             <p className="text-start leading-none text-[7px] lg:text-[14px] text-nowrap w-fit">
               7j/7 De 8h à 22h

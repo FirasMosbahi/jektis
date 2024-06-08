@@ -73,12 +73,12 @@ export default function ChambreSelectionTable({
           </div>
         </div>
       </div>
-      {/*<div className="flex text-white flex-row justify-end">*/}
-      {/*  <div className="flex flex-row border rounded-xl justify-center items-center gap-4 px-8 py-2 bg-[#9d9d9d] mt-8 w-fit">*/}
-      {/*    <strong className="text-xl">Envoyer votre demande</strong>*/}
-      {/*    <NextArrowWhite width={25} height={25} />*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      <div className="flex text-white flex-row justify-end">
+        <div className="flex flex-row border rounded-xl justify-center items-center gap-4 px-8 py-2 bg-[#9d9d9d] mt-8 w-fit">
+          <strong className="text-xl">Réserver</strong>
+          <NextArrowWhite width={25} height={25} />
+        </div>
+      </div>
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function CityCardXl({
     <>
       <div className="flex items-center p-1.5  shadow-md shadow-gray-400 bg-white rounded-2xl justify-center w-full">
         <div
-          className="overflow-hidden w-full max-h-[200px] relative flex lg:flex-row flex-col rounded-xl bg-[#ececec] bg-clip-border
+          className="overflow-hidden w-full max-h-[200px] relative flex lg:flex-row flex-col rounded-xl bg-white bg-clip-border
             text-gray-700 shadow-md"
         >
           <div className="bg-gradient-to-r from-[#004fa6] to-[#02c9b2] border-transparent rounded-full p-24 -top-28 -right-16 lg:h-96 lg:w-96 lg:p-36 flex flex-row items-start justify-start absolute lg:-top-[310px] lg:-right-44"></div>
@@ -36,7 +36,7 @@ export default function CityCardXl({
             alt="image"
             className="object-cover w-full lg:w-[30%] lg:max-h-[200px] rounded-l-xl"
           />
-          <div className="flex lg:flex-col sm:flex-row flex-col pr-2 pl-4 py-4 w-full bg-[#ececec] bg-clip-border">
+          <div className="flex lg:flex-col sm:flex-row flex-col pr-2 pl-4 py-4 w-full bg-white bg-clip-border">
             <div className="">
               <strong className="block leading-6 font-sans text-2xl font-semibold uppercase tracking-normal text-black antialiased">
                 {city.name}
