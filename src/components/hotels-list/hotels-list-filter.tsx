@@ -68,7 +68,7 @@ export default function HotelsFilter(): React.ReactNode {
                   height={25}
                 />
                 <div className="relative">
-                  {openArriveCalendar || (
+                  {openArriveCalendar || openDepartCalendar || (
                     <p
                       onClick={() => setOpenArriveCalendar(true)}
                       className="text-sm font-medium text-gray-900"
@@ -91,7 +91,7 @@ export default function HotelsFilter(): React.ReactNode {
               <div className="flex xl:min-w-[9rem] flex-row xl:gap-4 gap-8 items-center">
                 <Calendar width={25} height={25} />
                 <div className="relative">
-                  {openDepartCalendar || (
+                  {openDepartCalendar || openArriveCalendar || (
                     <p
                       onClick={() => setOpenDeaprtDateCalendar(true)}
                       className="text-sm font-medium text-gray-900"

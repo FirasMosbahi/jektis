@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  AddIcon,
-  Bagagge,
-  Close,
-  Trash,
-  TwoUsers,
-} from "@jektis/components/icons";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { AddIcon, Bagagge, Close, Trash } from "@jektis/components/icons";
+import React, { useMemo, useState } from "react";
 import { Room } from "@jektis/forms-data/home-filter-form-data";
 
 function arrayFromNumbers(num: number, array: any[]): any[] {
@@ -240,7 +234,7 @@ export default function HeaderRoomsForm({
         </p>
       </div>
       {isPopupOpen && (
-        <form className="absolute opacity-100 flex flex-col justify-between top-[10%] left-[7%] z-20 bg-white px-6 w-[450px] py-4 min-h-[250px]">
+        <form className="absolute max-h-[430px] border-[4px] rounded-lg overflow-y-scroll no-scrollbar opacity-100 flex flex-col justify-between top-[10%] left-[7%] z-20 bg-white px-6 w-[450px] py-4 min-h-[250px]">
           <div>
             <div className="flex flex-row pb-2 justify-between border-b-2 border-b-gray-700 items-center">
               <p className="text-black text-[17px]">
