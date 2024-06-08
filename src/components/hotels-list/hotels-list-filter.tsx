@@ -49,7 +49,7 @@ export default function HotelsFilter(): React.ReactNode {
             onSubmit={handleSubmit(onSubmit)}
             className="flex lg:flex-row flex-col relative bg-white xl:items-start xl:min-w-fit lg:px-0 px-8 items-start gap-8 lg:gap-0 xl:h-16 rounded-xl border-2 border-blue-700 w-full py-2 xl:bg-white"
           >
-            <div className="flex flex-row w-full xl:h-full xl:max-w-[200px] lg:w-[320px] h-12 border border-transparent lg:rounded-none rounded-2xl lg:mx-0 items-center lg:gap-2 gap-4 px-2 xl:pl-4">
+            <div className="flex flex-row w-full xl:h-full xl:max-w-[240px] lg:w-[320px] h-12 border border-transparent lg:rounded-none rounded-2xl lg:mx-0 items-center lg:gap-2 gap-4 px-2 xl:pl-1.5">
               <Localisation className="absolute top-4 size-6 left-5" />
 
               <input
@@ -112,7 +112,7 @@ export default function HotelsFilter(): React.ReactNode {
                 </div>
               </div>
             </div>
-            <div className="border-r-2 relative lg:w-[320px] xl:w-full xl:max-w-[400px] bg-white w-full xl:h-full lg:rounded-none rounded-2xl lg:border-r-blue-700">
+            <div className="border-r-2 relative lg:w-[320px] xl:w-full xl:max-w-[370px] bg-white w-full xl:h-full lg:rounded-none rounded-2xl lg:border-r-blue-700">
               <div className="flex flex-row  h-12 items-center xl:h-full xl:gap-2 gap-4 px-6 xl:pl-4">
                 <HeaderRoomsForm
                   onSubmit={(value) => console.log(value)}
