@@ -8,7 +8,13 @@ import { createTw } from "react-pdf-tailwind";
 // Create styles
 const tw = createTw({});
 
-function ProgramDay({ title, content }: { title: string; content: string }) {
+function ProgramDaySection({
+  title,
+  content,
+}: {
+  title: string;
+  content: string;
+}) {
   return (
     <View style={tw("flex flex-col items-start mt-1 mb-4 font-[700]")}>
       <Text style={tw("text-[#0050A5] text-[18px]")}>{title}</Text>
@@ -27,7 +33,7 @@ export default function ProgramPDF({ programme }: { programme: ProgramDay[] }) {
         </View>
         <View>
           {programme.map((programDay, index) => (
-            <ProgramDay
+            <ProgramDaySection
               key={index}
               title={programDay.title}
               content={programDay.content}

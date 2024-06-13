@@ -1,6 +1,6 @@
-import { Promo } from "@jektis/types/promo";
+import { PromoType } from "@jektis/types/promo";
 
-export const promos: Promo[] = [
+export const promos: PromoType[] = [
   {
     title: "U.S.A",
     image:

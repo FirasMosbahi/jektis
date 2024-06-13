@@ -2,7 +2,7 @@
 
 import Center, { Axes } from "@jektis/components/generic/center";
 import React, { useEffect, useRef, useState } from "react";
-import { Promo } from "@jektis/types/promo";
+import { PromoType } from "@jektis/types/promo";
 import getPromos from "@jektis/services/promos";
 import useIsInViewport from "@jektis/hooks/useInViewPort";
 import { AnimatePresence, motion } from "framer-motion";
@@ -24,7 +24,7 @@ export default function Promo(): React.ReactNode {
     };
   }, [isInView]);
 
-  const promos: Promo[] = getPromos();
+  const promos: PromoType[] = getPromos();
   return (
     <div className="border-4 2xl:w-full rounded-2xl flex flex-col">
       <div ref={ref} className="mx-auto max-w-screen-lg w-full">
