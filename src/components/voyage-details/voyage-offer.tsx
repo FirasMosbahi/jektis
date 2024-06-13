@@ -22,13 +22,15 @@ export default function VoyageOffer({
   );
   return (
     <div className="relative lg:ml-6">
-      <div className="text-black flex flex-row gap-8 lg:gap-4 justify-start items-end mb-8">
-        <strong className="lg:text-[52px] text-[32px] leading-none">
+      <div className="text-black h-[48px] flex flex-row gap-8 lg:gap-4 justify-start items-end mb-8">
+        <p className="lg:text-[52px] font-[700] h-full text-[32px] leading-none">
           {name.length > 12 ? name.split(" ")[0] : name}
-        </strong>
-        <p className="lg:text-[32px] text-[16px] leading-none">
-          {country} , {numberOfNights} Nuits - {numberOfDays} Jours
         </p>
+        <div className="h-full flex flex-col justify-end">
+          <p className="lg:text-[32px] text-[16px] leading-none">
+            {country} , {numberOfNights} Nuits - {numberOfDays} Jours
+          </p>
+        </div>
       </div>
 
       <img

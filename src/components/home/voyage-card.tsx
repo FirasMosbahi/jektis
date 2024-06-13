@@ -22,7 +22,7 @@ export default function VoyageCard({
 }): React.ReactNode {
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-row mb-4 text-xl lg:py-2 py-3 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
+      <div className="flex flex-row mb-4 text-xl lg:pb-2 py-3 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
         <strong className="ml-4 lg:text-[20px] leading-none lg:leading-normal text-[17px] text-white">
           {title}
         </strong>

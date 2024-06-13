@@ -26,7 +26,7 @@ export default function VoyageCardWithImg({
   return (
     <div className="flex text-white text-xl w-full flex-col mt-16 sm:mt-0 mr-12 lg:mr-0">
       {title && (
-        <div className="flex text-white flex-row py-2 mb-4 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
+        <div className="flex text-white flex-row py-2 lg:py-3 mb-4 border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2] p-1">
           <strong className="ml-4">{title}</strong>
           {titleLink ? (
             <Link
@@ -44,7 +44,7 @@ export default function VoyageCardWithImg({
           )}
         </div>
       )}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <div
           className={`w-full lg:h-[260px] md:w-full border-transparent rounded-xl ${
             showSeeAllButton ? "relative" : ""
@@ -61,7 +61,7 @@ export default function VoyageCardWithImg({
           <img
             alt="img"
             src={imageUrl}
-            className="w-full lg:block hidden h-[250px] md:w-full border-transparent rounded-xl"
+            className="w-full lg:block hidden h-[257px] md:w-full border-transparent rounded-xl"
           />
         </div>
 

@@ -36,7 +36,7 @@ export default function SearchSideFilter({
   }
   return (
     <div>
-      <div className="bg-white lg:block hidden px-4 py-8 h-full max-w-[400px]">
+      <div className="bg-white lg:block hidden px-4 py-8 h-full min-w-[230px] max-w-[400px]">
         <label
           htmlFor="default-search"
           className="text-[20px] font-bold text-gray-900"

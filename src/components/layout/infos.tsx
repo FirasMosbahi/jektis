@@ -22,7 +22,11 @@ export default function Infos(): React.ReactNode {
               9h à 13h
             </p>
           </div>
-          <div className="flex flex-row items-center gap-2">
+          <a
+            className="flex flex-row items-center gap-2"
+            href="https://wa.me/+21698538070"
+            target="_blank"
+          >
             <strong className="text-start text-[7px] leading-none lg:text-[18px] flex flex-row gap-3 items-center">
               <WhatsappWhite className="size-3.5" />{" "}
               <div className="flex flex-row items-center gap-1.5">
@@ -33,7 +37,7 @@ export default function Infos(): React.ReactNode {
             <p className="text-start leading-none text-[7px] lg:text-[14px] text-nowrap w-fit">
               7j/7 De 8h à 22h
             </p>
-          </div>
+          </a>
         </div>
         {/*<div className="flex text-[7px] lg:text-[18px] flex-row  items-end gap-1.5 lg:gap-3">*/}
         {/*  <strong className="w-fit text-start">Agence Ariana:</strong>{" "}*/}

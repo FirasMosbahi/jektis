@@ -11,7 +11,7 @@ export default function Navbar(): React.ReactNode {
   return (
     <>
       <div
-        className="flex flex-row font-light text-[18px] justify-center text-white shadow-sm mt-8 lg:mx-0 w-full mb-8"
+        className="flex flex-row font-light text-[18px] justify-center text-white shadow-sm mt-8 lg:my-4 w-full mb-8"
         role="group"
       >
         <NavbarElement
