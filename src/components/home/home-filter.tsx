@@ -5,6 +5,7 @@ import VolForm from "@jektis/components/home/vol-form";
 import HotelsForm from "@jektis/components/home/hotels-form";
 import VoyagesForm from "@jektis/components/home/voyages-form";
 import { HomeFilterFormsEnum } from "@jektis/enums/home.filter.enum";
+import { Hotel, Vol, Voyage } from "@jektis/components/icons";
 
 export default function HomeFilter(): React.ReactNode {
   const [chooseForm, setChooseForm] = useState<HomeFilterFormsEnum>(
@@ -16,15 +17,9 @@ export default function HomeFilter(): React.ReactNode {
         <form className="flex text-white sm:h-16 sm:min-h-[100px] lg:min-h-[60px] w-full bg-transparent bg-[#839fc4] border border-transparent rounded-2xl flex-row ">
           <div
             onClick={() => setChooseForm(HomeFilterFormsEnum.HOTELS)}
-            className="flex flex-col lg:flex-row items-center xl:w-[42%] lg:w-[35%] w-[33%] gap-4 lg:py-0 py-3 px-4 bg-[#839fc4] h-full  rounded-r-none rounded-l-2xl"
+            className="flex flex-col lg:flex-row items-center xl:w-[42%] lg:w-[35%] w-[33%] gap-4 lg:py-0 py-3 px-4 bg-[#254ea2] h-full  rounded-r-none rounded-l-2xl"
           >
-            <Image
-              src="/home-page/hotel.png"
-              width={30}
-              height={30}
-              alt="hotel"
-              className="w-6 h-8"
-            />
+            <Hotel className="size-6" />
             <p className="lg:text-[20px] text-white font-[400] xl:block hidden">
               Hotels en tunisie
             </p>
@@ -34,29 +29,17 @@ export default function HomeFilter(): React.ReactNode {
           </div>
           <div
             onClick={() => setChooseForm(HomeFilterFormsEnum.VOLS)}
-            className="flex flex-col lg:flex-row lg:w-[30%] xl:w-[27%] w-[33%] gap-3  py-3 lg:py-0 bg-[#839fc4] h-full items-center px-4 rounded-none border-x-2"
+            className="flex flex-col lg:flex-row lg:w-[30%] xl:w-[27%] w-[33%] gap-3  py-3 lg:py-0 bg-[#254ea2] h-full items-center px-4 rounded-none border-x-2"
           >
-            <Image
-              src="/home-page/vol.png"
-              width={40}
-              height={40}
-              alt="hotel"
-              className="w-10 h-8"
-            />
+            <Vol className="size-6" />
             <p className="text-[20px] text-white font-[400]">Vols</p>
           </div>
 
           <div
             onClick={() => setChooseForm(HomeFilterFormsEnum.VOYAGES)}
-            className="flex flex-col xl:w-[31%] lg:w-[35%] lg:flex-row w-[33%] gap-3 py-3 lg:py-0 items-center h-full bg-[#839fc4] px-4 border-transparent rounded-l-none rounded-r-2xl"
+            className="flex flex-col xl:w-[31%] lg:w-[35%] lg:flex-row w-[33%] gap-3 py-3 lg:py-0 items-center h-full bg-[#254ea2] px-4 border-transparent rounded-l-none rounded-r-2xl"
           >
-            <Image
-              src="/home-page/voyage.png"
-              width={30}
-              height={30}
-              alt="hotel"
-              className="w-10 h-8"
-            />
+            <Voyage className="size-6" />
             <p className="text-[20px] text-white font-[400]">Voyages</p>
           </div>
         </form>

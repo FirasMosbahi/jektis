@@ -33,8 +33,8 @@ export default function NavbarElement({
     >
       <button
         type="button"
-        className={`px-3 h-12 lg:w-full bg-opacity-80 bg-whiteBlue border border-b border-gray-200 ${
-          pathname === link ? "font-bold bg-[#0051a3]" : ""
+        className={`px-3 h-12 lg:w-full bg-[#254EA2] border border-b border-gray-200 ${
+          pathname === link ? "font-bold bg-[#254EA2]" : ""
         } ${isFirst ? "rounded-l-xl" : ""} ${isLast ? "rounded-r-xl" : ""}`}
       >
         {title}
