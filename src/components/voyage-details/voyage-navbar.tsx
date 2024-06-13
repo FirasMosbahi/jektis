@@ -8,7 +8,7 @@ export default function VoyageNavbar({
 }): React.ReactNode {
   return (
     <div
-      className="hidden py-1 3xl:tracking-[0.2em] xxl:text-[18px] lg:text-[15px] bg-gradient-to-r w-full from-[#004fa6] to-[#02c9b2] lg:inline-flex border-transparent rounded-xl shadow-sm mt-8"
+      className="hidden py-1 lg:text-[22px] font-[700] bg-gradient-to-r w-full from-[#004fa6] to-[#02c9b2] lg:inline-flex border-transparent rounded-xl shadow-sm mt-8"
       role="group"
     >
       <button
