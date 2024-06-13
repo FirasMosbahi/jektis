@@ -5,6 +5,8 @@ import VoyageDetailsProps from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
 import Programme from "@jektis/components/voyage-details/programme";
 import { Printer } from "@jektis/components/icons";
+import ReactPDF, { PDFDownloadLink } from "@react-pdf/renderer";
+import ProgramPDF from "@jektis/components/pdf/ProgramPDF";
 
 export default function VoyageDetails({
   voyageDetails,
@@ -21,10 +23,28 @@ export default function VoyageDetails({
             <button className="px-2 h-8 bg-[#CFCFCF] text-black border border-transparent rounded-xl">
               Partager
             </button>
-            <button className="px-2 h-8 bg-[#0050A5] text-white border border-transparent rounded-xl">
-              Imprimer
-            </button>
-            <Printer className="h-full w-auto" width={40} height={40} />
+            <PDFDownloadLink
+              document={<ProgramPDF programme={voyageDetails.program} />}
+              fileName={`${voyageDetails.name}-programme.pdf`}
+            >
+              {/*{({ blob, url, loading, error }) => {*/}
+              {/*  if (!loading) {*/}
+              {/*    this.download(*/}
+              {/*      `${voyageDetails.name}-programme.pdf`,*/}
+              {/*      URL.createObjectURL(blob),*/}
+              {/*    );*/}
+              {/*    callback();*/}
+              {/*  }*/}
+              {/*}}*/}
+              <button
+                // onClick={async () => {
+                //   await downloadPdf(voyageDetails.program);
+                // }}
+                className="px-2 h-8 bg-[#0050A5] text-white border border-transparent rounded-xl"
+              >
+                Imprimer
+              </button>
+            </PDFDownloadLink>
           </div>
           <div className="my-3">
             <strong className="text-[#1b53a1] text-3xl ">PROGRAMME</strong>

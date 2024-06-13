@@ -7,8 +7,24 @@ export default function Index(): React.ReactNode {
   return (
     <div className="flex lg:flex-row flex-col gap-8">
       <div className="flex flex-col w-full bg-white lg:w-[64%] lg:py-8 py-4">
-        <ContactElement location="/contacts/location1.jpg" name="ARIANA" />
-        <ContactElement location="/contacts/location1.jpg" name="MENZAH 9" />
+        <ContactElement
+          location="/contacts/location1.jpg"
+          name="ARIANA"
+          address="89 avenue Habib bourguiba ariana 2080"
+          email="sales@jektistravel.com"
+          tel="71706900"
+          mobile="98538070"
+          whatsapp="98755830"
+        />
+        <ContactElement
+          location="/contacts/location1.jpg"
+          name="MENZAH 9"
+          address="22 avenue Abdelaziz Thaalbi menzah9A"
+          email="tourisme@jektistravel.com"
+          mobile="98755830"
+          tel="71706900"
+          whatsapp="98755830"
+        />
       </div>
       <div className="flex flex-col bg-white lg:w-[34%] w-full lg:pb-0 pb-4 px-8">
         <p className="text-blue-800 lg:pb-10 pb-4 lg:pt-16 pt-4 text-[24px] font-semibold">
