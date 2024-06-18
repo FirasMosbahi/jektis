@@ -1,4 +1,3 @@
-import MiniCardProps from "@jektis/types/mini-card-props";
 import { VoyageCardProps, VoyageType } from "@jektis/types";
 import { voyageCards } from "@jektis/mocks";
 

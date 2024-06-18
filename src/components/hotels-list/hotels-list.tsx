@@ -3,7 +3,7 @@
 import React from "react";
 import HotelCard from "@jektis/components/hotels-list/hotel-card";
 import Link from "next/link";
-import HotelCardProps from "@jektis/types/hotel_class";
+import { HotelCardProps } from "@jektis/types/hotel_class";
 import MiniHotelCard from "@jektis/components/mobile-home-page/MiniHotelCard";
 
 export default function HotelsList({

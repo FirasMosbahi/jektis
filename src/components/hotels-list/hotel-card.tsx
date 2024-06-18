@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Ok, Star } from "@jektis/components/icons";
-import HotelCardProps from "@jektis/types/hotel_class";
+import { HotelCardProps } from "@jektis/types/hotel_class";
 import ChamberDescription from "@jektis/components/hotels-list/chamber-description";
 import HotelPricingButton from "@jektis/components/generic/HotelPricingButton";
 

@@ -48,10 +48,6 @@ const filters = [
   },
 ];
 
-function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function HotelsSideFilter() {
   return (
     <div className="hidden xl:block bg-white h-fit w-1/4">

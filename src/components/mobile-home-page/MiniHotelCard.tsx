@@ -1,9 +1,6 @@
 import React from "react";
-import StaticStars from "@jektis/components/generic/static-stars";
 import Link from "next/link";
-import { VoyageCardProps } from "@jektis/types";
-import { getSejourStayDetails } from "@jektis/utils/voyage.utils";
-import HotelCardProps from "@jektis/types/hotel_class";
+import { HotelCardProps } from "@jektis/types/hotel_class";
 
 export default function MiniHotelCard({
   isHorizontal,

@@ -68,7 +68,12 @@ export default function Index(): React.ReactNode {
             id="motif"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 lg:p-2.5"
           >
-            <option selected>Service</option>
+            <option>service</option>
+            <option>service finance</option>
+            <option>service ressource humaine</option>
+            <option>service commerical</option>
+            <option>service client</option>
+            <option>service corporate</option>
           </select>
         </form>
       </div>

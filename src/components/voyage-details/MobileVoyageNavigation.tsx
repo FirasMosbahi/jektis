@@ -29,18 +29,18 @@ export default function MobileVoyageNavigation({
       break;
     case VoyageDetailsSection.servicesNonInclus:
       prvious = VoyageDetailsSection.servicesInclus;
-      next = VoyageDetailsSection.TarifsAndReservation;
+      next = VoyageDetailsSection.TarifsAndConditions;
       previousLabel = "services inclus";
       nextLabel = "tarifs & réservation";
       break;
-    case VoyageDetailsSection.TarifsAndReservation:
+    case VoyageDetailsSection.TarifsAndConditions:
       prvious = VoyageDetailsSection.servicesNonInclus;
       next = VoyageDetailsSection.Visa;
       previousLabel = "services non inclus";
       nextLabel = "visa";
       break;
     case VoyageDetailsSection.Visa:
-      prvious = VoyageDetailsSection.TarifsAndReservation;
+      prvious = VoyageDetailsSection.TarifsAndConditions;
       next = VoyageDetailsSection.ChargeeDeVoyage;
       nextLabel = "chargée de voyage";
       previousLabel = "tarifs & réservation";

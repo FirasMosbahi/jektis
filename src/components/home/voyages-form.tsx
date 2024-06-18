@@ -1,18 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { WhiteSearchIcon } from "@jektis/components/icons";
 import { useForm } from "react-hook-form";
-import {
-  HomeFilterFormData,
-  VoyageFormData,
-} from "@jektis/forms-data/home-filter-form-data";
+import { VoyageFormData } from "@jektis/forms-data/home-filter-form-data";
 import { yupResolver } from "@hookform/resolvers/yup";
-import {
-  hotelsValidationSchema,
-  VoyageFormValidationSchema,
-} from "@jektis/schema/home-forms";
-import { hotelSearch, VoyageSearch } from "@jektis/actions/home-actions";
+import { VoyageFormValidationSchema } from "@jektis/schema/home-forms";
+import { VoyageSearch } from "@jektis/actions/home-actions";
 
 export default function VoyagesForm(): React.ReactElement {
   const { register, handleSubmit } = useForm<VoyageFormData>({

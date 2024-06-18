@@ -1,11 +1,9 @@
 import React from "react";
 import MiniCityCard from "@jektis/components/home/mini-city-card";
 import Link from "next/link";
-import MiniCardProps from "@jektis/types/mini-card-props";
 import { VoirPlus } from "@jektis/components/icons";
-import { VoyageCardProps } from "@jektis/types";
+import { HotelCardProps, VoyageCardProps } from "@jektis/types";
 import ScrollableCardsList from "@jektis/components/generic/ScrollableCardsList";
-import HotelCardProps from "@jektis/types/hotel_class";
 import CityCard from "@jektis/components/home/city-card";
 import hotelCards from "@jektis/mocks/hotelCard_moks";
 import MiniHotelCard from "@jektis/components/mobile-home-page/MiniHotelCard";

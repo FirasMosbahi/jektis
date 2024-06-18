@@ -1,12 +1,17 @@
 "use client";
 
 import React from "react";
-import VoyageDetailsProps from "@jektis/types/voyage-details-props";
+import { VoyageDetailsProps } from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
-import Programme from "@jektis/components/voyage-details/programme";
-import { Printer } from "@jektis/components/icons";
-import ReactPDF, { PDFDownloadLink } from "@react-pdf/renderer";
+import Programme from "@jektis/components/voyage-description/programme";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import ProgramPDF from "@jektis/components/pdf/ProgramPDF";
+import ServicesInclus from "@jektis/components/voyage-description/ServicesInclus";
+import ServicesNonInclus from "@jektis/components/voyage-description/ServicesNonInclus";
+import VisaSection from "@jektis/components/voyage-description/Visa";
+import chargeeDeVoyage from "@jektis/components/voyage-description/ChargeeDeVoyageSection";
+import ChargeeDeVoyageSection from "@jektis/components/voyage-description/ChargeeDeVoyageSection";
+import TarifsAndConditions from "@jektis/components/voyage-description/TarifsAndConditions";
 
 export default function VoyageDetails({
   voyageDetails,
@@ -27,21 +32,7 @@ export default function VoyageDetails({
               document={<ProgramPDF programme={voyageDetails.program} />}
               fileName={`${voyageDetails.name}-programme.pdf`}
             >
-              {/*{({ blob, url, loading, error }) => {*/}
-              {/*  if (!loading) {*/}
-              {/*    this.download(*/}
-              {/*      `${voyageDetails.name}-programme.pdf`,*/}
-              {/*      URL.createObjectURL(blob),*/}
-              {/*    );*/}
-              {/*    callback();*/}
-              {/*  }*/}
-              {/*}}*/}
-              <button
-                // onClick={async () => {
-                //   await downloadPdf(voyageDetails.program);
-                // }}
-                className="px-2 h-8 bg-[#0050A5] text-white border border-transparent rounded-xl"
-              >
+              <button className="px-2 h-8 bg-[#0050A5] text-white border border-transparent rounded-xl">
                 Imprimer
               </button>
             </PDFDownloadLink>
@@ -53,89 +44,37 @@ export default function VoyageDetails({
         </div>
       )}
       {section === VoyageDetailsSection.servicesInclus && (
-        <div className="flex flex-col gap-6 lg:border-[#dbdbdb] lg:border-b-4 mt-6 mb-8 pb-8 xl:my-3">
-          <strong className="text-3xl text-[#1c4678]">SERVICES INCLUS</strong>
-          <strong className="text-xl text-black">
-            Pack Standard comprends:
-          </strong>
-          <ul className="text-black">
-            {voyageDetails.servicesInclus.standard.map((service, index) => (
-              <li key={index}>- {service}</li>
-            ))}
-          </ul>
-          <strong className="text-black text-xl">Pack VIP comprends:</strong>
-          <ul className="text-black">
-            {voyageDetails.servicesInclus.vip.map((service, index) => (
-              <li key={index}>- {service}</li>
-            ))}
-          </ul>
-        </div>
+        <ServicesInclus
+          vip={voyageDetails.servicesInclus.vip}
+          standard={voyageDetails.servicesInclus.standard}
+        />
       )}
       {section === VoyageDetailsSection.servicesNonInclus && (
-        <div className="flex flex-col gap-6 lg:border-[#dbdbdb] lg:border-b-4 mt-6 mb-8 pb-8 xl:my-3">
-          <strong className="text-3xl text-[#1c4678]">
-            SERVICES NON INCLUS
-          </strong>
-          <ul className="text-black">
-            {voyageDetails.servicesNonInclus.map((service, index) => (
-              <li key={index}>- {service}</li>
-            ))}
-          </ul>
-        </div>
+        <ServicesNonInclus
+          servicesNonInclus={voyageDetails.servicesNonInclus}
+        />
       )}
       {section === VoyageDetailsSection.Visa && (
-        <div className="flex flex-col gap-6 lg:border-[#dbdbdb] lg:border-b-4 mt-6 mb-8 pb-8 xl:my-3">
-          <strong className="text-3xl text-[#1c4678]">VISA </strong>
-          <ul className="text-black">
-            {voyageDetails.visa.map((service, index) => (
-              <li key={index}>- {service}</li>
-            ))}
-          </ul>
-        </div>
+        <VisaSection
+          documents={voyageDetails.visa.documents}
+          procedures={voyageDetails.visa.procedures}
+          delais={voyageDetails.visa.delais}
+        />
       )}
       {section === VoyageDetailsSection.ChargeeDeVoyage && (
-        <div className="flex flex-col gap-6 lg:border-[#dbdbdb] lg:border-b-4 mt-6 mb-8 pb-8 xl:my-3">
-          <strong className="text-3xl text-[#1c4678]">
-            CHARGé(E) DU VOYAGE
-          </strong>
-          <ul>
-            {voyageDetails.chargeeDeVoyage.map((e, index) => (
-              <p key={index} className="text-black">
-                - {e}
-              </p>
-            ))}
-          </ul>
-        </div>
+        <ChargeeDeVoyageSection
+          nom={voyageDetails.chargeeDeVoyage.nom}
+          whatsapp={voyageDetails.chargeeDeVoyage.whatsapp}
+          email={voyageDetails.chargeeDeVoyage.email}
+          telephone={voyageDetails.chargeeDeVoyage.telephone}
+        />
       )}
-      {section === VoyageDetailsSection.TarifsAndReservation && (
-        <div className="flex flex-col gap-6 lg:border-b-[#dbdbdb] lg:border-b-4 mt-6 mb-8 pb-8 xl:my-3">
-          <strong className="text-3xl text-[#1c4678]">TARIF</strong>
-          <strong className="text-xl text-black">
-            date de voyage : Du 30 Octobre au 05 Novembre 2023
-          </strong>
-          <ul className="text-black mb-4">
-            {voyageDetails.tarif.prix.map((price, index) => (
-              <li key={index}>- {price}</li>
-            ))}
-          </ul>
-          <p className="text-black">
-            Ci-dessous les conditions générales du voyage :
-          </p>
-          <strong className="text-xl text-black">Paiement :</strong>
-          <ul className="text-black">
-            {voyageDetails.tarif.payement.map((payement, index) => (
-              <li key={index}>- {payement}</li>
-            ))}
-          </ul>
-          <strong className="text-xl text-black">
-            Frais d{"'"}annulation :
-          </strong>
-          <ul className="text-black">
-            {voyageDetails.tarif.cancelFrais.map((e, index) => (
-              <li key={index}>- {e}</li>
-            ))}
-          </ul>
-        </div>
+      {section === VoyageDetailsSection.TarifsAndConditions && (
+        <TarifsAndConditions
+          dateDeVoyage={voyageDetails.tarif.dateDeVoyage}
+          conditions={voyageDetails.tarif.conditions}
+          tarifs={voyageDetails.tarif.tarifs}
+        />
       )}
     </div>
   );

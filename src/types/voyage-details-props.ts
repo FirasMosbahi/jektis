@@ -1,35 +1,53 @@
+import { date } from "yup";
+
 export type ProgramDay = {
   title: string;
   content: string;
 };
-export type Chambres = {
+export type Chambre = {
   title: string;
   unitPrice: number;
 };
-export default class VoyageDetailsProps {
-  constructor(
-    public id: number,
-    public name: string,
-    public country: string,
-    public imageUrl: string,
-    public rate: number,
-    public price: number,
-    public startDate: Date,
-    public endDate: Date,
-    public program: ProgramDay[],
-    public chambres: Chambres[],
-    public servicesInclus: {
-      standard: string[];
-      vip: string[];
-    },
-    public servicesNonInclus: string[],
-    public visa: string[],
-    public chargeeDeVoyage: string[],
-    public payement: string[],
-    public tarif: {
-      prix: string[];
-      payement: string[];
-      cancelFrais: string[];
-    },
-  ) {}
-}
+
+type ServicesInclus = {
+  standard: string[];
+  vip: string[];
+};
+
+export type Tarif = {
+  dateDeVoyage: Date;
+  tarifs: string[];
+  conditions: string[];
+};
+
+export type Visa = {
+  documents: string[];
+  procedures: string[];
+  delais: string[];
+};
+
+export type ChargeDeVoyage = {
+  nom: string;
+  telephone: string;
+  whatsapp: string;
+  email: string;
+};
+
+export type VoyageDetailsProps = {
+  id: number;
+  name: string;
+  country: string;
+  imageUrl: string;
+  rate: number;
+  price: number;
+  startDate: Date;
+  endDate: Date;
+  program: ProgramDay[];
+  chambres: Chambre[];
+  servicesInclus: ServicesInclus;
+  servicesNonInclus: string[];
+  visa: Visa;
+  chargeeDeVoyage: ChargeDeVoyage;
+  payement: string[];
+  tarif: Tarif;
+};

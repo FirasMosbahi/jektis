@@ -4,7 +4,7 @@ import React from "react";
 import HotelsFilter from "@jektis/components/hotels-list/hotels-list-filter";
 import HotelsList from "@jektis/components/hotels-list/hotels-list";
 import { getHotels } from "@jektis/services";
-import HotelCardProps from "@jektis/types/hotel_class";
+import { HotelCardProps } from "@jektis/types/hotel_class";
 import HotelsSideFilter from "@jektis/components/hotels-list/hotels-filter";
 import Pagination from "@jektis/components/generic/pagination";
 import { FilterSection } from "@jektis/types/filter-type";

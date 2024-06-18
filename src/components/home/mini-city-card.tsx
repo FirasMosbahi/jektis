@@ -1,5 +1,5 @@
 import React from "react";
-import MiniCardProps from "@jektis/types/mini-card-props";
+import { MiniCardProps } from "@jektis/types/mini-card-props";
 import Link from "next/link";
 
 export default function MiniCityCard({

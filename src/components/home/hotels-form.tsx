@@ -2,18 +2,12 @@
 
 import RoomsForm from "@jektis/components/home/RoomsForm";
 
-import React, { useMemo } from "react";
+import React from "react";
 import {
-  AddIcon,
   BlackSearchIcon,
-  Close,
-  Plus,
-  SearchIcon,
   SimpleNextArrow,
-  TwoUsers,
   WhiteSearchIcon,
 } from "@jektis/components/icons";
-import Image from "next/image";
 import CustomCalendar from "@jektis/components/generic/CustomCalendar";
 import { useForm } from "react-hook-form";
 import { HomeFilterFormData } from "@jektis/forms-data/home-filter-form-data";

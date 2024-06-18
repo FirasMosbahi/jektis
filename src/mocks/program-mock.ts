@@ -1,4 +1,9 @@
-import { ProgramDay } from "@jektis/types/voyage-details-props";
+import {
+  Chambre,
+  ChargeDeVoyage,
+  ProgramDay,
+  Visa,
+} from "@jektis/types/voyage-details-props";
 
 export const servicesInclus = {
   standard: [
@@ -28,13 +33,22 @@ export const servicesNonInclus = [
   "Taxe de Séjour - Golden Tulip Media Hotel 4*: 15 ACD/Nuit/Chambre",
 ];
 
-export const visa = [
-  "1 photo d'identité",
-  "1 copie couleur de la première page du passeport (format jpg)",
-  "Billet Emirates, avec les frais de visa entrés dans la taxe YR (pénalité applicable selon la note tarifaire)",
-];
+export const visa: Visa = {
+  documents: [
+    "1 photo d'identité",
+    "1 copie couleur de la première page du passeport (format jpg)",
+    "Billet Emirates, avec les frais de visa entrés dans la taxe YR (pénalité applicable selon la note tarifaire)",
+  ],
+  delais: ["*", "*", "*"],
+  procedures: ["*", "*", "*"],
+};
 
-export const chargeeDeVoyage = ["WhatsApp: 98538070"];
+export const chargeeDeVoyage: ChargeDeVoyage = {
+  email: "chargeeVoyage@jektistravel.com",
+  nom: "chargee Voyage",
+  telephone: "+21698538070",
+  whatsapp: "+21671706900",
+};
 
 export const payement: string[] = [
   "50% du montant total à l'inscription",
@@ -87,33 +101,24 @@ export const program: ProgramDay[] = [
   },
 ];
 
-export const chambres = (price: {
-  chambreSignle: number;
-  chambreDouble: number;
-  chambreTrois: number;
-  enfant6Ans: number;
-  enfant12Ans: number;
-}) => [
+export const chambres: Chambre[] = [
   {
-    title: "chambre single",
-    unitPrice: price.chambreSignle,
+    title: "Chambre Single",
+    unitPrice: 210,
+  },
+  { title: "Chambre Double ", unitPrice: 380 },
+  { title: "1 Adulte en Double ( lit séparé ) suivant dispo", unitPrice: 420 },
+  { title: "Chambre Triple ( 3 adultes)", unitPrice: 450 },
+  {
+    title: "Chambre Triple : 2 Adultes + Enfant (de 2 à 06 ans)",
+    unitPrice: 490,
   },
   {
-    title: "chambre double",
-    unitPrice: price.chambreDouble,
+    title: "Chambre Triple : 2 Adultes + Enfant (+6 ans jusqu’ a 12 ans)",
+    unitPrice: 520,
   },
   {
-    title: "3éme personne",
-    unitPrice: price.chambreTrois,
-  },
-  {
-    title:
-      "Enfant (2 / -06 ans) partageant la chambre avec les parents (sans lit supplémentaire)",
-    unitPrice: price.enfant6Ans,
-  },
-  {
-    title:
-      "Enfant (+06 / -12 ans) partageant la chambre avec les parents (sans lit supplémentaire)",
-    unitPrice: price.enfant12Ans,
+    title: "Chambre quadruple : 2 Adultes + 2 Enfants (de 2 à 06 ans)",
+    unitPrice: 550,
   },
 ];

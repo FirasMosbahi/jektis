@@ -35,9 +35,9 @@ export default function VoyageNavbar({
       <button
         type="button"
         className="text-center py-4 w-[21%] font-medium text-white border-r-4 border-white"
-        onClick={() => onClick(VoyageDetailsSection.TarifsAndReservation)}
+        onClick={() => onClick(VoyageDetailsSection.TarifsAndConditions)}
       >
-        <strong>Tarifs et réservations</strong>
+        <strong>Tarifs et conditions</strong>
       </button>
       <button
         type="button"
@@ -51,7 +51,7 @@ export default function VoyageNavbar({
         className="text-center py-4 w-[21%] font-medium text-white"
         onClick={() => onClick(VoyageDetailsSection.ChargeeDeVoyage)}
       >
-        <strong>Chargé de voyage</strong>
+        <strong>Chargé de voyages</strong>
       </button>
     </div>
   );

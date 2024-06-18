@@ -2,12 +2,12 @@
 
 import React from "react";
 import ChambreReservationListItem from "@jektis/components/voyage-details/chambre-reservation-list-item";
-import { Chambres } from "@jektis/types";
+import { Chambre } from "@jektis/types";
 import { NextArrowWhite } from "@jektis/components/icons";
 export default function ChambreSelectionTable({
   chambres,
 }: {
-  chambres: Chambres[];
+  chambres: Chambre[];
 }): React.ReactNode {
   let reservation: any = {};
   chambres.forEach((chambre) => {

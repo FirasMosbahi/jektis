@@ -4,7 +4,7 @@ export enum HotelCategory {
   ALL_INCLUSIVE = "all_inclusive",
   TOBBOGAN = "tobbogan",
 }
-export default class HotelCardProps {
+export type HotelCardProps = {
   id: number;
   cityName: string;
   name: string;
@@ -16,29 +16,4 @@ export default class HotelCardProps {
   detailEnfant: string;
   categories: HotelCategory[];
   images: string[];
-  constructor(
-    id: number,
-    cityName: string,
-    detail: string,
-    imageUrl: string,
-    rate: number,
-    price: number,
-    minimumStay: number,
-    inclusive: boolean,
-    detailEnfant: string,
-    categories: HotelCategory[],
-    images: string[],
-  ) {
-    this.id = id;
-    this.cityName = cityName;
-    this.name = detail;
-    this.imageUrl = imageUrl;
-    this.rate = rate;
-    this.price = price;
-    this.minimumStay = minimumStay;
-    this.inclusive = inclusive;
-    this.detailEnfant = detailEnfant;
-    this.categories = categories;
-    this.images = images;
-  }
-}
+};

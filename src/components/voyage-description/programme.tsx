@@ -1,5 +1,5 @@
 import React from "react";
-import ProgramDayDescription from "@jektis/components/voyage-details/program-day-description";
+import ProgramDayDescription from "@jektis/components/voyage-description/program-day-description";
 import { ProgramDay } from "@jektis/types";
 
 export default function Programme({

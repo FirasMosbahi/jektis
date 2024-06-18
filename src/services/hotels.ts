@@ -1,6 +1,5 @@
-import HotelCardProps, { HotelCategory } from "@jektis/types/hotel_class";
+import { HotelCardProps, HotelCategory } from "@jektis/types/hotel_class";
 import hotelCards from "@jektis/mocks/hotelCard_moks";
-import MiniCardProps from "@jektis/types/mini-card-props";
 import { VoyageCardProps } from "@jektis/types";
 
 export function getHotels(

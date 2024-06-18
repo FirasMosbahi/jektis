@@ -1,13 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Center, { Axes } from "@jektis/components/generic/center";
-import InputWithIcon from "@jektis/components/generic/input-with-icon";
 import {
-  BlackSearchIcon,
   Calendar,
   Localisation,
-  Trolley,
   WhiteSearchIcon,
 } from "@jektis/components/icons";
 import { useForm } from "react-hook-form";
@@ -17,15 +14,10 @@ import { hotelSearchValidationSchema } from "@jektis/schema/hotel-forms";
 import { searchHotel } from "@jektis/actions/hotel-search-actions";
 import { Datepicker } from "flowbite-react";
 import { theme } from "@jektis/components/generic/CustomCalendar";
-import RoomsForm from "@jektis/components/home/RoomsForm";
 import HeaderRoomsForm from "@jektis/components/hotels-list/HeaderRoomsForm";
 
 export default function HotelsFilter(): React.ReactNode {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm<HotelSearchFormData>({
+  const { register, handleSubmit } = useForm<HotelSearchFormData>({
     resolver: yupResolver(hotelSearchValidationSchema),
   });
   async function onSubmit(data: HotelSearchFormData) {

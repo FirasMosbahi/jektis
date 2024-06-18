@@ -1,4 +1,4 @@
-import VoyageDetailsProps from "@jektis/types/voyage-details-props";
+import { VoyageDetailsProps } from "@jektis/types/voyage-details-props";
 import {
   cancelFrais,
   chambres,
@@ -17,32 +17,26 @@ export function getProgram(id: string | number): VoyageDetailsProps {
     id = Number.parseInt(id);
   }
   const voyage = voyageCards.filter((v) => v.id === id)[0];
-  return new VoyageDetailsProps(
+  return {
     id,
-    voyage.name,
-    voyage.country,
-    voyage.imageUrl,
-    voyage.rate,
-    voyage.price,
-    voyage.dateStart,
-    voyage.dateEnd,
+    name: voyage.name,
+    country: voyage.country,
+    imageUrl: voyage.imageUrl,
+    rate: voyage.rate,
+    price: voyage.price,
+    startDate: voyage.dateStart,
+    endDate: voyage.dateEnd,
     program,
-    chambres({
-      chambreSignle: voyage.price,
-      chambreDouble: voyage.price * 1.7,
-      chambreTrois: voyage.price * 2.2,
-      enfant6Ans: voyage.price * 2.4,
-      enfant12Ans: voyage.price * 2.6,
-    }),
+    chambres,
     servicesInclus,
     servicesNonInclus,
     visa,
     chargeeDeVoyage,
     payement,
-    {
-      payement,
-      prix: prix,
-      cancelFrais: cancelFrais,
+    tarif: {
+      dateDeVoyage: new Date(2024, 5, 24),
+      tarifs: payement,
+      conditions: cancelFrais,
     },
-  );
+  };
 }
