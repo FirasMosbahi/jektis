@@ -5,7 +5,7 @@ import { VoyageDetailsProps } from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
 import Programme from "@jektis/components/voyage-description/programme";
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import ProgramPDF from "@jektis/components/pdf/ProgramPDF";
+import VoyagePDF from "@jektis/components/pdf/VoyagePDF";
 import ServicesInclus from "@jektis/components/voyage-description/ServicesInclus";
 import ServicesNonInclus from "@jektis/components/voyage-description/ServicesNonInclus";
 import VisaSection from "@jektis/components/voyage-description/Visa";
@@ -29,7 +29,7 @@ export default function VoyageDetails({
               Partager
             </button>
             <PDFDownloadLink
-              document={<ProgramPDF programme={voyageDetails.program} />}
+              document={<VoyagePDF data={voyageDetails} />}
               fileName={`${voyageDetails.name}-programme.pdf`}
             >
               <button className="px-2 h-8 bg-[#0050A5] text-white border border-transparent rounded-xl">
