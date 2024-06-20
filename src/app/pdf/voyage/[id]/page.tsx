@@ -11,7 +11,10 @@ export default function HotelDetailsIndex({
 }: {
   params: { id: string };
 }): React.ReactNode {
-  const { toPDF, targetRef } = usePDF({ filename: "page.pdf" });
+  const voyage: VoyageDetailsProps = getProgram(params.id);
+  const { toPDF, targetRef } = usePDF({
+    filename: `voyage-${voyage.name}.pdf`,
+  });
   const [pdfGenerated, setPdpGenerated] = React.useState(false);
   useEffect(() => {
     if (pdfGenerated) {
@@ -20,7 +23,6 @@ export default function HotelDetailsIndex({
       setPdpGenerated(true);
     }
   }, [pdfGenerated]);
-  const voyage: VoyageDetailsProps = getProgram(params.id);
   return (
     <div
       className="flex flex-col items-center bg-white py-12 px-16"
