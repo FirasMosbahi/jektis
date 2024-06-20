@@ -13,7 +13,7 @@ export default function HotelDetailsIndex({
 }): React.ReactNode {
   const voyage: VoyageDetailsProps = getProgram(params.id);
   const { toPDF, targetRef } = usePDF({
-    filename: `voyage-${voyage.name}.pdf`,
+    filename: `voyage ${voyage.name}.pdf`,
   });
   const [pdfGenerated, setPdpGenerated] = React.useState(false);
   useEffect(() => {
