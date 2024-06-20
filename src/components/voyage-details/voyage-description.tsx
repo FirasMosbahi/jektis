@@ -4,16 +4,11 @@ import React from "react";
 import { VoyageDetailsProps } from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
 import Programme from "@jektis/components/voyage-description/programme";
-import { PDFDownloadLink } from "@react-pdf/renderer";
-import VoyagePDF from "@jektis/pdfs/VoyagePdf";
 import ServicesInclus from "@jektis/components/voyage-description/ServicesInclus";
 import ServicesNonInclus from "@jektis/components/voyage-description/ServicesNonInclus";
 import VisaSection from "@jektis/components/voyage-description/Visa";
-import chargeeDeVoyage from "@jektis/components/voyage-description/ChargeeDeVoyageSection";
 import ChargeeDeVoyageSection from "@jektis/components/voyage-description/ChargeeDeVoyageSection";
 import TarifsAndConditions from "@jektis/components/voyage-description/TarifsAndConditions";
-import { usePDF } from "react-to-pdf";
-import usePrintPdf from "@jektis/pdfs/VoyagePdf";
 import Link from "next/link";
 
 export default function VoyageDetails({
