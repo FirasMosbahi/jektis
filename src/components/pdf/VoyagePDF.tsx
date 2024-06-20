@@ -75,11 +75,17 @@ export default function VoyagePDF({ data }: { data: VoyageDetailsProps }) {
             src="/logo_footer.png"
             style={tw("w-[200px] h-[50px] mb-[12px]")}
           />
-          <Text>Voyage {data.name}</Text>
-          <Text>
-            Du {data.startDate.toLocaleDateString()} au{" "}
-            {data.endDate.toLocaleDateString()}
-          </Text>
+          <View
+            style={tw(
+              "flex flex-col items-center mt-[8px] bg-[#254EA2] relative",
+            )}
+          >
+            <Text style={tw("absolute bottom-0")}>Voyage {data.name}</Text>
+            <Text style={tw("absolute top-0 bg-[#63BC4F]")}>
+              Du {data.startDate.toLocaleDateString()} au{" "}
+              {data.endDate.toLocaleDateString()}
+            </Text>
+          </View>
           <View style={tw("flex flex-col gap-1 w-[80%] mt-[20px]")}>
             <Text>Chargé de voyage :</Text>
             <View style={tw("flex flex-col gap-0.5 text-[12px]")}>

@@ -99,6 +99,38 @@ export const program: ProgramDay[] = [
       En soirée, rejoignez-nous pour un dîner décontracté pour partager vos découvertes de la journée.
     `,
   },
+  {
+    title: "Jour 5: Journée de Détente",
+    content: `
+      Après quelques journées bien remplies, nous méritons une pause dédiée à la détente. Profitez d'une journée libre pour explorer la ville à votre rythme, faire du shopping dans les marchés locaux ou vous détendre dans un spa relaxant. Cette journée libre permettra à chacun de choisir ses propres activités, que ce soit flâner dans les ruelles pittoresques ou se prélasser au soleil sur une plage tranquille.
+
+      En soirée, rejoignez-nous pour un dîner décontracté pour partager vos découvertes de la journée.
+    `,
+  },
+  {
+    title: "Jour 6: Journée de Détente",
+    content: `
+      Après quelques journées bien remplies, nous méritons une pause dédiée à la détente. Profitez d'une journée libre pour explorer la ville à votre rythme, faire du shopping dans les marchés locaux ou vous détendre dans un spa relaxant. Cette journée libre permettra à chacun de choisir ses propres activités, que ce soit flâner dans les ruelles pittoresques ou se prélasser au soleil sur une plage tranquille.
+
+      En soirée, rejoignez-nous pour un dîner décontracté pour partager vos découvertes de la journée.
+    `,
+  },
+  {
+    title: "Jour 7: Journée de Détente",
+    content: `
+      Après quelques journées bien remplies, nous méritons une pause dédiée à la détente. Profitez d'une journée libre pour explorer la ville à votre rythme, faire du shopping dans les marchés locaux ou vous détendre dans un spa relaxant. Cette journée libre permettra à chacun de choisir ses propres activités, que ce soit flâner dans les ruelles pittoresques ou se prélasser au soleil sur une plage tranquille.
+
+      En soirée, rejoignez-nous pour un dîner décontracté pour partager vos découvertes de la journée.
+    `,
+  },
+  {
+    title: "Jour 8: Journée de Détente",
+    content: `
+      Après quelques journées bien remplies, nous méritons une pause dédiée à la détente. Profitez d'une journée libre pour explorer la ville à votre rythme, faire du shopping dans les marchés locaux ou vous détendre dans un spa relaxant. Cette journée libre permettra à chacun de choisir ses propres activités, que ce soit flâner dans les ruelles pittoresques ou se prélasser au soleil sur une plage tranquille.
+
+      En soirée, rejoignez-nous pour un dîner décontracté pour partager vos découvertes de la journée.
+    `,
+  },
 ];
 
 export const chambres: Chambre[] = [

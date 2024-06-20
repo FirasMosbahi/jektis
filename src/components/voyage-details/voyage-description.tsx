@@ -5,13 +5,16 @@ import { VoyageDetailsProps } from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
 import Programme from "@jektis/components/voyage-description/programme";
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import VoyagePDF from "@jektis/components/pdf/VoyagePDF";
+import VoyagePDF from "@jektis/pdfs/VoyagePdf";
 import ServicesInclus from "@jektis/components/voyage-description/ServicesInclus";
 import ServicesNonInclus from "@jektis/components/voyage-description/ServicesNonInclus";
 import VisaSection from "@jektis/components/voyage-description/Visa";
 import chargeeDeVoyage from "@jektis/components/voyage-description/ChargeeDeVoyageSection";
 import ChargeeDeVoyageSection from "@jektis/components/voyage-description/ChargeeDeVoyageSection";
 import TarifsAndConditions from "@jektis/components/voyage-description/TarifsAndConditions";
+import { usePDF } from "react-to-pdf";
+import usePrintPdf from "@jektis/pdfs/VoyagePdf";
+import Link from "next/link";
 
 export default function VoyageDetails({
   voyageDetails,
@@ -28,14 +31,13 @@ export default function VoyageDetails({
             <button className="px-2 h-8 bg-[#CFCFCF] text-black border border-transparent rounded-xl">
               Partager
             </button>
-            <PDFDownloadLink
-              document={<VoyagePDF data={voyageDetails} />}
-              fileName={`${voyageDetails.name}-programme.pdf`}
+            <Link
+              href={`/pdf/voyage/${voyageDetails.id}`}
+              target="_blank"
+              className="px-2 h-8 flex flex-col justify-center bg-[#0050A5] text-white border border-transparent rounded-xl"
             >
-              <button className="px-2 h-8 bg-[#0050A5] text-white border border-transparent rounded-xl">
-                Imprimer
-              </button>
-            </PDFDownloadLink>
+              Imprimer
+            </Link>
           </div>
           <div className="my-3">
             <strong className="text-[#1b53a1] text-3xl ">PROGRAMME</strong>
