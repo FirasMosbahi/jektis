@@ -28,12 +28,12 @@ export default function Index(): React.ReactNode {
         <div className="xl:min-w-[45%] ">
           <HomeFilter />
         </div>
-        <div className="lg:block hidden xl:min-w-[50%]">
+        <div className="xl:min-w-[50%] mt-8 lg:mt-0">
           <Promo />
         </div>
       </div>
-      <div className="bg-white px-4 pt-4 flex flex-col">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 xl:max-h-[38rem] w-full h-fit lg:gap-8 mb-8">
+      <div className="bg-white hidden px-4 pt-4 lg:flex lg:flex-col">
+        <div className="grid grid-cols-2 xl:max-h-[38rem] w-full h-fit lg:gap-8 mb-8">
           <div>
             <VoyageCard
               title="Voyages Organisées"
@@ -53,10 +53,9 @@ export default function Index(): React.ReactNode {
             />
           </div>
         </div>
-        <div className="lg:flex hidden text-2xl text-white lg:py-2 py-3 lg:px-4 pl-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="flex text-2xl text-white lg:py-2 py-3 lg:px-4 pl-4 mb-4 flex-row border rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-1 text-[20px] lg:leading-normal leading-5 xs:ml-4">
-            Voyages de Noces{" "}
-            <p className="lg:inline hidden"> - Voyages à la carte </p>
+            Voyages de Noces <p className="inline"> - Voyages à la carte </p>
           </strong>
           <Link
             href={`/voyages?category=${VoyageType.VOYAGE_DE_NOCES}`}
@@ -67,7 +66,7 @@ export default function Index(): React.ReactNode {
             </p>
           </Link>
         </div>
-        <div className="lg:flex hidden flex-row gap-8 overflow-x-scroll pb-12 lg:pb-0 no-scrollbar">
+        <div className="flex flex-row gap-8 overflow-x-scroll pb-12 lg:pb-0 no-scrollbar">
           {nocesVoyages.map((v, index) => (
             <CityCard
               linkBase="/voyages"
@@ -77,7 +76,7 @@ export default function Index(): React.ReactNode {
             />
           ))}
         </div>
-        <div className="lg:flex lg:flex-row hidden lg:text-xl text-[18px] text-white gap-8 mt-8 border py-2 lg:px-4 px-2 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
+        <div className="flex lg:flex-row lg:text-xl text-[18px] text-white gap-8 mt-8 border py-2 lg:px-4 px-2 rounded-xl justify-between bg-gradient-to-r from-[#004fa6] to-[#02c9b2]">
           <strong className="ml-4">Hotels en Tunisie :</strong>
           <Link
             href={`/hotels-list?category=${VoyageType.VOYAGE_DE_NOCES}`}

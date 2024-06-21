@@ -27,7 +27,7 @@ export default function VoyagesIndex({
         filters={VOYAGE_SIDE_FILTER_DATA}
         nameFilterPlaceholder="Nom du Voyage"
       />
-      <div className="bg-white w-full">
+      <div className="bg-white w-full lg:pb-0 pb-4">
         <div className="flex flex-col gap-8 items-start w-full py-6 flex-1">
           {citiesToShow.map((city, index) => (
             <div key={index} className="w-full px-4">

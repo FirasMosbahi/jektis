@@ -41,7 +41,7 @@ export default function HotelsForm(): React.ReactElement {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className={`relative h-full flex flex-col lg:h-[450px] lg:w-[530px] xl:w-full gap-6 2xl:gap-5 xl:gap-8 ${
+      className={`relative flex flex-col bg-white h-[470px] lg:h-[450px] lg:w-[530px] xl:w-full gap-6 2xl:gap-5 xl:gap-8 ${
         isPopupOpen ? "bg-opacity-70" : ""
       } pt-4 border border-transparent rounded-2xl bg-white`}
     >
@@ -109,7 +109,7 @@ export default function HotelsForm(): React.ReactElement {
           style={{
             borderRadius: 10,
           }}
-          className="text-white h-12 w-full bg-[#8eb633] focus:ring-4 font-medium rounded-lg text-sm px-20 py-2.5 text-center inline-flex justify-center items-center me-2 mb-2"
+          className="text-white w-full bg-[#8eb633] focus:ring-4 font-medium rounded-lg text-sm px-20 py-2.5 text-center inline-flex justify-center items-center me-2 mb-2"
         >
           <WhiteSearchIcon
             width={20}

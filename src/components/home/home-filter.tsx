@@ -44,7 +44,7 @@ export default function HomeFilter(): React.ReactNode {
           </div>
         </form>
 
-        <div className="min-h-[460px] 2xl:h-[440px] 2xl:min-h-fit">
+        <div className="min-h-[460px] bg-white border border-transparent rounded-xl 2xl:h-[440px] 2xl:min-h-fit">
           {chooseForm === HomeFilterFormsEnum.HOTELS ? (
             <HotelsForm />
           ) : chooseForm === HomeFilterFormsEnum.VOLS ? (

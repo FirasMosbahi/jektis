@@ -45,7 +45,7 @@ export default function Promo(): React.ReactNode {
           </AnimatePresence>
         </div>
       </div>
-      <div className="md:flex font-[ flex-row w-full hidden border-t-white border-t-4">
+      <div className="flex flex-row w-full border-t-white border-t-4">
         {promos.map((promo, index) => (
           <div
             style={{
@@ -53,7 +53,7 @@ export default function Promo(): React.ReactNode {
               borderBottomRightRadius: index === promos.length - 1 ? 12 : 0,
             }}
             key={index}
-            className={`text-center min-w-[10%] 2xl:h-16 text-white h-24 ${
+            className={`text-center min-w-[10%] max-w-[20%] 2xl:h-16 text-white h-24 ${
               index !== promos.length - 1 ? "border-r-4 border" : ""
             } ${current === index ? "bg-[#0051A3]" : "bg-[#A0BADB]"} ${
               promo.title.length < 12 ? "w-[14%]" : "w-[20%]"
