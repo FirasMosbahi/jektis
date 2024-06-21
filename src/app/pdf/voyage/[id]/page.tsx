@@ -29,10 +29,10 @@ export default function HotelDetailsIndex({
       ref={targetRef}
     >
       <img className="h-[120px] mb-10 w-[400px]" src="/logo_footer.png" />
-      <div className="relative mb-6 bg-[#2852A2] pb-6 w-full flex flex-col px-4 items-center">
+      <div className="mb-2 text-gray-400 w-full flex flex-col px-4 items-center">
         <div>
-          <p className="text-[62px] pb-4 font-[900]">{voyage.name}</p>
-          <p className="absolute left-[280px] -bottom-10 flex flex-row items-center justify-center px-1 pb-4 text-[24px] font-[700] bg-[#61BD50] border border-transparent rounded-2xl">
+          <p className="text-[62px] font-[900]">{voyage.name}</p>
+          <p className="flex flex-row items-center justify-center px-1 text-[24px] font-[700] border border-transparent rounded-2xl">
             Du {voyage.startDate.toLocaleDateString()} au{" "}
             {voyage.startDate.toLocaleDateString()} -{" "}
             {
@@ -78,9 +78,13 @@ export default function HotelDetailsIndex({
               </p>
             </div>
           ))}
-          <div className="flex flex-col text-[13px] bg-[#2852A2] px-4 pt-1 pb-6">
+          <div className="flex flex-col text-[13px] px-4 pt-1 pb-6">
+            <p className="text-[20px] font-[700] text-[#2852A2]">Chambres</p>
             {voyage.chambres.map((chambre, index) => (
-              <div key={index} className="flex flex-row justify-between">
+              <div
+                key={index}
+                className="flex text-gray-400  text-[13px] font-[500] flex-row justify-between"
+              >
                 <p>{chambre.title}</p>
                 <p>
                   {chambre.unitPrice}
@@ -89,16 +93,16 @@ export default function HotelDetailsIndex({
               </div>
             ))}
           </div>
-          <div className="bg-gray-600 p-4 flex flex-col gap-4 pb-8 pt-0">
+          <div className="text-gray-400 p-4 flex flex-col gap-4 pb-8 pt-0">
             <div>
-              <p className="text-[20px] font-[700]">Inclus :</p>
+              <p className="text-[20px] text-[#2852A2] font-[700]">Inclus :</p>
 
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-1">
                   <p className="text-[16x] font-[700]">VIP</p>
                   <div>
                     {voyage.servicesInclus.vip.map((vip, index) => (
-                      <p className="text-[12px]" key={index}>
+                      <p className="text-[13px] font-[500]" key={index}>
                         - {vip}
                       </p>
                     ))}
@@ -110,7 +114,7 @@ export default function HotelDetailsIndex({
                   </p>
                   <div>
                     {voyage.servicesInclus.standard.map((vip, index) => (
-                      <p className="text-[12px]" key={index}>
+                      <p className=" text-[13px] font-[500]" key={index}>
                         - {vip}
                       </p>
                     ))}
@@ -119,10 +123,15 @@ export default function HotelDetailsIndex({
               </div>
             </div>
             <div>
-              <p className="text-[20px] font-[700]">Non inclus</p>
+              <p className="text-[20px] text-[#2852A2] font-[700]">
+                Non inclus
+              </p>
               <div>
                 {voyage.servicesNonInclus.map((service, index) => (
-                  <p key={index}> - {service}</p>
+                  <p className="text-[13px] font-[500]" key={index}>
+                    {" "}
+                    - {service}
+                  </p>
                 ))}
               </div>
             </div>
