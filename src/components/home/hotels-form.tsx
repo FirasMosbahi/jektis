@@ -2,7 +2,7 @@
 
 import RoomsForm from "@jektis/components/home/RoomsForm";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   BlackSearchIcon,
   SimpleNextArrow,
@@ -18,6 +18,7 @@ import { hotelSearch } from "@jektis/actions/home-actions";
 export default function HotelsForm(): React.ReactElement {
   const today = new Date();
   const [isPopupOpen, setIsPopupOpen] = React.useState(false);
+  const [openCalendar, setOpenCalendar] = useState<number>(0);
   const { register, getValues, setValue, handleSubmit } =
     useForm<HomeFilterFormData>({
       resolver: yupResolver(hotelsValidationSchema),
@@ -40,50 +41,62 @@ export default function HotelsForm(): React.ReactElement {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className={`relative h-full flex flex-col lg:w-[530px] xl:w-full gap-6 2xl:gap-5 xl:gap-8 ${
+      className={`relative h-full flex flex-col lg:h-[450px] lg:w-[530px] xl:w-full gap-6 2xl:gap-5 xl:gap-8 ${
         isPopupOpen ? "bg-opacity-70" : ""
-      } pt-8 border border-transparent rounded-2xl bg-white`}
+      } pt-4 border border-transparent rounded-2xl bg-white`}
     >
       <div className="px-4 relative">
-        <BlackSearchIcon className="absolute top-[35%] size-5 left-7" />
+        <BlackSearchIcon className="absolute top-[35%] size-7 left-7 lg:left-9" />
 
         <input
           type="text"
           id="first_name"
-          className="text-xl border bg-transparent border-gray-300 w-full text-black focus:ring-blue-500 focus:border-blue-500 block lg:pl-10 pl-24 p-6"
+          className="border bg-transparent border-gray-300 font-[500] text-[32px] w-full text-black focus:ring-blue-500 focus:border-blue-500 block lg:pl-16 pl-14 py-6"
           placeholder="Votre destination"
           {...register("nom")}
         />
       </div>
-      <div className="flex flex-row h-28 justify-between items-center border border-gray-300 mx-4 py-4 px-4">
-        <CustomCalendar
-          label="Arrivée"
-          value={getValues().arrive ?? today}
-          setValue={(value: Date) => {
-            const date = getValues().depart ?? new Date();
-            if (value > new Date() && value < date) {
-              setValue("arrive", value);
-              return true;
-            }
-            return false;
-          }}
+      <div className="flex relative flex-row h-28 justify-between items-center border border-gray-300 mx-4 py-4 lg:px-4 px-6">
+        <div className={`lg:block ${openCalendar !== 2 ? "" : "hidden"}`}>
+          <CustomCalendar
+            label="Arrivée"
+            value={getValues().arrive ?? today}
+            setValue={(value: Date) => {
+              const date = getValues().depart ?? new Date();
+              if (value > new Date() && value < date) {
+                setValue("arrive", value);
+                return true;
+              }
+              return false;
+            }}
+            afterOpenCalendar={() => setOpenCalendar(1)}
+            afterCloseCalendar={() => setOpenCalendar(0)}
+          />
+        </div>
+        <SimpleNextArrow
+          className={`size-12 ${openCalendar === 0 ? "lg:block" : "hidden"}`}
         />
-        <SimpleNextArrow className="size-12" />
-        <CustomCalendar
-          value={
-            getValues().depart ??
-            new Date(today.getTime() + 24 * 60 * 60 * 1000)
-          }
-          label="Départ"
-          setValue={(value: Date) => {
-            const date = getValues().arrive ?? new Date();
-            if (value > new Date() && value > date) {
-              setValue("depart", value);
-              return true;
-            }
-            return false;
-          }}
-        />
+        <div className="relative">
+          <div className={`lg:block ${openCalendar !== 1 ? "" : "hidden"}`}>
+            <CustomCalendar
+              value={
+                getValues().depart ??
+                new Date(today.getTime() + 24 * 60 * 60 * 1000)
+              }
+              label="Départ"
+              setValue={(value: Date) => {
+                const date = getValues().arrive ?? new Date();
+                if (value > new Date() && value > date) {
+                  setValue("depart", value);
+                  return true;
+                }
+                return false;
+              }}
+              afterOpenCalendar={() => setOpenCalendar(2)}
+              afterCloseCalendar={() => setOpenCalendar(0)}
+            />
+          </div>
+        </div>
       </div>
       <RoomsForm
         isPopupOpen={isPopupOpen}

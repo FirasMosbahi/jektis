@@ -7,12 +7,12 @@ import { days, months } from "@jektis/utils/date-utils";
 
 export const theme = {
   root: {
-    base: "relative",
+    base: "lg:relative",
   },
   popup: {
     root: {
-      base: "absolute top-10 z-50 block pt-2",
-      inline: "relative top-0 z-auto",
+      base: "lg:absolute top-10 z-50 block pt-2",
+      inline: "lg:relative top-0 z-auto",
       inner: "inline-block rounded-lg bg-white p-4 shadow-lg",
     },
     header: {
@@ -93,10 +93,14 @@ export default function CustomCalendar({
   label,
   setValue,
   value,
+  afterOpenCalendar,
+  afterCloseCalendar,
 }: {
   label: string;
   setValue: (value: Date) => boolean;
   value: Date;
+  afterOpenCalendar: () => void;
+  afterCloseCalendar: () => void;
 }) {
   const [date, setDate] = useState<Date>(value);
   const [isCalendarOpen, setIsCalendarOpen] = useState<boolean>(false);
@@ -104,6 +108,7 @@ export default function CustomCalendar({
     const change = setValue(date);
     change && setDate(date);
     setIsCalendarOpen(false);
+    afterCloseCalendar();
   };
   return isCalendarOpen ? (
     <Datepicker
@@ -114,11 +119,14 @@ export default function CustomCalendar({
       theme={theme}
     />
   ) : (
-    <div className="flex flex-col gap-1 lg:w-[150px] w-[100px]">
+    <div className="flex flex-col gap-1 lg:w-[150px] w-[120px]">
       <p className="text-gray-400 text-center">{label}</p>
-      <div className="relative text-black max-w-sm flex flex-row lg:gap-4 gap-2">
+      <div className="lg:relative text-black max-w-sm flex flex-row lg:gap-4 gap-2">
         <div
-          onClick={() => setIsCalendarOpen(true)}
+          onClick={() => {
+            setIsCalendarOpen(true);
+            afterOpenCalendar();
+          }}
           className="flex flex-col h-full items-start"
         >
           <CalendarIcon className="size-7" />

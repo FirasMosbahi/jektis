@@ -222,18 +222,19 @@ export default function RoomsForm({
   }, [rooms]);
 
   return (
-    <div className="flex flex-row items-center justify-between border border-gray-300 mx-4 py-8 px-4">
-      <TwoUsers className="lg:size-6 size-5" />
-      <p className="text-black text-[18px] w-[80%] font-semibold">
-        {sumRooms.chambres} Chambre , {sumRooms.adultes} Adultes,{" "}
-        {sumRooms.enfants} enfants , {sumRooms.bebe} bébés
-      </p>
-      <AddIcon
+    <div className="border border-gray-300 mx-4 py-8 px-4">
+      <div
+        className="flex flex-row items-center lg:gap-4 gap-2 cursor-pointer justify-between"
         onClick={() => setIsPopupOpen(true)}
-        className="size-8 cursor-pointer"
-      />
+      >
+        <TwoUsers className="lg:size-6 size-5" />
+        <p className="text-black lg:text-[18px] flex-1 font-semibold">
+          {sumRooms.chambres} Chambre , {sumRooms.adultes} Adultes,{" "}
+          {sumRooms.enfants} enfants , {sumRooms.bebe} bébés
+        </p>
+      </div>
       {isPopupOpen && (
-        <form className="absolute opacity-100 flex flex-col justify-between top-[10%] left-[7%] z-20 bg-white px-6 w-[450px] py-4 min-h-[250px]">
+        <form className="absolute opacity-100 flex flex-col justify-between top-[10%] left-[7%] z-20 bg-white px-6 lg:w-[450px] w-[350px] py-4 min-h-[350px] lg:min-h-[250px]">
           <div>
             <div className="flex flex-row pb-2 justify-between border-b-2 border-b-gray-700 items-center">
               <p className="text-black text-[17px]">
