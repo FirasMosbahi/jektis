@@ -1,7 +1,7 @@
 "use client";
 
 import { AddIcon, Close, Trash, TwoUsers } from "@jektis/components/icons";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Room } from "@jektis/forms-data/hotel-filter-form-data";
 
 function arrayFromNumbers(num: number, array: any[]): any[] {

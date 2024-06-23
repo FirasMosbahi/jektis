@@ -1,6 +1,7 @@
 import { HotelCardProps, HotelCategory } from "@jektis/types/hotel_class";
 import hotelCards from "@jektis/mocks/hotelCard_moks";
 import { VoyageCardProps } from "@jektis/types";
+import { HotelFilterFormData } from "@jektis/forms-data/hotel-filter-form-data";
 
 export function getHotels(
   category: string | string[] | undefined,

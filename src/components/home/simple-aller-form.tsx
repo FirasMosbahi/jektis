@@ -1,38 +1,23 @@
 "use client";
 
 import { WhiteSearchIcon } from "@jektis/components/icons";
-import React, { useEffect, useMemo, useState } from "react";
-import { set, useForm } from "react-hook-form";
-import {
-  AllezReourVolFormData,
-  SimpleAllezVolFormData,
-} from "@jektis/forms-data/hotel-filter-form-data";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { SimpleAllezVolFormData } from "@jektis/forms-data/hotel-filter-form-data";
 import { yupResolver } from "@hookform/resolvers/yup";
-import {
-  AllezReourVolFormValidationSchema,
-  SimpleAllezVolFormValidationSchema,
-} from "@jektis/schema/home-forms";
-import {
-  allezDapartVolSearch,
-  simpleAllerVolSearch,
-} from "@jektis/actions/home-filter-actions";
-import { PackageJson } from "type-fest";
+import { SimpleAllezVolFormValidationSchema } from "@jektis/schema/home-forms";
+import { simpleAllerVolSearch } from "@jektis/actions/home-filter-actions";
 
 export default function SimpleAllerForm(): React.ReactElement {
-  const {
-    register,
-    formState: { errors },
-    setValue,
-    getValues,
-    handleSubmit,
-  } = useForm<SimpleAllezVolFormData>({
-    resolver: yupResolver(SimpleAllezVolFormValidationSchema),
-    defaultValues: {
-      nombreBebe: 0,
-      nombreEnfants: 0,
-      nombreAdultes: 0,
-    },
-  });
+  const { register, setValue, getValues, handleSubmit } =
+    useForm<SimpleAllezVolFormData>({
+      resolver: yupResolver(SimpleAllezVolFormValidationSchema),
+      defaultValues: {
+        nombreBebe: 0,
+        nombreEnfants: 0,
+        nombreAdultes: 0,
+      },
+    });
 
   const [persons, setPersons] = useState<{
     adultes: number;

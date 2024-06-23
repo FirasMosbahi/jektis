@@ -6,7 +6,7 @@ export type Room = {
 };
 
 export type HotelFilterFormData = {
-  nom?: string;
+  destination?: string;
   arrive?: Date;
   depart?: Date;
   chambres: Room[];

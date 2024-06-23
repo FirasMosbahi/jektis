@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { getHotelById, getProgram } from "@jektis/services";
 import { usePDF } from "react-to-pdf";
 import { VoyageDetailsProps } from "@jektis/types";
 import { getSejourStayDetails } from "@jektis/utils/voyage.utils";
+import { getProgram } from "@jektis/actions/voyage-details-actions";
 
 export default function HotelDetailsIndex({
   params,
@@ -79,7 +79,7 @@ export default function HotelDetailsIndex({
             </div>
           ))}
           <div className="flex flex-col text-[13px] px-4 pt-1 pb-6">
-            <p className="text-[20px] font-[700] text-[#2852A2]">Chambres</p>
+            <p className="text-[20px] font-[700] text-[#2852A2]">Tarifs</p>
             {voyage.chambres.map((chambre, index) => (
               <div
                 key={index}

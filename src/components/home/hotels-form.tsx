@@ -55,7 +55,7 @@ export default function HotelsForm(): React.ReactElement {
           id="first_name"
           className="border bg-transparent border-gray-300 font-[500] text-[32px] w-full text-black focus:ring-blue-500 focus:border-blue-500 block lg:pl-16 pl-14 py-6"
           placeholder="Votre destination"
-          {...register("nom")}
+          {...register("destination")}
         />
       </div>
       <div className="flex relative flex-row h-28 justify-between items-center border border-gray-300 mx-4 py-4 lg:px-4 px-6">

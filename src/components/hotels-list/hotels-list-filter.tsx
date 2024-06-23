@@ -7,23 +7,11 @@ import {
   Localisation,
   WhiteSearchIcon,
 } from "@jektis/components/icons";
-import { useForm } from "react-hook-form";
-import { HotelSearchFormData } from "@jektis/forms-data/hotel-filter-form-data";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { hotelSearchValidationSchema } from "@jektis/schema/hotel-forms";
-import { searchHotel } from "@jektis/actions/hotel-search-actions";
 import { Datepicker } from "flowbite-react";
 import { theme } from "@jektis/components/generic/CustomCalendar";
 import HeaderRoomsForm from "@jektis/components/hotels-list/HeaderRoomsForm";
 
 export default function HotelsFilter(): React.ReactNode {
-  const { register, handleSubmit } = useForm<HotelSearchFormData>({
-    resolver: yupResolver(hotelSearchValidationSchema),
-  });
-  async function onSubmit(data: HotelSearchFormData) {
-    await searchHotel(data);
-  }
-
   const today = new Date();
   const tomorrow = new Date(today.getTime() + 24 * 60 * 60 * 1000);
   const [openDepartCalendar, setOpenDeaprtDateCalendar] =
@@ -37,10 +25,7 @@ export default function HotelsFilter(): React.ReactNode {
     <div className="hidden lg:flex flex-col w-full">
       <div className="rounded-md shadow-sm w-full mt-8">
         <Center axe={Axes.y}>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="flex lg:flex-row flex-col relative bg-white xl:items-start xl:min-w-fit lg:px-0 px-8 items-start gap-8 lg:gap-0 xl:h-16 rounded-xl border-2 border-blue-700 w-full py-2 xl:bg-white"
-          >
+          <form className="flex lg:flex-row flex-col relative bg-white xl:items-start xl:min-w-fit lg:px-0 px-8 items-start gap-8 lg:gap-0 xl:h-16 rounded-xl border-2 border-blue-700 w-full py-2 xl:bg-white">
             <div className="flex flex-row w-full xl:h-full xl:max-w-[240px] lg:w-[320px] h-12 border border-transparent lg:rounded-none rounded-2xl lg:mx-0 items-center lg:gap-2 gap-4 px-2 xl:pl-1.5">
               <Localisation className="absolute top-4 size-6 left-5" />
 
@@ -49,7 +34,6 @@ export default function HotelsFilter(): React.ReactNode {
                 id="first_name"
                 className="text-[16px] bg-transparent w-full text-black focus:ring-blue-500 focus:border-blue-500 block lg:pl-10 pl-24 p-2"
                 placeholder="Votre destination"
-                {...register("location")}
               />
             </div>
             <div className="flex z-50 xl:max-w-[350px] lg:w-[650px] xl:text-[0.8rem] xl:min-w-[350px] sm:flex-row flex-col xl:px-4 xl:h-full sm:h-12 w-full xl:gap-6 sm:gap-8 gap-4 bg-white border-x-2 sm:justify-around xl:justify-center lg:rounded-none rounded-2xl lg:border-x-blue-700 px-4">

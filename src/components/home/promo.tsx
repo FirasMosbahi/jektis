@@ -5,7 +5,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { PromoType } from "@jektis/types/promo";
 import useIsInViewport from "@jektis/hooks/useInViewPort";
 import { AnimatePresence, motion } from "framer-motion";
-import { homePagePromos } from "@jektis/actions/home-page-actions";
 
 export default function Promo({
   promos,
