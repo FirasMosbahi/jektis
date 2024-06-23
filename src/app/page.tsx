@@ -5,23 +5,18 @@ import CityCard from "@jektis/components/home/city-card";
 import VoyageCardWithImg from "@jektis/components/home/voyage-card-with-image";
 import Promo from "@jektis/components/home/promo";
 import Link from "next/link";
-import { HotelCategory, VoyageCardProps, VoyageType } from "@jektis/types";
-import {
-  getBestCitiesByRateAndCategory,
-  getBestCityByRateAndCategory,
-  getMiniCards,
-  getVoyagesMiniCardsByCategory,
-} from "@jektis/services";
+import { HotelCategory, VoyageType } from "@jektis/types";
 import { VoirPlus } from "@jektis/components/icons";
 import HotelCardWithImage from "@jektis/components/home/HotelCardWithImage";
+import {
+  homePageHotelsData,
+  homePagePromos,
+  homePageVoyagesData,
+} from "@jektis/actions/home-page-actions";
 export default function Index(): React.ReactNode {
-  const nocesVoyages: VoyageCardProps[] = getBestCitiesByRateAndCategory(
-    3,
-    VoyageType.VOYAGE_DE_NOCES,
-  );
-  const voyageOrganise: VoyageCardProps = getBestCityByRateAndCategory(
-    VoyageType.VOYAGE_ORGANISE,
-  );
+  const voyagesData = homePageVoyagesData();
+  const hotelsData = homePageHotelsData();
+  const promos = homePagePromos();
   return (
     <div className="pt-12 lg:pt-0">
       <div className="lg:flex lg:flex-row mb-8 lg:pt-0 items-center justify-between xl:items-start w-full lg:mb-4 gap-12">
@@ -29,7 +24,7 @@ export default function Index(): React.ReactNode {
           <HomeFilter />
         </div>
         <div className="xl:min-w-[50%] mt-8 lg:mt-0">
-          <Promo />
+          <Promo promos={promos} />
         </div>
       </div>
       <div className="bg-white hidden px-4 pt-4 lg:flex lg:flex-col">
@@ -37,9 +32,9 @@ export default function Index(): React.ReactNode {
           <div>
             <VoyageCard
               title="Voyages Organisées"
-              cards={getVoyagesMiniCardsByCategory(VoyageType.VOYAGE_ORGANISE)}
+              cards={voyagesData.voyagesOrganise}
               linksBase="/voyages"
-              bigCardProps={voyageOrganise}
+              bigCardProps={voyagesData.mainVoyageOrganise}
               titleLink={`/voyages?category=${VoyageType.VOYAGE_ORGANISE}`}
             />
           </div>
@@ -47,7 +42,7 @@ export default function Index(): React.ReactNode {
             <VoyageCardWithImg
               title="Circuits Sud"
               imageUrl="https://th.bing.com/th/id/OIP.R3osXfaOo7ZExMdxL5Y09QHaE8?rs=1&pid=ImgDetMain"
-              cards={getVoyagesMiniCardsByCategory(VoyageType.CIRCUIT_SUD)}
+              cards={voyagesData.voyagesSud}
               linksBase="/voyages"
               titleLink={`/voyages?category=${VoyageType.CIRCUIT_SUD}`}
             />
@@ -67,7 +62,7 @@ export default function Index(): React.ReactNode {
           </Link>
         </div>
         <div className="flex flex-row gap-8 overflow-x-scroll pb-12 lg:pb-0 no-scrollbar">
-          {nocesVoyages.map((v, index) => (
+          {voyagesData.voyagesNoces.map((v, index) => (
             <CityCard
               linkBase="/voyages"
               isHorizontal={false}
@@ -91,7 +86,7 @@ export default function Index(): React.ReactNode {
           <HotelCardWithImage
             imageUrl="https://www.jektistravel.com/public/images/image/image_0.75932100-1701696368.png"
             mainLink={`hotels-list?category=${HotelCategory.VUE_MER}`}
-            cards={getMiniCards(HotelCategory.VUE_MER)}
+            cards={hotelsData.hotelsVueMer}
             linksBase="/hotels-list"
             showSeeAllButton={true}
           />
@@ -99,20 +94,20 @@ export default function Index(): React.ReactNode {
             imageUrl="https://www.jektistravel.com/public/images/image/image_0.01709600-1701696381.png"
             mainLink={`hotels-list?category=${HotelCategory.RECOMMANDE}`}
             linksBase="hotels-list"
-            cards={getMiniCards(HotelCategory.RECOMMANDE)}
+            cards={hotelsData.hotelsRecommande}
             showSeeAllButton={true}
           />
           <HotelCardWithImage
             imageUrl="https://www.jektistravel.com/public/images/image/image_0.11581900-1701696393.png"
             mainLink={`hotels-list?category=${HotelCategory.ALL_INCLUSIVE}`}
-            cards={getMiniCards(HotelCategory.ALL_INCLUSIVE)}
+            cards={hotelsData.hotelsAllInclusive}
             linksBase="hotels-list"
             showSeeAllButton={true}
           />
           <HotelCardWithImage
             imageUrl="https://www.jektistravel.com/public/images/image/image_0.72363500-1701696405.png"
             mainLink={`hotels-list?category=${HotelCategory.TOBBOGAN}`}
-            cards={getMiniCards(HotelCategory.TOBBOGAN)}
+            cards={hotelsData.hotelsTobbogan}
             linksBase="hotels-list"
             showSeeAllButton={true}
           />

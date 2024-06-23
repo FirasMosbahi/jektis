@@ -5,12 +5,12 @@ import VoyageOffer from "@jektis/components/voyage-details/voyage-offer";
 import VoyageNavbar from "@jektis/components/voyage-details/voyage-navbar";
 import VoyageDetails from "@jektis/components/voyage-details/voyage-description";
 import VoyageImages from "@jektis/components/voyage-details/voyage-images";
-import { getProgram } from "@jektis/services";
 import { VoyageDetailsProps } from "@jektis/types/voyage-details-props";
 import { VoyageDetailsSection } from "@jektis/enums/voyage";
 import ChambreSelectionTable from "@jektis/components/voyage-details/chambre-selection-table";
 import ResizeDetector from "react-resize-detector";
 import MobileVoyageNavigation from "@jektis/components/voyage-details/MobileVoyageNavigation";
+import { getProgram } from "@jektis/actions/voyage-details-actions";
 
 export default function VoyageGroupIndex({
   params,

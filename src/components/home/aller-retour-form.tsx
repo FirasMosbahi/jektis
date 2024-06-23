@@ -5,11 +5,11 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
   AllezReourVolFormData,
-  HomeFilterFormData,
-} from "@jektis/forms-data/home-filter-form-data";
+  HotelFilterFormData,
+} from "@jektis/forms-data/hotel-filter-form-data";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { AllezReourVolFormValidationSchema } from "@jektis/schema/home-forms";
-import { allezDapartVolSearch } from "@jektis/actions/home-actions";
+import { allezDapartVolSearch } from "@jektis/actions/home-filter-actions";
 
 export default function AllerRetourForm(): React.ReactElement {
   const { register, setValue, getValues, handleSubmit } =

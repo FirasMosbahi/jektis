@@ -1,16 +1,15 @@
-import { VoyageDetailsProps } from "@jektis/types/voyage-details-props";
+import { VoyageDetailsProps } from "@jektis/types";
 import {
   cancelFrais,
   chambres,
   chargeeDeVoyage,
   payement,
-  prix,
   program,
   servicesInclus,
   servicesNonInclus,
   visa,
-} from "@jektis/mocks/program-mock";
-import { voyageCards } from "@jektis/mocks";
+  voyageCards,
+} from "@jektis/mocks";
 
 export function getProgram(id: string | number): VoyageDetailsProps {
   if (typeof id === "string") {

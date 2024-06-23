@@ -10,17 +10,18 @@ import {
 } from "@jektis/components/icons";
 import CustomCalendar from "@jektis/components/generic/CustomCalendar";
 import { useForm } from "react-hook-form";
-import { HomeFilterFormData } from "@jektis/forms-data/home-filter-form-data";
+import { HotelFilterFormData } from "@jektis/forms-data/hotel-filter-form-data";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { hotelsValidationSchema } from "@jektis/schema/home-forms";
-import { hotelSearch } from "@jektis/actions/home-actions";
+import { hotelSearch } from "@jektis/actions/home-filter-actions";
+import useOnHotelFormSubmit from "@jektis/hooks/useOnHotelFormSubmit";
 
 export default function HotelsForm(): React.ReactElement {
   const today = new Date();
   const [isPopupOpen, setIsPopupOpen] = React.useState(false);
   const [openCalendar, setOpenCalendar] = useState<number>(0);
   const { register, getValues, setValue, handleSubmit } =
-    useForm<HomeFilterFormData>({
+    useForm<HotelFilterFormData>({
       resolver: yupResolver(hotelsValidationSchema),
       defaultValues: {
         depart: new Date(today.getTime() + 24 * 60 * 60 * 1000),
@@ -34,8 +35,9 @@ export default function HotelsForm(): React.ReactElement {
         ],
       },
     });
-  async function onSubmit(form: HomeFilterFormData) {
-    console.log(form);
+  const handleFormSubmit = useOnHotelFormSubmit();
+  async function onSubmit(form: HotelFilterFormData) {
+    handleFormSubmit(form);
     await hotelSearch(form);
   }
   return (

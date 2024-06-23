@@ -11,10 +11,10 @@ export default function Pagination({
   const path = usePathname();
   const params = useSearchParams();
   return (
-    <div className="flex w-full justify-between px-12">
+    <div className="flex w-full justify-between px-12 lg:mb-4">
       {params.get("page") && Number.parseInt(params.get("page") ?? "") > 1 ? (
         <Link
-          href={`${path}?page=${Number.parseInt(params.get("page") ?? "") - 1}`}
+          href={`${path}?page=${Number.parseInt(params.get("page") ?? "") - 1}${params.has("filters") ? `&filters=${params.get("filters")}` : ""}`}
           className="flex items-center justify-center px-4 h-10 me-3 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
         >
           <svg
@@ -40,8 +40,8 @@ export default function Pagination({
       {Number.parseInt(params.get("page") ?? "0") < pagesNumber ? (
         <Link
           href={`${path}?page=${
-            Number.parseInt(params.get("page") ?? "2") + 1
-          }`}
+            Number.parseInt(params.get("page") ?? "1") + 1
+          }${params.has("filters") ? `&filters=${params.get("filters")}` : ""}`}
           className="flex items-center justify-center px-4 h-10 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
         >
           Next

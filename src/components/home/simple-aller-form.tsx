@@ -6,7 +6,7 @@ import { set, useForm } from "react-hook-form";
 import {
   AllezReourVolFormData,
   SimpleAllezVolFormData,
-} from "@jektis/forms-data/home-filter-form-data";
+} from "@jektis/forms-data/hotel-filter-form-data";
 import { yupResolver } from "@hookform/resolvers/yup";
 import {
   AllezReourVolFormValidationSchema,
@@ -15,7 +15,7 @@ import {
 import {
   allezDapartVolSearch,
   simpleAllerVolSearch,
-} from "@jektis/actions/home-actions";
+} from "@jektis/actions/home-filter-actions";
 import { PackageJson } from "type-fest";
 
 export default function SimpleAllerForm(): React.ReactElement {

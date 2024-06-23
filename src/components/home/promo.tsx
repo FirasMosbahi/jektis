@@ -3,11 +3,15 @@
 import Center, { Axes } from "@jektis/components/generic/center";
 import React, { useEffect, useRef, useState } from "react";
 import { PromoType } from "@jektis/types/promo";
-import getPromos from "@jektis/services/promos";
 import useIsInViewport from "@jektis/hooks/useInViewPort";
 import { AnimatePresence, motion } from "framer-motion";
+import { homePagePromos } from "@jektis/actions/home-page-actions";
 
-export default function Promo(): React.ReactNode {
+export default function Promo({
+  promos,
+}: {
+  promos: PromoType[];
+}): React.ReactNode {
   const [current, setCurrent] = useState<number>(0);
   const ref = useRef<any>(null);
 
@@ -24,7 +28,6 @@ export default function Promo(): React.ReactNode {
     };
   }, [isInView]);
 
-  const promos: PromoType[] = getPromos();
   return (
     <div className="border-4 2xl:w-full rounded-2xl flex flex-col">
       <div ref={ref} className="mx-auto max-w-screen-lg w-full">

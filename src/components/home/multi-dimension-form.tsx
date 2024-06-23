@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import {
   AllezReourVolFormData,
   MultiDestinationsVolFormData,
-} from "@jektis/forms-data/home-filter-form-data";
+} from "@jektis/forms-data/hotel-filter-form-data";
 import { yupResolver } from "@hookform/resolvers/yup";
 import {
   AllezReourVolFormValidationSchema,
@@ -13,7 +13,7 @@ import {
 import {
   allezDapartVolSearch,
   MultiDestinationsVolSearch,
-} from "@jektis/actions/home-actions";
+} from "@jektis/actions/home-filter-actions";
 
 export default function MultiDimensionForm(): React.ReactElement {
   const { register, handleSubmit, getValues, setValue } =

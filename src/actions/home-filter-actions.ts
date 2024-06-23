@@ -2,13 +2,13 @@
 
 import {
   AllezReourVolFormData,
-  HomeFilterFormData,
+  HotelFilterFormData,
   MultiDestinationsVolFormData,
   SimpleAllezVolFormData,
   VoyageFormData,
-} from "@jektis/forms-data/home-filter-form-data";
+} from "@jektis/forms-data/hotel-filter-form-data";
 
-export async function hotelSearch(data: HomeFilterFormData) {
+export async function hotelSearch(data: HotelFilterFormData) {
   console.log(data);
 }
 export async function allezDapartVolSearch(data: AllezReourVolFormData) {

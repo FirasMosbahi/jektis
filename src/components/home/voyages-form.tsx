@@ -3,10 +3,10 @@
 import React from "react";
 import { WhiteSearchIcon } from "@jektis/components/icons";
 import { useForm } from "react-hook-form";
-import { VoyageFormData } from "@jektis/forms-data/home-filter-form-data";
+import { VoyageFormData } from "@jektis/forms-data/hotel-filter-form-data";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { VoyageFormValidationSchema } from "@jektis/schema/home-forms";
-import { VoyageSearch } from "@jektis/actions/home-actions";
+import { VoyageSearch } from "@jektis/actions/home-filter-actions";
 
 export default function VoyagesForm(): React.ReactElement {
   const { register, handleSubmit } = useForm<VoyageFormData>({

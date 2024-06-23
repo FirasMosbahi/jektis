@@ -3,23 +3,21 @@
 import React from "react";
 import HotelsFilter from "@jektis/components/hotels-list/hotels-list-filter";
 import HotelsList from "@jektis/components/hotels-list/hotels-list";
-import { getHotels } from "@jektis/services";
 import { HotelCardProps } from "@jektis/types/hotel_class";
-import HotelsSideFilter from "@jektis/components/hotels-list/hotels-filter";
 import Pagination from "@jektis/components/generic/pagination";
-import { FilterSection } from "@jektis/types/filter-type";
-import Stars from "@jektis/components/generic/stars";
 import SearchSideFilter from "@jektis/components/generic/SearchSideFilter";
 import { HOTEL_SIDE_FILTER_DATA } from "@jektis/consts/side-filters-data";
+import { getHotels } from "@jektis/actions/hotel-search-actions";
 
 export default function PageIndex({
   searchParams,
 }: {
   searchParams?: { [key: string]: string | string[] | undefined };
 }): React.ReactNode {
-  const category = searchParams?.category;
-  const city = searchParams?.city;
-  const hotels: HotelCardProps[] = getHotels(category, city);
+  const hotels: HotelCardProps[] = getHotels(
+    searchParams?.category,
+    searchParams?.city,
+  );
   const page = Number.parseInt(
     typeof searchParams?.page === "string" ? searchParams?.page : "0",
   );
